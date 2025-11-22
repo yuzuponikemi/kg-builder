@@ -1,0 +1,408 @@
+# Neo4j Schema Definitions for Knowledge Graph
+
+node_types:
+  Paper:
+    description: "Research paper document"
+    properties:
+      id:
+        type: string
+        required: true
+        unique: true
+        description: "Unique identifier (DOI or generated ID)"
+      title:
+        type: string
+        required: true
+        description: "Paper title"
+      abstract:
+        type: text
+        description: "Paper abstract"
+      year:
+        type: integer
+        description: "Publication year"
+      doi:
+        type: string
+        description: "Digital Object Identifier"
+      arxiv_id:
+        type: string
+        description: "ArXiv identifier"
+      pdf_path:
+        type: string
+        description: "Path to PDF file"
+      processed_date:
+        type: datetime
+        description: "When the paper was processed"
+      embedding:
+        type: vector[1024]
+        description: "Abstract embedding vector"
+      venue:
+        type: string
+        description: "Publication venue"
+      citations_count:
+        type: integer
+        default: 0
+        description: "Number of citations"
+
+  Concept:
+    description: "Scientific concept extracted from papers"
+    properties:
+      id:
+        type: string
+        required: true
+        unique: true
+        description: "Unique identifier"
+      name:
+        type: string
+        required: true
+        indexed: true
+        description: "Concept name"
+      type:
+        type: string
+        description: "Concept type (method, material, phenomenon, theory, etc.)"
+        enum:
+          - method
+          - material
+          - phenomenon
+          - theory
+          - measurement
+          - property
+          - application
+          - other
+      description:
+        type: text
+        description: "Concept description"
+      embedding:
+        type: vector[1024]
+        description: "Concept embedding vector"
+      confidence:
+        type: float
+        description: "Extraction confidence score (0-1)"
+      frequency:
+        type: integer
+        default: 1
+        description: "Number of papers mentioning this concept"
+      aliases:
+        type: list[string]
+        description: "Alternative names for this concept"
+
+  Author:
+    description: "Research paper author"
+    properties:
+      id:
+        type: string
+        required: true
+        unique: true
+        description: "Unique identifier"
+      name:
+        type: string
+        required: true
+        indexed: true
+        description: "Author name"
+      email:
+        type: string
+        description: "Author email"
+      affiliations:
+        type: list[string]
+        description: "Author affiliations"
+      orcid:
+        type: string
+        description: "ORCID identifier"
+      h_index:
+        type: integer
+        description: "h-index metric"
+      papers_count:
+        type: integer
+        default: 0
+        description: "Number of papers authored"
+
+  Institution:
+    description: "Research institution or organization"
+    properties:
+      id:
+        type: string
+        required: true
+        unique: true
+        description: "Unique identifier"
+      name:
+        type: string
+        required: true
+        indexed: true
+        description: "Institution name"
+      country:
+        type: string
+        description: "Country"
+      city:
+        type: string
+        description: "City"
+      type:
+        type: string
+        description: "Institution type"
+        enum:
+          - university
+          - research_institute
+          - company
+          - government
+          - other
+
+  Domain:
+    description: "Scientific domain or research area"
+    properties:
+      id:
+        type: string
+        required: true
+        unique: true
+        description: "Unique identifier"
+      name:
+        type: string
+        required: true
+        indexed: true
+        description: "Domain name"
+      level:
+        type: integer
+        description: "Hierarchy level (0=root, 1=top-level, etc.)"
+      description:
+        type: text
+        description: "Domain description"
+
+  Community:
+    description: "Research community (detected via graph algorithms)"
+    properties:
+      id:
+        type: string
+        required: true
+        unique: true
+        description: "Unique identifier"
+      algorithm:
+        type: string
+        description: "Detection algorithm used (louvain, label_propagation, etc.)"
+      size:
+        type: integer
+        description: "Number of concepts in community"
+      modularity:
+        type: float
+        description: "Modularity score"
+      representative_concepts:
+        type: list[string]
+        description: "Most central concepts in community"
+
+relationship_types:
+  CITES:
+    description: "Paper cites another paper"
+    from: Paper
+    to: Paper
+    properties:
+      context:
+        type: string
+        description: "Citation context"
+      section:
+        type: string
+        description: "Section where citation appears"
+
+  AUTHORED_BY:
+    description: "Paper is authored by an author"
+    from: Paper
+    to: Author
+    properties:
+      position:
+        type: integer
+        description: "Author position in author list"
+      corresponding:
+        type: boolean
+        default: false
+        description: "Is corresponding author"
+
+  MENTIONED_IN:
+    description: "Concept is mentioned in a paper"
+    from: Concept
+    to: Paper
+    properties:
+      frequency:
+        type: integer
+        default: 1
+        description: "Number of mentions in paper"
+      sections:
+        type: list[string]
+        description: "Sections where concept appears"
+      importance:
+        type: float
+        description: "Importance score (based on TF-IDF, position, etc.)"
+
+  RELATES_TO:
+    description: "Concept relates to another concept"
+    from: Concept
+    to: Concept
+    properties:
+      type:
+        type: string
+        description: "Relationship type"
+        enum:
+          - causal
+          - hierarchical
+          - compositional
+          - temporal
+          - comparative
+          - associative
+          - other
+      confidence:
+        type: float
+        description: "Relationship confidence (0-1)"
+      source_paper_id:
+        type: string
+        description: "Paper ID where relationship was extracted"
+      context:
+        type: text
+        description: "Textual context of relationship"
+      bidirectional:
+        type: boolean
+        default: false
+        description: "Is relationship bidirectional"
+
+  IS_A:
+    description: "Concept is a type of another concept (ontological hierarchy)"
+    from: Concept
+    to: Concept
+    properties:
+      confidence:
+        type: float
+        description: "Confidence score"
+
+  PART_OF:
+    description: "Concept is part of another concept"
+    from: Concept
+    to: Concept
+    properties:
+      confidence:
+        type: float
+        description: "Confidence score"
+
+  AFFILIATED_WITH:
+    description: "Author is affiliated with an institution"
+    from: Author
+    to: Institution
+    properties:
+      start_date:
+        type: date
+        description: "Affiliation start date"
+      end_date:
+        type: date
+        description: "Affiliation end date"
+      position:
+        type: string
+        description: "Position or role"
+
+  COLLABORATES_WITH:
+    description: "Author collaborates with another author"
+    from: Author
+    to: Author
+    properties:
+      papers_count:
+        type: integer
+        default: 1
+        description: "Number of collaborative papers"
+      first_collaboration:
+        type: integer
+        description: "Year of first collaboration"
+      last_collaboration:
+        type: integer
+        description: "Year of last collaboration"
+
+  BELONGS_TO:
+    description: "Paper or concept belongs to a domain"
+    from: [Paper, Concept]
+    to: Domain
+    properties:
+      confidence:
+        type: float
+        description: "Classification confidence"
+
+  IN_COMMUNITY:
+    description: "Concept belongs to a detected community"
+    from: Concept
+    to: Community
+    properties:
+      centrality:
+        type: float
+        description: "Concept centrality within community"
+
+  SUBDOMAIN_OF:
+    description: "Domain is a subdomain of another domain"
+    from: Domain
+    to: Domain
+    properties: {}
+
+indexes:
+  # Uniqueness constraints
+  - type: constraint
+    node: Paper
+    property: id
+    constraint: unique
+
+  - type: constraint
+    node: Concept
+    property: id
+    constraint: unique
+
+  - type: constraint
+    node: Author
+    property: id
+    constraint: unique
+
+  - type: constraint
+    node: Institution
+    property: id
+    constraint: unique
+
+  - type: constraint
+    node: Domain
+    property: id
+    constraint: unique
+
+  # Vector indexes for semantic search
+  - type: vector
+    node: Concept
+    property: embedding
+    dimension: 1024
+    similarity: cosine
+
+  - type: vector
+    node: Paper
+    property: embedding
+    dimension: 1024
+    similarity: cosine
+
+  # Full-text search indexes
+  - type: fulltext
+    name: concept_search
+    node: Concept
+    properties:
+      - name
+      - description
+
+  - type: fulltext
+    name: paper_search
+    node: Paper
+    properties:
+      - title
+      - abstract
+
+  - type: fulltext
+    name: author_search
+    node: Author
+    properties:
+      - name
+
+  # Regular indexes
+  - type: index
+    node: Concept
+    property: type
+
+  - type: index
+    node: Concept
+    property: name
+
+  - type: index
+    node: Paper
+    property: year
+
+  - type: index
+    node: Paper
+    property: doi
