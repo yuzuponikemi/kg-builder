@@ -205,3 +205,37 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# KG Builder specific
+# ===================
+
+# PDF files (keep local only - copyright/size issues)
+data/papers/*.pdf
+*.pdf
+
+# Keep directory structure and metadata
+!data/papers/README.md
+!data/papers/papers_index.json
+
+# Neo4j database files (local only)
+data/neo4j/
+neo4j_data/
+
+# Ollama models (local only)
+data/ollama/
+
+# Large embedding cache files (local only)
+data/embeddings/*.npy
+data/embeddings/*.pkl
+data/embeddings/*.bin
+
+# Keep exported knowledge graphs (these are shareable)
+!data/exports/*.json
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp

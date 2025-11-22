@@ -1,0 +1,7 @@
+{
+  "description": "Index of processed research papers (PDFs kept local)",
+  "total_papers": 0,
+  "papers": [],
+  "last_updated": "2025-11-22T12:00:00",
+  "note": "PDF files are not included in version control. Only metadata is tracked. Run 'python scripts/create_papers_index.py' to update this file."
+}
