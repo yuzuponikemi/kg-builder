@@ -28,12 +28,54 @@ Papers (PDF) → Knowledge Extraction (LLM) → Neo4j Graph DB
                     Visualization + Analysis + Agent Integration
 ```
 
+## 🚀 Ollama Setup (Local LLM - Recommended)
+
+KG Builder works best with **Ollama** for 100% local, private knowledge graph construction with no API costs!
+
+### Quick Ollama Setup
+
+1. **Install Ollama** (if not already installed):
+```bash
+# Linux
+curl -fsSL https://ollama.com/install.sh | sh
+
+# macOS
+brew install ollama
+
+# Windows: Download from https://ollama.com/download/windows
+```
+
+2. **Pull recommended model**:
+```bash
+ollama pull llama3.1:8b  # Good balance of speed and quality (8GB VRAM)
+# or
+ollama pull mistral:7b   # Faster, lower VRAM (6GB)
+```
+
+3. **Pull embedding model**:
+```bash
+ollama pull nomic-embed-text
+```
+
+4. **Run automated setup**:
+```bash
+python scripts/setup_ollama.py
+# This will check your system and recommend the best models
+```
+
+✅ **That's it!** KG Builder will automatically use Ollama (no API keys needed).
+
+📖 **For detailed setup, GPU configuration, and model recommendations**, see [docs/OLLAMA_GUIDE.md](docs/OLLAMA_GUIDE.md)
+
+---
+
 ## Quick Start
 
 ### Prerequisites
 
 - Python 3.11+
 - Neo4j 5.x
+- **Ollama** (recommended) OR OpenAI/Anthropic API keys
 - Redis (optional, for caching)
 - Docker (recommended)
 
@@ -50,18 +92,27 @@ uv pip install -e ".[dev]"
 
 # Set up environment
 cp .env.example .env
-# Edit .env with your API keys and configuration
+# Edit .env - Ollama is already configured as default!
+# (Optional: Add OpenAI/Anthropic keys if you want to use cloud APIs)
 ```
 
 ### Start Services (Docker)
 
 ```bash
-# Start Neo4j and Redis
+# Option 1: Basic services (Neo4j, Redis) - Use host Ollama (recommended)
 docker-compose -f docker/docker-compose.yml up -d neo4j redis
 
-# Or start all services including API
+# Option 2: All services including API
 docker-compose -f docker/docker-compose.yml up -d
+
+# Option 3: Include Ollama in Docker with GPU support
+docker-compose -f docker/docker-compose.yml -f docker/docker-compose.ollama.yml up -d
+
+# Option 4: Include Ollama in Docker (CPU only)
+docker-compose -f docker/docker-compose.yml -f docker/docker-compose.ollama-cpu.yml up -d
 ```
+
+💡 **Tip**: Using host Ollama (Option 1-2) is recommended for better performance and easier model management.
 
 ### Initialize Database
 
@@ -169,26 +220,45 @@ kg-builder/
 Key environment variables (see `.env.example`):
 
 ```bash
+# LLM Provider (Default: Ollama for local usage)
+LLM_PROVIDER=ollama  # Options: ollama, openai, anthropic
+
+# Ollama Configuration (Local LLM - No API keys needed!)
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=llama3.1:8b  # Or mistral:7b, mixtral:8x7b, etc.
+OLLAMA_NUM_GPU=1  # Set to 0 for CPU-only
+EMBEDDING_PROVIDER=local  # Or ollama
+
 # Neo4j
 NEO4J_URI=bolt://localhost:7687
 NEO4J_PASSWORD=your_password
 
-# LLM API Keys
-OPENAI_API_KEY=sk-...
-ANTHROPIC_API_KEY=sk-ant-...
+# Optional: Cloud LLM API Keys (only if not using Ollama)
+OPENAI_API_KEY=  # Leave empty if using Ollama
+ANTHROPIC_API_KEY=  # Leave empty if using Ollama
 
 # Embedding Model
-EMBEDDING_MODEL=BAAI/bge-large-en-v1.5
-EMBEDDING_DEVICE=cuda  # or cpu
+EMBEDDING_MODEL=BAAI/bge-large-en-v1.5  # For local embeddings
+OLLAMA_EMBEDDING_MODEL=nomic-embed-text  # For Ollama embeddings
+EMBEDDING_DEVICE=cuda  # Options: cuda, cpu, mps
 
 # API
 API_PORT=8000
 ```
 
+### Switching LLM Providers
+
+Simply change `LLM_PROVIDER` in `.env`:
+- `ollama` - Local, private, no costs (default)
+- `openai` - Cloud, requires API key
+- `anthropic` - Cloud, requires API key
+
 ## Documentation
 
+- **[📘 Ollama Setup Guide](docs/OLLAMA_GUIDE.md)**: Complete guide for local LLM setup
 - **[Strategic Plan](STRATEGIC_PLAN.md)**: Comprehensive project roadmap and architecture
 - **[API Documentation](http://localhost:8000/docs)**: Interactive OpenAPI docs (when server is running)
+- **[API Specification](docs/API_SPECIFICATION.md)**: Detailed API reference for agent integration
 - **[User Guide](docs/guides/)**: Detailed usage guides
 - **[Examples](docs/examples/)**: Jupyter notebooks with examples
 

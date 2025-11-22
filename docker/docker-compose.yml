@@ -41,6 +41,24 @@ services:
       timeout: 3s
       retries: 5
 
+  # Ollama (Optional - uncomment if you want to run Ollama in Docker)
+  # Note: For GPU support, see docker-compose.ollama.yml
+  # ollama:
+  #   image: ollama/ollama:latest
+  #   container_name: kg-builder-ollama
+  #   ports:
+  #     - "11434:11434"
+  #   volumes:
+  #     - ollama_data:/root/.ollama
+  #   # Uncomment for NVIDIA GPU support
+  #   # deploy:
+  #   #   resources:
+  #   #     reservations:
+  #   #       devices:
+  #   #         - driver: nvidia
+  #   #           count: 1
+  #   #           capabilities: [gpu]
+
   api:
     build:
       context: ..
@@ -53,6 +71,10 @@ services:
       - NEO4J_USER=neo4j
       - NEO4J_PASSWORD=your_password_here
       - REDIS_URL=redis://redis:6379/0
+      # Use host Ollama by default (recommended - faster, more flexible)
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      # Or use containerized Ollama (see docker-compose.ollama.yml)
+      # - OLLAMA_BASE_URL=http://ollama:11434
     env_file:
       - ../.env
     volumes:
@@ -75,6 +97,10 @@ services:
       - NEO4J_USER=neo4j
       - NEO4J_PASSWORD=your_password_here
       - REDIS_URL=redis://redis:6379/0
+      # Use host Ollama by default (recommended - faster, more flexible)
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      # Or use containerized Ollama (see docker-compose.ollama.yml)
+      # - OLLAMA_BASE_URL=http://ollama:11434
     env_file:
       - ../.env
     volumes:
@@ -93,3 +119,4 @@ volumes:
   neo4j_import:
   neo4j_plugins:
   redis_data:
+  # ollama_data:  # Uncomment if using Ollama service

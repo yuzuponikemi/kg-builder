@@ -24,19 +24,45 @@ class Settings(BaseSettings):
     neo4j_password: str = Field(..., description="Neo4j password")
     neo4j_database: str = Field(default="neo4j", description="Neo4j database name")
 
-    # LLM API Keys
-    openai_api_key: str | None = Field(default=None, description="OpenAI API key")
-    anthropic_api_key: str | None = Field(default=None, description="Anthropic API key")
+    # LLM Provider Configuration
+    llm_provider: Literal["ollama", "openai", "anthropic"] = Field(
+        default="ollama", description="Primary LLM provider to use"
+    )
+
+    # Ollama Configuration (Local LLM)
     ollama_base_url: str = Field(
         default="http://localhost:11434", description="Ollama base URL"
     )
+    ollama_model: str = Field(
+        default="llama3.1:8b", description="Ollama model to use"
+    )
+    ollama_timeout: int = Field(default=300, description="Ollama request timeout in seconds")
+    ollama_num_ctx: int = Field(default=8192, description="Ollama context window size")
+    ollama_num_gpu: int = Field(default=1, description="Number of GPUs for Ollama (0 for CPU)")
+    ollama_num_thread: int = Field(default=8, description="CPU threads for Ollama")
+
+    # OpenAI Configuration (Optional)
+    openai_api_key: str | None = Field(default=None, description="OpenAI API key")
+    openai_model: str = Field(default="gpt-4-turbo", description="OpenAI model to use")
+
+    # Anthropic Configuration (Optional)
+    anthropic_api_key: str | None = Field(default=None, description="Anthropic API key")
+    anthropic_model: str = Field(
+        default="claude-3-5-sonnet-20241022", description="Anthropic model to use"
+    )
 
     # Embedding Configuration
+    embedding_provider: Literal["local", "openai", "ollama"] = Field(
+        default="local", description="Embedding provider to use"
+    )
     embedding_model: str = Field(
-        default="BAAI/bge-large-en-v1.5", description="Sentence transformer model"
+        default="BAAI/bge-large-en-v1.5", description="Sentence transformer model for local embeddings"
+    )
+    ollama_embedding_model: str = Field(
+        default="nomic-embed-text", description="Ollama model for embeddings"
     )
     embedding_device: Literal["cuda", "cpu", "mps"] = Field(
-        default="cpu", description="Device for embedding generation"
+        default="cuda", description="Device for embedding generation"
     )
     embedding_batch_size: int = Field(default=32, description="Batch size for embeddings")
     embedding_dimension: int = Field(default=1024, description="Embedding vector dimension")
@@ -73,9 +99,6 @@ class Settings(BaseSettings):
     )
     extraction_timeout: int = Field(
         default=300, description="Extraction timeout in seconds"
-    )
-    default_llm_model: str = Field(
-        default="gpt-4-turbo", description="Default LLM model to use"
     )
     default_temperature: float = Field(
         default=0.0, description="Default LLM temperature"
@@ -132,12 +155,40 @@ class Settings(BaseSettings):
     @property
     def has_openai(self) -> bool:
         """Check if OpenAI API key is configured."""
-        return self.openai_api_key is not None
+        return self.openai_api_key is not None and len(self.openai_api_key) > 0
 
     @property
     def has_anthropic(self) -> bool:
         """Check if Anthropic API key is configured."""
-        return self.anthropic_api_key is not None
+        return self.anthropic_api_key is not None and len(self.anthropic_api_key) > 0
+
+    @property
+    def is_using_ollama(self) -> bool:
+        """Check if using Ollama as LLM provider."""
+        return self.llm_provider == "ollama"
+
+    @property
+    def current_llm_model(self) -> str:
+        """Get the current LLM model based on provider."""
+        if self.llm_provider == "ollama":
+            return self.ollama_model
+        elif self.llm_provider == "openai":
+            return self.openai_model
+        elif self.llm_provider == "anthropic":
+            return self.anthropic_model
+        return self.ollama_model
+
+    @property
+    def ollama_config(self) -> dict[str, int | str]:
+        """Get Ollama configuration as dictionary."""
+        return {
+            "base_url": self.ollama_base_url,
+            "model": self.ollama_model,
+            "timeout": self.ollama_timeout,
+            "num_ctx": self.ollama_num_ctx,
+            "num_gpu": self.ollama_num_gpu,
+            "num_thread": self.ollama_num_thread,
+        }
 
 
 @lru_cache()

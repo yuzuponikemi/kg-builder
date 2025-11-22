@@ -1,0 +1,57 @@
+# Docker Compose override for Ollama with GPU support
+#
+# Usage:
+#   docker-compose -f docker-compose.yml -f docker-compose.ollama.yml up -d
+#
+# This file adds Ollama service with GPU support for local LLM inference
+
+version: '3.8'
+
+services:
+  # Ollama with GPU support
+  ollama:
+    image: ollama/ollama:latest
+    container_name: kg-builder-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      # Ollama configuration
+      - OLLAMA_KEEP_ALIVE=5m
+      - OLLAMA_HOST=0.0.0.0:11434
+    # GPU support (requires nvidia-container-toolkit)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1  # Number of GPUs (use 'all' for all GPUs)
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: unless-stopped
+
+  # Update API to use containerized Ollama
+  api:
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+  # Update Celery worker to use containerized Ollama
+  celery-worker:
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+volumes:
+  ollama_data:
+    driver: local
