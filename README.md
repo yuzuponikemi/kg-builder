@@ -95,6 +95,37 @@ See **[Search Guide](docs/SEARCH_GUIDE.md)** for complete documentation.
 
 ---
 
+## 📊 Neo4j Import & Export
+
+Load JSON knowledge graphs into Neo4j for powerful querying and analysis:
+
+```bash
+# Import all knowledge graphs into Neo4j
+python scripts/import_to_neo4j.py data/exports/
+
+# Explore in browser
+open http://localhost:7474
+
+# Search for concepts
+python scripts/neo4j_manager.py search "neural network"
+
+# Show statistics
+python scripts/neo4j_manager.py stats
+
+# Export back to JSON (for sharing/backup)
+python scripts/export_from_neo4j.py --output backup.json
+```
+
+**Why Use Both JSON and Neo4j?**
+- **JSON**: Portable, shareable on GitHub, human-readable
+- **Neo4j**: Complex queries, graph algorithms, interactive visualization
+
+**Workflow**: Extract to JSON → Share on GitHub → Import to Neo4j → Analyze → Export back to JSON
+
+See **[Neo4j Guide](docs/NEO4J_GUIDE.md)** for complete documentation.
+
+---
+
 ## Quick Start
 
 ### Prerequisites
@@ -282,6 +313,8 @@ Simply change `LLM_PROVIDER` in `.env`:
 ## Documentation
 
 - **[📘 Ollama Setup Guide](docs/OLLAMA_GUIDE.md)**: Complete guide for local LLM setup
+- **[🔍 Search & Download Guide](docs/SEARCH_GUIDE.md)**: How to search arXiv and download papers with LLM filtering
+- **[📊 Neo4j Integration Guide](docs/NEO4J_GUIDE.md)**: Import, query, and export knowledge graphs with Neo4j
 - **[Strategic Plan](STRATEGIC_PLAN.md)**: Comprehensive project roadmap and architecture
 - **[API Documentation](http://localhost:8000/docs)**: Interactive OpenAPI docs (when server is running)
 - **[API Specification](docs/API_SPECIFICATION.md)**: Detailed API reference for agent integration
