@@ -59,7 +59,7 @@ class ArxivPaper:
 class ArxivSearcher:
     """Search for papers on arXiv."""
 
-    BASE_URL = "http://export.arxiv.org/api/query"
+    BASE_URL = "https://export.arxiv.org/api/query"
 
     def __init__(self):
         """Initialize arXiv searcher."""
