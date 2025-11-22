@@ -69,6 +69,32 @@ python scripts/setup_ollama.py
 
 ---
 
+## 🔍 Search & Download Papers (New!)
+
+Automatically search arXiv and download relevant papers using LLM-powered filtering:
+
+```bash
+# Search for papers and download the most relevant ones
+python scripts/search_and_download_papers.py "knowledge graph construction"
+
+# Search, filter, and extract knowledge in one command
+python scripts/search_and_download_papers.py "neural networks" --auto-extract
+
+# Get top 5 most relevant papers
+python scripts/search_and_download_papers.py "LLM reasoning" --top-n 5
+```
+
+**Features:**
+- 🔍 Smart arXiv search with field-specific queries
+- 🤖 LLM-powered relevance assessment
+- 📥 Automatic download of relevant papers
+- ⚡ Batch processing for multiple papers
+- 📊 Combined knowledge graph generation
+
+See **[Search Guide](docs/SEARCH_GUIDE.md)** for complete documentation.
+
+---
+
 ## Quick Start
 
 ### Prerequisites
