@@ -1,4 +1,4 @@
-"""LLM client with support for Ollama, OpenAI, and Anthropic."""
+"""LLM client with support for Ollama, OpenAI, Anthropic, and Gemini."""
 
 import json
 from typing import Any, Literal
@@ -13,7 +13,7 @@ class LLMClient:
         """Initialize LLM client.
 
         Args:
-            provider: LLM provider to use (ollama, openai, anthropic).
+            provider: LLM provider to use (ollama, openai, anthropic, gemini).
                      If None, uses value from settings.
         """
         self.settings = get_settings()
@@ -35,6 +35,12 @@ class LLMClient:
 
             self.client = Anthropic(api_key=self.settings.anthropic_api_key)
             self.model = self.settings.anthropic_model
+        elif self.provider == "gemini":
+            import google.generativeai as genai
+
+            genai.configure(api_key=self.settings.gemini_api_key)
+            self.client = genai.GenerativeModel(self.settings.gemini_model)
+            self.model = self.settings.gemini_model
         else:
             raise ValueError(f"Unknown LLM provider: {self.provider}")
 
@@ -67,6 +73,8 @@ class LLMClient:
             return self._generate_openai(prompt, system, temp, max_tok, response_format)
         elif self.provider == "anthropic":
             return self._generate_anthropic(prompt, system, temp, max_tok, response_format)
+        elif self.provider == "gemini":
+            return self._generate_gemini(prompt, system, temp, max_tok, response_format)
         else:
             raise ValueError(f"Unknown provider: {self.provider}")
 
@@ -156,6 +164,39 @@ class LLMClient:
 
         response = self.client.messages.create(**kwargs)
         return response.content[0].text
+
+    def _generate_gemini(
+        self,
+        prompt: str,
+        system: str | None,
+        temperature: float,
+        max_tokens: int,
+        response_format: str,
+    ) -> str:
+        """Generate using Gemini."""
+        # Combine system and user prompt for Gemini
+        full_prompt = prompt
+        if system:
+            full_prompt = f"{system}\n\n{prompt}"
+
+        if response_format == "json":
+            full_prompt += "\n\nRespond with valid JSON only."
+
+        # Configure generation
+        generation_config = {
+            "temperature": temperature,
+            "max_output_tokens": max_tokens,
+        }
+
+        if response_format == "json":
+            generation_config["response_mime_type"] = "application/json"
+
+        response = self.client.generate_content(
+            full_prompt,
+            generation_config=generation_config
+        )
+
+        return response.text
 
     def extract_json(self, response: str) -> dict[str, Any]:
         """Extract JSON from response, handling markdown code blocks.

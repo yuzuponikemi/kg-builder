@@ -169,6 +169,40 @@ See **[Neo4j Guide](docs/NEO4J_GUIDE.md)** for complete documentation.
 
 ---
 
+## 🤖 GitHub Actions Automation (NEW!)
+
+**Fully automate the entire pipeline with GitHub Actions** - no local execution needed!
+
+```yaml
+# Runs automatically every Monday at 0:00 UTC
+# Or trigger manually from GitHub UI
+```
+
+**What it does:**
+1. 🔍 Search arXiv for papers (with your custom topic)
+2. 🤖 Filter using Gemini 2.5 Flash (fast & free tier)
+3. 📥 Download and extract knowledge
+4. 💾 Save JSON files
+5. 🚀 Auto-commit to GitHub
+6. 📦 Archive results for 90 days
+
+**Setup (5 minutes):**
+1. Get [Gemini API key](https://aistudio.google.com/app/apikey) (free)
+2. Add to GitHub: Settings → Secrets → `GEMINI_API_KEY`
+3. Done! Runs automatically every week
+
+**Manual trigger from GitHub:**
+- Go to Actions tab
+- Select "Build Knowledge Graph"
+- Click "Run workflow"
+- Enter your topic and parameters
+
+**Cost:** **100% FREE** (uses Gemini free tier + GitHub Actions free tier)
+
+**📖 Complete setup guide**: [GitHub Actions Guide (日本語)](docs/GITHUB_ACTIONS_GUIDE.md)
+
+---
+
 ## Quick Start
 
 ### Prerequisites
@@ -336,6 +370,7 @@ NEO4J_PASSWORD=your_password
 # Optional: Cloud LLM API Keys (only if not using Ollama)
 OPENAI_API_KEY=  # Leave empty if using Ollama
 ANTHROPIC_API_KEY=  # Leave empty if using Ollama
+GEMINI_API_KEY=  # Leave empty if using Ollama (required for GitHub Actions)
 
 # Embedding Model
 EMBEDDING_MODEL=BAAI/bge-large-en-v1.5  # For local embeddings
@@ -349,12 +384,14 @@ API_PORT=8000
 ### Switching LLM Providers
 
 Simply change `LLM_PROVIDER` in `.env`:
-- `ollama` - Local, private, no costs (default)
+- `ollama` - Local, private, no costs (default for local)
+- `gemini` - Google Gemini, fast, generous free tier (default for GitHub Actions)
 - `openai` - Cloud, requires API key
 - `anthropic` - Cloud, requires API key
 
 ## Documentation
 
+- **[🤖 GitHub Actions Guide (日本語)](docs/GITHUB_ACTIONS_GUIDE.md)**: Automate pipeline with GitHub Actions (Japanese)
 - **[⚡ Pipeline Guide (日本語)](docs/PIPELINE_GUIDE.md)**: Complete end-to-end pipeline workflow (Japanese)
 - **[📘 Ollama Setup Guide](docs/OLLAMA_GUIDE.md)**: Complete guide for local LLM setup
 - **[🔍 Search & Download Guide](docs/SEARCH_GUIDE.md)**: How to search arXiv and download papers with LLM filtering

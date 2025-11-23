@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-KG Builder transforms scientific papers into an ontological knowledge graph using generative AI. It extracts entities and relationships from research papers using LLMs (Ollama, OpenAI, or Anthropic), builds a graph in Neo4j with semantic embeddings, and provides APIs for graph reasoning and visualization.
+KG Builder transforms scientific papers into an ontological knowledge graph using generative AI. It extracts entities and relationships from research papers using LLMs (Ollama, OpenAI, Anthropic, or Gemini), builds a graph in Neo4j with semantic embeddings, and provides APIs for graph reasoning and visualization.
 
 Based on the paper ["Accelerating Scientific Discovery with Generative Knowledge Extraction, Graph-Based Representation, and Multimodal Intelligent Graph Reasoning"](https://arxiv.org/abs/2403.11996) by Markus J. Buehler.
 
@@ -102,9 +102,10 @@ pre-commit run --all-files
 
 The system is designed to be LLM-agnostic:
 
-- **Default**: Ollama (local, private, no API costs)
+- **Default (Local)**: Ollama (local, private, no API costs)
+- **Default (GitHub Actions)**: Gemini (fast, generous free tier)
 - **Alternatives**: OpenAI, Anthropic
-- **Configuration**: Set `LLM_PROVIDER` in `.env` (ollama/openai/anthropic)
+- **Configuration**: Set `LLM_PROVIDER` in `.env` (ollama/openai/anthropic/gemini)
 - **Client Pattern**: Always use `get_llm_client()` to get the appropriate client
 
 When working with LLM code:

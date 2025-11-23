@@ -1,0 +1,223 @@
+name: Build Knowledge Graph
+
+# ワークフローのトリガー設定
+on:
+  # 手動実行（GitHub UI から）
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Research topic to search for'
+        required: true
+        default: 'knowledge graph construction'
+      max_papers:
+        description: 'Maximum number of papers to process'
+        required: false
+        default: '5'
+      review_only:
+        description: 'Only select review/survey papers'
+        required: false
+        type: boolean
+        default: true
+      combine:
+        description: 'Create combined knowledge graph'
+        required: false
+        type: boolean
+        default: true
+      threshold:
+        description: 'Relevance threshold (0.0-1.0)'
+        required: false
+        default: '0.7'
+
+  # スケジュール実行（毎週月曜日 0:00 UTC）
+  schedule:
+    - cron: '0 0 * * 1'  # 毎週月曜日
+
+  # プッシュ時に実行（オプション）
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - 'config/topics.txt'  # topics.txtが更新されたとき
+
+# 並行実行の制御
+concurrency:
+  group: build-kg-${{ github.ref }}
+  cancel-in-progress: false  # 実行中のジョブをキャンセルしない
+
+jobs:
+  build-knowledge-graph:
+    name: Build Knowledge Graph from Research Papers
+    runs-on: ubuntu-latest
+
+    # タイムアウト設定（2時間）
+    timeout-minutes: 120
+
+    steps:
+      # 1. リポジトリのチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 全履歴を取得
+
+      # 2. Python環境のセットアップ
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      # 3. 依存関係のインストール
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install uv
+          uv pip install --system -e .
+
+      # 4. データディレクトリの作成
+      - name: Create data directories
+        run: |
+          mkdir -p data/papers
+          mkdir -p data/exports
+          mkdir -p logs
+
+      # 5. 環境変数の設定
+      - name: Configure environment
+        run: |
+          cat > .env << EOF
+          # LLM Provider
+          LLM_PROVIDER=gemini
+          GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL=gemini-2.0-flash-exp
+
+          # Neo4j (not needed for pipeline, but required by settings)
+          NEO4J_PASSWORD=dummy_password_for_github_actions
+          NEO4J_URI=bolt://localhost:7687
+
+          # Processing
+          DEFAULT_TEMPERATURE=0.0
+          MAX_TOKENS=4000
+          LOG_LEVEL=INFO
+          EOF
+
+      # 6. トピックの決定（schedule実行時はデフォルト値を使用）
+      - name: Determine topic
+        id: topic
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "topic=${{ github.event.inputs.topic }}" >> $GITHUB_OUTPUT
+            echo "max_papers=${{ github.event.inputs.max_papers }}" >> $GITHUB_OUTPUT
+            echo "review_only=${{ github.event.inputs.review_only }}" >> $GITHUB_OUTPUT
+            echo "combine=${{ github.event.inputs.combine }}" >> $GITHUB_OUTPUT
+            echo "threshold=${{ github.event.inputs.threshold }}" >> $GITHUB_OUTPUT
+          else
+            # スケジュール実行時のデフォルト設定
+            echo "topic=knowledge graph construction" >> $GITHUB_OUTPUT
+            echo "max_papers=5" >> $GITHUB_OUTPUT
+            echo "review_only=true" >> $GITHUB_OUTPUT
+            echo "combine=true" >> $GITHUB_OUTPUT
+            echo "threshold=0.7" >> $GITHUB_OUTPUT
+          fi
+
+      # 7. パイプラインの実行
+      - name: Run knowledge graph pipeline
+        id: pipeline
+        run: |
+          # パラメータの設定
+          ARGS="--max-papers ${{ steps.topic.outputs.max_papers }}"
+          ARGS="$ARGS --threshold ${{ steps.topic.outputs.threshold }}"
+
+          if [ "${{ steps.topic.outputs.review_only }}" = "true" ]; then
+            ARGS="$ARGS --review-papers-only"
+          fi
+
+          if [ "${{ steps.topic.outputs.combine }}" = "true" ]; then
+            ARGS="$ARGS --combine"
+          fi
+
+          # パイプライン実行
+          python scripts/build_knowledge_graph.py "${{ steps.topic.outputs.topic }}" $ARGS
+        continue-on-error: false
+
+      # 8. 実行サマリーの生成
+      - name: Generate summary
+        if: always()
+        run: |
+          echo "## Knowledge Graph Build Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Topic:** ${{ steps.topic.outputs.topic }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Max Papers:** ${{ steps.topic.outputs.max_papers }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Review Only:** ${{ steps.topic.outputs.review_only }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Combined Graph:** ${{ steps.topic.outputs.combine }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Threshold:** ${{ steps.topic.outputs.threshold }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # ファイル数のカウント
+          EXPORT_COUNT=$(ls -1 data/exports/*.json 2>/dev/null | wc -l)
+          echo "**Generated Files:** $EXPORT_COUNT JSON files" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # ファイルリスト
+          if [ $EXPORT_COUNT -gt 0 ]; then
+            echo "### Generated Knowledge Graphs:" >> $GITHUB_STEP_SUMMARY
+            ls -lh data/exports/*.json | awk '{print "- " $9 " (" $5 ")"}' >> $GITHUB_STEP_SUMMARY
+          fi
+
+      # 9. 成果物のアップロード（JSONファイル）
+      - name: Upload knowledge graphs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: knowledge-graphs-${{ github.run_number }}
+          path: |
+            data/exports/*.json
+            data/papers/papers_index.json
+          retention-days: 90  # 90日間保持
+
+      # 10. 成果物のアップロード（ログ）
+      - name: Upload logs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pipeline-logs-${{ github.run_number }}
+          path: |
+            logs/*.log
+          retention-days: 30
+
+      # 11. GitHubへのコミット（オプション）
+      - name: Commit and push results
+        if: success()
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          # JSON ファイルと papers_index.json のみ追加（PDF は除外）
+          git add data/exports/*.json
+          git add data/papers/papers_index.json
+
+          # 変更があればコミット
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🤖 Auto-build: Add knowledge graphs for '${{ steps.topic.outputs.topic }}' (#${{ github.run_number }})"
+            git push
+          fi
+
+      # 12. Slackへの通知（オプション）
+      # - name: Notify Slack
+      #   if: always()
+      #   uses: slackapi/slack-github-action@v1
+      #   with:
+      #     webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+      #     payload: |
+      #       {
+      #         "text": "Knowledge Graph Build ${{ job.status }}",
+      #         "blocks": [
+      #           {
+      #             "type": "section",
+      #             "text": {
+      #               "type": "mrkdwn",
+      #               "text": "*Knowledge Graph Build ${{ job.status }}*\n*Topic:* ${{ steps.topic.outputs.topic }}\n*Papers:* ${{ steps.topic.outputs.max_papers }}\n*Run:* <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|#${{ github.run_number }}>"
+      #             }
+      #           }
+      #         ]
+      #       }

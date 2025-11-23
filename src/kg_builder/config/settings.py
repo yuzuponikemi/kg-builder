@@ -25,7 +25,7 @@ class Settings(BaseSettings):
     neo4j_database: str = Field(default="neo4j", description="Neo4j database name")
 
     # LLM Provider Configuration
-    llm_provider: Literal["ollama", "openai", "anthropic"] = Field(
+    llm_provider: Literal["ollama", "openai", "anthropic", "gemini"] = Field(
         default="ollama", description="Primary LLM provider to use"
     )
 
@@ -49,6 +49,12 @@ class Settings(BaseSettings):
     anthropic_api_key: str | None = Field(default=None, description="Anthropic API key")
     anthropic_model: str = Field(
         default="claude-3-5-sonnet-20241022", description="Anthropic model to use"
+    )
+
+    # Gemini Configuration (Optional)
+    gemini_api_key: str | None = Field(default=None, description="Google Gemini API key")
+    gemini_model: str = Field(
+        default="gemini-2.0-flash-exp", description="Gemini model to use"
     )
 
     # Embedding Configuration
@@ -163,6 +169,11 @@ class Settings(BaseSettings):
         return self.anthropic_api_key is not None and len(self.anthropic_api_key) > 0
 
     @property
+    def has_gemini(self) -> bool:
+        """Check if Gemini API key is configured."""
+        return self.gemini_api_key is not None and len(self.gemini_api_key) > 0
+
+    @property
     def is_using_ollama(self) -> bool:
         """Check if using Ollama as LLM provider."""
         return self.llm_provider == "ollama"
@@ -176,6 +187,8 @@ class Settings(BaseSettings):
             return self.openai_model
         elif self.llm_provider == "anthropic":
             return self.anthropic_model
+        elif self.llm_provider == "gemini":
+            return self.gemini_model
         return self.ollama_model
 
     @property
