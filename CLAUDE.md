@@ -146,6 +146,32 @@ Key configuration properties:
 
 ## Common Development Tasks
 
+### End-to-End Pipeline (Most Common)
+
+**Recommended for building knowledge graphs from a topic:**
+
+```bash
+# Complete pipeline: Search → Filter → Download → Extract → Save JSON
+python scripts/build_knowledge_graph.py "knowledge graph construction"
+
+# With options
+python scripts/build_knowledge_graph.py "graph neural networks" \
+  --max-papers 10 \
+  --review-papers-only \
+  --combine \
+  --threshold 0.8
+```
+
+This single script performs all steps:
+1. Search arXiv (prioritizing review papers)
+2. Filter by relevance (LLM-powered)
+3. Download PDFs
+4. Extract knowledge (entities + relationships)
+5. Save as JSON
+6. Update papers index
+
+See `docs/PIPELINE_GUIDE.md` for detailed documentation (Japanese).
+
 ### Search and Download Papers
 
 ```bash
@@ -185,6 +211,37 @@ python scripts/setup_ollama.py
 ollama pull llama3.1:8b  # Recommended model
 ollama pull nomic-embed-text  # For embeddings
 ```
+
+### Neo4j Import/Export
+
+```bash
+# Import JSON knowledge graphs to Neo4j
+python scripts/import_to_neo4j.py data/exports/
+
+# Import single file
+python scripts/import_to_neo4j.py data/exports/paper_knowledge_graph.json
+
+# Clear database and import
+python scripts/import_to_neo4j.py data/exports/ --clear
+
+# Export from Neo4j to JSON
+python scripts/export_from_neo4j.py --output backup.json
+
+# Export specific paper
+python scripts/export_from_neo4j.py --paper "2403_11996" --output paper.json
+
+# Database management
+python scripts/neo4j_manager.py stats           # Show statistics
+python scripts/neo4j_manager.py search "neural" # Search concepts
+python scripts/neo4j_manager.py concept "GNN"   # Show concept details
+python scripts/neo4j_manager.py papers          # List all papers
+```
+
+**Why both JSON and Neo4j?**
+- JSON: Portable, shareable on GitHub, human-readable
+- Neo4j: Complex queries, graph algorithms, fast traversal
+
+See `docs/NEO4J_GUIDE.md` for complete documentation.
 
 ## Important Patterns
 

@@ -69,7 +69,50 @@ python scripts/setup_ollama.py
 
 ---
 
-## 🔍 Search & Download Papers (New!)
+## ⚡ End-to-End Pipeline (Recommended!)
+
+**Build a complete knowledge graph in ONE command** - from topic to JSON:
+
+```bash
+# Complete pipeline: Search → Filter → Download → Extract → Save JSON
+python scripts/build_knowledge_graph.py "knowledge graph construction"
+```
+
+**That's it!** This single command will:
+1. 🔍 Search arXiv for relevant papers (prioritizing review papers)
+2. 🤖 Filter papers by relevance using LLM
+3. 📥 Download selected papers
+4. 🧠 Extract knowledge (entities and relationships)
+5. 💾 Save as JSON knowledge graphs
+6. 📋 Update papers index
+
+**Features:**
+- 📚 **Prioritizes review papers** by default (established knowledge)
+- 🎯 **LLM-powered quality filtering** (relevance threshold: 0.7)
+- 📊 **Detailed progress tracking** for each step
+- 💾 **Automatic JSON export** (individual + combined graphs)
+- 🔄 **Error-resilient** (continues on failures)
+
+**Options:**
+```bash
+# Get 10 papers
+python scripts/build_knowledge_graph.py "graph neural networks" --max-papers 10
+
+# Only review papers (established knowledge)
+python scripts/build_knowledge_graph.py "materials science" --review-papers-only
+
+# Create combined graph
+python scripts/build_knowledge_graph.py "transformers" --combine
+
+# Higher quality threshold
+python scripts/build_knowledge_graph.py "quantum computing" --threshold 0.85
+```
+
+**📖 Complete guide with step-by-step explanation**: [Pipeline Guide (日本語)](docs/PIPELINE_GUIDE.md)
+
+---
+
+## 🔍 Search & Download Papers
 
 Automatically search arXiv and download relevant papers using LLM-powered filtering:
 
@@ -312,6 +355,7 @@ Simply change `LLM_PROVIDER` in `.env`:
 
 ## Documentation
 
+- **[⚡ Pipeline Guide (日本語)](docs/PIPELINE_GUIDE.md)**: Complete end-to-end pipeline workflow (Japanese)
 - **[📘 Ollama Setup Guide](docs/OLLAMA_GUIDE.md)**: Complete guide for local LLM setup
 - **[🔍 Search & Download Guide](docs/SEARCH_GUIDE.md)**: How to search arXiv and download papers with LLM filtering
 - **[📊 Neo4j Integration Guide](docs/NEO4J_GUIDE.md)**: Import, query, and export knowledge graphs with Neo4j
