@@ -183,26 +183,7 @@ jobs:
             logs/*.log
           retention-days: 30
 
-      # 11. GitHubへのコミット（オプション）
-      - name: Commit and push results
-        if: success()
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-
-          # JSON ファイルと papers_index.json のみ追加（PDF は除外）
-          git add data/exports/*.json
-          git add data/papers/papers_index.json
-
-          # 変更があればコミット
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "🤖 Auto-build: Add knowledge graphs for '${{ steps.topic.outputs.topic }}' (#${{ github.run_number }})"
-            git push
-          fi
-
-      # 12. Slackへの通知（オプション）
+      # 11. Slackへの通知（オプション）
       # - name: Notify Slack
       #   if: always()
       #   uses: slackapi/slack-github-action@v1
