@@ -87,7 +87,7 @@ jobs:
           # LLM Provider
           LLM_PROVIDER=gemini
           GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL=gemini-2.0-flash-exp
+          GEMINI_MODEL=gemini-1.5-flash
 
           # Neo4j (not needed for pipeline, but required by settings)
           NEO4J_PASSWORD=dummy_password_for_github_actions
