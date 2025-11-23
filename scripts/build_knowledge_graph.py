@@ -605,9 +605,9 @@ class KnowledgeGraphPipeline:
         """
         review_keywords = ["review", "survey", "overview", "tutorial", "perspective"]
         title_lower = paper.title.lower()
-        summary_lower = paper.summary.lower()
+        abstract_lower = paper.abstract.lower()
 
-        return any(keyword in title_lower or keyword in summary_lower for keyword in review_keywords)
+        return any(keyword in title_lower or keyword in abstract_lower for keyword in review_keywords)
 
     def _deduplicate_entities(self, entities: list[dict[str, Any]]) -> list[dict[str, Any]]:
         """Deduplicate entities by name.
