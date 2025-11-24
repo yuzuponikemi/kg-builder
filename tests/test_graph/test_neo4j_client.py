@@ -24,7 +24,7 @@ class TestNeo4jClient:
             client = Neo4jClient(
                 uri=test_settings.neo4j_uri,
                 user=test_settings.neo4j_user,
-                password=test_settings.neo4j_password
+                password=test_settings.neo4j_password,
             )
 
             assert client is not None
@@ -78,8 +78,7 @@ class TestNeo4jClient:
             # Test node creation if method exists
             if hasattr(client, "create_node"):
                 client.create_node(
-                    label="Concept",
-                    properties={"name": "Test Concept", "type": "method"}
+                    label="Concept", properties={"name": "Test Concept", "type": "method"}
                 )
                 mock_session.run.assert_called()
         except ImportError:
@@ -101,7 +100,7 @@ class TestNeo4jClient:
                     source_id="node1",
                     target_id="node2",
                     rel_type="RELATED_TO",
-                    properties={"weight": 0.9}
+                    properties={"weight": 0.9},
                 )
                 mock_session.run.assert_called()
         except ImportError:
@@ -152,7 +151,9 @@ class TestNeo4jOperations:
         except ImportError:
             pytest.skip("Neo4jClient not found")
 
-    def test_add_relationship_to_graph(self, test_settings, mock_neo4j_driver, sample_relationships):
+    def test_add_relationship_to_graph(
+        self, test_settings, mock_neo4j_driver, sample_relationships
+    ):
         """Test adding relationship to graph."""
         try:
             from kg_builder.graph.neo4j_client import Neo4jClient
@@ -174,11 +175,11 @@ class TestNeo4jOperations:
 
             mock_session = MagicMock()
             mock_result = MagicMock()
-            mock_result.data.return_value = [
-                {"n": {"name": "GNN", "type": "method"}}
-            ]
+            mock_result.data.return_value = [{"n": {"name": "GNN", "type": "method"}}]
             mock_session.run.return_value = mock_result
-            mock_neo4j_driver.return_value.session.return_value.__enter__.return_value = mock_session
+            mock_neo4j_driver.return_value.session.return_value.__enter__.return_value = (
+                mock_session
+            )
 
             client = Neo4jClient(**test_settings.neo4j_config)
 

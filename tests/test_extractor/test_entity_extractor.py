@@ -45,7 +45,7 @@ class TestEntityExtractor:
                 "name": "Graph Neural Network",
                 "type": "method",
                 "description": "A neural network for graph data",
-                "confidence": 0.95
+                "confidence": 0.95,
             }
 
             assert extractor._validate_entity(valid_entity) is True
@@ -72,7 +72,7 @@ class TestEntityExtractor:
                 "name": "Test",
                 "type": "invalid_type",
                 "description": "Test description",
-                "confidence": 0.9
+                "confidence": 0.9,
             }
 
             assert extractor._validate_entity(invalid_entity) is False
@@ -86,7 +86,7 @@ class TestEntityExtractor:
                 "name": "Test",
                 "type": "method",
                 "description": "Test description",
-                "confidence": 1.5  # Invalid: > 1.0
+                "confidence": 1.5,  # Invalid: > 1.0
             }
 
             assert extractor._validate_entity(invalid_entity) is False
@@ -94,7 +94,9 @@ class TestEntityExtractor:
     def test_extract_success(self, sample_text, sample_entities):
         """Test successful entity extraction."""
         mock_llm = MagicMock()
-        mock_llm.generate.return_value = '{"entities": ' + str(sample_entities).replace("'", '"') + '}'
+        mock_llm.generate.return_value = (
+            '{"entities": ' + str(sample_entities).replace("'", '"') + "}"
+        )
         mock_llm.extract_json.return_value = {"entities": sample_entities}
 
         with patch("kg_builder.extractor.entity_extractor.get_llm_client", return_value=mock_llm):
@@ -130,14 +132,14 @@ class TestEntityExtractor:
                 "name": "Valid Entity",
                 "type": "method",
                 "description": "Valid description",
-                "confidence": 0.9
+                "confidence": 0.9,
             },
             {
                 "name": "Invalid Entity",
                 "type": "invalid_type",  # Invalid type
                 "description": "Invalid description",
-                "confidence": 0.9
-            }
+                "confidence": 0.9,
+            },
         ]
 
         mock_llm = MagicMock()
@@ -156,10 +158,7 @@ class TestEntityExtractor:
         """Test that extraction retries on failure."""
         mock_llm = MagicMock()
         # First attempt fails, second succeeds
-        mock_llm.generate.side_effect = [
-            Exception("First attempt failed"),
-            '{"entities": []}'
-        ]
+        mock_llm.generate.side_effect = [Exception("First attempt failed"), '{"entities": []}']
         mock_llm.extract_json.return_value = {"entities": []}
 
         with patch("kg_builder.extractor.entity_extractor.get_llm_client", return_value=mock_llm):

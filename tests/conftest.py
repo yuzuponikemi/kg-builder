@@ -30,19 +30,23 @@ def test_env():
 @pytest.fixture
 def test_settings(test_env, tmp_path):
     """Create test settings with temporary directories."""
-    with patch.dict(os.environ, {
-        "NEO4J_PASSWORD": "test_password",
-        "NEO4J_URI": "bolt://localhost:7687",
-        "NEO4J_USER": "neo4j",
-        "LLM_PROVIDER": "ollama",
-        "OLLAMA_MODEL": "llama3.1:8b",
-        "DATA_DIR": str(tmp_path / "data"),
-        "PAPERS_DIR": str(tmp_path / "data/papers"),
-        "EMBEDDINGS_CACHE_DIR": str(tmp_path / "data/embeddings"),
-        "EXPORTS_DIR": str(tmp_path / "data/exports"),
-    }):
+    with patch.dict(
+        os.environ,
+        {
+            "NEO4J_PASSWORD": "test_password",
+            "NEO4J_URI": "bolt://localhost:7687",
+            "NEO4J_USER": "neo4j",
+            "LLM_PROVIDER": "ollama",
+            "OLLAMA_MODEL": "llama3.1:8b",
+            "DATA_DIR": str(tmp_path / "data"),
+            "PAPERS_DIR": str(tmp_path / "data/papers"),
+            "EMBEDDINGS_CACHE_DIR": str(tmp_path / "data/embeddings"),
+            "EXPORTS_DIR": str(tmp_path / "data/exports"),
+        },
+    ):
         # Clear the lru_cache to force recreation
         from kg_builder.config import get_settings
+
         get_settings.cache_clear()
 
         settings = Settings()
@@ -129,20 +133,20 @@ def sample_entities():
             "name": "Graph Neural Networks",
             "type": "method",
             "description": "A powerful approach for learning on graph-structured data",
-            "confidence": 0.95
+            "confidence": 0.95,
         },
         {
             "name": "Message Passing Neural Network",
             "type": "method",
             "description": "A framework providing unified view of GNN architectures",
-            "confidence": 0.90
+            "confidence": 0.90,
         },
         {
             "name": "molecular property prediction",
             "type": "application",
             "description": "Application of GNNs to predict molecular properties",
-            "confidence": 0.85
-        }
+            "confidence": 0.85,
+        },
     ]
 
 
@@ -155,15 +159,15 @@ def sample_relationships():
             "target": "molecular property prediction",
             "relation": "applied_to",
             "description": "GNNs are applied to molecular property prediction",
-            "confidence": 0.90
+            "confidence": 0.90,
         },
         {
             "source": "Message Passing Neural Network",
             "target": "Graph Neural Networks",
             "relation": "provides_framework_for",
             "description": "MPNN provides unified framework for GNNs",
-            "confidence": 0.88
-        }
+            "confidence": 0.88,
+        },
     ]
 
 

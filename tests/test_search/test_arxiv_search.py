@@ -56,7 +56,7 @@ class TestArxivSearch:
         results = search_papers(
             "test query",
             max_results=5,
-            category="cs.AI" if "category" in search_papers.__code__.co_varnames else None
+            category="cs.AI" if "category" in search_papers.__code__.co_varnames else None,
         )
 
         assert isinstance(results, list)
@@ -110,10 +110,7 @@ class TestArxivDownload:
             with patch("urllib.request.urlretrieve") as mock_download:
                 mock_download.return_value = (str(tmp_path / "paper.pdf"), None)
 
-                result = download_paper(
-                    "http://arxiv.org/pdf/2403.11996",
-                    str(tmp_path)
-                )
+                result = download_paper("http://arxiv.org/pdf/2403.11996", str(tmp_path))
 
                 assert result is not None or mock_download.called
         except ImportError:

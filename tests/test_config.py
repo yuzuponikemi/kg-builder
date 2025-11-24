@@ -15,10 +15,13 @@ class TestSettings:
 
     def test_settings_with_required_fields(self, test_env, tmp_path):
         """Test settings creation with required fields."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             settings = Settings()
             assert settings.neo4j_password == "test_password"
             assert settings.neo4j_user == "neo4j"
@@ -37,12 +40,15 @@ class TestSettings:
 
     def test_llm_provider_openai(self, test_env, tmp_path):
         """Test OpenAI as LLM provider."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "LLM_PROVIDER": "openai",
-            "OPENAI_API_KEY": "test-key",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "LLM_PROVIDER": "openai",
+                "OPENAI_API_KEY": "test-key",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             settings = Settings()
             assert settings.llm_provider == "openai"
             assert settings.is_using_ollama is False
@@ -50,24 +56,30 @@ class TestSettings:
 
     def test_llm_provider_anthropic(self, test_env, tmp_path):
         """Test Anthropic as LLM provider."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "LLM_PROVIDER": "anthropic",
-            "ANTHROPIC_API_KEY": "test-key",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "LLM_PROVIDER": "anthropic",
+                "ANTHROPIC_API_KEY": "test-key",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             settings = Settings()
             assert settings.llm_provider == "anthropic"
             assert settings.has_anthropic is True
 
     def test_llm_provider_gemini(self, test_env, tmp_path):
         """Test Gemini as LLM provider."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "LLM_PROVIDER": "gemini",
-            "GEMINI_API_KEY": "test-key",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "LLM_PROVIDER": "gemini",
+                "GEMINI_API_KEY": "test-key",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             settings = Settings()
             assert settings.llm_provider == "gemini"
             assert settings.has_gemini is True
@@ -78,12 +90,15 @@ class TestSettings:
 
     def test_current_llm_model_openai(self, test_env, tmp_path):
         """Test current_llm_model returns openai model."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "LLM_PROVIDER": "openai",
-            "OPENAI_API_KEY": "test-key",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "LLM_PROVIDER": "openai",
+                "OPENAI_API_KEY": "test-key",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             settings = Settings()
             assert settings.current_llm_model == settings.openai_model
 
@@ -105,11 +120,14 @@ class TestSettings:
 
     def test_cors_origins_parsing(self, test_env, tmp_path):
         """Test CORS origins are parsed correctly."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "CORS_ORIGINS": "http://localhost:3000, http://localhost:5173, http://example.com",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "CORS_ORIGINS": "http://localhost:3000, http://localhost:5173, http://example.com",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             settings = Settings()
             assert len(settings.cors_origins) == 3
             assert "http://localhost:3000" in settings.cors_origins
@@ -120,11 +138,14 @@ class TestSettings:
         data_dir = tmp_path / "data"
         papers_dir = tmp_path / "data/papers"
 
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "DATA_DIR": str(data_dir),
-            "PAPERS_DIR": str(papers_dir),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "DATA_DIR": str(data_dir),
+                "PAPERS_DIR": str(papers_dir),
+            },
+        ):
             settings = Settings()
             assert settings.data_dir.exists()
             assert settings.papers_dir.exists()
@@ -172,18 +193,24 @@ class TestGetSettings:
         # Clear cache
         get_settings.cache_clear()
 
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "password1",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "password1",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             settings1 = get_settings()
             assert settings1.neo4j_password == "password1"
 
         # Change env (but cache should still return old instance)
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "password2",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "password2",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             settings2 = get_settings()
             # Due to cache, should still be password1
             assert settings2 is settings1

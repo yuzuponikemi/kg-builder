@@ -125,9 +125,10 @@ class EntityExtractor:
             # Merge entities, keeping highest confidence for duplicates
             for entity in entities:
                 name = entity["name"].lower()
-                if name not in all_entities or entity["confidence"] > all_entities[name][
-                    "confidence"
-                ]:
+                if (
+                    name not in all_entities
+                    or entity["confidence"] > all_entities[name]["confidence"]
+                ):
                     all_entities[name] = entity
 
         return list(all_entities.values())

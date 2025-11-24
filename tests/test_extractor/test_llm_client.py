@@ -22,14 +22,18 @@ class TestLLMClient:
 
     def test_init_with_openai_provider(self, test_env, tmp_path):
         """Test initialization with OpenAI provider."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "LLM_PROVIDER": "openai",
-            "OPENAI_API_KEY": "test-key",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "LLM_PROVIDER": "openai",
+                "OPENAI_API_KEY": "test-key",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             with patch("openai.OpenAI") as mock_client:
                 from kg_builder.config import get_settings
+
                 get_settings.cache_clear()
 
                 client = LLMClient(provider="openai")
@@ -40,14 +44,18 @@ class TestLLMClient:
 
     def test_init_with_anthropic_provider(self, test_env, tmp_path):
         """Test initialization with Anthropic provider."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "LLM_PROVIDER": "anthropic",
-            "ANTHROPIC_API_KEY": "test-key",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "LLM_PROVIDER": "anthropic",
+                "ANTHROPIC_API_KEY": "test-key",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             with patch("anthropic.Anthropic") as mock_client:
                 from kg_builder.config import get_settings
+
                 get_settings.cache_clear()
 
                 client = LLMClient(provider="anthropic")
@@ -58,15 +66,21 @@ class TestLLMClient:
 
     def test_init_with_gemini_provider(self, test_env, tmp_path):
         """Test initialization with Gemini provider."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "LLM_PROVIDER": "gemini",
-            "GEMINI_API_KEY": "test-key",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
-            with patch("google.generativeai.configure"), \
-                 patch("google.generativeai.GenerativeModel") as mock_model:
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "LLM_PROVIDER": "gemini",
+                "GEMINI_API_KEY": "test-key",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
+            with (
+                patch("google.generativeai.configure"),
+                patch("google.generativeai.GenerativeModel") as mock_model,
+            ):
                 from kg_builder.config import get_settings
+
                 get_settings.cache_clear()
 
                 client = LLMClient(provider="gemini")
@@ -86,10 +100,7 @@ class TestLLMClient:
         client.client = mock_ollama_client
 
         response = client.generate(
-            prompt="Test prompt",
-            system="Test system",
-            temperature=0.7,
-            max_tokens=1000
+            prompt="Test prompt", system="Test system", temperature=0.7, max_tokens=1000
         )
 
         assert isinstance(response, str)
@@ -97,17 +108,12 @@ class TestLLMClient:
 
     def test_generate_ollama_json_format(self, test_settings, mock_ollama_client):
         """Test JSON generation with Ollama."""
-        mock_ollama_client.chat.return_value = {
-            "message": {"content": '{"key": "value"}'}
-        }
+        mock_ollama_client.chat.return_value = {"message": {"content": '{"key": "value"}'}}
 
         client = LLMClient(provider="ollama")
         client.client = mock_ollama_client
 
-        response = client.generate(
-            prompt="Test prompt",
-            response_format="json"
-        )
+        response = client.generate(prompt="Test prompt", response_format="json")
 
         assert isinstance(response, str)
         call_args = mock_ollama_client.chat.call_args
@@ -115,14 +121,18 @@ class TestLLMClient:
 
     def test_generate_openai(self, test_env, tmp_path):
         """Test text generation with OpenAI."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "LLM_PROVIDER": "openai",
-            "OPENAI_API_KEY": "test-key",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "LLM_PROVIDER": "openai",
+                "OPENAI_API_KEY": "test-key",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             with patch("openai.OpenAI") as mock_openai:
                 from kg_builder.config import get_settings
+
                 get_settings.cache_clear()
 
                 # Setup mock
@@ -142,14 +152,18 @@ class TestLLMClient:
 
     def test_generate_openai_json_format(self, test_env, tmp_path):
         """Test JSON generation with OpenAI."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "LLM_PROVIDER": "openai",
-            "OPENAI_API_KEY": "test-key",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "LLM_PROVIDER": "openai",
+                "OPENAI_API_KEY": "test-key",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             with patch("openai.OpenAI") as mock_openai:
                 from kg_builder.config import get_settings
+
                 get_settings.cache_clear()
 
                 mock_client = MagicMock()
@@ -229,13 +243,17 @@ class TestGetLLMClient:
 
     def test_get_llm_client_with_provider(self, test_env, tmp_path):
         """Test getting client with specific provider."""
-        with patch.dict(os.environ, {
-            "NEO4J_PASSWORD": "test_password",
-            "OPENAI_API_KEY": "test-key",
-            "DATA_DIR": str(tmp_path / "data"),
-        }):
+        with patch.dict(
+            os.environ,
+            {
+                "NEO4J_PASSWORD": "test_password",
+                "OPENAI_API_KEY": "test-key",
+                "DATA_DIR": str(tmp_path / "data"),
+            },
+        ):
             with patch("openai.OpenAI"):
                 from kg_builder.config import get_settings
+
                 get_settings.cache_clear()
 
                 client = get_llm_client(provider="openai")

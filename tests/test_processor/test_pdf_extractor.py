@@ -187,7 +187,7 @@ This is the introduction.
         extractor = PDFExtractor(sample_pdf_path)
 
         # Check if extract_chunks method exists
-        if hasattr(extractor, 'extract_chunks'):
+        if hasattr(extractor, "extract_chunks"):
             chunks = extractor.extract_chunks(chunk_size=1000, overlap=100)
 
             # Should have multiple chunks

@@ -191,10 +191,7 @@ class LLMClient:
         if response_format == "json":
             generation_config["response_mime_type"] = "application/json"
 
-        response = self.client.generate_content(
-            full_prompt,
-            generation_config=generation_config
-        )
+        response = self.client.generate_content(full_prompt, generation_config=generation_config)
 
         return response.text
 
