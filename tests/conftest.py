@@ -1,12 +1,9 @@
 """Pytest configuration and shared fixtures."""
 
 import os
-import tempfile
-from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 import pytest
-from pydantic_settings import BaseSettings
 
 from kg_builder.config import Settings
 

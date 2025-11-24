@@ -1,6 +1,5 @@
 """Entity extraction from scientific text using LLMs."""
 
-import json
 from pathlib import Path
 from typing import Any
 

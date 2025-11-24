@@ -1,6 +1,5 @@
 """LLM-based relevance filtering for research papers."""
 
-import json
 from dataclasses import dataclass
 from typing import Any
 

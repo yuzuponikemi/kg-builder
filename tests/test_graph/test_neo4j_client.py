@@ -59,7 +59,6 @@ class TestNeo4jClient:
             client = Neo4jClient(**test_settings.neo4j_config)
 
             if hasattr(client, "execute_query") or hasattr(client, "run"):
-                query = "MATCH (n) RETURN n LIMIT 1"
                 # Test query execution
                 mock_session.run.assert_not_called()  # Not called yet
         except ImportError:
@@ -127,7 +126,7 @@ class TestNeo4jClient:
             try:
                 from kg_builder.graph.neo4j_client import Neo4jClient
 
-                with pytest.raises(Exception):
+                with pytest.raises(Exception):  # noqa: B017
                     Neo4jClient(**test_settings.neo4j_config)
             except ImportError:
                 pytest.skip("Neo4jClient not found")
@@ -144,7 +143,7 @@ class TestNeo4jOperations:
             client = Neo4jClient(**test_settings.neo4j_config)
 
             # Test adding entity if method exists
-            entity = sample_entities[0]
+            sample_entities[0]
             if hasattr(client, "add_entity") or hasattr(client, "create_node"):
                 # Method exists, test it
                 pass
@@ -161,7 +160,7 @@ class TestNeo4jOperations:
             client = Neo4jClient(**test_settings.neo4j_config)
 
             # Test adding relationship if method exists
-            relationship = sample_relationships[0]
+            sample_relationships[0]
             if hasattr(client, "add_relationship") or hasattr(client, "create_relationship"):
                 # Method exists, test it
                 pass

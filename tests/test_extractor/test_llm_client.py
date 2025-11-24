@@ -1,6 +1,5 @@
 """Tests for LLM client."""
 
-import json
 import os
 from unittest.mock import MagicMock, patch
 
@@ -173,7 +172,7 @@ class TestLLMClient:
                 mock_openai.return_value = mock_client
 
                 client = LLMClient(provider="openai")
-                response = client.generate(prompt="Test", response_format="json")
+                client.generate(prompt="Test", response_format="json")
 
                 call_kwargs = mock_client.chat.completions.create.call_args.kwargs
                 assert call_kwargs["response_format"] == {"type": "json_object"}

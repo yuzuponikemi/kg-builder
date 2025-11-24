@@ -8,7 +8,7 @@ Handles connection, entity/relationship creation, and queries.
 import logging
 from typing import Any
 
-from neo4j import GraphDatabase, Session
+from neo4j import GraphDatabase
 from neo4j.exceptions import ServiceUnavailable
 
 from kg_builder.config.settings import get_settings

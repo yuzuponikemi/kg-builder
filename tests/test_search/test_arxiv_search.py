@@ -121,7 +121,7 @@ class TestArxivDownload:
         try:
             from kg_builder.search.arxiv_search import download_paper
 
-            with pytest.raises(Exception):
+            with pytest.raises(Exception):  # noqa: B017
                 download_paper("invalid-url", str(tmp_path))
         except ImportError:
             pytest.skip("download_paper function not found")

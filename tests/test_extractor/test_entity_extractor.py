@@ -1,9 +1,6 @@
 """Tests for entity extraction."""
 
-from pathlib import Path
 from unittest.mock import MagicMock, patch
-
-import pytest
 
 from kg_builder.extractor.entity_extractor import EntityExtractor
 
@@ -118,7 +115,7 @@ class TestEntityExtractor:
 
         with patch("kg_builder.extractor.entity_extractor.get_llm_client", return_value=mock_llm):
             extractor = EntityExtractor()
-            entities = extractor.extract(long_text)
+            extractor.extract(long_text)
 
             # Check that generate was called with truncated text
             call_args = mock_llm.generate.call_args

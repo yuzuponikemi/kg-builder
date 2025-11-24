@@ -219,7 +219,7 @@ class LLMClient:
         try:
             return json.loads(response)
         except json.JSONDecodeError as e:
-            raise ValueError(f"Failed to parse JSON response: {e}\nResponse: {response}")
+            raise ValueError(f"Failed to parse JSON response: {e}\nResponse: {response}") from e
 
 
 def get_llm_client(provider: str | None = None) -> LLMClient:
