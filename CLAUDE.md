@@ -98,8 +98,10 @@ pre-commit run --all-files
 - `link_predictor.py`: Link prediction using similarity metrics
 - `hypothesis_generator.py`: LLM-based hypothesis generation from predicted links
 - `hypothesis_engine.py`: Orchestrates analysis, prediction, and generation
+- `recursive_alchemist.py`: Multi-layered hypothesis expansion for SF-level exploration
 - Discovers "unexplored territories" in knowledge graphs
 - Generates novel research hypotheses by combining unconnected but structurally similar concepts
+- Recursive exploration: hypotheses become new concepts for further hypothesis generation
 
 **6. Configuration** (`src/kg_builder/config/`)
 - `settings.py`: Pydantic settings model loaded from environment variables
@@ -295,6 +297,44 @@ python scripts/generate_hypotheses.py --temperature 0.9
 
 See `docs/HYPOTHESIS_GENERATION.md` for complete documentation.
 
+### Recursive Hypothesis Exploration (SF-Level) (NEW)
+
+Generate multi-layered hypothesis expansions for SF-prototype imagination:
+
+```bash
+# Basic recursive exploration
+python scripts/explore_hypotheses_recursive.py
+
+# Deep exploration (3 layers, 3 branches per layer)
+python scripts/explore_hypotheses_recursive.py \
+  --max-depth 3 \
+  --branches-per-layer 3 \
+  --hypotheses-per-layer 15
+
+# SF-level creative exploration
+python scripts/explore_hypotheses_recursive.py \
+  --max-depth 4 \
+  --temperature 0.95 \
+  --branching-criteria novelty
+```
+
+**Concept**: Hypotheses become new concepts → generate new hypotheses → repeat.
+Creates a multi-dimensional exploration tree with branches like:
+- Layer 0: Original KG
+- Layer 1: "Quantum + Biology", "AI + Materials"
+- Layer 2: "Quantum-Bio City Design", "AI-Enhanced Metamaterials"
+- Layer 3: "Self-Organizing Quantum Urban Organism" (SF territory!)
+
+**Branching Criteria**:
+- `diversity`: Branch by concept type combinations
+- `impact`: Branch by high/medium/low impact
+- `novelty`: Branch by innovation level
+- `feasibility`: Branch by short/mid/long-term realizability
+
+**Output**: Multi-layered JSON tree in `data/hypotheses/exploration_tree_*.json`
+
+See `docs/RECURSIVE_HYPOTHESIS_EXPLORATION.md` for complete documentation.
+
 ## Important Patterns
 
 ### Entity Types
@@ -356,11 +396,12 @@ src/kg_builder/
 └── sdk/              # Python client SDK (stub)
 
 scripts/              # Utility scripts
-├── search_and_download_papers.py  # Main paper acquisition workflow
-├── batch_extract_papers.py        # Batch processing
-├── generate_hypotheses.py         # Hypothesis generation from KG
-├── setup_ollama.py                # Ollama setup helper
-└── setup_neo4j.py                 # Database initialization
+├── search_and_download_papers.py    # Main paper acquisition workflow
+├── batch_extract_papers.py          # Batch processing
+├── generate_hypotheses.py           # Hypothesis generation from KG
+├── explore_hypotheses_recursive.py  # Recursive multi-layer exploration
+├── setup_ollama.py                  # Ollama setup helper
+└── setup_neo4j.py                   # Database initialization
 
 data/
 ├── papers/           # Downloaded PDFs
