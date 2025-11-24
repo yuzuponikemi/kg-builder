@@ -30,12 +30,8 @@ class Settings(BaseSettings):
     )
 
     # Ollama Configuration (Local LLM)
-    ollama_base_url: str = Field(
-        default="http://localhost:11434", description="Ollama base URL"
-    )
-    ollama_model: str = Field(
-        default="llama3.1:8b", description="Ollama model to use"
-    )
+    ollama_base_url: str = Field(default="http://localhost:11434", description="Ollama base URL")
+    ollama_model: str = Field(default="llama3.1:8b", description="Ollama model to use")
     ollama_timeout: int = Field(default=300, description="Ollama request timeout in seconds")
     ollama_num_ctx: int = Field(default=8192, description="Ollama context window size")
     ollama_num_gpu: int = Field(default=1, description="Number of GPUs for Ollama (0 for CPU)")
@@ -53,16 +49,15 @@ class Settings(BaseSettings):
 
     # Gemini Configuration (Optional)
     gemini_api_key: str | None = Field(default=None, description="Google Gemini API key")
-    gemini_model: str = Field(
-        default="gemini-2.5-flash", description="Gemini model to use"
-    )
+    gemini_model: str = Field(default="gemini-2.5-flash", description="Gemini model to use")
 
     # Embedding Configuration
     embedding_provider: Literal["local", "openai", "ollama"] = Field(
         default="local", description="Embedding provider to use"
     )
     embedding_model: str = Field(
-        default="BAAI/bge-large-en-v1.5", description="Sentence transformer model for local embeddings"
+        default="BAAI/bge-large-en-v1.5",
+        description="Sentence transformer model for local embeddings",
     )
     ollama_embedding_model: str = Field(
         default="nomic-embed-text", description="Ollama model for embeddings"
@@ -89,46 +84,32 @@ class Settings(BaseSettings):
 
     # Data Paths
     data_dir: Path = Field(default=Path("./data"), description="Base data directory")
-    papers_dir: Path = Field(
-        default=Path("./data/papers"), description="Directory for PDF papers"
-    )
+    papers_dir: Path = Field(default=Path("./data/papers"), description="Directory for PDF papers")
     embeddings_cache_dir: Path = Field(
         default=Path("./data/embeddings"), description="Directory for cached embeddings"
     )
-    exports_dir: Path = Field(
-        default=Path("./data/exports"), description="Directory for exports"
-    )
+    exports_dir: Path = Field(default=Path("./data/exports"), description="Directory for exports")
 
     # Processing Configuration
     max_concurrent_extractions: int = Field(
         default=5, description="Maximum concurrent extraction tasks"
     )
-    extraction_timeout: int = Field(
-        default=300, description="Extraction timeout in seconds"
-    )
-    default_temperature: float = Field(
-        default=0.0, description="Default LLM temperature"
-    )
+    extraction_timeout: int = Field(default=300, description="Extraction timeout in seconds")
+    default_temperature: float = Field(default=0.0, description="Default LLM temperature")
     max_tokens: int = Field(default=4000, description="Maximum tokens for LLM responses")
 
     # Logging Configuration
     log_level: Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"] = Field(
         default="INFO", description="Logging level"
     )
-    log_format: Literal["json", "text"] = Field(
-        default="json", description="Log format"
-    )
+    log_format: Literal["json", "text"] = Field(default="json", description="Log format")
     log_file: Path | None = Field(
         default=Path("./logs/kg-builder.log"), description="Log file path"
     )
 
     # Feature Flags
-    enable_arxiv_integration: bool = Field(
-        default=True, description="Enable ArXiv integration"
-    )
-    enable_pubmed_integration: bool = Field(
-        default=False, description="Enable PubMed integration"
-    )
+    enable_arxiv_integration: bool = Field(default=True, description="Enable ArXiv integration")
+    enable_pubmed_integration: bool = Field(default=False, description="Enable PubMed integration")
     enable_graphql: bool = Field(default=True, description="Enable GraphQL endpoint")
     enable_websockets: bool = Field(default=True, description="Enable WebSocket support")
 
@@ -138,9 +119,7 @@ class Settings(BaseSettings):
         """Parse comma-separated CORS origins."""
         return [origin.strip() for origin in v.split(",")]
 
-    @field_validator(
-        "data_dir", "papers_dir", "embeddings_cache_dir", "exports_dir", mode="before"
-    )
+    @field_validator("data_dir", "papers_dir", "embeddings_cache_dir", "exports_dir", mode="before")
     @classmethod
     def validate_path(cls, v: str | Path) -> Path:
         """Validate and create path if it doesn't exist."""
@@ -204,7 +183,7 @@ class Settings(BaseSettings):
         }
 
 
-@lru_cache()
+@lru_cache
 def get_settings() -> Settings:
     """Get cached application settings."""
     return Settings()

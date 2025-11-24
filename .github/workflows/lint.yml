@@ -1,0 +1,76 @@
+name: Lint & Format
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - 'claude/**'
+  pull_request:
+    branches:
+      - main
+      - develop
+
+concurrency:
+  group: lint-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Code Quality Checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install black ruff mypy
+
+      - name: Check code formatting with Black
+        run: |
+          echo "## Black Format Check" >> $GITHUB_STEP_SUMMARY
+          black --check src/ tests/ || {
+            echo "❌ Code formatting issues found" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Run \`black src/ tests/\` to fix formatting" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          }
+          echo "✅ All files properly formatted" >> $GITHUB_STEP_SUMMARY
+
+      - name: Lint with Ruff
+        run: |
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## Ruff Lint Check" >> $GITHUB_STEP_SUMMARY
+          ruff check src/ tests/ || {
+            echo "❌ Linting issues found" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Run \`ruff check src/ tests/ --fix\` to fix issues" >> $GITHUB_STEP_SUMMARY
+            exit 1
+          }
+          echo "✅ No linting issues found" >> $GITHUB_STEP_SUMMARY
+
+      - name: Type check with mypy (optional)
+        run: |
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "## MyPy Type Check" >> $GITHUB_STEP_SUMMARY
+          mypy src/ --ignore-missing-imports || {
+            echo "⚠️ Type checking issues found (non-blocking)" >> $GITHUB_STEP_SUMMARY
+          }
+        continue-on-error: true
+
+      - name: Summary
+        if: success()
+        run: |
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "### ✅ All code quality checks passed!" >> $GITHUB_STEP_SUMMARY
