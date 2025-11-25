@@ -1,0 +1,119 @@
+name: 🤖 Claude Task
+description: Request Claude to perform a specific task
+title: "[Claude]: "
+labels: ["claude", "automation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request Claude Code to perform automated tasks like fixing bugs, implementing features, or improving code.
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Task Type
+      description: What type of task should Claude perform?
+      options:
+        - Bug Fix
+        - Feature Implementation
+        - Code Refactoring
+        - Documentation
+        - Testing
+        - Code Review
+        - Performance Optimization
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: task-description
+    attributes:
+      label: Task Description
+      description: Detailed description of what Claude should do
+      placeholder: |
+        @claude Please...
+
+        Detailed requirements:
+        1. ...
+        2. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context & Files
+      description: List relevant files, directories, or background information
+      placeholder: |
+        Relevant files:
+        - src/kg_builder/extractor/entity_extractor.py
+        - tests/test_extractor.py
+
+        Context:
+        - This relates to issue #123
+        - The problem occurs when...
+    validations:
+      required: false
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements & Constraints
+      description: Any specific requirements or constraints
+      placeholder: |
+        - Maintain backward compatibility
+        - Follow existing code patterns
+        - Add comprehensive tests
+        - Update documentation
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How to verify the task is complete
+      placeholder: |
+        - [ ] All tests pass
+        - [ ] Code follows project style
+        - [ ] Documentation is updated
+        - [ ] No ruff/mypy errors
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this task?
+      options:
+        - Critical - ASAP
+        - High - Within 24 hours
+        - Medium - Within a week
+        - Low - When convenient
+    validations:
+      required: true
+
+  - type: textarea
+    id: related
+    attributes:
+      label: Related Issues/PRs
+      description: Link to related issues or pull requests
+      placeholder: |
+        - Related to #123
+        - Fixes #456
+        - Depends on #789
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have provided clear and detailed requirements
+          required: true
+        - label: I have specified all relevant files and context
+          required: false
+        - label: I have defined acceptance criteria
+          required: false
+        - label: I will review Claude's work and provide feedback
+          required: true

@@ -139,3 +139,7 @@ exclude_lines = [
     "if __name__ == .__main__.:",
     "if TYPE_CHECKING:",
 ]
+
+[tool.bandit]
+exclude_dirs = ["tests", "examples", "scripts"]
+skips = ["B101"]  # Skip assert_used in tests
