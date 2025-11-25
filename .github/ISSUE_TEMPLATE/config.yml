@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/yuzuponikemi/kg-builder/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 📚 Documentation
+    url: https://github.com/yuzuponikemi/kg-builder#readme
+    about: Read the documentation for help and guides

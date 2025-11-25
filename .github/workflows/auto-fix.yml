@@ -1,0 +1,131 @@
+name: Auto-fix CI Failures
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+    branches: ["claude/**"]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  auto-fix:
+    name: Auto-fix Failed CI
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the branch that triggered the CI
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+          fetch-depth: 0
+
+      # 2. Download test logs from failed CI run
+      - name: Download test logs
+        uses: actions/download-artifact@v4
+        with:
+          name: test-logs-py3.11
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
+      # 3. Prepare error context for Claude
+      - name: Prepare error context
+        id: error-context
+        run: |
+          echo "## 🔧 CI Test Failure Report" > error-context.md
+          echo "" >> error-context.md
+          echo "**Branch**: \`${{ github.event.workflow_run.head_branch }}\`" >> error-context.md
+          echo "**Commit**: \`${{ github.event.workflow_run.head_sha }}\`" >> error-context.md
+          echo "**Workflow Run**: [#${{ github.event.workflow_run.run_number }}](${{ github.event.workflow_run.html_url }})" >> error-context.md
+          echo "" >> error-context.md
+          echo "---" >> error-context.md
+          echo "" >> error-context.md
+
+          # Add pytest errors
+          if [ -f pytest.log ]; then
+            echo "### 🧪 Pytest Errors" >> error-context.md
+            echo "\`\`\`" >> error-context.md
+            tail -n 100 pytest.log >> error-context.md
+            echo "\`\`\`" >> error-context.md
+            echo "" >> error-context.md
+          fi
+
+          # Add ruff errors
+          if [ -f ruff-check.log ]; then
+            echo "### 🔍 Ruff Linter Errors" >> error-context.md
+            echo "\`\`\`" >> error-context.md
+            cat ruff-check.log >> error-context.md
+            echo "\`\`\`" >> error-context.md
+            echo "" >> error-context.md
+          fi
+
+          # Add ruff format errors
+          if [ -f ruff-format.log ]; then
+            echo "### 📝 Ruff Format Errors" >> error-context.md
+            echo "\`\`\`" >> error-context.md
+            cat ruff-format.log >> error-context.md
+            echo "\`\`\`" >> error-context.md
+            echo "" >> error-context.md
+          fi
+
+          # Add mypy errors
+          if [ -f mypy.log ]; then
+            echo "### 🔎 Mypy Type Errors" >> error-context.md
+            echo "\`\`\`" >> error-context.md
+            cat mypy.log >> error-context.md
+            echo "\`\`\`" >> error-context.md
+            echo "" >> error-context.md
+          fi
+
+      # 4. Create issue for Claude to fix
+      - name: Create auto-fix issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const errorContext = fs.readFileSync('error-context.md', 'utf8');
+            const branch = '${{ github.event.workflow_run.head_branch }}';
+
+            const issue = await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `[Auto-fix] CI Failed on ${branch}`,
+              body: `${errorContext}
+
+___
+
+@claude The CI workflow has failed on branch \`${branch}\`. Please analyze the errors above and fix them.
+
+**Instructions:**
+1. Review the error logs above
+2. Fix the failing tests, type errors, or linting issues
+3. Commit your fixes to the \`${branch}\` branch
+4. Push the changes to trigger CI again
+
+**Priority:**
+- Fix ruff formatting issues first (run \`ruff format .\`)
+- Then fix ruff linting issues
+- Then fix mypy type errors
+- Finally fix any failing tests
+
+Close this issue after all fixes are committed and CI passes.
+              `,
+              labels: ['auto-fix', 'claude', 'ci-failure']
+            });
+
+            console.log('Created issue:', issue.data.number);
+
+      # 5. Upload error context as artifact
+      - name: Upload error context
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: auto-fix-context
+          path: error-context.md
+          retention-days: 7

@@ -1,0 +1,173 @@
+name: CI
+
+on:
+  push:
+    branches: ["main", "develop", "claude/**"]
+  pull_request:
+    branches: ["main", "develop"]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Test (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required for auto-commit of requirements.txt
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      # 1. Checkout code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. Set up Python
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      # 3. Install uv
+      - name: Install uv
+        run: |
+          python -m pip install --upgrade pip
+          pip install uv
+
+      # 4. Compile requirements.txt from requirements.in
+      - name: Compile requirements.txt
+        run: uv pip compile requirements.in -o requirements.txt
+
+      # 5. Check if requirements.txt changed
+      - name: Check for requirements.txt changes
+        id: check-requirements
+        run: |
+          if git diff --quiet requirements.txt; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      # 6. Commit updated requirements.txt (only on main Python version)
+      - name: Commit updated requirements.txt
+        if: steps.check-requirements.outputs.changed == 'true' && matrix.python-version == '3.11' && github.event_name == 'push'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add requirements.txt
+          git commit -m "Auto-update requirements.txt from requirements.in"
+          git push
+
+      # 7. Install dependencies
+      - name: Install dependencies
+        run: |
+          uv pip install --system -r requirements.txt
+          uv pip install --system -e ".[dev]"
+
+      # 8. Run ruff linter (continue on error to run all checks)
+      - name: Run ruff linter
+        id: ruff-check
+        continue-on-error: true
+        run: |
+          ruff check . 2>&1 | tee ruff-check.log
+          exit ${PIPESTATUS[0]}
+
+      # 9. Run ruff formatter check
+      - name: Check code formatting with ruff
+        id: ruff-format
+        continue-on-error: true
+        run: |
+          ruff format --check . 2>&1 | tee ruff-format.log
+          exit ${PIPESTATUS[0]}
+
+      # 10. Run mypy type checker
+      - name: Run mypy type checker
+        id: mypy
+        continue-on-error: true
+        run: |
+          mypy src/kg_builder --ignore-missing-imports 2>&1 | tee mypy.log
+          exit ${PIPESTATUS[0]}
+
+      # 11. Run pytest
+      - name: Run pytest
+        id: pytest
+        continue-on-error: true
+        run: |
+          python -m pytest -v --tb=short --cov=kg_builder --cov-report=term-missing --cov-report=html 2>&1 | tee pytest.log
+          exit ${PIPESTATUS[0]}
+
+      # 12. Upload coverage reports
+      - name: Upload coverage to artifacts
+        if: always() && matrix.python-version == '3.11'
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: htmlcov/
+          retention-days: 7
+
+      # 13. Upload test logs
+      - name: Upload test logs as artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-logs-py${{ matrix.python-version }}
+          path: |
+            pytest.log
+            ruff-check.log
+            ruff-format.log
+            mypy.log
+          retention-days: 7
+
+      # 14. Generate test summary
+      - name: Generate test summary
+        if: always()
+        run: |
+          echo "## CI Test Results (Python ${{ matrix.python-version }})" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          # Ruff check status
+          if [ "${{ steps.ruff-check.outcome }}" == "success" ]; then
+            echo "✅ **Ruff Linter**: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Ruff Linter**: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          # Ruff format status
+          if [ "${{ steps.ruff-format.outcome }}" == "success" ]; then
+            echo "✅ **Ruff Formatter**: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Ruff Formatter**: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          # Mypy status
+          if [ "${{ steps.mypy.outcome }}" == "success" ]; then
+            echo "✅ **Mypy Type Check**: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Mypy Type Check**: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          # Pytest status
+          if [ "${{ steps.pytest.outcome }}" == "success" ]; then
+            echo "✅ **Pytest**: Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "❌ **Pytest**: Failed" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      # 15. Check if any step failed
+      - name: Check if any step failed
+        if: |
+          steps.ruff-check.outcome == 'failure' ||
+          steps.ruff-format.outcome == 'failure' ||
+          steps.mypy.outcome == 'failure' ||
+          steps.pytest.outcome == 'failure'
+        run: |
+          echo "::error::CI checks failed. Check the logs for details."
+          exit 1
