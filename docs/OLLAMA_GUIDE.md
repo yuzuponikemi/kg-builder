@@ -461,7 +461,7 @@ Use the provided setup script:
 
 ```bash
 # Run Ollama setup
-python scripts/setup_ollama.py
+uv run python scripts/setup_ollama.py
 
 # This will:
 # 1. Check if Ollama is installed

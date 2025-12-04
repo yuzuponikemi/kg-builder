@@ -59,7 +59,7 @@ ollama pull nomic-embed-text
 
 4. **Run automated setup**:
 ```bash
-python scripts/setup_ollama.py
+uv run python scripts/setup_ollama.py
 # This will check your system and recommend the best models
 ```
 
@@ -75,7 +75,7 @@ python scripts/setup_ollama.py
 
 ```bash
 # Complete pipeline: Search → Filter → Download → Extract → Save JSON
-python scripts/build_knowledge_graph.py "knowledge graph construction"
+uv run python scripts/build_knowledge_graph.py "knowledge graph construction"
 ```
 
 **That's it!** This single command will:
@@ -96,16 +96,16 @@ python scripts/build_knowledge_graph.py "knowledge graph construction"
 **Options:**
 ```bash
 # Get 10 papers
-python scripts/build_knowledge_graph.py "graph neural networks" --max-papers 10
+uv run python scripts/build_knowledge_graph.py "graph neural networks" --max-papers 10
 
 # Only review papers (established knowledge)
-python scripts/build_knowledge_graph.py "materials science" --review-papers-only
+uv run python scripts/build_knowledge_graph.py "materials science" --review-papers-only
 
 # Create combined graph
-python scripts/build_knowledge_graph.py "transformers" --combine
+uv run python scripts/build_knowledge_graph.py "transformers" --combine
 
 # Higher quality threshold
-python scripts/build_knowledge_graph.py "quantum computing" --threshold 0.85
+uv run python scripts/build_knowledge_graph.py "quantum computing" --threshold 0.85
 ```
 
 **📖 Complete guide with step-by-step explanation**: [Pipeline Guide (日本語)](docs/PIPELINE_GUIDE.md)
@@ -118,13 +118,13 @@ Automatically search arXiv and download relevant papers using LLM-powered filter
 
 ```bash
 # Search for papers and download the most relevant ones
-python scripts/search_and_download_papers.py "knowledge graph construction"
+uv run python scripts/search_and_download_papers.py "knowledge graph construction"
 
 # Search, filter, and extract knowledge in one command
-python scripts/search_and_download_papers.py "neural networks" --auto-extract
+uv run python scripts/search_and_download_papers.py "neural networks" --auto-extract
 
 # Get top 5 most relevant papers
-python scripts/search_and_download_papers.py "LLM reasoning" --top-n 5
+uv run python scripts/search_and_download_papers.py "LLM reasoning" --top-n 5
 ```
 
 **Features:**
@@ -144,19 +144,19 @@ Load JSON knowledge graphs into Neo4j for powerful querying and analysis:
 
 ```bash
 # Import all knowledge graphs into Neo4j
-python scripts/import_to_neo4j.py data/exports/
+uv run python scripts/import_to_neo4j.py data/exports/
 
 # Explore in browser
 open http://localhost:7474
 
 # Search for concepts
-python scripts/neo4j_manager.py search "neural network"
+uv run python scripts/neo4j_manager.py search "neural network"
 
 # Show statistics
-python scripts/neo4j_manager.py stats
+uv run python scripts/neo4j_manager.py stats
 
 # Export back to JSON (for sharing/backup)
-python scripts/export_from_neo4j.py --output backup.json
+uv run python scripts/export_from_neo4j.py --output backup.json
 ```
 
 **Why Use Both JSON and Neo4j?**
@@ -220,9 +220,15 @@ See **[Neo4j Guide](docs/NEO4J_GUIDE.md)** for complete documentation.
 git clone https://github.com/yourusername/kg-builder.git
 cd kg-builder
 
+# Install uv (modern Python package manager)
+# Option 1: Using the official installer (recommended)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Option 2: Using pipx (alternative)
+# pipx install uv
+
 # Install dependencies with uv
-pip install uv
-uv pip install -e ".[dev]"
+uv sync
 
 # Set up environment
 cp .env.example .env
@@ -252,13 +258,13 @@ docker-compose -f docker/docker-compose.yml -f docker/docker-compose.ollama-cpu.
 
 ```bash
 # Set up Neo4j schema and indexes
-python scripts/setup_neo4j.py
+uv run python scripts/setup_neo4j.py
 ```
 
 ### Start API Server (Development)
 
 ```bash
-uvicorn kg_builder.api.main:app --reload
+uv run uvicorn kg_builder.api.main:app --reload
 ```
 
 Visit http://localhost:8000/docs for interactive API documentation.
@@ -447,33 +453,34 @@ class ResearchAgent:
 ### Install Development Dependencies
 
 ```bash
-uv pip install -e ".[dev]"
+# Development dependencies are automatically installed with uv sync
+uv sync --all-extras
 ```
 
 ### Run Tests
 
 ```bash
-pytest tests/ -v --cov=kg_builder
+uv run pytest tests/ -v --cov=kg_builder
 ```
 
 ### Code Quality
 
 ```bash
 # Format code
-black src/
+uv run black src/
 
 # Lint
-ruff check src/
+uv run ruff check src/
 
 # Type check
-mypy src/
+uv run mypy src/
 ```
 
 ### Pre-commit Hooks
 
 ```bash
-pre-commit install
-pre-commit run --all-files
+uv run pre-commit install
+uv run pre-commit run --all-files
 ```
 
 ## Roadmap

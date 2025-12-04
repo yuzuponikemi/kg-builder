@@ -12,15 +12,36 @@ Based on the paper ["Accelerating Scientific Discovery with Generative Knowledge
 
 ### Installation
 
+**CRITICAL: UV-ONLY POLICY**
+This project **EXCLUSIVELY** uses `uv` as the package manager. **NEVER** use `pip` directly.
+
 ```bash
-# Install dependencies with uv (preferred package manager)
-pip install uv
-uv pip install -e ".[dev]"
+# Install uv (if not already installed)
+# Option 1: Official installer (recommended)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Option 2: Using pipx
+# pipx install uv
+
+# Install all dependencies (including dev dependencies)
+uv sync
 
 # Set up environment
 cp .env.example .env
 # Edit .env with required settings (Neo4j password is required)
 ```
+
+**Why UV?**
+- ⚡ **10-100x faster** than pip
+- 🔒 **Deterministic** dependency resolution with uv.lock
+- 🎯 **Unified** tool for package management and script execution
+- 🔄 **Modern** Python packaging with full PEP 621 support
+
+**UV Rules for AI Agents:**
+1. **NEVER** use `pip install` - always use `uv sync` or `uv add`
+2. **ALWAYS** use `uv run python script.py` instead of `python script.py`
+3. **ALWAYS** use `uv run <command>` for any Python tooling (pytest, black, ruff, etc.)
+4. If you see `python` without `uv run` in documentation, it's outdated - use `uv run python`
 
 ### Start Services
 
@@ -32,39 +53,43 @@ docker-compose -f docker/docker-compose.yml up -d neo4j redis
 docker-compose -f docker/docker-compose.yml up -d
 
 # Initialize database schema
-python scripts/setup_neo4j.py
+uv run python scripts/setup_neo4j.py
 
 # Start API server (development)
-uvicorn kg_builder.api.main:app --reload
+uv run uvicorn kg_builder.api.main:app --reload
 ```
 
 ## Testing
 
+**MANDATORY: Always use `uv run` for all test commands.**
+
 ```bash
 # Run all tests with coverage
-pytest tests/ -v --cov=kg_builder
+uv run pytest tests/ -v --cov=kg_builder
 
 # Run specific test file
-pytest tests/test_specific.py -v
+uv run pytest tests/test_specific.py -v
 
 # Run tests with output
-pytest tests/ -v -s
+uv run pytest tests/ -v -s
 ```
 
 ## Code Quality
 
+**MANDATORY: Always use `uv run` for all code quality tools.**
+
 ```bash
 # Format code (always run before committing)
-black src/
+uv run black src/
 
 # Lint code
-ruff check src/
+uv run ruff check src/
 
 # Type check
-mypy src/
+uv run mypy src/
 
 # Run all pre-commit hooks
-pre-commit run --all-files
+uv run pre-commit run --all-files
 ```
 
 ## Architecture
@@ -147,16 +172,18 @@ Key configuration properties:
 
 ## Common Development Tasks
 
+**CRITICAL UV RULE**: **ALWAYS** use `uv run python` instead of `python` directly for all scripts.
+
 ### End-to-End Pipeline (Most Common)
 
 **Recommended for building knowledge graphs from a topic:**
 
 ```bash
 # Complete pipeline: Search → Filter → Download → Extract → Save JSON
-python scripts/build_knowledge_graph.py "knowledge graph construction"
+uv run python scripts/build_knowledge_graph.py "knowledge graph construction"
 
 # With options
-python scripts/build_knowledge_graph.py "graph neural networks" \
+uv run python scripts/build_knowledge_graph.py "graph neural networks" \
   --max-papers 10 \
   --review-papers-only \
   --combine \
@@ -177,17 +204,17 @@ See `docs/PIPELINE_GUIDE.md` for detailed documentation (Japanese).
 
 ```bash
 # Search arXiv and download relevant papers using LLM filtering
-python scripts/search_and_download_papers.py "knowledge graph construction"
+uv run python scripts/search_and_download_papers.py "knowledge graph construction"
 
 # With options
-python scripts/search_and_download_papers.py "neural networks" \
+uv run python scripts/search_and_download_papers.py "neural networks" \
   --max-results 20 \
   --threshold 0.6 \
   --top-n 5 \
   --auto-extract
 
 # Search by category
-python scripts/search_and_download_papers.py "recent advances" \
+uv run python scripts/search_and_download_papers.py "recent advances" \
   --category cs.AI \
   --recent-days 30
 ```
@@ -196,17 +223,17 @@ python scripts/search_and_download_papers.py "recent advances" \
 
 ```bash
 # Process single paper
-python examples/ingest_paper.py data/papers/paper.pdf
+uv run python examples/ingest_paper.py data/papers/paper.pdf
 
 # Batch process multiple papers
-python scripts/batch_extract_papers.py data/papers/
+uv run python scripts/batch_extract_papers.py data/papers/
 ```
 
 ### Setup Ollama (Local LLM)
 
 ```bash
 # Run automated setup script
-python scripts/setup_ollama.py
+uv run python scripts/setup_ollama.py
 
 # Or manually:
 ollama pull llama3.1:8b  # Recommended model
@@ -217,25 +244,25 @@ ollama pull nomic-embed-text  # For embeddings
 
 ```bash
 # Import JSON knowledge graphs to Neo4j
-python scripts/import_to_neo4j.py data/exports/
+uv run python scripts/import_to_neo4j.py data/exports/
 
 # Import single file
-python scripts/import_to_neo4j.py data/exports/paper_knowledge_graph.json
+uv run python scripts/import_to_neo4j.py data/exports/paper_knowledge_graph.json
 
 # Clear database and import
-python scripts/import_to_neo4j.py data/exports/ --clear
+uv run python scripts/import_to_neo4j.py data/exports/ --clear
 
 # Export from Neo4j to JSON
-python scripts/export_from_neo4j.py --output backup.json
+uv run python scripts/export_from_neo4j.py --output backup.json
 
 # Export specific paper
-python scripts/export_from_neo4j.py --paper "2403_11996" --output paper.json
+uv run python scripts/export_from_neo4j.py --paper "2403_11996" --output paper.json
 
 # Database management
-python scripts/neo4j_manager.py stats           # Show statistics
-python scripts/neo4j_manager.py search "neural" # Search concepts
-python scripts/neo4j_manager.py concept "GNN"   # Show concept details
-python scripts/neo4j_manager.py papers          # List all papers
+uv run python scripts/neo4j_manager.py stats           # Show statistics
+uv run python scripts/neo4j_manager.py search "neural" # Search concepts
+uv run python scripts/neo4j_manager.py concept "GNN"   # Show concept details
+uv run python scripts/neo4j_manager.py papers          # List all papers
 ```
 
 **Why both JSON and Neo4j?**
