@@ -64,23 +64,27 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
-      # 3. 依存関係のインストール
+      # 3. UV のセットアップ
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
+          cache-dependency-glob: "pyproject.toml"
+
+      # 4. 依存関係のインストール
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install uv
-          uv pip install --system -e .
+          uv sync --all-extras
 
-      # 4. データディレクトリの作成
+      # 5. データディレクトリの作成
       - name: Create data directories
         run: |
           mkdir -p data/papers
           mkdir -p data/exports
           mkdir -p logs
 
-      # 5. 環境変数の設定
+      # 6. 環境変数の設定
       - name: Configure environment
         run: |
           cat > .env << EOF
@@ -99,7 +103,7 @@ jobs:
           LOG_LEVEL=INFO
           EOF
 
-      # 6. トピックの決定（schedule実行時はデフォルト値を使用）
+      # 7. トピックの決定（schedule実行時はデフォルト値を使用）
       - name: Determine topic
         id: topic
         run: |
@@ -118,7 +122,7 @@ jobs:
             echo "threshold=0.7" >> $GITHUB_OUTPUT
           fi
 
-      # 7. パイプラインの実行
+      # 8. パイプラインの実行
       - name: Run knowledge graph pipeline
         id: pipeline
         run: |
@@ -134,11 +138,11 @@ jobs:
             ARGS="$ARGS --combine"
           fi
 
-          # パイプライン実行
-          python scripts/build_knowledge_graph.py "${{ steps.topic.outputs.topic }}" $ARGS
+          # パイプライン実行（UV経由）
+          uv run python scripts/build_knowledge_graph.py "${{ steps.topic.outputs.topic }}" $ARGS
         continue-on-error: false
 
-      # 8. 実行サマリーの生成
+      # 9. 実行サマリーの生成
       - name: Generate summary
         if: always()
         run: |
@@ -162,7 +166,7 @@ jobs:
             ls -lh data/exports/*.json | awk '{print "- " $9 " (" $5 ")"}' >> $GITHUB_STEP_SUMMARY
           fi
 
-      # 9. 成果物のアップロード（JSONファイル）
+      # 10. 成果物のアップロード（JSONファイル）
       - name: Upload knowledge graphs
         uses: actions/upload-artifact@v4
         if: always()
@@ -173,7 +177,7 @@ jobs:
             data/papers/papers_index.json
           retention-days: 90  # 90日間保持
 
-      # 10. 成果物のアップロード（ログ）
+      # 11. 成果物のアップロード（ログ）
       - name: Upload logs
         uses: actions/upload-artifact@v4
         if: always()

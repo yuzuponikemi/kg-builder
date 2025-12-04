@@ -25,7 +25,7 @@
 
 ✅ **ワンコマンドで完了**
 ```bash
-python scripts/build_knowledge_graph.py "knowledge graph construction"
+uv run python scripts/build_knowledge_graph.py "knowledge graph construction"
 ```
 
 これだけで：
@@ -65,7 +65,7 @@ cat .env | grep NEO4J_PASSWORD
 
 ```bash
 # トピックを指定して実行（デフォルト: 5論文、レビュー論文優先）
-python scripts/build_knowledge_graph.py "knowledge graph construction"
+uv run python scripts/build_knowledge_graph.py "knowledge graph construction"
 ```
 
 **これだけです！** 後は自動で実行されます。
@@ -609,7 +609,7 @@ Saved combined graph: combined_knowledge_graph.json
 
 #### 1. レビュー論文優先モード（デフォルト）
 ```bash
-python scripts/build_knowledge_graph.py "topic"
+uv run python scripts/build_knowledge_graph.py "topic"
 ```
 
 **動作**:
@@ -621,7 +621,7 @@ python scripts/build_knowledge_graph.py "topic"
 
 #### 2. レビュー論文のみモード
 ```bash
-python scripts/build_knowledge_graph.py "topic" --review-papers-only
+uv run python scripts/build_knowledge_graph.py "topic" --review-papers-only
 ```
 
 **動作**:
@@ -635,7 +635,7 @@ python scripts/build_knowledge_graph.py "topic" --review-papers-only
 
 #### 3. 全論文モード
 ```bash
-python scripts/build_knowledge_graph.py "topic" --no-review-preference
+uv run python scripts/build_knowledge_graph.py "topic" --no-review-preference
 ```
 
 **動作**:
@@ -681,7 +681,7 @@ def _is_review_paper(paper):
 ### 例1: 基本的な実行
 
 ```bash
-python scripts/build_knowledge_graph.py "knowledge graph construction"
+uv run python scripts/build_knowledge_graph.py "knowledge graph construction"
 ```
 
 **結果**:
@@ -692,7 +692,7 @@ python scripts/build_knowledge_graph.py "knowledge graph construction"
 ### 例2: 論文数を増やす
 
 ```bash
-python scripts/build_knowledge_graph.py "graph neural networks" --max-papers 10
+uv run python scripts/build_knowledge_graph.py "graph neural networks" --max-papers 10
 ```
 
 **結果**:
@@ -703,7 +703,7 @@ python scripts/build_knowledge_graph.py "graph neural networks" --max-papers 10
 ### 例3: レビュー論文のみ
 
 ```bash
-python scripts/build_knowledge_graph.py "materials science" --review-papers-only
+uv run python scripts/build_knowledge_graph.py "materials science" --review-papers-only
 ```
 
 **結果**:
@@ -714,7 +714,7 @@ python scripts/build_knowledge_graph.py "materials science" --review-papers-only
 ### 例4: 統合グラフ作成
 
 ```bash
-python scripts/build_knowledge_graph.py "transformers" --max-papers 8 --combine
+uv run python scripts/build_knowledge_graph.py "transformers" --max-papers 8 --combine
 ```
 
 **結果**:
@@ -725,7 +725,7 @@ python scripts/build_knowledge_graph.py "transformers" --max-papers 8 --combine
 ### 例5: 高品質フィルタリング
 
 ```bash
-python scripts/build_knowledge_graph.py "quantum computing" --threshold 0.85 --max-papers 3
+uv run python scripts/build_knowledge_graph.py "quantum computing" --threshold 0.85 --max-papers 3
 ```
 
 **結果**:
@@ -735,7 +735,7 @@ python scripts/build_knowledge_graph.py "quantum computing" --threshold 0.85 --m
 ### 例6: サイレントモード
 
 ```bash
-python scripts/build_knowledge_graph.py "deep learning" --quiet
+uv run python scripts/build_knowledge_graph.py "deep learning" --quiet
 ```
 
 **結果**:
@@ -747,16 +747,16 @@ python scripts/build_knowledge_graph.py "deep learning" --quiet
 
 ```bash
 # 1. パイプライン実行
-python scripts/build_knowledge_graph.py "knowledge graphs" --max-papers 5 --combine
+uv run python scripts/build_knowledge_graph.py "knowledge graphs" --max-papers 5 --combine
 
 # 2. Neo4jにインポート
-python scripts/import_to_neo4j.py data/exports/
+uv run python scripts/import_to_neo4j.py data/exports/
 
 # 3. 統計確認
-python scripts/neo4j_manager.py stats
+uv run python scripts/neo4j_manager.py stats
 
 # 4. コンセプト検索
-python scripts/neo4j_manager.py search "graph"
+uv run python scripts/neo4j_manager.py search "graph"
 
 # 5. Neo4jブラウザで可視化
 open http://localhost:7474
@@ -935,13 +935,13 @@ data/papers/*.pdf
 **解決策**:
 ```bash
 # 1. レビュー論文優先を解除
-python scripts/build_knowledge_graph.py "topic" --no-review-preference
+uv run python scripts/build_knowledge_graph.py "topic" --no-review-preference
 
 # 2. より一般的なクエリを使用
-python scripts/build_knowledge_graph.py "graph neural networks"  # "GNN"より広い
+uv run python scripts/build_knowledge_graph.py "graph neural networks"  # "GNN"より広い
 
 # 3. カテゴリで検索
-python scripts/build_knowledge_graph.py "cat:cs.AI machine learning"
+uv run python scripts/build_knowledge_graph.py "cat:cs.AI machine learning"
 ```
 
 ### 問題2: 関連性フィルタで全て除外される
@@ -959,13 +959,13 @@ python scripts/build_knowledge_graph.py "cat:cs.AI machine learning"
 **解決策**:
 ```bash
 # 1. 閾値を下げる
-python scripts/build_knowledge_graph.py "topic" --threshold 0.6
+uv run python scripts/build_knowledge_graph.py "topic" --threshold 0.6
 
 # 2. より具体的なトピックを指定
-python scripts/build_knowledge_graph.py "knowledge graph embedding methods"
+uv run python scripts/build_knowledge_graph.py "knowledge graph embedding methods"
 
 # 3. 検索数を増やす
-python scripts/build_knowledge_graph.py "topic" --max-papers 10
+uv run python scripts/build_knowledge_graph.py "topic" --max-papers 10
 ```
 
 ### 問題3: ダウンロードエラー
@@ -984,10 +984,10 @@ python scripts/build_knowledge_graph.py "topic" --max-papers 10
 ```bash
 # 1. 少し待ってから再実行
 sleep 60
-python scripts/build_knowledge_graph.py "topic"
+uv run python scripts/build_knowledge_graph.py "topic"
 
 # 2. 論文数を減らす
-python scripts/build_knowledge_graph.py "topic" --max-papers 3
+uv run python scripts/build_knowledge_graph.py "topic" --max-papers 3
 
 # 3. プロキシ設定を確認
 export HTTP_PROXY=your_proxy
@@ -1058,11 +1058,11 @@ MemoryError: Unable to allocate array
 **解決策**:
 ```bash
 # 1. 論文数を減らす
-python scripts/build_knowledge_graph.py "topic" --max-papers 3
+uv run python scripts/build_knowledge_graph.py "topic" --max-papers 3
 
 # 2. バッチ処理
-python scripts/build_knowledge_graph.py "topic part1" --max-papers 5
-python scripts/build_knowledge_graph.py "topic part2" --max-papers 5
+uv run python scripts/build_knowledge_graph.py "topic part1" --max-papers 5
+uv run python scripts/build_knowledge_graph.py "topic part2" --max-papers 5
 
 # 3. CPUモードを使用（GPUメモリ不足の場合）
 # .envで設定
@@ -1127,10 +1127,10 @@ cat data/exports/2301_12345_knowledge_graph.json | jq '.statistics'
 ### 2. Neo4jにインポート
 ```bash
 # インポート
-python scripts/import_to_neo4j.py data/exports/
+uv run python scripts/import_to_neo4j.py data/exports/
 
 # 統計確認
-python scripts/neo4j_manager.py stats
+uv run python scripts/neo4j_manager.py stats
 ```
 
 ### 3. Neo4jブラウザで可視化
@@ -1160,10 +1160,10 @@ git push
 ### 5. 追加の論文処理
 ```bash
 # 別のトピックで追加実行
-python scripts/build_knowledge_graph.py "another topic" --max-papers 5
+uv run python scripts/build_knowledge_graph.py "another topic" --max-papers 5
 
 # 既存のナレッジグラフと統合（Neo4j上で）
-python scripts/import_to_neo4j.py data/exports/
+uv run python scripts/import_to_neo4j.py data/exports/
 ```
 
 ---
@@ -1183,13 +1183,13 @@ python scripts/import_to_neo4j.py data/exports/
 
 ```bash
 # 1. 新しいトピックの知識収集
-python scripts/build_knowledge_graph.py "your topic" --max-papers 5 --review-papers-only
+uv run python scripts/build_knowledge_graph.py "your topic" --max-papers 5 --review-papers-only
 
 # 2. Neo4jにインポート
-python scripts/import_to_neo4j.py data/exports/
+uv run python scripts/import_to_neo4j.py data/exports/
 
 # 3. 分析と可視化
-python scripts/neo4j_manager.py stats
+uv run python scripts/neo4j_manager.py stats
 open http://localhost:7474
 
 # 4. 結果をGitHubに共有

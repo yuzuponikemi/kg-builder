@@ -100,7 +100,7 @@ NEO4J_DATABASE=neo4j
 
 ```bash
 # Check database statistics (should connect successfully)
-python scripts/neo4j_manager.py stats
+uv run python scripts/neo4j_manager.py stats
 ```
 
 ### 4. Access Browser Interface
@@ -120,7 +120,7 @@ Import knowledge graphs from JSON files into Neo4j.
 #### Import Single File
 
 ```bash
-python scripts/import_to_neo4j.py data/exports/2403_11996_knowledge_graph.json
+uv run python scripts/import_to_neo4j.py data/exports/2403_11996_knowledge_graph.json
 ```
 
 Output:
@@ -152,7 +152,7 @@ Relationships created: 58
 #### Import All Files in Directory
 
 ```bash
-python scripts/import_to_neo4j.py data/exports/
+uv run python scripts/import_to_neo4j.py data/exports/
 ```
 
 This imports all `*_knowledge_graph.json` files.
@@ -162,7 +162,7 @@ This imports all `*_knowledge_graph.json` files.
 Start fresh by clearing existing data:
 
 ```bash
-python scripts/import_to_neo4j.py data/exports/ --clear
+uv run python scripts/import_to_neo4j.py data/exports/ --clear
 ```
 
 **⚠️ WARNING**: This deletes all existing data! You'll be prompted to confirm.
@@ -172,7 +172,7 @@ python scripts/import_to_neo4j.py data/exports/ --clear
 Validate JSON files without importing:
 
 ```bash
-python scripts/import_to_neo4j.py data/exports/ --dry-run
+uv run python scripts/import_to_neo4j.py data/exports/ --dry-run
 ```
 
 ---
@@ -238,7 +238,7 @@ LIMIT 50
 #### Show Statistics
 
 ```bash
-python scripts/neo4j_manager.py stats
+uv run python scripts/neo4j_manager.py stats
 ```
 
 Output:
@@ -265,7 +265,7 @@ Concepts by Type:
 #### Search Concepts
 
 ```bash
-python scripts/neo4j_manager.py search "neural"
+uv run python scripts/neo4j_manager.py search "neural"
 ```
 
 Output:
@@ -282,7 +282,7 @@ Found 5 concepts matching 'neural':
 #### Show Concept Details
 
 ```bash
-python scripts/neo4j_manager.py concept "graph neural network"
+uv run python scripts/neo4j_manager.py concept "graph neural network"
 ```
 
 Output:
@@ -319,19 +319,19 @@ Mentioned in Papers (3):
 #### Show Paper Details
 
 ```bash
-python scripts/neo4j_manager.py paper "2403_11996"
+uv run python scripts/neo4j_manager.py paper "2403_11996"
 ```
 
 #### List All Papers
 
 ```bash
-python scripts/neo4j_manager.py papers
+uv run python scripts/neo4j_manager.py papers
 ```
 
 #### Run Custom Query
 
 ```bash
-python scripts/neo4j_manager.py query "MATCH (c:Concept) WHERE c.type = 'method' RETURN c.name LIMIT 10"
+uv run python scripts/neo4j_manager.py query "MATCH (c:Concept) WHERE c.type = 'method' RETURN c.name LIMIT 10"
 ```
 
 ---
@@ -343,7 +343,7 @@ Export knowledge graphs from Neo4j back to JSON format (for sharing, backup, or 
 ### Export Entire Graph
 
 ```bash
-python scripts/export_from_neo4j.py --output data/exports/full_graph.json
+uv run python scripts/export_from_neo4j.py --output data/exports/full_graph.json
 ```
 
 This creates a complete snapshot of your knowledge graph.
@@ -351,7 +351,7 @@ This creates a complete snapshot of your knowledge graph.
 ### Export Specific Paper
 
 ```bash
-python scripts/export_from_neo4j.py --paper "2403_11996" --output paper_export.json
+uv run python scripts/export_from_neo4j.py --paper "2403_11996" --output paper_export.json
 ```
 
 Exports only the concepts and relationships for one paper.
@@ -360,10 +360,10 @@ Exports only the concepts and relationships for one paper.
 
 ```bash
 # Export all neural-network-related concepts
-python scripts/export_from_neo4j.py --concept-pattern "neural" --output neural_concepts.json
+uv run python scripts/export_from_neo4j.py --concept-pattern "neural" --output neural_concepts.json
 
 # Export graph-related concepts
-python scripts/export_from_neo4j.py --concept-pattern "graph" --output graph_concepts.json
+uv run python scripts/export_from_neo4j.py --concept-pattern "graph" --output graph_concepts.json
 ```
 
 ### Use Cases for Export
@@ -393,24 +393,24 @@ python scripts/export_from_neo4j.py --concept-pattern "graph" --output graph_con
 
 ```bash
 # With confirmation prompt
-python scripts/neo4j_manager.py clear
+uv run python scripts/neo4j_manager.py clear
 
 # Force (skip prompt)
-python scripts/neo4j_manager.py clear --force
+uv run python scripts/neo4j_manager.py clear --force
 ```
 
 ### Rebuild from JSON
 
 ```bash
 # Clear and reimport
-python scripts/neo4j_manager.py clear --force
-python scripts/import_to_neo4j.py data/exports/
+uv run python scripts/neo4j_manager.py clear --force
+uv run python scripts/import_to_neo4j.py data/exports/
 ```
 
 ### Check Database Health
 
 ```bash
-python scripts/neo4j_manager.py stats
+uv run python scripts/neo4j_manager.py stats
 ```
 
 ---
@@ -607,27 +607,27 @@ Here's a complete example from paper search to Neo4j analysis:
 
 ```bash
 # 1. Search and download papers
-python scripts/search_and_download_papers.py "knowledge graph construction" \
+uv run python scripts/search_and_download_papers.py "knowledge graph construction" \
   --max-results 10 \
   --threshold 0.7
 
 # 2. Extract knowledge graphs
-python scripts/batch_extract_papers.py --combine
+uv run python scripts/batch_extract_papers.py --combine
 
 # 3. Update papers index (for GitHub)
-python scripts/create_papers_index.py
+uv run python scripts/create_papers_index.py
 
 # 4. Import to Neo4j
-python scripts/import_to_neo4j.py data/exports/
+uv run python scripts/import_to_neo4j.py data/exports/
 
 # 5. Verify import
-python scripts/neo4j_manager.py stats
+uv run python scripts/neo4j_manager.py stats
 
 # 6. Explore in browser
 open http://localhost:7474
 
 # 7. Export for backup
-python scripts/export_from_neo4j.py --output backups/backup_$(date +%Y%m%d).json
+uv run python scripts/export_from_neo4j.py --output backups/backup_$(date +%Y%m%d).json
 
 # 8. Commit results to GitHub (PDFs stay local!)
 git add data/papers/papers_index.json
