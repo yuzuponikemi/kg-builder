@@ -1,0 +1,286 @@
+{
+  "metadata": {
+    "title": "Knowledge Graph and Noesis - A Meta-Cognitive Exploration",
+    "arxiv_id": "test_kg_noesis",
+    "authors": ["Test Author"],
+    "num_pages": 1
+  },
+  "statistics": {
+    "num_entities": 20,
+    "num_relationships": 25
+  },
+  "entities": [
+    {
+      "name": "Knowledge Graph",
+      "type": "method",
+      "description": "Structured representation of knowledge as nodes and edges",
+      "confidence": 1.0
+    },
+    {
+      "name": "Noesis",
+      "type": "theory",
+      "description": "Phenomenological concept of the act of thinking or cognition",
+      "confidence": 0.95
+    },
+    {
+      "name": "Semantic Network",
+      "type": "method",
+      "description": "Graph-based representation of semantic relationships",
+      "confidence": 0.9
+    },
+    {
+      "name": "Phenomenology",
+      "type": "theory",
+      "description": "Philosophical study of structures of consciousness",
+      "confidence": 0.9
+    },
+    {
+      "name": "Graph Neural Network",
+      "type": "method",
+      "description": "Neural network architecture for processing graph-structured data",
+      "confidence": 0.95
+    },
+    {
+      "name": "Intentionality",
+      "type": "theory",
+      "description": "The directedness of consciousness toward objects",
+      "confidence": 0.85
+    },
+    {
+      "name": "Cognitive Architecture",
+      "type": "theory",
+      "description": "Theoretical framework for modeling human cognition",
+      "confidence": 0.9
+    },
+    {
+      "name": "Ontology Engineering",
+      "type": "method",
+      "description": "Design and construction of formal ontologies",
+      "confidence": 0.9
+    },
+    {
+      "name": "Consciousness",
+      "type": "phenomenon",
+      "description": "State of being aware of one's thoughts and surroundings",
+      "confidence": 0.8
+    },
+    {
+      "name": "Embeddings",
+      "type": "method",
+      "description": "Vector representations of entities in continuous space",
+      "confidence": 0.95
+    },
+    {
+      "name": "Qualia",
+      "type": "phenomenon",
+      "description": "Subjective quality of conscious experiences",
+      "confidence": 0.8
+    },
+    {
+      "name": "Link Prediction",
+      "type": "method",
+      "description": "Predicting missing connections in graph structures",
+      "confidence": 0.9
+    },
+    {
+      "name": "Emergence",
+      "type": "phenomenon",
+      "description": "Complex patterns arising from simple rules",
+      "confidence": 0.85
+    },
+    {
+      "name": "Neural-Symbolic Integration",
+      "type": "method",
+      "description": "Combining neural networks with symbolic reasoning",
+      "confidence": 0.85
+    },
+    {
+      "name": "Meta-Cognition",
+      "type": "theory",
+      "description": "Awareness and understanding of one's own thought processes",
+      "confidence": 0.9
+    },
+    {
+      "name": "Graph Reasoning",
+      "type": "method",
+      "description": "Logical inference over graph-structured knowledge",
+      "confidence": 0.9
+    },
+    {
+      "name": "Self-Organization",
+      "type": "phenomenon",
+      "description": "Spontaneous order arising from local interactions",
+      "confidence": 0.85
+    },
+    {
+      "name": "Epistemology",
+      "type": "theory",
+      "description": "Theory of knowledge and justified belief",
+      "confidence": 0.9
+    },
+    {
+      "name": "Collective Intelligence",
+      "type": "application",
+      "description": "Shared intelligence emerging from collaboration",
+      "confidence": 0.85
+    },
+    {
+      "name": "Quantum Cognition",
+      "type": "theory",
+      "description": "Application of quantum probability to model cognition",
+      "confidence": 0.75
+    }
+  ],
+  "relationships": [
+    {
+      "from": "Knowledge Graph",
+      "to": "Semantic Network",
+      "type": "is_a",
+      "confidence": 0.9
+    },
+    {
+      "from": "Noesis",
+      "to": "Phenomenology",
+      "type": "part_of",
+      "confidence": 0.95
+    },
+    {
+      "from": "Graph Neural Network",
+      "to": "Knowledge Graph",
+      "type": "uses",
+      "confidence": 0.9
+    },
+    {
+      "from": "Intentionality",
+      "to": "Consciousness",
+      "type": "related_to",
+      "confidence": 0.85
+    },
+    {
+      "from": "Knowledge Graph",
+      "to": "Ontology Engineering",
+      "type": "based_on",
+      "confidence": 0.9
+    },
+    {
+      "from": "Noesis",
+      "to": "Intentionality",
+      "type": "related_to",
+      "confidence": 0.9
+    },
+    {
+      "from": "Embeddings",
+      "to": "Semantic Network",
+      "type": "applies_to",
+      "confidence": 0.9
+    },
+    {
+      "from": "Cognitive Architecture",
+      "to": "Meta-Cognition",
+      "type": "enables",
+      "confidence": 0.85
+    },
+    {
+      "from": "Qualia",
+      "to": "Consciousness",
+      "type": "part_of",
+      "confidence": 0.9
+    },
+    {
+      "from": "Link Prediction",
+      "to": "Knowledge Graph",
+      "type": "applies_to",
+      "confidence": 0.95
+    },
+    {
+      "from": "Emergence",
+      "to": "Consciousness",
+      "type": "related_to",
+      "confidence": 0.8
+    },
+    {
+      "from": "Neural-Symbolic Integration",
+      "to": "Graph Neural Network",
+      "type": "uses",
+      "confidence": 0.85
+    },
+    {
+      "from": "Graph Reasoning",
+      "to": "Knowledge Graph",
+      "type": "applies_to",
+      "confidence": 0.95
+    },
+    {
+      "from": "Self-Organization",
+      "to": "Emergence",
+      "type": "enables",
+      "confidence": 0.9
+    },
+    {
+      "from": "Epistemology",
+      "to": "Knowledge Graph",
+      "type": "related_to",
+      "confidence": 0.8
+    },
+    {
+      "from": "Meta-Cognition",
+      "to": "Noesis",
+      "type": "related_to",
+      "confidence": 0.85
+    },
+    {
+      "from": "Collective Intelligence",
+      "to": "Knowledge Graph",
+      "type": "uses",
+      "confidence": 0.8
+    },
+    {
+      "from": "Phenomenology",
+      "to": "Epistemology",
+      "type": "related_to",
+      "confidence": 0.85
+    },
+    {
+      "from": "Quantum Cognition",
+      "to": "Consciousness",
+      "type": "related_to",
+      "confidence": 0.75
+    },
+    {
+      "from": "Neural-Symbolic Integration",
+      "to": "Cognitive Architecture",
+      "type": "enables",
+      "confidence": 0.8
+    },
+    {
+      "from": "Graph Reasoning",
+      "to": "Epistemology",
+      "type": "based_on",
+      "confidence": 0.75
+    },
+    {
+      "from": "Embeddings",
+      "to": "Graph Neural Network",
+      "type": "part_of",
+      "confidence": 0.9
+    },
+    {
+      "from": "Self-Organization",
+      "to": "Collective Intelligence",
+      "type": "enables",
+      "confidence": 0.85
+    },
+    {
+      "from": "Quantum Cognition",
+      "to": "Noesis",
+      "type": "related_to",
+      "confidence": 0.7
+    },
+    {
+      "from": "Meta-Cognition",
+      "to": "Epistemology",
+      "type": "related_to",
+      "confidence": 0.8
+    }
+  ]
+}
