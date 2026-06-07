@@ -1,0 +1,929 @@
+{
+  "metadata": {
+    "source_file": "2003_03875v1.pdf",
+    "title": "Microsoft Word - CCKS2019评测综述-中文信息学报-v1.2.docx",
+    "authors": [],
+    "num_pages": 21,
+    "extraction_date": "2025-12-03T10:33:11.628359",
+    "arxiv_id": null
+  },
+  "entities": [
+    {
+      "name": "CCKS 2019 Knowledge Graph Evaluation Track",
+      "type": "phenomenon",
+      "description": "A track that evaluates knowledge graph-related technologies, including entity recognition, relation extraction, event extraction, and question answering.",
+      "confidence": 0.95,
+      "context": "The CCKS 2019 Knowledge Graph Evaluation Track: Entity, Relation, Event and QA"
+    },
+    {
+      "name": "Entity Recognition",
+      "type": "phenomenon",
+      "description": "The process of identifying and categorizing entities in text.",
+      "confidence": 0.9,
+      "context": "本次评测是围绕中文电子病历语义化开展的一交结果，整个比赛周期内累计提交评测结果 1203"
+    },
+    {
+      "name": "relation extraction",
+      "type": "method",
+      "description": "Technique for extracting relationships from clinical text without labeled relations.",
+      "confidence": 0.9,
+      "context": "Distant super-i2b2/va challenge on concepts, assertions, and vision for relation extraction without labeled relations in clinical text[J]."
+    },
+    {
+      "name": "Event Extraction",
+      "type": "application",
+      "description": "A practical application of event knowledge for risk warning and intelligent investment.",
+      "confidence": 0.9,
+      "context": "事件知识、特别是事件的类型和主体知识，在金 融领域中具有重要作用，能为风险预警、智能投顾等应用提供重要决策参考。"
+    },
+    {
+      "name": "Question Answering",
+      "type": "method",
+      "description": "A technique used to answer questions based on a text or corpus.",
+      "confidence": 0.85,
+      "context": "知识图谱以概念、实体及其关系的方式建模世界知识，在实际任务中得到了越来越广泛的应用。"
+    },
+    {
+      "name": "Knowledge Graph",
+      "type": "phenomenon",
+      "description": "A representation of knowledge that models concepts, entities, and their relationships.",
+      "confidence": 0.95,
+      "context": "知识图谱以概念、实体及其关系的方式建模世界知识，在实际任务中得到了越来越广泛的应用。"
+    },
+    {
+      "name": "CCKS 2019",
+      "type": "application",
+      "description": "A challenge that held an evaluation track with 6 tasks and attracted more than 1,600 teams.",
+      "confidence": 0.95,
+      "context": "CCKS 2019 held an evaluation track with 6 tasks and attracted more than 1,600 teams."
+    },
+    {
+      "name": "Knowledge Graph Evaluation Track",
+      "type": "application",
+      "description": "An evaluation track that reviewed task definition, successful methods, useful resources, good strategies, and research challenges.",
+      "confidence": 0.95,
+      "context": "By reviewing the task definition, successful methods, useful resources, good strategies and research challenges associated with each task in CCKS 2019,"
+    },
+    {
+      "name": "evaluation",
+      "type": "method",
+      "description": "The process of assessing the performance and effectiveness of a knowledge graph application.",
+      "confidence": 0.9,
+      "context": "由于其有效性，知识图谱被应用于越来越多的应用场景中，解决各种各样的问题。"
+    },
+    {
+      "name": "information extraction",
+      "type": "method",
+      "description": "The process of extracting relevant information from unstructured or semi-structured data.",
+      "confidence": 0.9,
+      "context": "信息抽取以及问答系统等的重要基础工作[3]，同对诸多实际临床应用如合并症分析、综合症监测、不良药物事件检测以及药物相互作用的分析等具有巨大促进作用[4]。"
+    },
+    {
+      "name": "i2b2",
+      "type": "material",
+      "description": "A publicly available dataset for named entity recognition and information extraction tasks.",
+      "confidence": 0.9,
+      "context": "国际上先后出现了一些围绕电子病历命名实体识别的公开评测及标注数据集，主要有 i2b2[5]，ShARe CLEF eHealth[6]以及 SemEval[7]，但这些评测大多面向英文电子病历。"
+    },
+    {
+      "name": "electronic medical records",
+      "type": "material",
+      "description": "Digital records of patient health information and treatment history.",
+      "confidence": 0.9,
+      "context": "其中以自由文本形式的非结构化数据是电子病历最主要的部分， 如出院小结、病程记录等，其中蕴含着大量详尽而有价值的医疗知识及健康信息[1]。"
+    },
+    {
+      "name": "CCKS2019-clinic",
+      "type": "application",
+      "description": "A medical information extraction competition and evaluation framework.",
+      "confidence": 0.98,
+      "context": "本任务预定义类别包括：疾病和诊断、检查 、 数据集描述 两个子任务的数据集均由医渡云（北京）技术有限公司提供，并组织专业的医学团队"
+    },
+    {
+      "name": "Precision",
+      "type": "measurement",
+      "description": "A metric used to evaluate the accuracy of medical information extraction.",
+      "confidence": 0.96,
+      "context": "该子任务为迁移学习任务，即在只提供目标场景少量标注数据的情况下，通过其他场景的标注数据及非标注数据进行目标场景的识别任务。"
+    },
+    {
+      "name": "Recall",
+      "type": "measurement",
+      "description": "A metric used to evaluate the completeness of medical information extraction.",
+      "confidence": 0.96,
+      "context": "该子任务为迁移学习任务，即在只提供目标场景少量标注数据的情况下，通过其他场景的标注数据及非标注数据进行目标场景的识别任务。"
+    },
+    {
+      "name": "F1-Measure",
+      "type": "measurement",
+      "description": "A metric used to evaluate the overall performance of medical information extraction.",
+      "confidence": 0.96,
+      "context": "该子任务为迁移学习任务，即在只提供目标场景少量标注数据的情况下，通过其他场景的标注数据及非标注数据进行目标场景的识别任务。"
+    },
+    {
+      "name": "𝑃",
+      "type": "theory",
+      "description": "A predefined category system for medical information extraction.",
+      "confidence": 0.98,
+      "context": "预 定 义类 别 的 答案实 体集 合：当且仅当：{〈𝑑 ,B𝑝 ,⟨𝑠 ,𝑠 ,⋯𝑠 ⟩H〉}"
+    },
+    {
+      "name": "𝐺",
+      "type": "theory",
+      "description": "A predefined category system for medical information extraction.",
+      "confidence": 0.98,
+      "context": "预 定 定义类 别 的 答案实 体集 合：当且仅当：{〈𝑑 ,B𝑝 ,⟨𝑠 ,𝑠 ,⋯𝑠 ⟩H〉}"
+    },
+    {
+      "name": "CRF",
+      "type": "method",
+      "description": "A traditional sequence labeling model used for named entity recognition.",
+      "confidence": 0.9,
+      "context": "因此，所有参赛队都将任务视为序列标注问题，采用的主体模型都是 CRF、BiLSTM 等传统的序列标注模型。"
+    },
+    {
+      "name": "BiLSTM",
+      "type": "method",
+      "description": "A type of recurrent neural network used for sequence labeling tasks.",
+      "confidence": 0.9,
+      "context": "因此，所有参赛队都将任务视为序列标注问题，采用的主体模型都是 CRF、BiLSTM 等传统的序列标注模型。"
+    },
+    {
+      "name": "BERT",
+      "type": "theory",
+      "description": "A language model that can be used for various NLP tasks, including predicting relationships such as parent-child relationships.",
+      "confidence": 0.95,
+      "context": "自从BERT[12]发布后，它很快超过 ELMo[21]， 姓氏也可以用于血亲关系尤其是父子关系的预测"
+    },
+    {
+      "name": "ELMo",
+      "type": "theory",
+      "description": "A language model that can be used for various NLP tasks, including predicting relationships such as parent-child relationships.",
+      "confidence": 0.95,
+      "context": "自从BERT[12]发布后，它很快超过 ELMo[21]， 姓氏也可以用于血亲关系尤其是父子关系的预测"
+    },
+    {
+      "name": "Sequence Labeling",
+      "type": "phenomenon",
+      "description": "A type of natural language processing task that involves labeling sequences of text.",
+      "confidence": 0.9,
+      "context": "因此，所有参赛队都将任务视为序列标注问题，采用的主体模型都是 CRF、BiLSTM 等传统的序列标注模型。"
+    },
+    {
+      "name": "Named Entity Recognition",
+      "type": "phenomenon",
+      "description": "A type of natural language processing task that involves identifying named entities in text.",
+      "confidence": 0.9,
+      "context": "因此，所有参赛队都将任务视为序列标注问题，采用的主体模型都是 CRF、BiLSTM 等传统的序列标注模型。"
+    },
+    {
+      "name": "Evaluation Metrics",
+      "type": "measurement",
+      "description": "Metrics used to evaluate the performance of named entity recognition models.",
+      "confidence": 0.9,
+      "context": "评测指标：𝑃 = |Z∩h|， 𝑅 = |Z∩h|， 𝐹 = 5_‘g g %g"
+    },
+    {
+      "name": "Biendata",
+      "type": "application",
+      "description": "A platform used for hosting and evaluating named entity recognition tasks.",
+      "confidence": 0.9,
+      "context": "评测结果在 biendata 网站1上进行在线提交，评测指标使用实体而非本评测提供的标注数据等。"
+    },
+    {
+      "name": "BILSTM+CRF",
+      "type": "method",
+      "description": "A neural network-based method for named entity recognition.",
+      "confidence": 0.9,
+      "context": "靠模型和算法很难获得显著的性能提升，参 显不足，我们认为基于中文电子病历命名实体识"
+    },
+    {
+      "name": "Entity Linking",
+      "type": "phenomenon",
+      "description": "A process of linking entities to their corresponding entries in a knowledge base.",
+      "confidence": 0.9,
+      "context": "实体链指包括实体识别(NER)和实体消歧(NED)两个子任务。"
+    },
+    {
+      "name": "Named Entity Recognition (NER)",
+      "type": "phenomenon",
+      "description": "A process of identifying named entities in unstructured text.",
+      "confidence": 0.9,
+      "context": "实体链指包括实体识别(NER)和实体消歧(NED)两个子任务。"
+    },
+    {
+      "name": "Named Entity Disambiguation (NED)",
+      "type": "phenomenon",
+      "description": "A process of resolving ambiguities in named entities.",
+      "confidence": 0.9,
+      "context": "实体链指包括实体识别(NER)和实体消歧(NED)两个子任务。"
+    },
+    {
+      "name": "Language Model",
+      "type": "theory",
+      "description": "A theoretical framework for understanding language and its patterns.",
+      "confidence": 0.8,
+      "context": "所有的参赛队在预训练中都引入了 Bert，ELMo 等模 型，结果表明这些语言模型能有效提升识别性能。"
+    },
+    {
+      "name": "Knowledge Base",
+      "type": "material",
+      "description": "A database of knowledge that can be used for entity linking and other applications.",
+      "confidence": 0.9,
+      "context": "实体链指包括实体识别(NER)和实体消歧(NED)两个子任务。"
+    },
+    {
+      "name": "ICD-10",
+      "type": "material",
+      "description": "A standardized system of coding diseases and disorders for medical purposes.",
+      "confidence": 0.8,
+      "context": "传统的实体链指任务主要是针对长文档，长 文档拥有较长的上下文信息能辅助实体的歧义消解并完成链指。"
+    },
+    {
+      "name": "Standardized Surgical Coding",
+      "type": "material",
+      "description": "A standardized system of coding surgical procedures for medical purposes.",
+      "confidence": 0.8,
+      "context": "传统的实体链指任务主要是针对长文档，长 文档拥有较长的上下文信息能辅助实体的歧义消解并完成链指。"
+    },
+    {
+      "name": "Pharmaceutical Name Database",
+      "type": "material",
+      "description": "A database of pharmaceutical names and their corresponding entries in a knowledge base.",
+      "confidence": 0.8,
+      "context": "传统的实体链指任务主要是针对长文档，长 文档拥有较长的上下文信息能辅助实体的歧义消解并完成链指。"
+    },
+    {
+      "name": "LSTM",
+      "type": "method",
+      "description": "A type of recurrent neural network used for entity recognition.",
+      "confidence": 0.8,
+      "context": "本次评测使用频率较高且相对典型的模型与方法进行介绍：SPO数量 3,564,565 方法一：基于 CRF[9]进行序列标注的实体识别"
+    },
+    {
+      "name": "ERNIE",
+      "type": "method",
+      "description": "A neural architecture for representation through knowledge integration.",
+      "confidence": 1.0,
+      "context": "Wang S , Li Y , et al. ERNIE: Enhanced Representation through Knowledge Integration[J]."
+    },
+    {
+      "name": "F1 score",
+      "type": "measurement",
+      "description": "A metric used to evaluate the performance of entity relationship extraction models.",
+      "confidence": 0.9,
+      "context": "在比赛期间，我们只根据 F1 值计算 A分和 B分。在比赛结束后公布，作为各个参赛队伍的最终成绩。"
+    },
+    {
+      "name": "ERNIE/BERT",
+      "type": "method",
+      "description": "Pre-trained language models used for entity recognition and disambiguation.",
+      "confidence": 0.9,
+      "context": "Softmax 的效果，同时 Top10 队伍中亦有多个团队通过各 FC FC 种形式引入知识来提升整体模型的效果"
+    },
+    {
+      "name": "CLS",
+      "type": "method",
+      "description": "A classification-based method for entity recognition and disambiguation.",
+      "confidence": 0.8,
+      "context": "CLS 位置输出向量和实体文本 实体链指任务主要可拆解为实体识别和实体消歧两个关键子任务"
+    },
+    {
+      "name": "Dropout",
+      "type": "method",
+      "description": "A regularization technique used in neural networks.",
+      "confidence": 0.8,
+      "context": "Softmax 的效果，同时 Top10 队伍中亦有多个团队通过各 FC FC 种形式引入知识来提升整体模型的效果"
+    },
+    {
+      "name": "F1",
+      "type": "measurement",
+      "description": "A metric used to evaluate the performance of entity recognition and disambiguation models.",
+      "confidence": 0.9,
+      "context": "实体标注的 F1 值定义如下：2∗𝑃∗𝑅 𝐹1= 𝑃+𝑅"
+    },
+    {
+      "name": "P",
+      "type": "measurement",
+      "description": "A metric used to evaluate the precision of entity recognition and disambiguation models.",
+      "confidence": 0.9,
+      "context": "实体标注的准确率定义如下： ∑ .n( |𝐸 . ∩𝐸′ . |"
+    },
+    {
+      "name": "R",
+      "type": "measurement",
+      "description": "A metric used to evaluate the recall of entity recognition and disambiguation models.",
+      "confidence": 0.9,
+      "context": "实体标注的召回率定义如下： ∑ .n( |𝐸 . |"
+    },
+    {
+      "name": "基于排序的实体消歧方法",
+      "type": "method",
+      "description": "A method for entity disambiguation based on ranking and semantic matching.",
+      "confidence": 0.95,
+      "context": "方法三：基于排序的实体消歧方法: 10 ★= base- 万达信息股份 0.78450"
+    },
+    {
+      "name": "神经网络",
+      "type": "method",
+      "description": "A neural network-based approach for entity modeling and disambiguation.",
+      "confidence": 0.95,
+      "context": "通过神经网络对它们分别建模并得到各 JayPath 中国科学技术 0.78450"
+    },
+    {
+      "name": "语义匹配",
+      "type": "method",
+      "description": "A semantic matching approach for computing the similarity between entities.",
+      "confidence": 0.95,
+      "context": "计算待 line =★ 有限公司&个 消歧文本（输入文本）和知识库中候选实体间的 人 相似度"
+    },
+    {
+      "name": "模型融合",
+      "type": "method",
+      "description": "A model fusion approach for combining the strengths of different models.",
+      "confidence": 0.95,
+      "context": "模型融合可以体现集体智慧，也是在比赛中 … …"
+    },
+    {
+      "name": "实体链指任务",
+      "type": "phenomenon",
+      "description": "The task of identifying and disambiguating entities in text.",
+      "confidence": 0.9,
+      "context": "Similarity score 通过本次评测，参赛选手对实体链指技术做 了很多有益探索。"
+    },
+    {
+      "name": "知识增强",
+      "type": "method",
+      "description": "A knowledge-enhanced approach for improving entity disambiguation.",
+      "confidence": 0.9,
+      "context": "知识增强在实体链指中发挥了 FC FC 巨大作用，如基于知识图谱的知识嵌入技术、基于知识图谱的实体动态概念预测技术等"
+    },
+    {
+      "name": "remote supervision",
+      "type": "method",
+      "description": "A concept that allows for the generation of labeled data without human annotation.",
+      "confidence": 0.9,
+      "context": "通过远程监督方法生成的数据不可避免地存在错误标注的问题，特别是测试数据的错"
+    },
+    {
+      "name": "IPRE",
+      "type": "application",
+      "description": "A dataset used for the evaluation of entity relationship extraction models.",
+      "confidence": 0.8,
+      "context": "在本次评测中，我们使用一个专门用于人物关系抽取的中文数据集 (Inter-Personal Relationship Extraction , IPRE)[20]。"
+    },
+    {
+      "name": "Sent-Track",
+      "type": "method",
+      "description": "A method for ranking teams based on their performance in the competition.",
+      "confidence": 0.95,
+      "context": "赛队伍提交的每份预测结果，我们在其中固定的 榜。B 榜在比赛结束后公布，作为各个参赛队伍的最终成绩。"
+    },
+    {
+      "name": "Bag-Track",
+      "type": "method",
+      "description": "A method for ranking teams based on their performance in the competition.",
+      "confidence": 0.95,
+      "context": "赛队伍提交的每份预测结果，我们在其中固定的 榜。B 榜在比赛结束后公布，作为各个参赛队伍的最终成绩。"
+    },
+    {
+      "name": "NA",
+      "type": "phenomenon",
+      "description": "A type of relationship that represents the absence of a relationship between two entities.",
+      "confidence": 0.9,
+      "context": "人作为社会的重要组成单位，研究人与 NA 关系是一种特殊的关系，表示实体对不存在的人之间的关系是十分必要和有价值的。"
+    },
+    {
+      "name": "Skip-Gram",
+      "type": "method",
+      "description": "A method for training word vectors that can be used as input to BERT.",
+      "confidence": 0.95,
+      "context": "GloVe[23]，BERT可以提供更丰富、语义更强的上下文表示。在这次评测任务中，在 BERT 输出后简单地添加一个全连接层进行分类或者用 BERT 的代替词向量作为输入"
+    },
+    {
+      "name": "GloVe",
+      "type": "theory",
+      "description": "A method for training word vectors that can be used as input to BERT.",
+      "confidence": 0.95,
+      "context": "GloVe[23]，BERT可以提供更丰富、语义更强的上下文表示。在这次评测任务中，在 BERT 输出后简单地添加一个全连接层进行分类或者用 BERT 的代替词向量作为输入"
+    },
+    {
+      "name": "下采样和上采样",
+      "type": "method",
+      "description": "A method used to address the issue of imbalanced data in named entity recognition.",
+      "confidence": 0.8,
+      "context": "针对数据不平衡的问题，格物致知队名字“刘伟明”、“李静”替代了句子中的给定的 则使用下采样和上采样相结合的方法数 据进行预 人物实体对。"
+    },
+    {
+      "name": "F1 值",
+      "type": "measurement",
+      "description": "A metric used to evaluate the performance of relation extraction systems.",
+      "confidence": 0.9,
+      "context": "我们通过𝐹 值比较了每个系统在各关 系上性能，所有的系统都在这七类关系中的大多 数关系上取得了很好的效果。"
+    },
+    {
+      "name": "Event Knowledge",
+      "type": "theory",
+      "description": "A theoretical framework used for event extraction and understanding.",
+      "confidence": 0.8,
+      "context": "事件知识、特别是事件的类型和主体知识，在金 融领域中具有重要作用，能为风险预警、智能投顾等应用提供重要决策参考。"
+    },
+    {
+      "name": "Event Entity Recognition",
+      "type": "phenomenon",
+      "description": "The process of recognizing the main entity involved in an event.",
+      "confidence": 0.9,
+      "context": "任务定义：在此背景下，该评测任务旨在从互联网上真实存在的新闻数据中抽取特定类型的事件的主体。"
+    },
+    {
+      "name": "CCKS2019",
+      "type": "theory",
+      "description": "A theoretical framework for recognizing the main entity involved in an event.",
+      "confidence": 0.8,
+      "context": "CCKS2019 人物关系抽评测由 Sent-Track 和 Bag-Track两个子任务组成。"
+    },
+    {
+      "name": "Event Type",
+      "type": "measurement",
+      "description": "A metric for categorizing events into different types.",
+      "confidence": 0.9,
+      "context": "输入：一段文本 T和事件类型 S"
+    },
+    {
+      "name": "Event Main Entity",
+      "type": "phenomenon",
+      "description": "The main entity involved in an event.",
+      "confidence": 0.8,
+      "context": "输出：事件主体 E（E的集合）"
+    },
+    {
+      "name": "BERT-based reading comprehension model",
+      "type": "method",
+      "description": "A method that uses BERT as a base and integrates multiple models to improve robustness and performance.",
+      "confidence": 0.95,
+      "context": "基于阅读理解的方法：基于阅读理解的方法能更好的挖掘文本和事件类型的语义关系。"
+    },
+    {
+      "name": "Sequence labeling method",
+      "type": "method",
+      "description": "A method that models the event extraction task as a sequence labeling problem and uses BERT to input token embeddings, segment embeddings, and positional embeddings.",
+      "confidence": 0.95,
+      "context": "序列通过 token Embedding、segment embedding 和 positional embedding 输入到 BERT。"
+    },
+    {
+      "name": "Model ensemble",
+      "type": "method",
+      "description": "A method that combines the outputs of multiple models to improve performance and robustness.",
+      "confidence": 0.9,
+      "context": "很多参赛队伍都采用了模型集成的方法，主要分为两类方法，一类是基于阅读理解的模型和基于序列标注模型的融合，一类是不同参数的单一模型融合。"
+    },
+    {
+      "name": "Precision, Recall, and F1-measure",
+      "type": "measurement",
+      "description": "Metrics used to evaluate the performance of event extraction models.",
+      "confidence": 0.95,
+      "context": "本次任务采用精确率（Precision）、召回率（Recall）、F1 值（F1-measure）来评估事件主体的识别效果。"
+    },
+    {
+      "name": "Model integration",
+      "type": "method",
+      "description": "A methodology that combines multiple models for better performance",
+      "confidence": 0.9,
+      "context": "涉嫌传销 500 104 8254 2033 伍都采用了模型集成的方法"
+    },
+    {
+      "name": "sequence labeling task",
+      "type": "method",
+      "description": "A task that can be modeled as a sequence labeling task, where the goal is to extract relevant information points from announcements.",
+      "confidence": 0.9,
+      "context": "事件知识在金融领域有着不可或缺的地位， 参赛者从公告中提取相关的重要信息点，采用的面向金融领域的事件主体发现是一个富有挑战的任务，该任务可以建模成序列标注任务，也可以建模成阅读理解任务，大规模预训练语言模型的引入会使相关方法进一步提升性能。"
+    },
+    {
+      "name": "reading comprehension task",
+      "type": "method",
+      "description": "A task that can be modeled as a reading comprehension task, where the goal is to extract relevant information points from announcements.",
+      "confidence": 0.9,
+      "context": "事件知识在金融领域有着不可或缺的地位， 参赛者从公告中提取相关的重要信息点，采用的面向金融领域的事件主体发现是一个富有挑战的任务，该任务可以建模成序列标注任务，也可以建模成阅读理解任务，大规模预训练语言模型的引入会使相关方法进一步提升性能。"
+    },
+    {
+      "name": "financial domain",
+      "type": "phenomenon",
+      "description": "The financial domain, where event knowledge plays a crucial role.",
+      "confidence": 0.9,
+      "context": "事件知识在金融领域有着不可或缺的地位， 参赛者从公告中提取相关的重要信息点，采用的面向金融领域的事件主体发现是一个富有挑战的任务，该任务可以建模成序列标注任务，也可以建模成阅读理解任务，大规模预训练语言模型的引入会使相关方法进一步提升性能。"
+    },
+    {
+      "name": "Structured data",
+      "type": "measurement",
+      "description": "The output of the models, which is a structured representation of the information extracted from PDF files.",
+      "confidence": 0.9,
+      "context": "通过对这两个模块分别进行训练和优化，模型得以输出更为准确的结构化数据。"
+    },
+    {
+      "name": "unstructured data",
+      "type": "material",
+      "description": "Unstructured data, such as text and images.",
+      "confidence": 0.8,
+      "context": "本评测包含有两个子任务：（1）表格中的信息点提取：本任务给定某公告 PDF 文件，参赛者需从文件的结构化财务报表中提取相关的信息点，并输出该表格对应的结构化数据。"
+    },
+    {
+      "name": "API",
+      "type": "method",
+      "description": "A technique used to extract information from PDF files and provide a final score.",
+      "confidence": 0.9,
+      "context": "时间 统一深入挖掘表格的信息，需要结合其上下文的内容， 调用 API 来给出最终分数。"
+    },
+    {
+      "name": "BFS algorithm",
+      "type": "method",
+      "description": "An algorithm used to locate and extract information from tables within PDF files.",
+      "confidence": 0.8,
+      "context": "并准确定位到表格提取的难点 -跨页表格中信息的准确识别，通过构建页眉页脚识别模型，有效地解决了该任务难点；"
+    },
+    {
+      "name": "Faster R-CNN algorithm",
+      "type": "method",
+      "description": "An algorithm used to detect lines and non-lines in tables within PDF files.",
+      "confidence": 0.8,
+      "context": "也有队伍采用 OpenCV 接口和 Faster R-CNN 算法，分别检测有线条和无线条的表格，同样获得了不错的效果[28]；"
+    },
+    {
+      "name": "Acrobat DC SDK",
+      "type": "method",
+      "description": "A software development kit used to convert PDF files into XML files and extract structured information.",
+      "confidence": 0.9,
+      "context": "有队伍使用 Acrobat DC SDK，将 PDF 文档转换为 XML 文件，成功识别了大部分的文字和表格[27]，"
+    },
+    {
+      "name": "PDF information automatic extraction model",
+      "type": "method",
+      "description": "A model used to automatically extract information from PDF files.",
+      "confidence": 0.9,
+      "context": "解决 PDF 信息自动抽取主要有两种思路，概述如下。第一种是先将 PDF 文件转换为图片，再找到所需区域，并对其进行限定和提取。"
+    },
+    {
+      "name": "Page header and footer recognition model",
+      "type": "method",
+      "description": "A model used to recognize page headers and footers in PDF files.",
+      "confidence": 0.8,
+      "context": "通过构建页眉页脚识别模型，有效地解决了该任务难点；"
+    },
+    {
+      "name": "Biendata platform",
+      "type": "application",
+      "description": "A platform used to host the competition and provide training data and evaluation metrics.",
+      "confidence": 0.8,
+      "context": "本次评测依托 bien-data 平台展开，评测网站链接为： https://biendata.com/competi-"
+    },
+    {
+      "name": "BiLSTM-CRF",
+      "type": "method",
+      "description": "A neural network model used for named entity recognition and sequence labeling.",
+      "confidence": 0.9,
+      "context": "根据该思路，需要先解决命名实体识别问题。大 果。其中，在解决任务二时，有队伍通过使用 BERT，部分队伍都采用了 BiLSTM-CRF[24]的神经网络模"
+    },
+    {
+      "name": "caBERT",
+      "type": "method",
+      "description": "A pre-trained language model for the financial domain.",
+      "confidence": 0.9,
+      "context": "首先基于词向量进行字 /词 券公告领域的语料模型 caBERT[26]，并针对“人事变动”类型公告进行了 fine-tune。"
+    },
+    {
+      "name": "Faster R-CNN",
+      "type": "method",
+      "description": "A deep learning algorithm for object detection.",
+      "confidence": 1.0,
+      "context": "[28] 朱耀邦,高翔,曾彦能,顾嘉晟,李欣,纪达麒,陈运文:CCKS测评任务5 基于OpenCV和Faster R-CNN的金融财报抽取"
+    },
+    {
+      "name": "OpenCV",
+      "type": "method",
+      "description": "A computer vision library used for table information extraction.",
+      "confidence": 0.9,
+      "context": "基于 OpenCV 和 Faster R-CNN 的表格信息抽取方法，能夠有效提 高 扫描线件条的检测精度，以及无线条表格的单元格识别准确度。"
+    },
+    {
+      "name": "PDF",
+      "type": "material",
+      "description": "A file format used for storing and sharing documents.",
+      "confidence": 0.8,
+      "context": "DC SDK，将 PDF 文档转换为 XML 文件，成功识别了大部分的文字和表格[27]，但该方法会将部分表格错误地识别为图片，降低了模型的效果。"
+    },
+    {
+      "name": "XML",
+      "type": "material",
+      "description": "A file format used for storing and sharing structured data.",
+      "confidence": 0.8,
+      "context": "DC SDK，将 PDF 文档转换为 XML 文件，成功识别了大部分的文字和表格[27]，但该方法会将部分表格错误地识别为图片，降低了模型的效果。"
+    },
+    {
+      "name": "Table information extraction",
+      "type": "phenomenon",
+      "description": "The process of extracting structured data from tables in PDF files.",
+      "confidence": 0.9,
+      "context": "基于 OpenCV 和 Faster R-CNN 的表格信息抽取方法，能夠有效提 高 扫描线件条的检测精度，以及无线条表格的单元格识别准确度。"
+    },
+    {
+      "name": "基于神经网络的模型",
+      "type": "method",
+      "description": "A model based on neural networks was used to improve table information extraction.",
+      "confidence": 0.95,
+      "context": "抽取失败的原因。如何 以及无线条表格的单元格识别准确度。在此基础快速的进行 PDF 文件解析以及抽取信息点，保证 上，结合“表格定位+表格结构识别+信息点抽取”"
+    },
+    {
+      "name": "语义消歧",
+      "type": "phenomenon",
+      "description": "Semantic ambiguity is a common issue in natural language processing.",
+      "confidence": 0.9,
+      "context": "自然语言的文法通常是模棱两可的，针对一个句子通常可能会解析出多种依赖结构，而我们必须要仰赖语意及前后文的信息才能在其中选择一种最为适合的句法结构。"
+    },
+    {
+      "name": "PKUBASE",
+      "type": "material",
+      "description": "PKUBASE is a knowledge graph developed by Peking University, used for generating datasets and querying.",
+      "confidence": 0.95,
+      "context": "本次测评任务使用北京大学开发的 PKUBASE 作为指定的知识图谱。其被用于数据集的生成，并且选手最终给出的问题答案必须来自于该知识库。"
+    },
+    {
+      "name": "表格定位+表格结构识别+信息点抽取",
+      "type": "method",
+      "description": "A three-step strategy was used to extract information points from table regions, including table positioning, structure recognition, and point extraction.",
+      "confidence": 0.9,
+      "context": "快速的进行 PDF 文件解析以及抽取信息点，保证 上，结合“表格定位+表格结构识别+信息点抽取”"
+    },
+    {
+      "name": "RDF",
+      "type": "phenomenon",
+      "description": "A data structure format used in the PKUBASE knowledge graph database.",
+      "confidence": 0.9,
+      "context": "PKUBASE 采用当前应用最广泛的 RDF 结构，用户可 以使用结构化的 SPARQL 语言对其进行查询。"
+    },
+    {
+      "name": "SPARQL",
+      "type": "method",
+      "description": "A query language used for querying the PKUBASE knowledge graph database.",
+      "confidence": 0.95,
+      "context": "PKUBASE 采用当前应用最广泛的 RDF 结构，用户可 以使用结构化的 SPARQL 语言对其进行查询。"
+    },
+    {
+      "name": "Natural Language Question Answering",
+      "type": "phenomenon",
+      "description": "A task that involves understanding natural language questions and generating answers based on the PKUBASE knowledge graph database.",
+      "confidence": 0.9,
+      "context": "本任务为开放领域的自然语言问答，宏观而言，这是一个从理解自然语言，再利用获取到的信息匹"
+    },
+    {
+      "name": "Query Templates",
+      "type": "method",
+      "description": "Templates used for generating natural language questions and corresponding SPARQL queries.",
+      "confidence": 0.9,
+      "context": "我们用到的问题模板包括单跳型、双跳型、三跳型以及星型。"
+    },
+    {
+      "name": "基于路径匹配的模型",
+      "type": "method",
+      "description": "A model that uses path matching to identify entities and relationships.",
+      "confidence": 0.9,
+      "context": "图8 基于实体与关系识别的模型总体流程"
+    },
+    {
+      "name": "谓词匹配",
+      "type": "method",
+      "description": "A method that matches predicates in text with knowledge base information.",
+      "confidence": 0.85,
+      "context": "谓词匹配 句子中出现的文本与知识库中 《国王的演讲》有多"
+    },
+    {
+      "name": "TextCNN",
+      "type": "material",
+      "description": "A type of convolutional neural network (CNN) architecture.",
+      "confidence": 0.75,
+      "context": "相比起 LSTM、TextCNN 等上一代模型，BERT 尤其在实体、关系、问句类型识别上能达到更高的准确率。"
+    },
+    {
+      "name": "Pairwise LambdaRank",
+      "type": "method",
+      "description": "A method for ranking and selecting the best query path.",
+      "confidence": 0.8,
+      "context": "不适应开 对于问题相对较少的领域，模 如何计 算 融券费"
+    },
+    {
+      "name": "Ensemble",
+      "type": "method",
+      "description": "A method that combines the results of multiple models to achieve better performance.",
+      "confidence": 0.85,
+      "context": "部分队伍亦使用 Ensemble 螜合多个系统结果以试图达到单个系统无法企及的性能"
+    },
+    {
+      "name": "Query Path Optimization",
+      "type": "method",
+      "description": "A method that optimizes the query path to achieve better performance.",
+      "confidence": 0.9,
+      "context": "优化查询路径的打分方式对于此类系统是至关重要的。在本次比赛中，表现较为突出的模型包括 BERT 语义匹配模型"
+    },
+    {
+      "name": "Natural Language Processing",
+      "type": "phenomenon",
+      "description": "The processing of human language by computers.",
+      "confidence": 0.8,
+      "context": "积极应用自然语言处理领域的新兴模型、技术是有利于进一步提高问答系统性能的。"
+    },
+    {
+      "name": "pre-training",
+      "type": "method",
+      "description": "Large-scale pre-training models, such as BERT and Elmo, are used to fine-tune the model.",
+      "confidence": 0.95,
+      "context": "随着的关键。在多个任务中，排名前列的系统基CCKS中文问答数据集的不断丰富，将端到端模型尝本都采用了大规模预训练模型（如 BERT 和试应用与中文问答任务是值得期待的。"
+    },
+    {
+      "name": "transfer learning",
+      "type": "method",
+      "description": "Transfer learning techniques can be used to improve the model's performance.",
+      "confidence": 0.9,
+      "context": "无监督学习技术等；进而促进相关领域研究不断发展。"
+    },
+    {
+      "name": "open-domain knowledge graph",
+      "type": "application",
+      "description": "Building a high-performance open-domain knowledge graph is a valuable research direction.",
+      "confidence": 0.95,
+      "context": "针对开放领域的知识图谱问答，本次比赛的统是一个非常值得研究的方向；"
+    },
+    {
+      "name": "domain-specific knowledge",
+      "type": "material",
+      "description": "Domain-specific knowledge resources can help build effective models.",
+      "confidence": 0.9,
+      "context": "领域知识资源可以帮助构建有效的模型，特别是在面向特定领域时。例如，在医疗命名实体识别中，医疗实体词典可以有效地降低计算开销；"
+    },
+    {
+      "name": "end-to-end model",
+      "type": "method",
+      "description": "End-to-end models are used to fine-tune the model.",
+      "confidence": 0.9,
+      "context": "将端到端模型尝本都采用了大规模预训练模型（如 BERT 和试应用与中文问答任务是值得期待的。"
+    },
+    {
+      "name": "supervised learning",
+      "type": "method",
+      "description": "Supervised learning techniques can be used to improve the model's performance.",
+      "confidence": 0.9,
+      "context": "在有监督的情况下知识图谱技术性能水平优秀，但是在缺乏语料的情况下知识图谱距离实用仍有一定距离。"
+    },
+    {
+      "name": "Syntax-aware entity representations",
+      "type": "method",
+      "description": "A technique for neural relation extraction that uses syntax-aware entity representations.",
+      "confidence": 0.9,
+      "context": "He Z, Chen W, Li Z, et al. Syntax-aware entity representations for neural relation extraction... (2019)"
+    },
+    {
+      "name": "Distant supervision for relation extraction",
+      "type": "method",
+      "description": "A method that uses distant supervision to train models for relation extraction.",
+      "confidence": 0.8,
+      "context": "[17] Ji G, Liu K, He S, et al. Distant supervision for relation extraction with sentence-level attention... (2017)"
+    },
+    {
+      "name": "Attention-based bidirectional long short-term memory networks",
+      "type": "method",
+      "description": "A type of neural network that uses attention mechanisms and bidirectional long short-term memory to classify relations.",
+      "confidence": 0.9,
+      "context": "[18] Zhou P, Shi W, Tian J, et al. Attention-based bidirectional long short-term memory networks for relation classification... (2016)"
+    },
+    {
+      "name": "Clinical named entity recognition",
+      "type": "phenomenon",
+      "description": "The process of identifying and categorizing named entities in clinical text.",
+      "confidence": 0.8,
+      "context": "[4] Kundeti, S.R., Vijayananda, J., Mujjiga, S., et al. Clinical named entity recognition: Challenges and opportunities... (2016)"
+    },
+    {
+      "name": "Relation classification",
+      "type": "phenomenon",
+      "description": "The process of classifying relationships between entities in text.",
+      "confidence": 0.9,
+      "context": "[16] He Z, Chen W, Li Z, et al. Syntax-aware entity representations for neural relation extraction... (2019)"
+    },
+    {
+      "name": "IPRE dataset",
+      "type": "material",
+      "description": "Dataset for Inter-Personal Relationship Extraction.",
+      "confidence": 0.8,
+      "context": "arXiv preprint arXiv:1907.12801, 2019."
+    },
+    {
+      "name": "Deep contextualized word representations",
+      "type": "theory",
+      "description": "Theoretical framework for representing words in vector space.",
+      "confidence": 0.95,
+      "context": "arXiv preprint arXiv:1802.05365, 2018."
+    },
+    {
+      "name": "Conditional Random Fields",
+      "type": "theory",
+      "description": "Probabilistic models for segmenting and labeling sequence data.",
+      "confidence": 0.9,
+      "context": "Proceedings of Icml, 2001, 3(2):282-289."
+    },
+    {
+      "name": "Long Short-Term Memory",
+      "type": "method",
+      "description": "Neural network architecture for learning long-term dependencies in sequences.",
+      "confidence": 0.95,
+      "context": "Neural Computation, 1997, 9(8):1735 - 1780."
+    },
+    {
+      "name": "Neural architectures for named entity recognition",
+      "type": "phenomenon",
+      "description": "A scientific phenomenon related to natural language processing.",
+      "confidence": 1.0,
+      "context": "al. Neural architectures for named entity recognition[J]. arXiv preprint arXiv:1603.01360, 2016."
+    },
+    {
+      "name": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+      "type": "method",
+      "description": "A neural architecture for natural language processing.",
+      "confidence": 1.0,
+      "context": "Devlin J, Chang M W, Lee K, et al. Bert: Pre-training of deep bidirectional transformers for language understanding[J]. arXiv preprint arXiv:1810.04805, 2018."
+    },
+    {
+      "name": "Zero-Shot Entity Linking by Reading Entity Descriptions",
+      "type": "method",
+      "description": "A technique for entity linking without explicit training data.",
+      "confidence": 1.0,
+      "context": "Logeswaran L, Chang M W, Lee K, et al. Zero-Shot Entity Linking by Reading Entity Descriptions[J]. arXiv preprint arXiv:1906.07348, 2019."
+    },
+    {
+      "name": "Domain Language Model",
+      "type": "theory",
+      "description": "A theoretical framework for information extraction.",
+      "confidence": 1.0,
+      "context": "[26] Jing Zhu, Yongcui Deng, Yiwen Zhou, Dewang Sun and Ruibin Mao: An Information Extraction Approach Based on Domain Language Model (2019)."
+    },
+    {
+      "name": "Multi-Module System for Open Domain Chinese Question Answering over Knowledge Base",
+      "type": "application",
+      "description": "A practical implementation of a question answering system.",
+      "confidence": 1.0,
+      "context": "[29] Yang, Y.y., He, X.h., Zhou, K.j. and Wei, Z.y.: Multi-Module System for Open Domain Chinese Question Answering over Knowledge Base. In: Proceedings of CCKS Tasks (2019)."
+    }
+  ],
+  "relationships": [
+    {
+      "from": "Knowledge Graph Evaluation Track",
+      "to": "CCKS 2019",
+      "type": "based_on",
+      "confidence": 0.99,
+      "context": "The CCKS 2019 Knowledge Graph Evaluation Track is based on the concept of knowledge graph and its related technologies."
+    },
+    {
+      "from": "Entity Recognition",
+      "to": "Named Entity Recognition (NER)",
+      "type": "is_a",
+      "confidence": 0.98,
+      "context": "Entity recognition is a type of named entity recognition."
+    },
+    {
+      "from": "Relation Extraction",
+      "to": "Event Extraction",
+      "type": "related_to",
+      "confidence": 0.92,
+      "context": "The report mentions that relation extraction is related to event extraction in the context of knowledge graph evaluation track."
+    },
+    {
+      "from": "BiLSTM",
+      "to": "ERNIE/BERT",
+      "type": "uses",
+      "confidence": 0.95,
+      "context": "The text mentions that ERNIE/BERT is used as a tool for entity recognition."
+    },
+    {
+      "from": "神经网络",
+      "to": "实体链指任务",
+      "type": "enables",
+      "confidence": 0.92,
+      "context": "通过神经网络对它们分别建模并得到各自的向量表示，然后通过相似度度量方法进行匹配度打分，选择得分最高的候选实体输出。"
+    },
+    {
+      "from": "PKUBASE",
+      "to": "Natural Language Question Answering",
+      "type": "applies_to",
+      "confidence": 0.98,
+      "context": "本次测评任务构建了专门的中文自然语言问答数据。"
+    },
+    {
+      "from": "model ensemble",
+      "to": "evaluation metrics",
+      "type": "measures",
+      "confidence": 0.9,
+      "context": "The text states that model ensembles were evaluated using evaluation metrics such as F1-score, indicating a relationship between the two."
+    }
+  ],
+  "statistics": {
+    "num_entities": 123,
+    "num_relationships": 7,
+    "num_chunks_processed": 26
+  }
+}

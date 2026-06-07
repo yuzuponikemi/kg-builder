@@ -1,0 +1,754 @@
+{
+  "metadata": {
+    "source_file": "2003_00719v3.pdf",
+    "title": "January2020",
+    "authors": [],
+    "num_pages": 22,
+    "extraction_date": "2025-12-03T10:12:37.180492",
+    "arxiv_id": null
+  },
+  "entities": [
+    {
+      "name": "Knowledge Graphs",
+      "type": "phenomenon",
+      "description": "A type of graph that provides ready-to-use cross-domain knowledge.",
+      "confidence": 0.95,
+      "context": "In summary, knowledge graphs are a useful ingredient to XAI systems, as they provide ready-to-use cross-domain knowledge."
+    },
+    {
+      "name": "Google's Knowledge Graph",
+      "type": "application",
+      "description": "A publicly available knowledge graph used to improve search results.",
+      "confidence": 0.8,
+      "context": "While Google coined the term Knowledge Graph first and promoted it as a means to improve their search results, they are used in many applications today."
+    },
+    {
+      "name": "DBpedia",
+      "type": "material",
+      "description": "A knowledge base that extracts structured information from Wikipedia and other sources.",
+      "confidence": 1.0,
+      "context": "http://downloads.dbpedia.org/2016-10/dbpedia_2016-10.owl"
+    },
+    {
+      "name": "Wikidata",
+      "type": "material",
+      "description": "A knowledge base that contains structured data about entities, such as people, places, and organizations.",
+      "confidence": 1.0,
+      "context": "https://dumps.wikimedia.org/wikidatawiki/entities/latest-truthy.nt.gz"
+    },
+    {
+      "name": "Things, not Strings",
+      "type": "theory",
+      "description": "The idea that knowledge graphs consist of disambiguated entities, so that entities of the same name can be told apart more easily.",
+      "confidence": 0.8,
+      "context": "Since Google coined the term Knowledge Graph for marketing purposes, it has subsequently been used in the scientific literature as well."
+    },
+    {
+      "name": "manual curation",
+      "type": "method",
+      "description": "A technique for creating knowledge graphs by manually curating data.",
+      "confidence": 0.9,
+      "context": "There are different techniques for creating knowledge graphs. The most common ones are (1) manual curation, (2) creation from (semi) structured sources, and (3) creation from unstructured sources."
+    },
+    {
+      "name": "creation from semi-structured sources",
+      "type": "method",
+      "description": "A technique for creating knowledge graphs by extracting data from semi-structured sources.",
+      "confidence": 0.9,
+      "context": "There are different techniques for creating knowledge graphs. The most common ones are (1) manual curation, (2) creation from (semi) structured sources, and (3) creation from unstructured sources."
+    },
+    {
+      "name": "creation from unstructured sources",
+      "type": "method",
+      "description": "A technique for creating knowledge graphs by extracting data from unstructured sources.",
+      "confidence": 0.9,
+      "context": "There are different techniques for creating knowledge graphs. The most common ones are (1) manual curation, (2) creation from (semi) structured sources, and (3) creation from unstructured sources."
+    },
+    {
+      "name": "Cyc",
+      "type": "material",
+      "description": "A knowledge graph with a total cost of development estimated as 120 Million USD.",
+      "confidence": 0.9,
+      "context": "The total cost of development for Cyc have been estimated as 120 Million USD."
+    },
+    {
+      "name": "Freebase",
+      "type": "material",
+      "description": "A knowledge graph acquired by Google in 2010 and shutdown in 2014.",
+      "confidence": 0.9,
+      "context": "To that end, the schema of Freebase was kept fairly simple to lower the entrance barrier as much as possible."
+    },
+    {
+      "name": "DBpedia Extraction Framework",
+      "type": "method",
+      "description": "Creates a graph in which each page in Wikipedia becomes an entity, and all values and links in an infobox become attributes and edges.",
+      "confidence": 0.95,
+      "context": "The DBpedia Extraction Framework creates a graph in which each page in Wikipedia becomes an entity, and all values and links in an infobox become attributes and edges."
+    },
+    {
+      "name": "YAGO",
+      "type": "material",
+      "description": "A semantic network database that contains information about entities, such as people, places, and organizations.",
+      "confidence": 1.0,
+      "context": "http://resources.mpi-inf.mpg.de/yago-naga/yago3.1/yagoTransitiveType.ttl.7z"
+    },
+    {
+      "name": "Crowd editing approach",
+      "type": "method",
+      "description": "An approach used by Wikidata to create a knowledge graph.",
+      "confidence": 0.9,
+      "context": "Wikidata also uses on a crowd editing approach."
+    },
+    {
+      "name": "RDF reification",
+      "type": "method",
+      "description": "A process of representing temporal facts with meta-level statements.",
+      "confidence": 0.9,
+      "context": "Wikipedia into a single graph and represents temporal facts with meta-level statements, i.e., RDF reification."
+    },
+    {
+      "name": "DBpedia as supervision",
+      "type": "material",
+      "description": "Supervision used for converting categories into formal axioms.",
+      "confidence": 0.8,
+      "context": "CaLiGraph also uses information in categories, but aims at converting them into formal axioms using DBpedia as supervision."
+    },
+    {
+      "name": "Populating the knowledge graph with instances from Wikipedia list pages",
+      "type": "method",
+      "description": "A process of populating the knowledge graph with instances from Wikipedia list pages.",
+      "confidence": 0.9,
+      "context": "Moreover, instances from Wikipedia list pages are considered for populating the knowledge graph."
+    },
+    {
+      "name": "Combination of information in Wikipedia and WordNet",
+      "type": "method",
+      "description": "A combination of information in Wikipedia and WordNet used by BabelNet.",
+      "confidence": 0.9,
+      "context": "Asimilar approach, i.e., the combination of information in Wikipedia and WordNet, is used by BabelNet."
+    },
+    {
+      "name": "Multi-language applications",
+      "type": "application",
+      "description": "A type of application that BabelNet is particularly well suited for.",
+      "confidence": 0.8,
+      "context": "Themain purpose of BabelNet is the collection of synonyms and translations in various languages, so that this knowledge graph is particularly well suited for supporting multi-language applications."
+    },
+    {
+      "name": "BabelNet",
+      "type": "material",
+      "description": "A multilingual lexical database that contains information about words, phrases, and concepts in different languages.",
+      "confidence": 1.0,
+      "context": "BabelNet Version 3.6 is not publicly available for download, but has been provided by the developers upon request."
+    },
+    {
+      "name": "ConceptNet",
+      "type": "application",
+      "description": "A knowledge graph that collects synonyms and translations in various languages, integrating multiple third-party knowledge graphs itself.",
+      "confidence": 0.95,
+      "context": "Similarly, ConceptNet [38] collects synonymsandtranslationsinvariouslanguages,integratingmultiplethirdpartyknowl- edgegraphsitself."
+    },
+    {
+      "name": "DBkWik",
+      "type": "application",
+      "description": "A graph that has a larger coverage and level of detail for many long tail entities, highly complementary to DBpedia.",
+      "confidence": 0.95,
+      "context": "DBkWik [14] uses the same codebase as DBpedia, but applies it to a multitude of Wikis.Thisleadstoagraphwhichhasalargercoverageandlevelofdetailformanylongtailentities,andishighlycomplementarytoDBpedia."
+    },
+    {
+      "name": "RDFa",
+      "type": "method",
+      "description": "A technique for creating structured data in Webpages.",
+      "confidence": 0.95,
+      "context": "AnothersourceofstructureddataisthestructuredannotationsinWebpagesusingtechniquessuchasRDFa,Microdata,andMicroformats[23]."
+    },
+    {
+      "name": "VoldemortKG",
+      "type": "application",
+      "description": "A consolidated version of structured data into a more connected knowledge graph.",
+      "confidence": 0.95,
+      "context": "Aconsolidatedversionofthisdataintoa moreconnectedknowledgegraphhasbeenpublishedunderthenameVoldemortKG[42]."
+    },
+    {
+      "name": "iterative coupled learning process",
+      "type": "method",
+      "description": "A machine learning approach that uses facts to learn textual patterns and detects those facts, with patterns learned in previous iterations used to extract new facts.",
+      "confidence": 0.95,
+      "context": "NELL was originally trained with a few seed examples and continuously runs an iterative coupled learning process."
+    },
+    {
+      "name": "feedback loop",
+      "type": "method",
+      "description": "A mechanism that incorporates occasional human feedback to improve the quality of extracted facts.",
+      "confidence": 0.95,
+      "context": "NELL has introduced a feedback loop incorporating occasional human feedback."
+    },
+    {
+      "name": "WebIsA",
+      "type": "application",
+      "description": "A system that extracts facts from free text and focuses on the creation of a large-scale taxonomy.",
+      "confidence": 0.95,
+      "context": "WebIsA also extracts facts from free text, but focuses on the creation of a large-scale taxonomy."
+    },
+    {
+      "name": "NELL",
+      "type": "application",
+      "description": "An example of extracting a knowledge graph from free text.",
+      "confidence": 0.95,
+      "context": "NELL is an example for extracting a knowledge graph from free text."
+    },
+    {
+      "name": "number of instances in a graph",
+      "type": "measurement",
+      "description": "A metric that measures the amount of information contained in a knowledge graph.",
+      "confidence": 0.95,
+      "context": "The most straightforward metrics to be used consider the mere amount of information contained in a knowledge graph."
+    },
+    {
+      "name": "number of assertions (or edges between entities)",
+      "type": "measurement",
+      "description": "A metric that measures the number of relationships or connections between entities in a knowledge graph.",
+      "confidence": 0.95,
+      "context": "The most straightforward metrics to be used consider the mere amount of information contained in a knowledge graph."
+    },
+    {
+      "name": "average and median linked degree",
+      "type": "measurement",
+      "description": "A metric that measures how many relationships or connections each entity has in a knowledge graph.",
+      "confidence": 0.95,
+      "context": "The most straightforward metrics to be used consider the mere amount of information contained in a knowledge graph."
+    },
+    {
+      "name": "number of classes defined in the schema",
+      "type": "measurement",
+      "description": "A metric that measures the number of categories or concepts defined in a knowledge graph's schema.",
+      "confidence": 0.95,
+      "context": "Another set of metrics can be defined for the schema or ontology level of a knowledge graph:"
+    },
+    {
+      "name": "number of relations defined in the schema",
+      "type": "measurement",
+      "description": "A metric that measures the number of relationships or connections defined in a knowledge graph's schema.",
+      "confidence": 0.95,
+      "context": "Another set of metrics can be defined for the schema or ontology level of a knowledge graph:"
+    },
+    {
+      "name": "average depth and width (branching factor) of the class hierarchy",
+      "type": "measurement",
+      "description": "A metric that measures the complexity and structure of a knowledge graph's schema.",
+      "confidence": 0.95,
+      "context": "Another set of metrics can be defined for the schema or ontology level of a knowledge graph:"
+    },
+    {
+      "name": "complexity of the schema",
+      "type": "measurement",
+      "description": "A metric that measures the overall complexity and richness of a knowledge graph's schema.",
+      "confidence": 0.95,
+      "context": "Another set of metrics can be defined for the schema or ontology level of a knowledge graph:"
+    },
+    {
+      "name": "ontology reasoning",
+      "type": "method",
+      "description": "A technique used to reason with ontology data.",
+      "confidence": 0.9,
+      "context": "While more formal, very complex ontologies will call for using ontology reasoning..."
+    },
+    {
+      "name": "statistical and distributional approaches",
+      "type": "method",
+      "description": "Approaches used to exploit large-scale ontologies.",
+      "confidence": 0.8,
+      "context": "Light-weight, but large-scale ontologies will be better exploited by statistical and distributional approaches."
+    },
+    {
+      "name": "schema-level metrics",
+      "type": "phenomenon",
+      "description": "Metrics that provide information about the richness and formality of knowledge graphs.",
+      "confidence": 0.95,
+      "context": "While the instance-based metrics focus more on the coverage of a domain in a knowledge graph, these schema-level metrics provide..."
+    },
+    {
+      "name": "instance-based metrics",
+      "type": "phenomenon",
+      "description": "Metrics that focus on the coverage of a domain in a knowledge graph.",
+      "confidence": 0.9,
+      "context": "While the instance-based metrics focus more on the coverage of a domain in a knowledge graph, these schema-level metrics provide..."
+    },
+    {
+      "name": "OpenCyc",
+      "type": "material",
+      "description": "A free version of Cyc available until 2017.",
+      "confidence": 0.8,
+      "context": "For Cyc, which is only available as a commercial product today, we used the free version OpenCyc, which has been available until 2017."
+    },
+    {
+      "name": "knowledge graphs (KGS)",
+      "type": "phenomenon",
+      "description": "A type of graph that represents knowledge.",
+      "confidence": 0.9,
+      "context": "From those metrics, it can be observed that the KGS differ in size by several orders of magnitude..."
+    },
+    {
+      "name": "Linked Open Data Cloud diagrams",
+      "type": "method",
+      "description": "A convention used to depict linked datasets and their connections.",
+      "confidence": 0.9,
+      "context": "The knowledge graphs also differ strongly in the characteristics of their schema."
+    },
+    {
+      "name": "Schema",
+      "type": "phenomenon",
+      "description": "The structure or organization of a knowledge graph's data.",
+      "confidence": 0.8,
+      "context": "DBpedia and NELL have comparably small schemas, while Wikidata and BabelNet build deep and detailed taxonomies."
+    },
+    {
+      "name": "Taxonomy",
+      "type": "phenomenon",
+      "description": "A classification system used to organize knowledge graph data into categories.",
+      "confidence": 0.9,
+      "context": "Wikidata has more than 600 subclasses..."
+    },
+    {
+      "name": "schema.org ontology",
+      "type": "theory",
+      "description": "A theoretical framework used by Voldemort to classify entities",
+      "confidence": 0.8,
+      "context": "Voldemort reuses the schema.org ontology, which is comparably small"
+    },
+    {
+      "name": "logical rules",
+      "type": "method",
+      "description": "Techniques used in Cyc's development of a formal ontology",
+      "confidence": 0.9,
+      "context": "Cyc, originating in classic AI research and strongly building on logical rules"
+    },
+    {
+      "name": "crowdsourcing process",
+      "type": "method",
+      "description": "A method of creating an ontology through a collaborative effort.",
+      "confidence": 0.9,
+      "context": "Thesame holds forschema.org,whichisapragmaticeffortofaconsortiumofsearchenginedevelopers."
+    },
+    {
+      "name": "linkagedegree and number of assertions per instance",
+      "type": "measurement",
+      "description": "A metric to measure the level of detail in which instances are represented.",
+      "confidence": 0.8,
+      "context": "it is useful to not only look at the number of instances, but also the level of detail in whichthoseinstancesarerepresented(i.e.,thelinkagedegreeandnumberofassertionsperinstance)."
+    },
+    {
+      "name": "explainable AI system",
+      "type": "application",
+      "description": "A practical implementation of artificial intelligence that provides explanations for its decisions.",
+      "confidence": 0.9,
+      "context": "To obtain deeper insights which classes are more prominent in which KGs, and, ultimately,whichKGsaresuitableforbuildingexplainableAIsysteminaspecificdomain,"
+    },
+    {
+      "name": "NEL",
+      "type": "material",
+      "description": "A knowledge base with fewer instances but larger level of detail.",
+      "confidence": 0.8,
+      "context": "While Wikidata has a large number of works, YAGO is a good source of events. NEL often has fewer instances but a larger level of detail, which can be explained by its focus on more prominent instances."
+    },
+    {
+      "name": "owl:sameAs links",
+      "type": "method",
+      "description": "Links that express entities in two knowledge graphs are the same or refer to the same real-world entity.",
+      "confidence": 0.95,
+      "context": "original text snippet: ...those links, usually in the form of owl:sameAs links, express that entities in two KGs are the same..."
+    },
+    {
+      "name": "knowledge graph interlinks",
+      "type": "phenomenon",
+      "description": "Links between knowledge graphs that provide a first hint at the overlap of KGs.",
+      "confidence": 0.95,
+      "context": "original text snippet: ...many KGs contain explicit interlinks."
+    },
+    {
+      "name": "transitivity of owl:sameAs property",
+      "type": "method",
+      "description": "Exploiting the transitivity of the owl:sameAs property to find further links between knowledge graphs.",
+      "confidence": 0.95,
+      "context": "original text snippet: ...further links can be found by exploiting the transitivity of the owl:sameAs property..."
+    },
+    {
+      "name": "open world assumption",
+      "type": "theory",
+      "description": "The assumption that there might always be more links than those explicitly or implicitly provided by the knowledge graphs.",
+      "confidence": 0.95,
+      "context": "original text snippet: ...due to the open world assumption, which holds for KG interlinks..."
+    },
+    {
+      "name": "heuristic link discovery",
+      "type": "method",
+      "description": "A method that builds on a set of existing links and heuristic link discovery to estimate the actual number of interlinks.",
+      "confidence": 0.95,
+      "context": "In order to estimate the actual number of interlinks, we use a method first discussed in [33], which builds on a set of existing links and heuristic link discovery:"
+    },
+    {
+      "name": "string similarity measures",
+      "type": "method",
+      "description": "Different string similarity measures used to discover links between two KGs automatically.",
+      "confidence": 0.95,
+      "context": "1. We used different heuristics to discover links between two KGs automatically, e.g., different string similarity measures [7,26]."
+    },
+    {
+      "name": "recall and precision",
+      "type": "measurement",
+      "description": "Metrics used to measure the performance of individual heuristics.",
+      "confidence": 0.95,
+      "context": "2. Based on the existing, incomplete set of interlinks, we measured recall and precision of the individual heuristics [35]."
+    },
+    {
+      "name": "actual number of interlinks",
+      "type": "phenomenon",
+      "description": "The unknown number of links between two KGs.",
+      "confidence": 0.95,
+      "context": "Given that the actual number of links is C (which is unknown), the number of links found by a heuristic is F, and that the number of correct links in F is F+, recall and precision are defined as..."
+    },
+    {
+      "name": "estimated overlap",
+      "type": "measurement",
+      "description": "The average estimate computed using 16 metrics.",
+      "confidence": 0.95,
+      "context": "The estimated overlap reported is the average estimate computed using these 16 metrics."
+    },
+    {
+      "name": "Jaccard similarity metric",
+      "type": "method",
+      "description": "A measure of the overlap between two sets, used to estimate the number of links in a knowledge graph.",
+      "confidence": 0.95,
+      "context": "The estimated overlap reported is the average estimate computed using these 16 metrics."
+    },
+    {
+      "name": "Monge-Elkan similarity metric",
+      "type": "method",
+      "description": "A method for comparing two sets and estimating the number of links in a knowledge graph.",
+      "confidence": 0.95,
+      "context": "The estimated overlap reported is the average estimate computed using these 16 metrics."
+    },
+    {
+      "name": "Combining knowledge graphs",
+      "type": "application",
+      "description": "The process of combining multiple knowledge graphs to improve coverage and accuracy.",
+      "confidence": 0.9,
+      "context": "To analyze the benefit of the combination of different KGs, we depict the number of estimated links both in relation to (a) the entities existing in the larger of the two KGs (Fig.10) as well as (b) in relation to the links that exist explicitly or implicitly (Fig.11)."
+    },
+    {
+      "name": "Entity overlap",
+      "type": "phenomenon",
+      "description": "The measure of how many entities are shared between two knowledge graphs.",
+      "confidence": 0.9,
+      "context": "From (a), we can estimate the amount of gain in knowledge of combining two KGs (i.e., if only a small fraction of one KG is also contained in the other and vice versa, such a combination adds a lot of information)."
+    },
+    {
+      "name": "Knowledge graph coverage",
+      "type": "phenomenon",
+      "description": "The measure of how well a knowledge graph covers a particular domain or class.",
+      "confidence": 0.9,
+      "context": "Fig.10 shows that in most cases, the larger of two knowledge graphs contains most of the entities of a smaller one, i.e., its set of entities of a class in larger KG is usually a superset of that set in the smaller one."
+    },
+    {
+      "name": "Complementary instances",
+      "type": "phenomenon",
+      "description": "The phenomenon where multiple knowledge graphs contain different but complementary instances of the same entity.",
+      "confidence": 0.9,
+      "context": "Notable exceptions are BabelNet and CaLiGraph, which often contain complementary instances."
+    },
+    {
+      "name": "extraction from list pages",
+      "type": "method",
+      "description": "A technique used to extract instances from CaLiGraph, which leads to a larger number of instances overall.",
+      "confidence": 0.9,
+      "context": "guageeditions)andextractionmechanisms(especiallytheextractionfromlistpagesinCaLiGraph"
+    },
+    {
+      "name": "interlinking",
+      "type": "phenomenon",
+      "description": "The process of linking different knowledge graphs, which requires efforts to improve the linkage.",
+      "confidence": 0.8,
+      "context": "This shows that links between KGs are only complete where they are trivial to create,"
+    },
+    {
+      "name": "overlap of knowledge graphs",
+      "type": "phenomenon",
+      "description": "The degree to which two or more knowledge graphs share common entities.",
+      "confidence": 0.9,
+      "context": "been considered in this chapter, since there are already quite elaborate surveys covering this aspect[6,44]."
+    },
+    {
+      "name": "statement-level overlap",
+      "type": "phenomenon",
+      "description": "The degree to which two or more knowledge graphs share common information about a specific entity.",
+      "confidence": 0.8,
+      "context": "Even if two knowledge graphs cover the same entity, the information they contain about that entity might still be complementary."
+    },
+    {
+      "name": "extraction mechanism",
+      "type": "method",
+      "description": "A method used to extract knowledge graphs from various sources.",
+      "confidence": 0.9,
+      "context": "They use the extraction mechanism of DBpedia and applies it to a multitude of Wikis."
+    },
+    {
+      "name": "sophisticated methods for recognizing and converting units of measurement",
+      "type": "method",
+      "description": "Methods used to recognize and convert units of measurement in extracted knowledge graphs.",
+      "confidence": 0.8,
+      "context": "Besides the mere extraction, Chaudron uses sophisticated methods for recognizing and converting units of measurement."
+    },
+    {
+      "name": "Linked Hypernym Dataset (LHD)",
+      "type": "material",
+      "description": "A dataset that focuses on the extraction of a hypernym graph using deep linguistic analysis.",
+      "confidence": 0.95,
+      "context": "The Linked Hypernym Dataset (LHD) [17], like the aforementioned WebIsA-LOD, focuses on the extraction of a hypernym graph."
+    },
+    {
+      "name": "Wikipedia",
+      "type": "material",
+      "description": "A source used to extract knowledge graphs.",
+      "confidence": 0.8,
+      "context": "Chaudron uses Wikipedia as a source and focuses on quantifiable values (e.g., sizes, weights, etc.)."
+    },
+    {
+      "name": "ClaimsKG",
+      "type": "method",
+      "description": "A method that extracts claims from fact-checking webpages and interlinks them with other knowledge graphs.",
+      "confidence": 0.95,
+      "context": "ClaimsKG [41] extracts claims from fact-checking Webpages, such as politifact, and interlinks them with other knowledge graphs such as DBpedia,"
+    },
+    {
+      "name": "Linked Data Quality of DBpedia, Freebase, OpenCyC, Wikidata, and YAGO",
+      "type": "measurement",
+      "description": "Evaluation of the quality of linked data sources.",
+      "confidence": 0.95,
+      "context": "Linked data quality of dbpedia, freebase, opencyc, wikidata, and yago. Semantic Web (to appear), 2016."
+    },
+    {
+      "name": "Data Linking for the Semantic Web",
+      "type": "method",
+      "description": "Techniques for linking data in the semantic web.",
+      "confidence": 0.95,
+      "context": "Datalinking for the semantic web. International Journal on Semantic Web and Information Systems (IJSWIS), 7(3):46–76, 2011."
+    },
+    {
+      "name": "Enterprise Knowledge Graphs: A Backbone of Linked Enterprise Data",
+      "type": "application",
+      "description": "Use case for enterprise knowledge graphs.",
+      "confidence": 0.95,
+      "context": "Enterprise knowledge graph: An introduction. In Exploiting linked data and knowledge graphs in large organisations, pages 1–14. Springer, 2017."
+    },
+    {
+      "name": "Towards a Definition of Knowledge Graphs",
+      "type": "theory",
+      "description": "Theoretical framework for defining knowledge graphs.",
+      "confidence": 0.95,
+      "context": "Towards a definition of knowledge graphs. SEMANTiCS (Posters, Demos, SuCCESS), 48, 2016."
+    },
+    {
+      "name": "Uncovering the Semantics of Wikipedia Categories",
+      "type": "phenomenon",
+      "description": "Study on the semantics of Wikipedia categories.",
+      "confidence": 0.95,
+      "context": "Uncovering the semantics of wikipedia categories. In International semantic web conference, pages 219–236. Springer, 2019."
+    },
+    {
+      "name": "Entity Extraction from Wikipedia List Pages",
+      "type": "method",
+      "description": "Technique for extracting entities from Wikipedia list pages.",
+      "confidence": 0.95,
+      "context": "Entity extraction from wikipedia list pages. In Extended Semantic Web Conference, 2020."
+    },
+    {
+      "name": "text mining approach",
+      "type": "method",
+      "description": "An approach to typing entities in knowledge graphs.",
+      "confidence": 0.9,
+      "context": "[17] Toma´sˇKliegrandOndˇrejZamazal. Lhd2.0:A text mining approach to typing entities in knowledge graphs. Journal of Web Semantics, 39:47–61, 2016."
+    },
+    {
+      "name": "schema.org vocabulary",
+      "type": "phenomenon",
+      "description": "A vocabulary for describing structured data on the web.",
+      "confidence": 0.8,
+      "context": "[21] Robert Meusel, Christian Bizer, and Heiko Paulheim. A web-scale study of the adoption and evolution of the schema.org vocabulary over time. In Proceedings of the 5th International Conference on Web Intelligence, Mining and Semantics, page 15. ACM, 2015."
+    },
+    {
+      "name": "knowledge graph creation",
+      "type": "phenomenon",
+      "description": "The process of creating a knowledge graph from thousands of wikis.",
+      "confidence": 0.9,
+      "context": "[16] Alexandra Hofmann, Samresh Perchani, Jan Portisch, Sven Hertling, and Heiko Paulheim. Dbkwik: Towards knowledge graph creation from thousands of wikis. In International Semantic Web Conference (Posters, Demos&IndustryTracks), 2017."
+    },
+    {
+      "name": "WordNet",
+      "type": "material",
+      "description": "A lexical database for English.",
+      "confidence": 0.8,
+      "context": "[24] George A. Miller. WordNet: A lexical database for English. Communications of the ACM, 38(11):39–41, 1995."
+    },
+    {
+      "name": "Schema.org",
+      "type": "material",
+      "description": "A semantic framework for linked open data",
+      "confidence": 0.9,
+      "context": "[28] Heiko Paulheim. What the adoption of schema.org tells about linked open data."
+    },
+    {
+      "name": "Knowledge Graph Refinement",
+      "type": "method",
+      "description": "A survey of approaches and evaluation methods for refining knowledge graphs",
+      "confidence": 0.95,
+      "context": "[29] Heiko Paulheim. Knowledge graph refinement: A survey of approaches and evaluation methods."
+    },
+    {
+      "name": "Linked Open Data",
+      "type": "phenomenon",
+      "description": "The use of linked data principles to make data available on the web",
+      "confidence": 0.9,
+      "context": "[28] Heiko Paulheim. What the adoption of schema.org tells about linked open data."
+    },
+    {
+      "name": "ontology matching tools",
+      "type": "method",
+      "description": "Techniques for automatically parameterizing ontology matching tools based on example mappings.",
+      "confidence": 0.9,
+      "context": "[35] Dominique Ritze and Heiko Paulheim. Towards an automatic parameterization of ontology matching tools based on example mappings."
+    },
+    {
+      "name": "example mappings",
+      "type": "material",
+      "description": "Mappings used to automatically parameterize ontology matching tools.",
+      "confidence": 0.8,
+      "context": "[35] Dominique Ritze and Heiko Paulheim. Towards an automatic parameterization of ontology matching tools based on example mappings."
+    },
+    {
+      "name": "Linked Data best practices",
+      "type": "theory",
+      "description": "Guidelines for publishing Linked Data, including data quality and metadata standards.",
+      "confidence": 0.9,
+      "context": "[36] Max Schmachtenberg, Christian Bizer, and Heiko Paulheim. Adoption of the Linked Data best practices in different topical domains."
+    },
+    {
+      "name": "Hypernymy relations",
+      "type": "phenomenon",
+      "description": "Relationships between concepts that indicate a hierarchical structure.",
+      "confidence": 0.8,
+      "context": "[37] Julian Seitner, Christian Bizer, Kai Eckert, Stefano Faralli, Robert Meusel, Heiko Paulheim, and Simone Paolo Ponzetto. A large database of hypernymy relations extracted from the web."
+    },
+    {
+      "name": "ConceptNet 5",
+      "type": "theory",
+      "description": "A knowledge graph representing general relational knowledge.",
+      "confidence": 0.9,
+      "context": "[38] Robert Speer and Catherine Havasi. Representing general relational knowledge in ConceptNet 5."
+    },
+    {
+      "name": "Chauffeur",
+      "type": "method",
+      "description": "An extension to DBpedia that adds measurement capabilities.",
+      "confidence": 0.8,
+      "context": "[39] Julien Subercaze. Chauffeur: extending DBpedia with measurement."
+    },
+    {
+      "name": "ClaimKG",
+      "type": "application",
+      "description": "A knowledge graph of fact-checked claims.",
+      "confidence": 0.9,
+      "context": "[41] Andon Tchechmedjiev, Pavlos Fafalios, Katarina Boland, Malo Gasquet, Mattha¨us Zloch, Benjamin Zapilko, Stefan Dietze, and Konstantin Todorov. ClaimsKG: A knowledge graph of fact-checked claims."
+    },
+    {
+      "name": "Voldemort KG",
+      "type": "method",
+      "description": "A mapping schema for linking schema.org and web entities to Linked Open Data.",
+      "confidence": 0.8,
+      "context": "[42] Alberto Tonon, Victor Felder, Djellel Eddine Difallah, and Philippe Cudre´-Mauroux. Voldemort KG: Mapping schema.org and web entities to linked open data."
+    },
+    {
+      "name": "Quality assessment for Linked Data",
+      "type": "theory",
+      "description": "A survey of methods for assessing the quality of Linked Data.",
+      "confidence": 0.9,
+      "context": "[44] Amrapali Zaveri, Anisa Rula, Andrea Maurino, Ricardo Pietrobon, Jens Lehmann, and So¨ren Auer. Quality assessment for linked data: A survey."
+    },
+    {
+      "name": "BabelNet Version 3.6",
+      "type": "material",
+      "description": "A knowledge graph-based system for multilingual information retrieval and natural language processing.",
+      "confidence": 0.9,
+      "context": "BabelNet Version 3.6 is not publicly available for download, but has been provided by the developers upon request."
+    },
+    {
+      "name": "NELL Version 0.3#1100",
+      "type": "material",
+      "description": "A large-scale information extraction system that can extract entities and relationships from text.",
+      "confidence": 0.8,
+      "context": "• http://wdaqua-nell2rdf.univ-st-etienne.fr/archive/NELL2RDF_0.3_1100_ontology.ttl.gz • http://wdaqua-nell2rdf.univ-st-etienne.fr/archive/NELL2RDF_0.3_1100.nt.gz"
+    },
+    {
+      "name": "OpenCyc Version 4.0",
+      "type": "material",
+      "description": "A large-scale, publicly available ontology that provides a framework for representing and reasoning about common sense knowledge.",
+      "confidence": 0.9,
+      "context": "• https://github.com/asanchez75/opencyc/blob/master/opencyc-latest.owl.gz"
+    },
+    {
+      "name": "CaLiGraph Version 1.0.6",
+      "type": "material",
+      "description": "A knowledge graph-based system for multilingual information retrieval and natural language processing.",
+      "confidence": 0.9,
+      "context": "• https://zenodo.org/api/files/042e92ff-0bf7-4d3a-8edb-a5bf491f9a19/caligraph-ontology.nt.bz2 • https://zenodo.org/api/files/042e92ff-0bf7-4d3a-8edb-a5bf491f9a19/caligraph-instances_types.nt.bz2"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "schema-level metrics",
+      "to": "instance-based metrics",
+      "type": "based_on",
+      "confidence": 0.95,
+      "context": "While the instance-based metrics focus more on the coverage of a domain in a knowledge graph, these schema-level metrics provide information about the richness and formality of that knowledge."
+    },
+    {
+      "from": "Things, not Strings",
+      "to": "knowledge graphs",
+      "type": "is_a",
+      "confidence": 0.95,
+      "context": "The idea of that slogan is: while strings are often ambiguous, knowledge graphs consist of disambiguated entities..."
+    },
+    {
+      "from": "ontology reasoning",
+      "to": "statistical and distributional approaches",
+      "type": "related_to",
+      "confidence": 0.85,
+      "context": "They determine which techniques to use – e.g., while more formal, very complex ontologies will call for using ontology reasoning, light-weight, but large-scale ontologies will be better exploited by statistical and distributional approaches."
+    },
+    {
+      "from": "Combining knowledge graphs",
+      "to": "Knowledge Graphs",
+      "type": "uses",
+      "confidence": 0.95,
+      "context": "The combination of different KGs is used to analyze the benefit of combining two KGs."
+    },
+    {
+      "from": "DBpedia",
+      "to": "Wikipedia",
+      "type": "part_of",
+      "confidence": 0.95,
+      "context": "DBpediamainlyusesinfoboxesinWikipedia."
+    },
+    {
+      "from": "DBpedia",
+      "to": "BabelNet",
+      "type": "measures",
+      "confidence": 0.8,
+      "context": "The text states that the average linked degree is high in DBpedia, while the median is high in BabelNet."
+    }
+  ],
+  "statistics": {
+    "num_entities": 99,
+    "num_relationships": 6,
+    "num_chunks_processed": 25
+  }
+}

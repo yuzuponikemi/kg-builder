@@ -1,0 +1,3274 @@
+{
+  "metadata": {
+    "source_file": "2112_10006v6.pdf",
+    "title": "UNDERREVISION 1",
+    "authors": [],
+    "num_pages": 34,
+    "extraction_date": "2025-12-03T11:27:54.588553",
+    "arxiv_id": null
+  },
+  "entities": [
+    {
+      "name": "Zero-shot Learning",
+      "type": "phenomenon",
+      "description": "A machine learning problem that involves recognizing unseen objects in an image.",
+      "confidence": 0.95,
+      "context": "They use Conditional Random Field to infer the unseen objects using the recognized seen objects and a KG with prior knowledge about the relationships between objects."
+    },
+    {
+      "name": "Few-shot Learning",
+      "type": "theory",
+      "description": "A learning approach where a model is trained on a small number of examples from each class to predict the labels of new, unseen instances.",
+      "confidence": 0.95,
+      "context": "Definition 4 (Few-shot Learning): Given a set of training samples D = {(x,y)|x∈X ,y ∈Y } and a set of few-shot samplesD = {(x,y)|x∈X ,y ∈Y }, where Y ∩Y = ∅, each class in Y has a large number of samples in D and eachclassinY has only a small number of samples in D , very few samples are used to train a classifier f with D and D for predicting samples in a testing set D = {(x,y)|x∈X ,y ∈Y } with X ∩X =∅, or D = {(x,y)|x∈X ∪X(cid:48),y ∈Y ∪Y } with X ∩X(cid:48) =∅."
+    },
+    {
+      "name": "Knowledge Graph",
+      "type": "material",
+      "description": "A graph-based data structure used to represent knowledge.",
+      "confidence": 1.0,
+      "context": "The weakness of ImageNet mainly lies in that the KG has only class hierarchies and is actually referred to as AwA2, while the original AwA1 can be used as the auxiliary information."
+    },
+    {
+      "name": "sample shortage",
+      "type": "phenomenon",
+      "description": "A situation where there is not enough training data available.",
+      "confidence": 0.9,
+      "context": "All these situations will lead to sample shortage in ML."
+    },
+    {
+      "name": "Zero-shot Learning (ZSL)",
+      "type": "phenomenon",
+      "description": "Predicting new classes for which only a small number of labeled samples are available.",
+      "confidence": 0.95,
+      "context": "rning (FSL). ZSL is shot learning (FSL) where some classes to be predicted have formally defined as predicting new classes (labels) that have only a small number of labeled samples that are available."
+    },
+    {
+      "name": "Few-shot Learning (FSL)",
+      "type": "phenomenon",
+      "description": "Predicting new classes for which only a few labeled samples are available.",
+      "confidence": 0.95,
+      "context": "rning (FSL). ZSL is shot learning (FSL) where some classes to be predicted have formally defined as predicting new classes (labels) that have only a small number of labeled samples that are available."
+    },
+    {
+      "name": "Knowledge Graphs (KGs)",
+      "type": "material",
+      "description": "A type of graph-based data structure that represents entities and their relationships.",
+      "confidence": 0.95,
+      "context": "The content covers (i) the introduction of KGs that have been applied and the methods for constructing such task-specific KGs, (ii) the review of the KG-aware ZSL and FSL methods of each paradigm, and (iii) the presentation of the development of ZSL and FSL research for different tasks in CV, NLP and KG completion,"
+    },
+    {
+      "name": "One-shot Learning",
+      "type": "phenomenon",
+      "description": "A special case of Few-shot Learning where there is only one labeled sample available.",
+      "confidence": 0.9,
+      "context": "Specially, when the unseen class has only one labeled sample, FSL becomes one-shot learning [5]."
+    },
+    {
+      "name": "Knowledge Graph-aware Zero-shot Learning (KG-ZSL) and Few-shot Learning (KG-FSL)",
+      "type": "method",
+      "description": "Methods that utilize Knowledge Graphs in Zero-shot Learning and Few-shot Learning.",
+      "confidence": 0.9,
+      "context": "We next present different applications, including not only KG augmented prediction tasks such as image classification, question answering, text classification and knowledge extraction, but also KG completion tasks..."
+    },
+    {
+      "name": "Mapping-based, Propagation-based, Optimization-based",
+      "type": "method",
+      "description": "Paradigms used in Knowledge Graph-aware Zero-shot Learning and Few-shot Learning.",
+      "confidence": 0.8,
+      "context": "FSL is to predict new classes for which only a small number of labeled samples are given [4][5]. For convenience, we also call such new classes with insufficient labeled samples as unseen classes..."
+    },
+    {
+      "name": "Image Classification, Question Answering, Text Classification, Knowledge Extraction",
+      "type": "application",
+      "description": "Typical applications that utilize Zero-shot Learning and Few-shot Learning.",
+      "confidence": 0.8,
+      "context": "We next present different applications, including not only KG augmented prediction tasks such as image classification, question answering, text classification and knowledge extraction, but also KG completion tasks..."
+    },
+    {
+      "name": "KG Completion Tasks",
+      "type": "application",
+      "description": "Tasks that involve completing Knowledge Graphs.",
+      "confidence": 0.8,
+      "context": "We next present different applications, including not only KG augmented prediction tasks such as image classification, question answering, text classification and knowledge extraction, but also KG completion tasks..."
+    },
+    {
+      "name": "Zero-shot learning (ZSL) methods",
+      "type": "method",
+      "description": "Methods that utilize auxiliary information to describe inter-class relationships and transfer knowledge from seen classes to unseen classes.",
+      "confidence": 0.95,
+      "context": "themethodsmainlyuseattributesthatdescribeobjects’visualcharacteristics(a.k.a.classattributes)[2,3].Next,classtextualinformation such as class name and sentence description iswidely studied due to its high accessibility [10, 11]."
+    },
+    {
+      "name": "Convolutional Neural Networks (CNNs)",
+      "type": "method",
+      "description": "Deep learning models that can often achieve even higher accuracy than human beings in image classification and visual object recognition.",
+      "confidence": 0.95,
+      "context": "For example, Convolutional NeuralNetworks (CNNs) can often achieve even higher accuracythan human beings in image classification and visual object recognition, leading to the fast development of applications such as self-driving vehicles, face recognition, handwriting recognition, image retrieval and remote sensing image processing;RecurrentNeuralNetworks(RNNs)andTransformer-based models are quite successful in sequence learning and naturallanguageunderstanding,whichboostapplicationssuch"
+    },
+    {
+      "name": "Transfer learning",
+      "type": "method",
+      "description": "The process of transferring knowledge from seen classes to unseen classes by adapting the learned features.",
+      "confidence": 0.95,
+      "context": "Completion.(datarepresentations)andmodelparametersfromseenclasses to unseen classes so as to avoid only learning features fromlabeledsamplesandtrainingnewmodelsfromthescratch[9]."
+    },
+    {
+      "name": "Artificial intelligence (AI)",
+      "type": "theory",
+      "description": "The field of research that focuses on creating intelligent machines that can perform tasks that typically require human intelligence.",
+      "confidence": 0.95,
+      "context": "Machine learning (ML) especially deep learning is playing an increasingly important role in artificial intelligence (AI), and has achieved great success in many domains and applications in the past decades."
+    },
+    {
+      "name": "Deep learning",
+      "type": "method",
+      "description": "A subfield of machine learning that uses neural networks with multiple layers to analyze complex data.",
+      "confidence": 0.95,
+      "context": "Machine learning (ML) especially deep learning is playing an increasingly important role in artificial intelligence (AI), and has achieved great success in many domains and applications in the past decades."
+    },
+    {
+      "name": "Image classification",
+      "type": "phenomenon",
+      "description": "The process of assigning a label or category to an image based on its visual features.",
+      "confidence": 0.95,
+      "context": "For example, in zero-shot image classification, image features that have been already learned byCNNs such as ResNet from images of seen classes are often directly re-used to build classifiers for unseen classes."
+    },
+    {
+      "name": "Visual object recognition",
+      "type": "phenomenon",
+      "description": "The process of identifying and recognizing objects within an image.",
+      "confidence": 0.95,
+      "context": "For example, in zero-shot image classification, image features that have been already learned byCNNs such as ResNet from images of seen classes are often directly re-used to build classifiers for unseen classes."
+    },
+    {
+      "name": "Neural Networks (GNNs)",
+      "type": "method",
+      "description": "A type of neural network used for graph structured data.",
+      "confidence": 0.9,
+      "context": "Graph five years, Knowledge Graph (KG), which often represents NeuralNetworks(GNNs)havebeenwidelyappliedtopredic-"
+    },
+    {
+      "name": "knowledge graph (KG)",
+      "type": "material",
+      "description": "A popular form for representing knowledge and graph-structured data, acting as the foundation of many successful AI information systems.",
+      "confidence": 0.95,
+      "context": "Motivation and Contribution. Since KG has become a very popular form for representing knowledge..."
+    },
+    {
+      "name": "Meta Learning (a.k.a. Learn to Learn)",
+      "type": "theory",
+      "description": "A type of learning where a model can learn to learn from other models.",
+      "confidence": 0.9,
+      "context": "techniques of meta learning (a.k.a. learn to learn) [16] have been widely applied [17]."
+    },
+    {
+      "name": "meta learning",
+      "type": "method",
+      "description": "A technique that enables a model to learn from other models or tasks, allowing it to adapt to new situations.",
+      "confidence": 0.95,
+      "context": "Meta learning is usually applied by either reducing the parameter searching space in training using meta parameters such as more optimized initial parameter settings..."
+    },
+    {
+      "name": "ZSL methods",
+      "type": "method",
+      "description": "Zero-shot learning methods that enable a model to learn from unseen classes without any labeled data.",
+      "confidence": 0.9,
+      "context": "Thetwosurveypapers[7]and[15]systematicallyreview techniques of meta learning (a.k.a. learn to learn) [16] have been widely applied, including ZSL methods by 2019 and the FSL methods by 2020..."
+    },
+    {
+      "name": "FSL methods",
+      "type": "method",
+      "description": "Few-shot learning methods that enable a model to learn from a small number of labeled examples.",
+      "confidence": 0.9,
+      "context": "Thetwosurveypapers[7]and[15]systematicallyreview techniques of meta learning (a.k.a. learn to learn) [16] have been widely applied, including ZSL methods by 2019 and the FSL methods by 2020..."
+    },
+    {
+      "name": "KGs",
+      "type": "material",
+      "description": "Knowledge graphs that represent entities and their relationships.",
+      "confidence": 0.8,
+      "context": "KGs have been utilized to optimise such meta learning-based methods; for example, Sui et al. [18] retrieve relevant knowledge from a KG named NELL [19]..."
+    },
+    {
+      "name": "structured data",
+      "type": "material",
+      "description": "Data that has a predefined structure or format.",
+      "confidence": 0.7,
+      "context": "Structured data, however, is more general than KG with a much larger scope, and thus [25] collects only a small part of the papers on KG-aware ZSL and FSL research..."
+    },
+    {
+      "name": "few-shot text classification",
+      "type": "phenomenon",
+      "description": "A type of text classification where a model must classify texts based on a limited number of labeled examples.",
+      "confidence": 0.8,
+      "context": "The very recently released paper [25] reviews both ZSL and FSL methods that use or aim at structured data, including few-shot text classification..."
+    },
+    {
+      "name": "knowledge transfer",
+      "type": "theory",
+      "description": "A concept where a model can learn from one task or domain and apply it to another.",
+      "confidence": 0.9,
+      "context": "The aforementioned idea of knowledge transfer can also be adopted for addressing FSL, where KG auxiliary information is becoming increasingly popular in recent years [20, 21, 22, 23]..."
+    },
+    {
+      "name": "CNN (convolutional neural network)",
+      "type": "method",
+      "description": "A type of neural network used for image classification tasks.",
+      "confidence": 0.85,
+      "context": "by a CNN from flight delay forecasting tasks with a lot of historical records to a new forecasting task..."
+    },
+    {
+      "name": "KG-aware ZSL methods",
+      "type": "theory",
+      "description": "Methods that utilize knowledge graphs to perform zero-shot learning.",
+      "confidence": 0.95,
+      "context": "IV. KG-AWAREZERO-SHOTLEARNING"
+    },
+    {
+      "name": "ZSL and FSL paradigms",
+      "type": "phenomenon",
+      "description": "Different approaches or frameworks for zero-shot learning (ZSL) and few-shot learning (FSL).",
+      "confidence": 0.8,
+      "context": "For each paradigm, we further introduce different categories and their corresponding methods."
+    },
+    {
+      "name": "Image Classification Task",
+      "type": "application",
+      "description": "A specific task that involves classifying images into different categories or classes.",
+      "confidence": 0.8,
+      "context": "mentioning that this topic includes not only using KGs to image classification task."
+    },
+    {
+      "name": "Data Mapping- Propagation- Optimization-",
+      "type": "method",
+      "description": "A method for mapping, propagating, and optimizing data.",
+      "confidence": 0.95,
+      "context": "Data Mapping- Propagation- Optimization-"
+    },
+    {
+      "name": "Class Feature Transfer-based Augmentation",
+      "type": "method",
+      "description": "A method for transferring class features through augmentation.",
+      "confidence": 0.9,
+      "context": "Class Feature Transfer-based Augmentation based based based"
+    },
+    {
+      "name": "Model Neural Generation Input Text Feature KG-specific Parameter Network Model-based Mapping Fusion Optimization Propagation Transfer Multi-modal Rule-based Class Feature Embedding KG-agnostic Rule Transfer Mapping Propagation and Categories",
+      "type": "method",
+      "description": "A method for generating neural networks with input text features, using knowledge graph-specific parameters.",
+      "confidence": 0.8,
+      "context": "Model Neural Generation Input Text Feature KG-specific Parameter Network Model-based Mapping Fusion Optimization Propagation Transfer Multi-modal Rule-based Class Feature Embedding KG-agnostic Rule Transfer Mapping Propagation and Categories"
+    },
+    {
+      "name": "Joint Class Belief FSL Paradigms ZSL Paradigms",
+      "type": "theory",
+      "description": "A theoretical framework for joint class belief in few-shot learning paradigms.",
+      "confidence": 0.9,
+      "context": "Fig. 1: Paradigms and categories of KG-aware zero-shot and few-shot learning methods"
+    },
+    {
+      "name": "Multi-modal Rule-based Class Feature Embedding",
+      "type": "method",
+      "description": "A method for embedding class features using multi-modal rules.",
+      "confidence": 0.8,
+      "context": "Rule-based Class Feature Embedding KG-agnostic Rule Transfer Mapping Propagation and Categories"
+    },
+    {
+      "name": "KG-aware FSL methods",
+      "type": "theory",
+      "description": "A theoretical framework for knowledge graph-aware few-shot learning methods.",
+      "confidence": 0.9,
+      "context": "VissimilartoSectionIVbutreviewsKG-wareFSLmethods,"
+    },
+    {
+      "name": "ZSL in the end",
+      "type": "phenomenon",
+      "description": "The phenomenon of zero-shot learning at the end.",
+      "confidence": 0.8,
+      "context": "to enter the domain of ML with sample shortage, those who have already been working on this topic but are interested"
+    },
+    {
+      "name": "KG-aware ZSL and FSL in different tasks across CV, NLP, and KG completion",
+      "type": "application",
+      "description": "An application of knowledge graph-aware zero-shot learning and few-shot learning in various tasks.",
+      "confidence": 0.9,
+      "context": "and compares KG-aware FSL and ZSL in the end"
+    },
+    {
+      "name": "Knowledge Representation and Reasoning",
+      "type": "theory",
+      "description": "A theoretical framework for representing and reasoning with knowledge.",
+      "confidence": 0.8,
+      "context": "solutions utilizing knowledge representation and reasoning,"
+    },
+    {
+      "name": "Supervised ML Classification",
+      "type": "phenomenon",
+      "description": "A type of machine learning where a classifier is trained on labeled data to approximate a target function.",
+      "confidence": 0.95,
+      "context": "Definition 1 (Supervised ML Classification): Given a set of labeled training samples D = {(x,y)|x ∈ X,y ∈ Y}, a classifier is trained..."
+    },
+    {
+      "name": "Knowledge Graph (KG) completion",
+      "type": "phenomenon",
+      "description": "A task that predicts missing RDF triples based on existing knowledge graph data.",
+      "confidence": 0.9,
+      "context": "In KG completion, which is to predict a missing RDF triple, x is often the two components of a triple while y is a label indicating the third component."
+    },
+    {
+      "name": "Entity or relation linking",
+      "type": "method",
+      "description": "A task that matches an entity or relation mention in text with a pre-defined entity or relation.",
+      "confidence": 0.9,
+      "context": "The function that scores the matching degree between x and y, which matches an entity or relation mention in text with a pre-defined entity or relation..."
+    },
+    {
+      "name": "Entity typing",
+      "type": "method",
+      "description": "A task that assigns a pre-defined class or multiple predefined classes to an entity mention in the text.",
+      "confidence": 0.9,
+      "context": "The function that scores the matching degree between x and y, which matches an entity or relation mention in text with a pre-defined entity or relation..."
+    },
+    {
+      "name": "Formal Definition of Zero-shot Learning",
+      "type": "theory",
+      "description": "A formal definition of zero-shot learning, given as Definition 2: Given a training sample with formal problem definitions and annotations.",
+      "confidence": 0.9,
+      "context": "Here is the formal definition. framework. In the session, we aim to present this framework..."
+    },
+    {
+      "name": "Generalized Zero-shot Learning",
+      "type": "phenomenon",
+      "description": "A type of zero-shot learning where the problem becomes generalized, allowing for prediction of both seen and unseen classes.",
+      "confidence": 0.9,
+      "context": "When it is required to predict testing samples of both seen and unseen classes, i.e., D te = {(x,y)|x ∈ X u ∪X s (cid:48),y ∈ Y u ∪Y s }..."
+    },
+    {
+      "name": "class encoding",
+      "type": "method",
+      "description": "A function that encodes classes into symbolic representations (vectors) with relationships between classes concerned in the vector space.",
+      "confidence": 0.95,
+      "context": "Since unseen classes have no labeled samples, ZSL methods rely on auxiliary information."
+    },
+    {
+      "name": "instance-based methods",
+      "type": "method",
+      "description": "Methods that obtain labeled samples belonging to unseen classes and use them for learning and prediction.",
+      "confidence": 0.9,
+      "context": "Instance-based.The instance-based methods are to obtain labeled samples belonging to the unseen classes and use them for learning and prediction."
+    },
+    {
+      "name": "projection methods",
+      "type": "method",
+      "description": "Methods that learn a function to project the input and class encoding into the same space (i.e., the class encodings after projection).",
+      "confidence": 0.9,
+      "context": "They are further divided into (i) Projection Methods which learns a function to project the input and the class encoding into the same space (i.e., the class encodings after projection)"
+    },
+    {
+      "name": "combination methods",
+      "type": "method",
+      "description": "Methods that combine classifiers for basic elements that are used to constitute the classes.",
+      "confidence": 0.9,
+      "context": "Combination Methods which combine classifiers for basic elements that are used to constitute the classes."
+    },
+    {
+      "name": "Instance-borrowing methods",
+      "type": "method",
+      "description": "Transfer samples from seen classes to unseen classes.",
+      "confidence": 0.9,
+      "context": "the Methods which transfer samples from seen classes to un-"
+    },
+    {
+      "name": "Synthesizing methods",
+      "type": "method",
+      "description": "Obtain labeled samples for the unseen classes by synthesizing pseudo samples.",
+      "confidence": 0.95,
+      "context": "There are also relative attributes which enable comparing the degree of each attribute across classes"
+    },
+    {
+      "name": "Class attributes",
+      "type": "material",
+      "description": "A set of key-value pairs for describing object visual characteristics.",
+      "confidence": 0.9,
+      "context": "the majority of the solutions utilize class attributes which are seen classes,and(iii)SynthesizingMethodswhichobtain"
+    },
+    {
+      "name": "Relative attributes",
+      "type": "material",
+      "description": "Enable comparing the degree of each attribute across classes.",
+      "confidence": 0.8,
+      "context": "There are also relative attributes which enable comparing the degree of each attribute across classes"
+    },
+    {
+      "name": "Auxiliary information",
+      "type": "phenomenon",
+      "description": "Information used to classify unseen classes in ZSL methods.",
+      "confidence": 0.95,
+      "context": "ZSL methods rely on auxiliary information."
+    },
+    {
+      "name": "WordNet",
+      "type": "material",
+      "description": "A lexical database for the English language.",
+      "confidence": 1.0,
+      "context": "Note that object recognition is often transformed into two steps: discovering object bounding boxes and classifying these bounding boxes."
+    },
+    {
+      "name": "classifier-based methods",
+      "type": "method",
+      "description": "Directly learn a classifier for each unseen class.",
+      "confidence": 0.8,
+      "context": "• Classifier-based. The classifier-based methods are to directly learn a classifier for each unseen class."
+    },
+    {
+      "name": "corresponding methods",
+      "type": "method",
+      "description": "Exploit the correspondence between the binary one-vs-rest classifier for each class and its corresponding encoding of auxiliary information.",
+      "confidence": 0.85,
+      "context": "(i) Corresponding Methods which exploit the correspondence between the binary one-vs-rest classifier for each class and its corresponding encoding of the auxiliary information,"
+    },
+    {
+      "name": "relationship-based methods",
+      "type": "method",
+      "description": "Measure how close the best hypothesis in a given hypothesis set can approximate the target function.",
+      "confidence": 0.9,
+      "context": "(ii) Relationship which measures how close the best hypothesis h∗ in a given hypothesis set H can approximate hˆ"
+    },
+    {
+      "name": "expected risk",
+      "type": "theory",
+      "description": "The expected risk of the learned hypothesis w.r.t. the target function.",
+      "confidence": 0.95,
+      "context": "For an optimal hypothesis hˆ (i.e., the target function f), its expected risk is composed of two parts: (i) approximation error E app"
+    },
+    {
+      "name": "scoring function",
+      "type": "method",
+      "description": "Ranking candidate classes using a scoring function.",
+      "confidence": 0.8,
+      "context": "ranking the candidate classes, i.e., f(cid:48) :(x,y)→s."
+    },
+    {
+      "name": "multi-task learning",
+      "type": "method",
+      "description": "A machine learning approach that allows parameter sharing between tasks.",
+      "confidence": 0.9,
+      "context": "asmulti-tasklearningwhichallowsparametersharingbetween"
+    },
+    {
+      "name": "RDF triple",
+      "type": "material",
+      "description": "A data structure consisting of a subject, predicate, and object, representing a statement or fact.",
+      "confidence": 0.9,
+      "context": "Each RDF triple in T is denoted as (s,p,o), where s represents the subject which is an entity in E, p represents a predicate which is a property in P, and o represents the object which can be either an entity in E or a literal in L."
+    },
+    {
+      "name": "Data augmentation methods",
+      "type": "method",
+      "description": "Methods that increase the size of few-shot samples by transforming samples from the training set or other similar labeled data.",
+      "confidence": 0.95,
+      "context": "The dataaugmentationmethods.Theyincreasethesizeofthefew-shot samples (D ) via data augmentation by e.g., transforming samples from the training set D or other similarlabeleddata,andgeneratingsamplesfromweekly labeled or unlabeled data."
+    },
+    {
+      "name": "Model augmentation methods",
+      "type": "method",
+      "description": "Methods that reduce the original hypothesis set H to a small one for reducing the searching space. They are further divided into (i) multi-task learning methods which share parameters between tasks or to regularize the parameters of the target task, and (ii) embedding methods which project samples to an embedding space where similar and dissimilar samples can be easily distinguished.",
+      "confidence": 0.95,
+      "context": "• Model augmentation methods. They reduce the original hypothesis set H to a small one for reducing the searching space.Theyarefurtherdividedinto(i)multi-tasklearning methods which share parameters between tasks or to regularize the parameters of the target task, (ii) embedding methods which project samples to an embedding space where similar and dissimilar samples can be easily distinguished."
+    },
+    {
+      "name": "KG lookup",
+      "type": "method",
+      "description": "A service that returns the most relevant entities and/or properties in a Knowledge Graph (KG) that match the meaning of an input string.",
+      "confidence": 0.95,
+      "context": "The content of a KG can usually be efficiently accessed via two operations: lookup and query. KG lookup (a.k.a. KG retrieval) is a service that returns the most relevant entities and/or properties in a KG that match the meaning of an input string (usually a phrase)."
+    },
+    {
+      "name": "KG query",
+      "type": "method",
+      "description": "A service that returns the answers of an input query of the RDF query language SPARQL.",
+      "confidence": 0.95,
+      "context": "KGqueryisaservicethatreturns the answers of an input query of the RDF query language SPARQL3."
+    },
+    {
+      "name": "Gquery",
+      "type": "method",
+      "description": "A service that returns ding methods which project samples to an embedding space where similar and dissimilar samples can be easily discriminated.",
+      "confidence": 0.95,
+      "context": "Gqueryisaservicethatreturnsdingmethodswhichprojectsamples toanembeddingthespacewheresimilarsamplescanbeeasilydiscriminated,"
+    },
+    {
+      "name": "SPARQL",
+      "type": "method",
+      "description": "The input of such a query is actually a sub-graph pattern with variables, while the output could be not only the matched entities, properties and/or literals, but also the whole sub-graphs (i.e., triples).",
+      "confidence": 0.95,
+      "context": "the answers of an input query of the RDF query language space where similar and dissimilar samples can be easily discriminated, SPARQL3."
+    },
+    {
+      "name": "RDFox",
+      "type": "material",
+      "description": "A modern graph database that can already support efficient SPARQL query.",
+      "confidence": 0.9,
+      "context": "In the semantic Web, a KG is often accompanied by an ontology as the schema, using languages from the semantic Web such as RDFox [36] can already support efficient SPARQL query."
+    },
+    {
+      "name": "Semantic Network",
+      "type": "phenomenon",
+      "description": "A type of knowledge graph that represents concepts and their relationships.",
+      "confidence": 0.9,
+      "context": "Knowledge Extraction Knowledge Construction ZSL or FSL task General purpose KGs: Domain specific KGs:"
+    },
+    {
+      "name": "Weighted Graph Integration",
+      "type": "method",
+      "description": "An approach to integrate multiple graphs by assigning weights to the edges between them.",
+      "confidence": 0.8,
+      "context": "Customized KG Weighted Graph Integration CV, NLP, Task-oriented ML, (Multi-relation)Graph Sub-KG"
+    },
+    {
+      "name": "ZSL/FSL",
+      "type": "phenomenon",
+      "description": "Zero-shot learning and few-shot learning tasks that require the model to learn from a limited number of examples.",
+      "confidence": 0.9,
+      "context": "ZSL or FSL task General purpose KGs: Domain specific KGs:"
+    },
+    {
+      "name": "RDFS",
+      "type": "theory",
+      "description": "A vocabulary for representing hierarchical classes and relationships between different terms.",
+      "confidence": 0.9,
+      "context": "community such as RDFS4 and OWL5 for richer semantics [31]"
+    },
+    {
+      "name": "OWL",
+      "type": "theory",
+      "description": "A semantic web language used for representing RDF data and its relationships.",
+      "confidence": 0.8,
+      "context": "Major KG forms (representations) KG construction Fig. 3: An overall picture of the KGs in ZSL and FSL community such as RDFS4 and OWL5 for richer semantics [31] and ConceptNet which stores commonsense knowledge"
+    },
+    {
+      "name": "ConceptNet",
+      "type": "material",
+      "description": "A freely-available Semantic Network that stores a large number of entities which are either words or phrases, with labeled edges for representing different relationships.",
+      "confidence": 0.95,
+      "context": "One popular KG form • ConceptNet is a freely-available Semantic Network with..."
+    },
+    {
+      "name": "RDF triples",
+      "type": "method",
+      "description": "A way to represent an ontology as a set of subject-predicate-object triplets.",
+      "confidence": 0.8,
+      "context": "ontology can be represented as RDF triples; for example,"
+    },
+    {
+      "name": "rdfs:subClassOf",
+      "type": "measurement",
+      "description": "A predicate used to represent the subsumption relationship between two concepts.",
+      "confidence": 0.9,
+      "context": "the predicate rdfs:subClassOf, while"
+    },
+    {
+      "name": "rdf:type",
+      "type": "measurement",
+      "description": "A predicate used to represent the membership relationship between an instance and a concept.",
+      "confidence": 0.9,
+      "context": "instance and a concept can be represented by the predicate rdf:type."
+    },
+    {
+      "name": "Semantic Web standards",
+      "type": "theory",
+      "description": "Standards for representing structured knowledge in the form of relational facts, literals, and ontologies.",
+      "confidence": 0.9,
+      "context": "following the semantic Web standards,"
+    },
+    {
+      "name": "Description Logics",
+      "type": "method",
+      "description": "A formal system used to reason about knowledge represented as a set of concepts and their relationships.",
+      "confidence": 0.8,
+      "context": "according to Description Logics."
+    },
+    {
+      "name": "OWL ontologies",
+      "type": "theory",
+      "description": "Ontologies that follow the OWL (Web Ontology Language) standard for representing knowledge in a formal and standardized way.",
+      "confidence": 0.8,
+      "context": "KGs, especially those OWL ontologies and those equipped with ontologies,"
+    },
+    {
+      "name": "NLTK",
+      "type": "method",
+      "description": "A Python library used for natural language processing tasks, including accessing WordNet.",
+      "confidence": 0.9,
+      "context": "some python libraries such as NLTK."
+    },
+    {
+      "name": "IsA relation",
+      "type": "phenomenon",
+      "description": "Represents hyponyms and hypernyms, from which class hierarchies are often used for augmenting ZSL and FSL.",
+      "confidence": 0.9,
+      "context": "The IsA relation represents hyponyms and hypernyms, from which class hierarchies entities..."
+    },
+    {
+      "name": "RDFS schema",
+      "type": "method",
+      "description": "An ontology used for augmenting zero-shot KG completion with unseen relations.",
+      "confidence": 0.8,
+      "context": "...its RDFS schema (ontology) for augmenting zero-shot KG completion with unseen relations..."
+    },
+    {
+      "name": "WebChild",
+      "type": "material",
+      "description": "A large-scale knowledge graph with relational facts extracted from the Web.",
+      "confidence": 0.9,
+      "context": "• Freebase is a large-scale KG with relational facts, contributed by multiple sources such as Wikipedia, MusicBrainz (a music database), Notable Names Database and volunteers[61]."
+    },
+    {
+      "name": "Freebase",
+      "type": "material",
+      "description": "A large-scale knowledge graph with relational facts contributed by multiple sources.",
+      "confidence": 0.9,
+      "context": "• Freebase is a large-scale KG with relational facts, contributed by multiple sources such as Wikipedia, MusicBrainz (a music database), Notable Names Database and volunteers[61]."
+    },
+    {
+      "name": "Google's Knowledge Graph API",
+      "type": "application",
+      "description": "An official API for accessing the Freebase knowledge graph.",
+      "confidence": 0.8,
+      "context": "Its official API has been shut down, but it can still be accessed as a dump or via Google’s Knowledge Graph API."
+    },
+    {
+      "name": "WordNet and ConceptNet",
+      "type": "phenomenon",
+      "description": "Two existing knowledge graphs constructed in different ways.",
+      "confidence": 0.7,
+      "context": "Different from WordNet and ConceptNet, Freebase is mainly applied in open information extraction."
+    },
+    {
+      "name": "SNOMED",
+      "type": "material",
+      "description": "A medical ontology for constructing domain-specific ontologies.",
+      "confidence": 0.8,
+      "context": "Most high quality domain-specific ontologies such as the medical ontology SNOMED [38] are constructed in different ways."
+    },
+    {
+      "name": "crowdsourcing",
+      "type": "method",
+      "description": "A technique for constructing knowledge graphs by gathering information from volunteers.",
+      "confidence": 0.9,
+      "context": "oftendirectlyconstructedbydomainexpertsviacollaboration,"
+    },
+    {
+      "name": "SPARQL query service",
+      "type": "application",
+      "description": "An online interface for querying and accessing Wikidata's data.",
+      "confidence": 0.8,
+      "context": "downloaded as adump, or accessed via its officialonline while many aforementioned general purpose KGs are con-"
+    },
+    {
+      "name": "Linked Open Data",
+      "type": "theory",
+      "description": "A framework for publishing and integrating structured data on the web.",
+      "confidence": 0.9,
+      "context": "technologies of Linked Open Data, Ontology Network and Ontology Alignment can all be used for constructing KGs"
+    },
+    {
+      "name": "data mining",
+      "type": "method",
+      "description": "The process of automatically extracting valuable patterns or relationships from large datasets.",
+      "confidence": 0.8,
+      "context": "With the development of data mining, ML and other data analysis techniques,"
+    },
+    {
+      "name": "knowledge extraction",
+      "type": "phenomenon",
+      "description": "The process of automatically identifying and extracting relevant information from unstructured or semi-structured data.",
+      "confidence": 0.9,
+      "context": "knowledgeextractionfrom unstructured and semi-structured data such as the Web pages,"
+    },
+    {
+      "name": "NELL",
+      "type": "method",
+      "description": "A popular knowledge graph continuously extracted from the Web.",
+      "confidence": 0.9,
+      "context": "According to its official statistics accessed in November 2022, it has accumulated 2.8 million high confident beliefs (triples). NELL can be browsed online14 or downloaded."
+    },
+    {
+      "name": "DBpedia",
+      "type": "method",
+      "description": "A knowledge graph that can be directly downloaded as a dump, tables and text have recently been widely investigated and accessed via its online SPARQL query service12 used for KG construction.",
+      "confidence": 0.9,
+      "context": "DBpedia also has and other data analysis techniques, knowledge extraction from localized versions in 125 languages with much more unstructured and semi-structured data such as the Web pages,"
+    },
+    {
+      "name": "KGs (Knowledge Graphs)",
+      "type": "phenomenon",
+      "description": "A type of knowledge graph that usually cannot be directly applied due to their large sizes and irrelevant knowledge.",
+      "confidence": 0.8,
+      "context": "KGs usually cannot be directly applied due to their large sizes and irrelevant knowledge, and an (ad-hoc) KG should be extracted or constructed."
+    },
+    {
+      "name": "ZSL (Zero-Shot Learning)",
+      "type": "phenomenon",
+      "description": "A type of learning that involves training a model on one set of data and applying it to another set without any additional training.",
+      "confidence": 0.8,
+      "context": "For some specific ZSL or FSL tasks, there are exactly suitable KGs that can be directly applied."
+    },
+    {
+      "name": "FSL (Few-Shot Learning)",
+      "type": "phenomenon",
+      "description": "A type of learning that involves training a model on a small set of data and applying it to another set without any additional training.",
+      "confidence": 0.8,
+      "context": "For some specific ZSL or FSL tasks, there are exactly suitable KGs that can be directly applied."
+    },
+    {
+      "name": "Sub-KGExtraction",
+      "type": "method",
+      "description": "A straightforward solution is re-using an existing KG by extracting relevant knowledge.",
+      "confidence": 0.9,
+      "context": "Given a ZSL or FSL task, a straight-forward solution is re-using an existing KG by extracting relevant knowledge."
+    },
+    {
+      "name": "Hadamard product",
+      "type": "method",
+      "description": "Computing Hadamard product over the entities as well as some other related knowledge.",
+      "confidence": 0.8,
+      "context": "by computing Hadamard product over the entities as well as some other related knowledge including part-level class attributes."
+    },
+    {
+      "name": "Word embeddings",
+      "type": "method",
+      "description": "Using word embeddings to calculate weighted edges between entities.",
+      "confidence": 0.85,
+      "context": "Specially, Changpinyo et al. consider both class attributes and word embeddings to calculate weighted edges between entities."
+    },
+    {
+      "name": "part-of-speech algorithm",
+      "type": "method",
+      "description": "An algorithm used for extracting nouns and pronouns from sentences.",
+      "confidence": 0.9,
+      "context": "from all sentences in the dataset, and then search for their corresponding entities"
+    },
+    {
+      "name": "simple name comparison",
+      "type": "method",
+      "description": "A method used to match classes with KG entities based on class names.",
+      "confidence": 0.8,
+      "context": "by simple name comparison or some knowledge retrieval services"
+    },
+    {
+      "name": "knowledge retrieval services",
+      "type": "method",
+      "description": "Services used for retrieving and matching classes with KG entities.",
+      "confidence": 0.85,
+      "context": "sometimes with even human intervention."
+    },
+    {
+      "name": "heuristics",
+      "type": "theory",
+      "description": "Rules or guidelines used to construct task-specific KGs.",
+      "confidence": 0.9,
+      "context": "Domain knowledge, which is often in the form of heuristics and logic rules"
+    },
+    {
+      "name": "logic rules",
+      "type": "theory",
+      "description": "Rules used to construct task-specific KGs based on domain knowledge.",
+      "confidence": 0.85,
+      "context": "Domain knowledge, which is often in the form of heuristics and logic rules"
+    },
+    {
+      "name": "UMLS",
+      "type": "material",
+      "description": "An ontology of medical concepts that stores knowledge from which concept-level relations can be extracted.",
+      "confidence": 0.9,
+      "context": "Rios et al. [75] extract class hierarchies and class descriptions as a KG entity, and finally calculated the cosine similarity"
+    },
+    {
+      "name": "Visual Genome",
+      "type": "material",
+      "description": "A knowledge base that stores connections between image visual concepts and language concepts.",
+      "confidence": 0.9,
+      "context": "Luo et al. [76] extract a sub-KG for object relationships from Visual Genome — a knowledge base that stores connections between image visual concepts and language concepts"
+    },
+    {
+      "name": "COMET",
+      "type": "application",
+      "description": "A Transformer-based neural knowledge model used for generating a temporary KG on demand for each prediction request of zeros-shot question answering.",
+      "confidence": 0.9,
+      "context": "Bosselut et al. [88] generate a temporary KG on demand for each prediction request of zeros-shot question answering, using its named COMET"
+    },
+    {
+      "name": "WorldTree V2.0",
+      "type": "material",
+      "description": "A knowledge base containing explanations for multiple-choice science questions in the form of graph, covering both commonsense and scientific knowledge.",
+      "confidence": 0.8,
+      "context": "for multiple-choice science questions in the form of graph, 3) KnowledgeIntegration: Althoughsomegeneralpurpose existing KGs contain a large quantity of knowledge and are being continuously extended, it is still common that the knowledge extracted from such a KG is incomplete or not fine-grained enough for a specific ZSL or FSL task. Therefore, some studies proposed to integrate knowledge extracted from different KGs or/and other resources for building a high quality task-specific KG. For example, Chen et al. [56] extract RDF facts from three KGs — ConceptNet, WebChild and DBpedia to generate a unified commonsense KG for augmenting zero-shot VQA; Geng et al. [46, 14] integrate class hierarchies fromWordNet, relationalfactsandliteralsfromDBpedia,and"
+    },
+    {
+      "name": "KnowledgeIntegration",
+      "type": "method",
+      "description": "A method of integrating knowledge extracted from different KGs or/and other resources for building a high quality task-specific KG.",
+      "confidence": 0.9,
+      "context": "Therefore, some studies proposed to integrate knowledge extracted from different KGs or/and other resources for building a high quality task-specific KG."
+    },
+    {
+      "name": "Task-oriented KG Construction",
+      "type": "method",
+      "description": "A method of constructing task-specific KGs instead of utilizing existing KGs.",
+      "confidence": 0.9,
+      "context": "2) Task-oriented KG Construction: Instead of utilizing existing KGs, some ZSL and FSL studies build task-specific KGs."
+    },
+    {
+      "name": "Class attribute annotations",
+      "type": "method",
+      "description": "A method for constructing knowledge graphs by using class attributes.",
+      "confidence": 0.9,
+      "context": "1.Class hierarchy from WordNet e.g., (horse, hasBodyPart, tail)"
+    },
+    {
+      "name": "Commonsense knowledge",
+      "type": "phenomenon",
+      "description": "The phenomenon of using commonsense knowledge about classes to construct knowledge graphs.",
+      "confidence": 0.8,
+      "context": "2. Commonsense knowledge about classes from ConceptNet"
+    },
+    {
+      "name": "mapping-based paradigm",
+      "type": "method",
+      "description": "A method for constructing knowledge graphs (KGs) using various sources of auxiliary knowledge.",
+      "confidence": 0.95,
+      "context": "KGwhichissemi-automaticallyconstructedwithseveral kinds of auxiliary knowledge, including class attribute, class textual information, commonsense knowledge from ConceptNet, class hierarchy (taxonomy) from WordNet and logical relationships such as disjointness."
+    },
+    {
+      "name": "Cosine similarity",
+      "type": "measurement",
+      "description": "A metric used for measuring the similarity between two vectors.",
+      "confidence": 0.9,
+      "context": "that their vector representations after mapping are in the same space and are comparable (i.e., an input is of a class if their vectors are close w.r.t. some metric like Cosine similarity and Euclidean distance)"
+    },
+    {
+      "name": "Euclidean distance",
+      "type": "measurement",
+      "description": "A metric used for measuring the distance between two vectors.",
+      "confidence": 0.9,
+      "context": "that their vector representations after mapping are in the same space and are comparable (i.e., an input is of a class if their vectors are close w.r.t. some metric like Cosine similarity and Euclidean distance)"
+    },
+    {
+      "name": "Zero-shot image classification",
+      "type": "phenomenon",
+      "description": "The ability to classify images without requiring labeled data for training.",
+      "confidence": 0.95,
+      "context": "Input mapping is widely used in zero-shot image classifica- tion,oftenwithmorecomplicatedclassencodingandmapping"
+    },
+    {
+      "name": "M (mapping function)",
+      "type": "method",
+      "description": "The mapping function for the input, which can be both linear and non-linear transformation networks.",
+      "confidence": 0.95,
+      "context": "We denote the mapping function for the input as M and the mapping function for the class as M(cid:48)."
+    },
+    {
+      "name": "M(cid:48) (mapping function)",
+      "type": "method",
+      "description": "The mapping function for the class, which can be both linear and non-linear transformation networks.",
+      "confidence": 0.95,
+      "context": "We denote the mapping function for the input as M and the mapping function for the class as M(cid:48)."
+    },
+    {
+      "name": "Joint mapping",
+      "type": "method",
+      "description": "A technique that learns both input and class mappings in one intermediate space.",
+      "confidence": 0.95,
+      "context": "learns both input mapping M and class mapping M(cid:48) such that the input and class are compared in one intermediate space."
+    },
+    {
+      "name": "Input Mapping",
+      "type": "method",
+      "description": "A mapping-based paradigm that maps input into the same space.",
+      "confidence": 0.9,
+      "context": "As matching classes to KG entities for sub-KG extraction, the alignment of entities and relations in integrating different knowledge parts now is still mostly based on simple name matching or manual matching."
+    },
+    {
+      "name": "Class Mapping",
+      "type": "method",
+      "description": "A mapping-based paradigm that maps class into the same space.",
+      "confidence": 0.9,
+      "context": "As matching classes to KG entities for sub-KG extraction, the alignment of entities and relations in integrating different knowledge parts now is still mostly based on simple name matching or manual matching."
+    },
+    {
+      "name": "Neural Activity Classification",
+      "type": "phenomenon",
+      "description": "The process of classifying neural activity signals.",
+      "confidence": 0.95,
+      "context": "In this task, the class is annotated by multiple attributes which are either calculated from classes' word similarity or manually created via crowdsourcing."
+    },
+    {
+      "name": "1-nearest neighbor",
+      "type": "method",
+      "description": "A technique used to attach M to a concept based on the closest match.",
+      "confidence": 0.9,
+      "context": "elationalfacts (vector) y(cid:48). M is further attached by a 1-nearest neighbour such as (horse, usedFor, riding)"
+    },
+    {
+      "name": "Concept-classifier",
+      "type": "method",
+      "description": "A model that outputs the class whose encoding is closest to the input.",
+      "confidence": 0.85,
+      "context": "whichoutputstheclassastheonewhoseencoding"
+    },
+    {
+      "name": "Semantic Autoencoder (SAE)",
+      "type": "method",
+      "description": "A typical ZSL method that uses a linear encoder as M and pre-trained ontology embedding for the initial class encoding y.",
+      "confidence": 0.9,
+      "context": "Chen et al. [87] adopt a typical ZSL method named Semantic Autoencoder (SAE) [106]"
+    },
+    {
+      "name": "Long-Short-Term-Memory (LSTM) network",
+      "type": "method",
+      "description": "A type of neural network used to model the class hierarchy for class encoding.",
+      "confidence": 0.85,
+      "context": "Li et al. [84] propose to use a Long-Short-Term-Memory (LSTM) network to model the class hierarchy for classencoding"
+    },
+    {
+      "name": "LSTM network",
+      "type": "method",
+      "description": "A type of neural network used to model the class hierarchy.",
+      "confidence": 0.9,
+      "context": "Memory (LSTM) network to model the class hierarchy for"
+    },
+    {
+      "name": "Data Augmentation",
+      "type": "method",
+      "description": "A technique used to generate samples or sample features for unseen classes.",
+      "confidence": 0.95,
+      "context": "Data Augmentation, Propagation-based and Class Feature, as"
+    },
+    {
+      "name": "Propagating model parameters",
+      "type": "method",
+      "description": "A method that propagates model parameters from seen classes to unseen classes via a knowledge graph.",
+      "confidence": 0.9,
+      "context": "Thesemethodspropagatemodelparameters ModelParameter [12,13,43,46,49,80,48]"
+    },
+    {
+      "name": "Class Belief Propagation",
+      "type": "method",
+      "description": "A method that propagates class beliefs from seen classes to unseen classes via a knowledge graph.",
+      "confidence": 0.95,
+      "context": "Thesemethodspropagatemodelparameters ModelParameter [12,13,43,46,49,80,48]"
+    },
+    {
+      "name": "Text Feature Fusion",
+      "type": "method",
+      "description": "A method that aims at zero-shot learning tasks within a knowledge graph context where the auxiliary information is some kind of text.",
+      "confidence": 0.95,
+      "context": "1) TextFeatureFusion: These methods usually aim at ZSL tasks within a KG context where the auxiliary information is some kind of text."
+    },
+    {
+      "name": "Multi-modal Feature Fusion",
+      "type": "method",
+      "description": "A method that aims at zero-shot learning tasks within a knowledge graph context.",
+      "confidence": 0.95,
+      "context": "1) TextFeatureFusion: These methods usually aim at ZSL tasks within a KG context where the auxiliary information is some kind of text."
+    },
+    {
+      "name": "Support Vector Machine",
+      "type": "method",
+      "description": "A machine learning algorithm used for classification.",
+      "confidence": 0.9,
+      "context": "and train one Support Vector Machine (SVM) for each rule as the mapping function M."
+    },
+    {
+      "name": "Zero-shot KG completion",
+      "type": "phenomenon",
+      "description": "A type of knowledge graph completion that involves predicting triples with both head and tail entities being unseen.",
+      "confidence": 0.9,
+      "context": "for zero-shot KG completion."
+    },
+    {
+      "name": "KG TransE embedding",
+      "type": "material",
+      "description": "A type of embedding used in knowledge graph-based applications.",
+      "confidence": 0.9,
+      "context": "erate a weighted graph where ... KG TransE embedding and ad-hoc relation feature extraction."
+    },
+    {
+      "name": "Bidirectional LSTM network",
+      "type": "method",
+      "description": "A type of neural network used for text representation learning.",
+      "confidence": 0.95,
+      "context": "by word embedding and a Bidirectional LSTM network, and vectors of phantom classes into the input."
+    },
+    {
+      "name": "Graph Convolutional Network (GCN)",
+      "type": "theory",
+      "description": "A type of neural network architecture used for graph-based applications.",
+      "confidence": 0.9,
+      "context": "propose a novel transformer Graph Convolutional Network (GCN) as M(cid:48)"
+    },
+    {
+      "name": "Linear transformation function",
+      "type": "method",
+      "description": "A mathematical function used to map text representation into the space of relation encoding.",
+      "confidence": 0.95,
+      "context": "then use a linear transformation function to map the text representation into the space of relation encoding"
+    },
+    {
+      "name": "Compatibility score",
+      "type": "measurement",
+      "description": "A metric used for comparing image CNN features and class embeddings.",
+      "confidence": 0.9,
+      "context": "use a compatibility score as the metric for comparing the image CNN feature (input) and the class embedding."
+    },
+    {
+      "name": "zero-shot entity/relation extraction",
+      "type": "phenomenon",
+      "description": "A type of extraction where the model can extract entities and relations without any labeled data.",
+      "confidence": 0.95,
+      "context": "where features of both the input (entity mention text) and the class (entity/relation in a KG) are jointly mapped."
+    },
+    {
+      "name": "weighted approximate-rank pair-wise loss",
+      "type": "method",
+      "description": "A loss function used to minimize the difference between predicted and actual rankings.",
+      "confidence": 0.9,
+      "context": "by minimizing a weighted approximate-rank pair-wise loss, for zero-shot entity extraction."
+    },
+    {
+      "name": "ontology embedding",
+      "type": "theory",
+      "description": "A way of representing event types as vectors in a shared space.",
+      "confidence": 0.85,
+      "context": "the event type encoding which is based on event ontology embedding"
+    },
+    {
+      "name": "CNN-based generation paradigm",
+      "type": "application",
+      "description": "An approach to generating text using convolutional neural networks.",
+      "confidence": 0.9,
+      "context": "Fig. 6: Overview of the GAN-based generation paradigm."
+    },
+    {
+      "name": "GCN-based class encoding",
+      "type": "method",
+      "description": "A method for mapping initial class encoding learned by a GCN on commonsense knowledge and the image features learned by a CNN.",
+      "confidence": 0.9,
+      "context": "The text encoding by BERT and the class encoding which is based on a word embedding model tailored by ConceptNet."
+    },
+    {
+      "name": "matrix factorization-based KG completion model",
+      "type": "method",
+      "description": "A method for completing knowledge graph with unseen entities.",
+      "confidence": 0.9,
+      "context": "One of the methods is logically inferring additional relational facts in advance before training the matrix factorization model."
+    },
+    {
+      "name": "Generative Adversarial Networks (GANs)",
+      "type": "method",
+      "description": "A method for generating data using adversarial networks.",
+      "confidence": 0.9,
+      "context": "Generation models such as Generative Adversarial Networks (GANs) [107] and Variational Auto-encoder(VAE)[108]havebecomepopulartoolsforgeneratingdata"
+    },
+    {
+      "name": "Variational Auto-encoder (VAE)",
+      "type": "method",
+      "description": "A method for generating data using variational auto-encoders.",
+      "confidence": 0.9,
+      "context": "Generation models such as Generative Adversarial Networks (GANs) [107] and Variational Auto-encoder(VAE)[108]havebecomepopulartoolsforgeneratingdata"
+    },
+    {
+      "name": "ResNet101",
+      "type": "material",
+      "description": "A type of CNN used for image features learning.",
+      "confidence": 0.8,
+      "context": "using a non-linear transformation named Relation Network.This network first attaches a fully connected layer to the class encoding, then concatenates its output with the image features learned by a ResNet101"
+    },
+    {
+      "name": "fully connected layer",
+      "type": "method",
+      "description": "A type of neural network architecture used in the paper's approach.",
+      "confidence": 0.9,
+      "context": "It is learned by minimizing a MSE loss."
+    },
+    {
+      "name": "MSE loss",
+      "type": "measurement",
+      "description": "A type of loss function used to train the fully connected layer.",
+      "confidence": 0.8,
+      "context": "It is learned by minimizing a MSE loss."
+    },
+    {
+      "name": "GAN-based scheme",
+      "type": "method",
+      "description": "An approach used in zero-shot VQA, mapping input and KG entity encodings to a common space.",
+      "confidence": 0.9,
+      "context": "Chen et al. GAN-based scheme..."
+    },
+    {
+      "name": "generator",
+      "type": "method",
+      "description": "A component of the GAN-based scheme, generating sample features for unseen classes.",
+      "confidence": 0.8,
+      "context": "to generate a set of sample features xˆ for y"
+    },
+    {
+      "name": "adversarial discriminator",
+      "type": "method",
+      "description": "A component of the GAN-based scheme, distinguishing between real and generated features.",
+      "confidence": 0.9,
+      "context": "via an adversarial discriminator which distinguish x and xˆ"
+    },
+    {
+      "name": "Data Augmentation Paradigm",
+      "type": "method",
+      "description": "A method for generating synthetic data to augment the training dataset.",
+      "confidence": 0.9,
+      "context": "We regard these the class embeddings. Neural networks composed of several methods as Data Augmentation Paradigm."
+    },
+    {
+      "name": "Neural Networks",
+      "type": "theory",
+      "description": "A theoretical framework for machine learning models that are inspired by the structure and function of the human brain.",
+      "confidence": 0.95,
+      "context": "We regard these the class embeddings. Neural networks composed of several methods as Data Augmentation Paradigm."
+    },
+    {
+      "name": "ModelParameterPropagation",
+      "type": "method",
+      "description": "A method for propagating model parameters from seen classes to unseen classes in zero-shot learning.",
+      "confidence": 0.9,
+      "context": "1) ModelParameterPropagation: Foreachseenclassy in Y , a one-vs-rest binary classifier is trained with D ."
+    },
+    {
+      "name": "Conditional Generation Models",
+      "type": "theory",
+      "description": "A theoretical framework for generating synthetic data that is conditioned on the input data.",
+      "confidence": 0.9,
+      "context": "Conditional generation models were not widely applied in ZSL until around 2018."
+    },
+    {
+      "name": "One-vs-Rest Binary Classifier",
+      "type": "method",
+      "description": "A method for training a binary classifier for each seen class to predict test samples.",
+      "confidence": 0.9,
+      "context": "Such a classifier is usually composed of a pre-trained input encoding g (e.g., a CNN for image feature learning) and linear or non-linear classification layer(s)."
+    },
+    {
+      "name": "Propagation Graph",
+      "type": "phenomenon",
+      "description": "A phenomenon where model parameters are propagated from seen classes to unseen classes.",
+      "confidence": 0.8,
+      "context": "We will next introduce the general idea of each category, and its contributes mainly from two dimensions — the propagation graph and the propagation model."
+    },
+    {
+      "name": "KG-aware methods",
+      "type": "method",
+      "description": "Three graph-aware methods are proposed for zero-shot image classification.",
+      "confidence": 0.9,
+      "context": "Considering asimple but general case in Figure 7 (a), the seen classes y1, y2 and y3 are"
+    },
+    {
+      "name": "Graph propagation model",
+      "type": "method",
+      "description": "A graph propagation model is used to approximate parameters of classifiers.",
+      "confidence": 0.95,
+      "context": "With p(y1) and the pre-trained input encoding g, samples of y1 can be predicted."
+    },
+    {
+      "name": "Disentangled KG embedding method",
+      "type": "method",
+      "description": "A disentangled KG embedding method is used to encode class semantics from multiple aspects.",
+      "confidence": 0.9,
+      "context": "The follow-up work by Geng et al. [112] further considers an anewdisentangledKGembeddingmethodforencodingclass"
+    },
+    {
+      "name": "Graph entities",
+      "type": "material",
+      "description": "Entities in a graph, including seen and unseen classes.",
+      "confidence": 0.9,
+      "context": "the seen classes y1, y2 and y3 are aligned with three graph entities e , e and e , respectively."
+    },
+    {
+      "name": "Residual Graph Convolutional Network (ResGCN)",
+      "type": "method",
+      "description": "A neural network architecture that builds residual connections between hidden layers for propagation, alleviating over-smoothing and over-fitting.",
+      "confidence": 0.95,
+      "context": "They propose to use a Residual Graph Convolutional Network (ResGCN), which builds residual connections between hidden layers, for propagation so as to alleviate over-smoothing and over-fitting when stacking multiple GCN layers."
+    },
+    {
+      "name": "Generative Adversarial Networks (GAN)",
+      "type": "method",
+      "description": "A deep learning approach that involves training a generator network to generate samples that can fool a discriminator network.",
+      "confidence": 0.95,
+      "context": "They propose to first use GAN to generate sample features adopt a CNN named ResNet-50 for image feature learning."
+    },
+    {
+      "name": "Zero-shot Knowledge Graph (KG) completion",
+      "type": "phenomenon",
+      "description": "The problem of completing KGs with new relations that have never appeared in training.",
+      "confidence": 0.95,
+      "context": "zero-shot KG completion problem, where the testing triples is trained for each seen class via D , and the linear layer involve new relations that have never appeared in training."
+    },
+    {
+      "name": "WordNet entities",
+      "type": "material",
+      "description": "A lexical database of English words and their semantic relationships.",
+      "confidence": 0.95,
+      "context": "aligns image classes with WordNet [31] entities, their textual description embeddings (i.e., class encodings),"
+    },
+    {
+      "name": "Graph-based information propagation",
+      "type": "method",
+      "description": "A straightforward solution to utilize KG auxiliary information for ZSL.",
+      "confidence": 0.9,
+      "context": "When graph-based information propagation is a straightforward solution to utilize KG auxiliary information for ZSL."
+    },
+    {
+      "name": "propagation-based paradigm",
+      "type": "method",
+      "description": "A method for utilizing KGs in zero-shot image classification.",
+      "confidence": 0.95,
+      "context": "To utilize the KGs, the propagation-based paradigm starts to be widely adopted in some recent studies such as [12, 13, 46]."
+    },
+    {
+      "name": "Attentive multi-relational GCN",
+      "type": "method",
+      "description": "A method that adopts different relations with different contributions in parameter propagation.",
+      "confidence": 0.9,
+      "context": "an attentive multi-relational GCN is adopted, where different relations have different contributions in parameter propagation."
+    },
+    {
+      "name": "GCN Layers",
+      "type": "material",
+      "description": "Graph Convolutional Network layers used in the graph propagation model.",
+      "confidence": 0.9,
+      "context": "methods prefer to stack multiple GCN layers."
+    },
+    {
+      "name": "model parameter propagation",
+      "type": "method",
+      "description": "A method that transfers parameters from seen classes to unseen classes.",
+      "confidence": 0.95,
+      "context": "parametersfromseenclassestounseenclasses.Thedifference"
+    },
+    {
+      "name": "Auxiliary Knowledge Graph",
+      "type": "material",
+      "description": "A knowledge graph used as input for the graph propagation model.",
+      "confidence": 0.8,
+      "context": "When propagating knowledge to distant nodes, all the above methods prefer to stack multiple GCN layers on the auxiliary KG."
+    },
+    {
+      "name": "Few-shot Knowledge Graph Completion",
+      "type": "application",
+      "description": "A use case where the graph propagation model is used for few-shot knowledge graph completion.",
+      "confidence": 0.9,
+      "context": "and evaluation setting as in [12], the two-layer network and these weighted additional connections often achieve better performance."
+    },
+    {
+      "name": "Propagation",
+      "type": "phenomenon",
+      "description": "A process of iterative belief propagation on the auxiliary KG, where the propagation is directional from seen classes to unseen classes.",
+      "confidence": 0.95,
+      "context": "These methods are often for Encoding Models multi-label classification where one sample is annotated by Pre-trained GCNs multiple related classes."
+    },
+    {
+      "name": "Class Feature Paradigm",
+      "type": "theory",
+      "description": "A transformed scoring function f(cid:48) : (g(x),h(y)) → s to calculate a matching score s between an input x and a class y.",
+      "confidence": 0.95,
+      "context": "As shown in Figure 8, class feature paradigm uses a transformed scoring function f(cid:48) : (g(x),h(y)) → s to calculate a matching score s between an input x and a class y."
+    },
+    {
+      "name": "Gated Recurrent Update Mechanism",
+      "type": "method",
+      "description": "A recurrent update mechanism for iterative belief propagation on the auxiliary KG.",
+      "confidence": 0.95,
+      "context": "One typical work is the zero-shot multi-label image classification method by Lee et al. [42], where multiple objects are to be recognized from an input image."
+    },
+    {
+      "name": "Fusion Model",
+      "type": "method",
+      "description": "A model that combines g(x) and h(y), and a prediction model.",
+      "confidence": 0.95,
+      "context": "f(cid:48) is usually composed of a fusion model, which combines g(x) and h(y), and a prediction model."
+    },
+    {
+      "name": "Pre-trained GCNs",
+      "type": "method",
+      "description": "Graph convolutional networks pre-trained for multi-label classification.",
+      "confidence": 0.95,
+      "context": "multi-label classification where one sample is annotated by Pre-trained GCNs multiple related classes."
+    },
+    {
+      "name": "Conditional Random Field",
+      "type": "method",
+      "description": "A machine learning approach used to infer unseen objects using recognized seen objects and a knowledge graph.",
+      "confidence": 0.95,
+      "context": "According to the types of g(x) and h(y), we further classify these KG-aware ZSL methods into two categories: Text Feature Fusion and Multi-modal Feature Fusion."
+    },
+    {
+      "name": "ConMask",
+      "type": "method",
+      "description": "A zero-shot KG completion method for dealing with unseen entities using their names and text descriptions.",
+      "confidence": 0.95,
+      "context": "They feed the text and learn the prediction model by alternatively masking the encodings of the entities and the relation of a triple into a CNN-based fusion model."
+    },
+    {
+      "name": "Transformer-based model",
+      "type": "method",
+      "description": "A transformer-based model that generates encodings of its two entities to calculate a triple score, where the answer given the text features of the context and question is learned by span masked language modeling.",
+      "confidence": 0.95,
+      "context": "In implementation, a transformer-based model that generates"
+    },
+    {
+      "name": "TF-IDF algorithm",
+      "type": "method",
+      "description": "An algorithm used to combine learning where the context, question and answer are modeled as the embeddings of words to encode each entity with its text as a triple.",
+      "confidence": 0.95,
+      "context": "Zhao et al. [95] adopt the TF-IDF algorithm"
+    },
+    {
+      "name": "Span masked language modeling",
+      "type": "method",
+      "description": "A method used by the transformer-based model to learn the prediction model by alternatively masking the encodings of the entities and the relation of a triple into a CNN-based fusion model.",
+      "confidence": 0.95,
+      "context": "span masked language modeling, using triples"
+    },
+    {
+      "name": "Multi-modalFeatureFusion",
+      "type": "method",
+      "description": "A method that combines different types of input encoding and class encoding for zero-shot relation extraction.",
+      "confidence": 0.95,
+      "context": "Inthesemethods,theinputencodingandtheclassexecodingareofdifferenttypes."
+    },
+    {
+      "name": "Entity Encoding",
+      "type": "method",
+      "description": "A process that represents entities using their word embeddings and hierarchical classes' word embeddings.",
+      "confidence": 0.8,
+      "context": "For each entity, its feature fusion category."
+    },
+    {
+      "name": "BERT (Bidirectional Encoder Representations from Transformers)",
+      "type": "material",
+      "description": "A pre-trained language model used for encoding text features.",
+      "confidence": 0.9,
+      "context": "It encodes an entity by concatenating its text embeddings by the fastText word embedding model [113] and the pre-trained BERT [114]."
+    },
+    {
+      "name": "Gated-Relational Graph Convolutional Network (GCN)",
+      "type": "method",
+      "description": "A neural network architecture used for encoding entities' graph vectors.",
+      "confidence": 0.8,
+      "context": "a gated-relational GCN and a decoder — a simplified version of ConvE [115] to predict a score."
+    },
+    {
+      "name": "Zero-shot Entity Extraction",
+      "type": "phenomenon",
+      "description": "A phenomenon where models can extract entities without seeing them during training.",
+      "confidence": 0.9,
+      "context": "Ristoski et al. [105] work on zero-shot entity extraction."
+    },
+    {
+      "name": "Triple Classification with Unseen Entities",
+      "type": "phenomenon",
+      "description": "A phenomenon where models are trained to classify triples containing unseen entities.",
+      "confidence": 0.8,
+      "context": "Due to the heterogeneity of the inputs, the mechanism of f(cid:48), especially the fusion model, will differ from that of the text classification."
+    },
+    {
+      "name": "ConvE",
+      "type": "method",
+      "description": "A method for predicting a score by encoding the entity's KG semantics such as types.",
+      "confidence": 0.9,
+      "context": "encodes of ConvE [115] to predict a score."
+    },
+    {
+      "name": "ConceptNet-based class encoding",
+      "type": "method",
+      "description": "A method that encodes the associated entity, its ancestors and its description using multi-hot encoding.",
+      "confidence": 0.8,
+      "context": "They fuse the input text and the ConceptNet-based class encoding, and feed them into a CNN classifier."
+    },
+    {
+      "name": "KG-BERT",
+      "type": "method",
+      "description": "A method that transforms each triple into a text sentence with name information of its head entity, predicate and tail entity.",
+      "confidence": 0.9,
+      "context": "Yao et al. [98] propose a KG triple prediction method called KG-BERT."
+    },
+    {
+      "name": "Meta-learning algorithms",
+      "type": "theory",
+      "description": "A theoretical framework that accelerates the adaption in training with optimization-based learning algorithms.",
+      "confidence": 0.8,
+      "context": "Instead, we regard those that focus on utilizing the few-shot samples by accelerating the adaption in training with meta learning algorithms..."
+    },
+    {
+      "name": "transfer-based paradigm",
+      "type": "method",
+      "description": "A method that directly applies the whole prediction models learned from D tr to D te.",
+      "confidence": 0.95,
+      "context": "These methods are regarded as the transfer- seen and the unseen KGs are the same, such that the rules based paradigm."
+    },
+    {
+      "name": "KEPLER",
+      "type": "method",
+      "description": "A joint text and entity embedding method for predicting KG triples with unseen entities and relations.",
+      "confidence": 0.9,
+      "context": "Wang et al. [100] propose a joint text and entity embedding method named KEPLER which is also able to predict KG triples with unseen entities and relations."
+    },
+    {
+      "name": "ZSL",
+      "type": "phenomenon",
+      "description": "Zero-shot learning, where models are trained on one dataset and tested on another without any overlap.",
+      "confidence": 0.9,
+      "context": "The majority of the ZSL methods, which usually well utilize the auxiliary KG, can be extended to support FSL."
+    },
+    {
+      "name": "FSL",
+      "type": "phenomenon",
+      "description": "Few-shot learning, a type of machine learning that learns from limited labeled data.",
+      "confidence": 0.95,
+      "context": "In this section, we first very briefly revisit KG-aware ZSL and FSL in different domains and tasks..."
+    },
+    {
+      "name": "Masked language modeling loss",
+      "type": "method",
+      "description": "A method for fine-tuning the BERT model.",
+      "confidence": 0.8,
+      "context": "It utilizes the text of the entities and the relations to fine-tune the BERT model via a masked language modeling loss."
+    },
+    {
+      "name": "DataAugmentation",
+      "type": "method",
+      "description": "Generating additional samples or sample features for unseen classes, utilizing KG auxiliary information.",
+      "confidence": 0.9,
+      "context": "Thesemethodsgenerateadditionalsamplesor Rule-based [20] DataAugmentation samplefeaturesfortheunseenclasses,"
+    },
+    {
+      "name": "EmbeddingPropagation",
+      "type": "method",
+      "description": "Propagating model parameters or class embeddings (or asample's class beliefs) from seen classes to unseen classes via a KG.",
+      "confidence": 0.95,
+      "context": "Thesemethodspropagatemodelparameters, ModelParameter [22,50] Propagation-based or classembeddings(orasample’sclassbeliefs) Propagation"
+    },
+    {
+      "name": "TextFeatureFusion",
+      "type": "method",
+      "description": "Encoding the input and class into features often with their KG contexts considered, fusing these features and feeding them directly into a prediction model.",
+      "confidence": 0.9,
+      "context": "Thesemethodsencodetheinputandtheclass TextFeatureFusion [86] ClassFeature intofeaturesoftenwiththeirKGcontexts"
+    },
+    {
+      "name": "Multi-modalFeature",
+      "type": "method",
+      "description": "Encoding the input and class into features often with their KG contexts considered, fusing these features and feeding them directly into a prediction model.",
+      "confidence": 0.9,
+      "context": "Thesemethodsencodetheinputandtheclass TextFeatureFusion [86] ClassFeature intofeaturesoftenwiththeirKGcontexts"
+    },
+    {
+      "name": "NeuralNetworkTransfer",
+      "type": "method",
+      "description": "Directly applying models of seen classes to unseen classes, often with the few-shot samples utilized in prediction.",
+      "confidence": 0.9,
+      "context": "Thesemethodsdirectlyapplymodelsofseen NeuralNetworkTransfer [133,134,135] Transfer-based classestounseenclasses,"
+    },
+    {
+      "name": "RuleTransfer",
+      "type": "method",
+      "description": "Directly applying models of seen classes to unseen classes, often with the few-shot samples utilized in prediction.",
+      "confidence": 0.9,
+      "context": "Thesemethodsdirectlyapplymodelsofseen NeuralNetworkTransfer [133,134,135] Transfer-based classestounseenclasses,"
+    },
+    {
+      "name": "KG-specificOptimization",
+      "type": "method",
+      "description": "Using meta-learning algorithms to optimize the training that relies on the few-shot samples.",
+      "confidence": 0.9,
+      "context": "Thesemethodsadoptmetalearningalgorithms KG-specificOptimization [128,129,130] Optimization-based tooptimizethetraining"
+    },
+    {
+      "name": "KG-agnosticOptimization",
+      "type": "method",
+      "description": "Using meta-learning algorithms to optimize the training that relies on the few-shot samples.",
+      "confidence": 0.9,
+      "context": "Thesemethodsadoptmetalearningalgorithms KG-agnosticOptimization [131,132,65,117,54,64]"
+    },
+    {
+      "name": "WordNet-based class learning encoding",
+      "type": "material",
+      "description": "A material used in the input mapping method for few-shot image classification.",
+      "confidence": 0.8,
+      "context": "Akata et al. [91, 44] jointly map the WordNet-based class learning encoding and the image encoding into one common space..."
+    },
+    {
+      "name": "CNN features",
+      "type": "material",
+      "description": "A material used in the prediction method for few-shot image classification.",
+      "confidence": 0.8,
+      "context": "the average of the CNN features of the few shotsamples as well as the mapped class vector are both used and compared with the input of a testing sample..."
+    },
+    {
+      "name": "Few-shot samples",
+      "type": "material",
+      "description": "A material used in the training method for few-shot image classification.",
+      "confidence": 0.8,
+      "context": "they train the mapping model M, i.e., a linear transformation function with both training samples and few-shot samples D..."
+    },
+    {
+      "name": "Zero-shot entity mention typing",
+      "type": "phenomenon",
+      "description": "A phenomenon of typing entities without any labeled data.",
+      "confidence": 0.8,
+      "context": "Ma et al. [62] support zero-shot and few-shot entity mention typing at the same time..."
+    },
+    {
+      "name": "EL Embedding",
+      "type": "method",
+      "description": "A logic embedding algorithm used for initial class encoding.",
+      "confidence": 0.9,
+      "context": "They regard D as a kind of auxiliary information, and for initial class encoding. Monka et al. [52] investigate KG-"
+    },
+    {
+      "name": "GCN",
+      "type": "method",
+      "description": "A graph convolutional network used to predict graph node features (i.e., triples) of the unseen KG.",
+      "confidence": 0.95,
+      "context": "this GCN to predict graph node features (i.e., triples) of the unseen KG."
+    },
+    {
+      "name": "one-shot KG completion",
+      "type": "method",
+      "description": "Evaluating one-shot KG completion by inferring triples for unseen entities and/or relations.",
+      "confidence": 0.95,
+      "context": "eloped by Xiongetal.[116]forevaluatingone-shotKGcompletion logicalrulestoinfertriplesfortheunseenentitiesand/orrelations."
+    },
+    {
+      "name": "Matching Network",
+      "type": "method",
+      "description": "A network used to compare a testing entity pair with the center of the mapped vectors.",
+      "confidence": 0.9,
+      "context": "They develop a matching network to compare a testing entity pair with"
+    },
+    {
+      "name": "neighbourhood encoder",
+      "type": "method",
+      "description": "An encoder used to learn the features of an entity pair by sampling them from latent semantics.",
+      "confidence": 0.85,
+      "context": "a neighbourhood encoder, and a matching score is predicted by an LSTM network"
+    },
+    {
+      "name": "generative network",
+      "type": "method",
+      "description": "A neural network used for reconstructing triple embeddings conditioned on latent semantics.",
+      "confidence": 0.9,
+      "context": "Next, the decoder by a generative network is proceeded to reconstruct the triple embeddings (g ,g ,g )"
+    },
+    {
+      "name": "MLPs",
+      "type": "method",
+      "description": "Multi-layer perceptrons used to fuse KG embeddings and text embeddings into one common space.",
+      "confidence": 0.85,
+      "context": "into one common space by MLPs."
+    },
+    {
+      "name": "Consine similarity",
+      "type": "measurement",
+      "description": "A metric used for comparing testing samples with few-shot samples of each unseen class.",
+      "confidence": 0.9,
+      "context": "via calculating the Consine similarity"
+    },
+    {
+      "name": "KG-aware few-shot text classification",
+      "type": "method",
+      "description": "A method that combines knowledge graph and few-shot learning for text classification.",
+      "confidence": 0.8,
+      "context": "a KG-aware few-shot text classification method."
+    },
+    {
+      "name": "task-agnostic relation network",
+      "type": "method",
+      "description": "A neural network that learns to represent relations between entities without considering the specific task.",
+      "confidence": 0.9,
+      "context": "It maps and domains. For example, Zhang et al. [23] work out a general compares a testing sample with the few-shot samples of each feature generation framework for addressing few-shot unseen"
+    },
+    {
+      "name": "relation extraction",
+      "type": "phenomenon",
+      "description": "The process of extracting relationships between entities from text data.",
+      "confidence": 0.8,
+      "context": "Zhang et al. [64] work on few-shot relation extraction from text, utilizing concept-level knowledge from Wikidata [33] or UMLS [74]."
+    },
+    {
+      "name": "CNN",
+      "type": "method",
+      "description": "A type of neural network that uses convolutional and pooling layers to extract features.",
+      "confidence": 0.9,
+      "context": "The feature generation module is implemented by a CNN to extract features from the entity pair (or from the text sentence for relation extraction) until the discriminator model is a network which considers the sentence features, the entity description features and the KG concept features,"
+    },
+    {
+      "name": "KG embeddings",
+      "type": "material",
+      "description": "A type of representation that captures the semantic meaning of entities in a knowledge graph.",
+      "confidence": 0.8,
+      "context": "the relation encoding is based on the relation representations extracted from the KG embeddings."
+    },
+    {
+      "name": "Rule-based",
+      "type": "method",
+      "description": "A simple heuristic rule for sample generation for one-shot image classification.",
+      "confidence": 0.9,
+      "context": "Tsai and Salakhutdinov [20] use a simple and heuristic rule for sample generation for one-shot image clas-sification."
+    },
+    {
+      "name": "Generation-based",
+      "type": "method",
+      "description": "Utilize statistical generation models such as GANs and VAEs.",
+      "confidence": 0.9,
+      "context": "we find some KG-aware FSL studies of generation-based, which usually utilize statistical generation models such as GANs[107]andVAEs[108]."
+    },
+    {
+      "name": "Embedding Propagation",
+      "type": "phenomenon",
+      "description": "A process that predicts the embedding of an unseen entity via trained embeddings of seen entities.",
+      "confidence": 0.95,
+      "context": "We classify these methods into a new category named Embedding Propagation."
+    },
+    {
+      "name": "Graph-Aware Zero-Shot Learning (ZSL)",
+      "type": "theory",
+      "description": "A theoretical framework that leverages graph structures for zero-shot learning.",
+      "confidence": 0.9,
+      "context": "1) ModelParameterPropagation: Pengetal.[22]workon"
+    },
+    {
+      "name": "Gated Graph Neural Network (GGNN)",
+      "type": "method",
+      "description": "A neural network architecture used for updating classifier parameters of each graph node.",
+      "confidence": 0.8,
+      "context": "They initialize the θ prior distribution p (z|o ) by taking as input the embedded textual descriptions of the triples O and that of the relations"
+    },
+    {
+      "name": "Conditional VAE",
+      "type": "method",
+      "description": "A method that uses a Conditional Variational Autoencoder to supplement real triple sets.",
+      "confidence": 0.8,
+      "context": "Following the basic idea of VAE, the encoder is implemented with a recognition network and a prior network to learn the variational posterior distribution q (z|O) and the conditional prior distribution p (z|o )"
+    },
+    {
+      "name": "Few-Shot Image Classification",
+      "type": "application",
+      "description": "A practical implementation that uses few-shot learning for image classification.",
+      "confidence": 0.9,
+      "context": "They first do model parameter propagation as in KG-aware ZSL, which mainlyfromtwodimensions—thepropagationgraphandthe"
+    },
+    {
+      "name": "GatedGraphNeuralNetwork (GGNN)",
+      "type": "method",
+      "description": "A neural network architecture for updating the classifier.",
+      "confidence": 1.0,
+      "context": "ing as input the embedded GatedGraphNeuralNetwork(GGNN)toupdatetheclassifier"
+    },
+    {
+      "name": "Cross-Entropy Loss",
+      "type": "method",
+      "description": "A loss function used for training the GGNN.",
+      "confidence": 1.0,
+      "context": "GGNN is trained with a cross-entropy loss on D and D D."
+    },
+    {
+      "name": "Logic Attention Network (LAN)",
+      "type": "method",
+      "description": "A method that exploits logic rules to measure neighbouring relations' usefulness and embed unseen entities by aggregating their neighbours based on relevance to a given relation.",
+      "confidence": 0.95,
+      "context": "In LAN, logic rules are exploited to measure neighbouring relations’ usefulness, and neighbours connected by different relationships have different weights w.r.t an unseen entity."
+    },
+    {
+      "name": "Graph Transformer Encoder",
+      "type": "method",
+      "description": "An encoder that aggregates neighbours based on their relevance to a given relation and embeds an unseen entity.",
+      "confidence": 0.95,
+      "context": "Bhowmik and Melo [122] use a variant of Graph Transformer encoder to embed an unseen entity by aggregating its neighbours based on their relevance to a given relation."
+    },
+    {
+      "name": "Sentence BERT",
+      "type": "method",
+      "description": "A method that uses Sentence BERT to initialize the entity embeddings using textual information.",
+      "confidence": 0.9,
+      "context": "For predicting relations between unseen entities, they initialize the entity embeddings by the entities’ textual information using Sentence BERT, and then propagate to update the entities’ embeddings by a graph."
+    },
+    {
+      "name": "GNN",
+      "type": "method",
+      "description": "A graph neural network used for KG completion with unseen entities.",
+      "confidence": 0.8,
+      "context": "Besides GNN, Ali et al. [125] also explore a linear projection of entity features to relation features without considering the graph structure."
+    },
+    {
+      "name": "TransE",
+      "type": "method",
+      "description": "A translation-based method used for calculating a candidate set of embeddings for an unseen entity.",
+      "confidence": 0.8,
+      "context": "KRISP uses some simple aggregation operations such as averaging to get the embedding of an unseen entity from its neighbours, and this method can be applied to any KG embedding models..."
+    },
+    {
+      "name": "RotatE",
+      "type": "method",
+      "description": "A rotation-based method used for calculating a candidate set of embeddings for an unseen entity.",
+      "confidence": 0.8,
+      "context": "KRISP uses some simple aggregation operations such as averaging to get the embedding of an unseen entity from its neighbours, and this method can be applied to any KG embedding models..."
+    },
+    {
+      "name": "E. Optimization-based Paradigm",
+      "type": "theory",
+      "description": "A theoretical framework for optimizing training with few-shot samples.",
+      "confidence": 0.9,
+      "context": "All the above mentioned few-shot KG completion methods some meta-learning algorithms have been applied for fast deal with unseen entities."
+    },
+    {
+      "name": "aggregation operations",
+      "type": "method",
+      "description": "Techniques used to combine information from associated triples to an unseen entity or relation.",
+      "confidence": 0.8,
+      "context": "e aggregation operations such as averaging to get the the KG) to predict the answer."
+    },
+    {
+      "name": "embedding of an unseen entity from its neighbours",
+      "type": "method",
+      "description": "A method for predicting the answer by embedding an unseen entity from its neighbors.",
+      "confidence": 0.9,
+      "context": "This method can be applied to any KG embedding models, but it requires that the original KG embedding training is adjusted for the aggregation operation."
+    },
+    {
+      "name": "few-shot sample set D",
+      "type": "measurement",
+      "description": "A set of learning tasks used to simulate few-shot samples.",
+      "confidence": 0.8,
+      "context": "all adopt an episode-based training strategy and generate a few-shot sample set D and few"
+    },
+    {
+      "name": "episode-based training strategy",
+      "type": "method",
+      "description": "An approach for training models with few-shot samples, consisting of a support set and query set.",
+      "confidence": 0.9,
+      "context": "all adopt an episode-based training strategy and generate a few-shot sample set D and few"
+    },
+    {
+      "name": "margin loss",
+      "type": "measurement",
+      "description": "A metric used to train the model with a translation-based function.",
+      "confidence": 0.8,
+      "context": "the model is trained with a margin loss."
+    },
+    {
+      "name": "GraphExtrapolationNetwork",
+      "type": "method",
+      "description": "A GraphExtrapolationNetwork for quickly learning the embeddings of unseen entities with only a few associated triples.",
+      "confidence": 0.95,
+      "context": "After multiple training iterations on these training tasks, the method can obtain an optimal Meta Learner."
+    },
+    {
+      "name": "Meta Learner",
+      "type": "method",
+      "description": "A parameterized model that is expected to learn efficiently from only a small number of unseen entities.",
+      "confidence": 0.95,
+      "context": "After multiple training iterations on these training tasks, the method can obtain an optimal Meta Learner."
+    },
+    {
+      "name": "LSTM",
+      "type": "method",
+      "description": "A Long Short-Term Memory network used in the path encoder.",
+      "confidence": 0.9,
+      "context": "a path encoder based on LSTM"
+    },
+    {
+      "name": "GNNs",
+      "type": "method",
+      "description": "Graph Neural Networks used to predict relations between seen and unseen entities.",
+      "confidence": 0.95,
+      "context": "They propose a GraphExtrapolationNetwork for quickly learning the embeddings of unseen entities with only a few associated triples, where relations between seen entities and unseen entities, and between unseen entities are both predicted using GNNs."
+    },
+    {
+      "name": "MAML",
+      "type": "method",
+      "description": "A meta-learning algorithm used for few-shot learning with unseen relations.",
+      "confidence": 0.95,
+      "context": "They adopt reinforcement learning to search tail entities and paths which could infer the set of these tail entities, and directly apply MAML with one relation."
+    },
+    {
+      "name": "Reinforcement Learning",
+      "type": "method",
+      "description": "A technique used for searching tail entities and paths in few-shot learning.",
+      "confidence": 0.9,
+      "context": "They adopt reinforcement learning to search tail entities and paths which could infer the set of these tail entities, and directly apply MAML with one relation."
+    },
+    {
+      "name": "Few-Show KG Completion",
+      "type": "phenomenon",
+      "description": "A phenomenon where unseen relations are completed in a knowledge graph.",
+      "confidence": 0.95,
+      "context": "They adopt reinforcement learning to search tail entities and paths which could infer the set of these tail entities, and directly apply MAML with one relation."
+    },
+    {
+      "name": "MetaR",
+      "type": "method",
+      "description": "A new method named MetaR to predict triples involving unseen relations.",
+      "confidence": 0.95,
+      "context": "Chen et al. [129] propose a new method named MetaR to predict triples involving unseen relations."
+    },
+    {
+      "name": "Bayesian meta-learning method",
+      "type": "method",
+      "description": "A Bayesian meta-learning method which is related to MAML but can handle the uncertainty of the prototype vectors.",
+      "confidence": 0.9,
+      "context": "To this end, they first initialize the relation prototype vectors by a BERT model over the samples (i.e., sentences) and a GNN over a global relation graph extracted from different ways, and then effectively learn their posterior distribution by a Bayesian meta-learning method which is related to MAML but can handle the uncertainty of the prototype vectors."
+    },
+    {
+      "name": "Bert",
+      "type": "method",
+      "description": "Pre-training of deep bidirectional transformers for language understanding.",
+      "confidence": 0.95,
+      "context": "Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), 2019, pp. 3016–3025."
+    },
+    {
+      "name": "Transfer Graph Generation (TGG)",
+      "type": "method",
+      "description": "An approach that has a graph generation module and a propagation module for utilizing this graph for prediction.",
+      "confidence": 0.9,
+      "context": "They train the whole model with an episodic training strategy of metalearning."
+    },
+    {
+      "name": "Knowledge-Enhanced Prototypical Network",
+      "type": "method",
+      "description": "A method that implements the matching between instances and the matching between instance and query.",
+      "confidence": 0.8,
+      "context": "They implement the matching between instances and the matching between instance and query with a knowledge-enhanced prototypical network."
+    },
+    {
+      "name": "Few-shot Relational Learning",
+      "type": "phenomenon",
+      "description": "A learning task that involves predicting triples involving unseen relations with only a small number of associated FSRL.",
+      "confidence": 0.9,
+      "context": "Their few-shot relational learning method for unseen relations which have only a small number of associated FSRL."
+    },
+    {
+      "name": "Gradient Meta",
+      "type": "method",
+      "description": "A method for training relation meta with gradient updates.",
+      "confidence": 0.9,
+      "context": "which is shown to be able to train with gradient meta."
+    },
+    {
+      "name": "Rule Transfer",
+      "type": "method",
+      "description": "A method that transfers rules mined by Markov Logic Networks (MLNs).",
+      "confidence": 0.95,
+      "context": "and the embedding propagation category of the propagation-"
+    },
+    {
+      "name": "Neural LP",
+      "type": "method",
+      "description": "A rule mining method used for learning first-order logical rules associated with weights from a seen KG.",
+      "confidence": 0.9,
+      "context": "differentiable way using the rule mining method named Neural LP,"
+    },
+    {
+      "name": "Datalog Rules",
+      "type": "phenomenon",
+      "description": "Graph patterns represented in Datalog rules and applied to capture graph patterns in a seen KG.",
+      "confidence": 0.8,
+      "context": "A new sub-KG Another KG sharing A seen KG capture graph patterns representedin Datalog rules,and apply"
+    },
+    {
+      "name": "Horn Rules",
+      "type": "phenomenon",
+      "description": "A type of rule that can be learned from a KG for representing graph patterns and regularities.",
+      "confidence": 0.8,
+      "context": "Different rules such as Horn rules, first-order rules and their weighted versions can be learned from Graph Neural Networks"
+    },
+    {
+      "name": "KG Completion",
+      "type": "phenomenon",
+      "description": "The task of inferring missing knowledge in a Knowledge Graph",
+      "confidence": 0.9,
+      "context": "KG completion is to infer missing knowledge in a KG"
+    },
+    {
+      "name": "matching predicates between rules",
+      "type": "method",
+      "description": "A method proposed by Mihalkova et al. for transferring rules mined by Markov Logic Networks (MLNs).",
+      "confidence": 0.95,
+      "context": "is that methods of the transfer-based paradigm directly apply"
+    },
+    {
+      "name": "extracting and transferring higher order rules",
+      "type": "method",
+      "description": "A method that extracts and transfers more general higher order rules that are summarized from the original rules.",
+      "confidence": 0.95,
+      "context": "(ii) extracting and transferring"
+    },
+    {
+      "name": "Neural Network Transfer",
+      "type": "method",
+      "description": "A method that transfers a GNN learned from the seen KG to the unseen KG for inference.",
+      "confidence": 0.95,
+      "context": "1) Neural Network Transfer: As GNNs can represent statistical regularities and structure patterns in a graph, some methods transfer a GNN learned from the seen KG to the unseen KG for inference."
+    },
+    {
+      "name": "GraIL",
+      "type": "method",
+      "description": "A method that learns a GNN by extracting subgraphs from the seen KG and labeling their entities with their structural roles.",
+      "confidence": 0.95,
+      "context": "the Teru et al. [133] propose a method named GraIL."
+    },
+    {
+      "name": "R-GCN",
+      "type": "method",
+      "description": "A method that uses relational graph convolutional networks for supporting multiple relations in the KG.",
+      "confidence": 0.9,
+      "context": "Chen et al. [135] extend GraIL by using R-GCN for supporting multiple relations in the KG."
+    },
+    {
+      "name": "ImageNet",
+      "type": "material",
+      "description": "A multi-label image classification dataset including nearly 270K images.",
+      "confidence": 1.0,
+      "context": "The released NUS-WIDE [155] is a multi-label image classification dataset including nearly 270K images."
+    },
+    {
+      "name": "ImNet-A",
+      "type": "material",
+      "description": "A dataset extracted from ImageNet, including 80 classes of animal species and general objects.",
+      "confidence": 0.95,
+      "context": "Some KG completion benchmark without additional KG (ontology) auxiliary information are also collected, as the zero-shot or few-shot task itself is within a KG context."
+    },
+    {
+      "name": "ImNet-O",
+      "type": "material",
+      "description": "A dataset extracted from ImageNet, including 35 classes of general objects.",
+      "confidence": 0.95,
+      "context": "Some KG completion benchmark without additional KG (ontology) auxiliary information are also collected, as the zero-shot or few-shot task itself is within a KG context."
+    },
+    {
+      "name": "KG-aware ZSL",
+      "type": "phenomenon",
+      "description": "A type of zero-shot learning that utilizes knowledge graphs.",
+      "confidence": 0.95,
+      "context": "In this section, we first very briefly revisit KG-aware ZSL and FSL in different domains and tasks..."
+    },
+    {
+      "name": "NUS-1000",
+      "type": "material",
+      "description": "One of the two versions of label sets in NUS-WIDE.",
+      "confidence": 1.0,
+      "context": "The object recognition in many works (e.g., [148]) usually aim at thesecond step former comprises 1000 noisy labels collected from Flickr user tags and the latter is a dedicated one with 81 human-annotated labels."
+    },
+    {
+      "name": "NUS-81",
+      "type": "material",
+      "description": "The other version of label sets in NUS-WIDE.",
+      "confidence": 1.0,
+      "context": "The object recognition in many works (e.g., [148]) usually aim at thesecond step former comprises 1000 noisy labels collected from Flickr user tags and the latter is a dedicated one with 81 human-annotated labels."
+    },
+    {
+      "name": "Propagation-based",
+      "type": "method",
+      "description": "A method for completing knowledge graphs.",
+      "confidence": 0.9,
+      "context": "KGCompletion Propagation-based — [119,120,122,121,123,124]"
+    },
+    {
+      "name": "Optimization-based",
+      "type": "method",
+      "description": "A method for optimizing knowledge graph completion.",
+      "confidence": 0.9,
+      "context": "Optimization-based — [130] Optimization-based — [128,129,131,132]"
+    },
+    {
+      "name": "Transfer-based",
+      "type": "method",
+      "description": "A method for transferring knowledge between tasks.",
+      "confidence": 0.8,
+      "context": "Transfer-based — [136,133,134,135]"
+    },
+    {
+      "name": "Mapping-based",
+      "type": "method",
+      "description": "A method for mapping between tasks and knowledge graphs.",
+      "confidence": 0.9,
+      "context": "Mapping-based — [92,93] Mapping-based — [116,117]"
+    },
+    {
+      "name": "ClassFeature",
+      "type": "material",
+      "description": "A feature used in classification tasks.",
+      "confidence": 0.8,
+      "context": "(UnseenEntity) ClassFeature [95,96,98,101,102,103,99,100,47,125] — (UnseenRelation) ClassFeature [98,102,103] —"
+    },
+    {
+      "name": "Knowledge Graph Completion",
+      "type": "phenomenon",
+      "description": "The task of completing a knowledge graph.",
+      "confidence": 0.9,
+      "context": "KGCompletion Propagation-based — [119,120,122,121,123,124]"
+    },
+    {
+      "name": "few-shot setting",
+      "type": "method",
+      "description": "A setting where a small number of labeled images are added for each unseen class.",
+      "confidence": 0.8,
+      "context": "Some of them simply extend their mapping-based of them being seen classes and the remaining be unseen models which are originally developed for zero-shot image classes."
+    },
+    {
+      "name": "ImageNet-FS",
+      "type": "application",
+      "description": "A dataset of images for few-shot image classification, derived from ImageNet.",
+      "confidence": 0.8,
+      "context": "• ImageNet-FS [159] and mini-ImageNet [160] are two derivatives of ImageNet."
+    },
+    {
+      "name": "mini-ImageNet",
+      "type": "application",
+      "description": "A dataset of images for few-shot image classification, derived from ImageNet.",
+      "confidence": 0.8,
+      "context": "• ImageNet-FS [159] and mini-ImageNet [160] are two derivatives of ImageNet."
+    },
+    {
+      "name": "Visual Question Answering (VQA)",
+      "type": "phenomenon",
+      "description": "A phenomenon where a natural language question is answered according to a given image.",
+      "confidence": 0.9,
+      "context": "2) Visual Question Answering (VQA): VQA is to answer a natural language question according to a given image."
+    },
+    {
+      "name": "mapping-based method",
+      "type": "method",
+      "description": "A technique for addressing zero-shot VQA by mapping answers to their embeddings in a knowledge graph.",
+      "confidence": 0.95,
+      "context": "The work [56] proposes a mapping-based KG method, where answers that have never appeared in training are predicted via comparing the KG-based embeddings of the question and answer embeddings."
+    },
+    {
+      "name": "OWL ontology",
+      "type": "material",
+      "description": "A framework for establishing connections between seen and unseen answers.",
+      "confidence": 0.9,
+      "context": "The work [87] also adopts the mapping-based paradigm, but builds and embeds an OWL ontology for establishing connections between seen answers and unseen answers."
+    },
+    {
+      "name": "meta learning algorithms",
+      "type": "method",
+      "description": "A type of optimization algorithm used in few-shot methods to learn from a small number of examples.",
+      "confidence": 0.9,
+      "context": "Some methods also consider the class feature paradigm by fusing features from a KG with the input features for both ZSL and FSL [57, 126]."
+    },
+    {
+      "name": "zero-shot VQA",
+      "type": "phenomenon",
+      "description": "A type of visual question answering task where the model is not trained on any examples from the test set.",
+      "confidence": 0.95,
+      "context": "KGs have been exploited for addressing zero-shot VQA, but not widely."
+    },
+    {
+      "name": "few-shot knowledge extraction",
+      "type": "phenomenon",
+      "description": "A type of knowledge extraction task where the model is trained on a small number of examples.",
+      "confidence": 0.9,
+      "context": "For these tasks, most KG-aware zero-shot methods follow the mapping-based paradigm utilizing the entities', relations' embeddings in the KG [72, 62, 63, 66], while KG-aware few-shot methods often follow the optimization- based paradigm which utilizes meta learning algorithms for fast training [65, 64]."
+    },
+    {
+      "name": "KG-aware ZSL and FSL methods",
+      "type": "method",
+      "description": "Methods for evaluating zero-shot learning (ZSL) and few-shot learning (FSL) with knowledge graphs.",
+      "confidence": 0.9,
+      "context": "between answers of the training samples and answers Therearequiteafewknowledgeextractionbenchmarksthat"
+    },
+    {
+      "name": "DBpedia, ConceptNet, and WebChild",
+      "type": "material",
+      "description": "Three public knowledge graphs used for evaluating KG-aware methods.",
+      "confidence": 0.8,
+      "context": "Chen et al. [56] extract facts from three public KGs (DBpedia [67], ConceptNet [32] and WebChild [69]),"
+    },
+    {
+      "name": "BBN, OntoNotes, and Wikipedia",
+      "type": "material",
+      "description": "Three benchmarks for fine-grained named entity typing.",
+      "confidence": 0.9,
+      "context": "BBN, OntoNotes and Wikipedia are three benchmarks for fine-grained named entity typing,"
+    },
+    {
+      "name": "OK-VQA",
+      "type": "application",
+      "description": "A recent benchmark for evaluating zero-shot VQA with visual content.",
+      "confidence": 0.8,
+      "context": "• OK-VQA [164] is a recent benchmark where the visual content of an image is not sufficient to answer the question."
+    },
+    {
+      "name": "GPT-3",
+      "type": "material",
+      "description": "A pre-trained language model used for few-shot VQA.",
+      "confidence": 0.9,
+      "context": "Regarding few-shot VQA, the existing methods (e.g., [60]) often rely on pre-trained language models such as GPT-3"
+    },
+    {
+      "name": "Visual Language Models",
+      "type": "theory",
+      "description": "A theoretical framework that combines visual and textual information to improve language understanding.",
+      "confidence": 0.9,
+      "context": "To incorporate images, visual language models can be pre-trained with images and text, or images can also be transformed into text by e.g., image captions so as to be utilized in language models [165]."
+    },
+    {
+      "name": "Zero-shot relation (property) extraction",
+      "type": "method",
+      "description": "A method that extracts relationships between entities without requiring labeled data.",
+      "confidence": 0.8,
+      "context": "Yang et al. [60] propose a supervised learning method which use knowledge retrieved from KGs for augmenting the question-answer samples, and this method is used as a baseline in comparison with the GTP-3-based method."
+    },
+    {
+      "name": "Microsoft Bing search engine API",
+      "type": "application",
+      "description": "A tool used for generating samples associated with predicate paths in the FB15k benchmark.",
+      "confidence": 0.8,
+      "context": "On the other hand, Marino et al. [127] first fuse features of the question and the image by a Transformer-based model, and then fuse these features with knowledge from ConceptNet.On the other hand, Marino et al. [63]."
+    },
+    {
+      "name": "Microsoft Bing search engine",
+      "type": "method",
+      "description": "A search engine used to retrieve knowledge from ConceptNet.",
+      "confidence": 0.8,
+      "context": "image by a Transformer-based model, and then fuse these withthesepropertiesusingMicrosoftBingsearchengine featureswithknowledgefromConceptNet."
+    },
+    {
+      "name": "Zero-shot VQA benchmarks",
+      "type": "phenomenon",
+      "description": "A set of evaluation metrics used to assess the performance of image generation models.",
+      "confidence": 0.8,
+      "context": "Under the aforementioned mentioned zero-shot VQA benchmarks ZSL setting in [63], 217 and 54 properties of WEB19 ZS-F-VQA and OK-VQA can be easily adjusted by adding few-shot samples for supporting the few-shot VQA setting."
+    },
+    {
+      "name": "ACE05",
+      "type": "material",
+      "description": "A corpus used for event extraction, annotated with fine-grained types.",
+      "confidence": 0.9,
+      "context": "ACE05 is a corpus for event extraction, annotated by 33 fine-grained types which are sub-types of 8 coarse- grained main types such as Life and Justice from the ACE (Automatic Content Extraction) ontology."
+    },
+    {
+      "name": "Knowledge triple learning",
+      "type": "method",
+      "description": "A machine learning approach used to model the QA problem via knowledge triples.",
+      "confidence": 0.9,
+      "context": "where the context, question and answer are modeled as a similar triple, and the answer is predicted given the context and question."
+    },
+    {
+      "name": "knowledge triple learning model",
+      "type": "method",
+      "description": "A machine learning model that learns from knowledge graph triples.",
+      "confidence": 0.9,
+      "context": "Their knowledge triple learning model is learned mainly utilize different kinds of word embeddings, and the from KG triples."
+    },
+    {
+      "name": "ontology augmented CNN classifier",
+      "type": "method",
+      "description": "A type of neural network that uses an ontology to augment its classification capabilities.",
+      "confidence": 0.8,
+      "context": "an ontology augmented CNN classifier for both few-shot (triple prediction) problem, where the model is trained by alternatively masking the subjects and the objects in triples."
+    },
+    {
+      "name": "MIMIC II",
+      "type": "application",
+      "description": "A multi-label text classification benchmark used in [75].",
+      "confidence": 0.9,
+      "context": "• MIMIC II [171] and MIMIC III [172] are multi-label text classification benchmarks used in [75]."
+    },
+    {
+      "name": "MIMIC III",
+      "type": "application",
+      "description": "A multi-label text classification benchmark used in [88].",
+      "confidence": 0.9,
+      "context": "• MIMIC II [171] and MIMIC III [172] are multi-label text classification benchmarks used in [75]."
+    },
+    {
+      "name": "few-shot QA",
+      "type": "method",
+      "description": "A technique for question answering that uses a limited number of labels for training and testing.",
+      "confidence": 0.9,
+      "context": "to few-shot QA by using 4, 10 or 20 labels for training and 1,356 labels for testing."
+    },
+    {
+      "name": "zero-shot QA",
+      "type": "method",
+      "description": "A technique for question answering that does not use any labeled data.",
+      "confidence": 0.9,
+      "context": "the investigation of KG-aware zero-shot and few-shot QA is still quite preliminary."
+    },
+    {
+      "name": "pre-trained language models",
+      "type": "theory",
+      "description": "The development of pre-trained language models that can provide symbolic knowledge.",
+      "confidence": 0.9,
+      "context": "With the development of pre-trained language models, the class feature paradigm is becoming more and more popular, especially for tasks whose inputs are text, such as text classification, question answering and knowledge extraction."
+    },
+    {
+      "name": "Question Answering (QA)",
+      "type": "phenomenon",
+      "description": "The task of answering questions based on the content of a text or other source.",
+      "confidence": 0.9,
+      "context": "3) Question Answering: Zero-shot and few-shot question answering (QA)18 started to attract wide attention in recent years..."
+    },
+    {
+      "name": "CommonsenseQA",
+      "type": "application",
+      "description": "A challenging dataset for evaluating commonsense QA methods, consisting of 12,247 questions with 5 answer candidates.",
+      "confidence": 0.95,
+      "context": "Althoughpre-trainedlanguagemodelshavecontainedmuchknowledge via large scale parameters, symbolic knowledge (including commonsense and domain knowledge with logics) CommonsenseQA is also adopted by Banerjee et al. [86] for evaluation."
+    },
+    {
+      "name": "STORYCS",
+      "type": "application",
+      "description": "A dataset consisting of 5-sentence stories with annotated motivations and emotional responses.",
+      "confidence": 0.9,
+      "context": "• STORYCS [180] consists of 5-sentence stories with annotated motivations and emotional responses."
+    },
+    {
+      "name": "Bosselut et al.",
+      "type": "theory",
+      "description": "Classical theories of psychology used for emotion classification.",
+      "confidence": 0.8,
+      "context": "originally for emotion classification, where the labels are drawn from classical theories of psychology. Bosselut et"
+    },
+    {
+      "name": "FB15k-237-OWE",
+      "type": "material",
+      "description": "A semi-ZS benchmark built on FB15k-237.",
+      "confidence": 0.9,
+      "context": "• FB15k-237-OWE [92] is a typical semi-ZS benchmark anduseitforevaluatingtheirKG-awaremethodforboth zero-shot and few-shot settings."
+    },
+    {
+      "name": "aNLI",
+      "type": "application",
+      "description": "A dataset with commonsense knowledge used for evaluating KG-augmented triple learning models.",
+      "confidence": 0.9,
+      "context": "• aNLI [181], QASC [182], OpenBookQA [183] and ARC[184]areadoptedbyBanerjeeetal.[86]forevalu-"
+    },
+    {
+      "name": "QASC",
+      "type": "application",
+      "description": "A QA dataset with scientific knowledge used for evaluating KG-augmented triple learning models.",
+      "confidence": 0.9,
+      "context": "• aNLI [181], QASC [182], OpenBookQA [183] and ARC[184]areadoptedbyBanerjeeetal.[86]forevalu-"
+    },
+    {
+      "name": "OpenBookQA",
+      "type": "application",
+      "description": "A QA dataset with scientific knowledge used for evaluating KG-augmented triple learning models.",
+      "confidence": 0.9,
+      "context": "• aNLI [181], QASC [182], OpenBookQA [183] and ARC[184]areadoptedbyBanerjeeetal.[86]forevalu-"
+    },
+    {
+      "name": "ARC",
+      "type": "application",
+      "description": "A QA dataset with scientific knowledge used for evaluating KG-augmented triple learning models.",
+      "confidence": 0.9,
+      "context": "• aNLI [181], QASC [182], OpenBookQA [183] and ARC[184]areadoptedbyBanerjeeetal.[86]forevalu-"
+    },
+    {
+      "name": "Link prediction",
+      "type": "method",
+      "description": "A technique for predicting relationships between entities in a knowledge graph",
+      "confidence": 1.0,
+      "context": "D. Daza, M. Cochez, and P. Groth, “Inductive entity representations from text via link prediction,” in Proceedings of the Web Conference, 2021, pp. 798–808."
+    },
+    {
+      "name": "DBpedia50k",
+      "type": "material",
+      "description": "A dataset for Knowledge Graph completion, containing 49,900 entities and 654 relations",
+      "confidence": 0.9,
+      "context": "DBpedia50k has 49,900 entities and 654 relations, with 32,388, 399 and 10,969 training, validation and testing triples"
+    },
+    {
+      "name": "DBpedia500k",
+      "type": "material",
+      "description": "A larger dataset for Knowledge Graph completion, containing 517,475 entities and 654 relations",
+      "confidence": 0.9,
+      "context": "DBpedia500k has 517,475 entities and 654 relations, with 3,102,677, 10,000 and 1,155,937 training, validation and testing triples"
+    },
+    {
+      "name": "Wikidata5M",
+      "type": "material",
+      "description": "A dataset for evaluating text-aware KG embedding methods, containing 5 million entities and relationships",
+      "confidence": 0.9,
+      "context": "Wikidata5M [100], originally developed for evaluating text-aware KG embedding methods, is an important fully-ZS benchmark"
+    },
+    {
+      "name": "wikidata paradigm",
+      "type": "phenomenon",
+      "description": "A knowledge graph completion benchmark constructed based on Wikidata and aligned to Wikipedia pages.",
+      "confidence": 0.95,
+      "context": "It is constructed based on the Wikidata paradigm [95, 99, 100, 47, 96, 101, 102, 103, 98]."
+    },
+    {
+      "name": "normal KG completion benchmarks",
+      "type": "phenomenon",
+      "description": "Existing knowledge graph completion benchmarks such as FB15k, FB15k-237, WordNet11, WN18RR, and NELL-995.",
+      "confidence": 0.95,
+      "context": "such as FB15k [170], FB15k-237 [185], WordNet11 [186], Entities with no Wikipedia pages or with descriptions"
+    },
+    {
+      "name": "entity textual description",
+      "type": "measurement",
+      "description": "The textual description of an entity, often collected from the original KGs or associated public resources.",
+      "confidence": 0.9,
+      "context": "Their entity auxiliary information is often collected fromthebenchmarks’originalKGsorsomeassociatedpublic resources."
+    },
+    {
+      "name": "triples extraction",
+      "type": "method",
+      "description": "The process of extracting relational facts (triples) from the Wikidata dump.",
+      "confidence": 0.9,
+      "context": "One triple is kept if both of its entities are not discarded, and its relation has a corresponding nonempty page in Wikipedia."
+    },
+    {
+      "name": "zero-shot setting",
+      "type": "phenomenon",
+      "description": "A setting where the model is trained on one set of data and tested on another without any additional training.",
+      "confidence": 0.9,
+      "context": "Tosupportthezero-shotsetting,"
+    },
+    {
+      "name": "random sub-KG extraction",
+      "type": "method",
+      "description": "The process of randomly extracting two sub-KGs as the validation set and testing set, and using the remaining data as the training set.",
+      "confidence": 0.9,
+      "context": "Wang et al. [100] randomly extract two sub-KGs as the validation set and the testing set, and use the remaining as the training set."
+    },
+    {
+      "name": "KG completion benchmark",
+      "type": "method",
+      "description": "A benchmark for evaluating knowledge graph completion models, involving unseen entities and relations.",
+      "confidence": 0.9,
+      "context": "Given an original KG completion benchmark, a set of entities are first selected as unseen entities."
+    },
+    {
+      "name": "FB20k",
+      "type": "material",
+      "description": "A knowledge graph completion benchmark that extends FB15k's testing set by adding triples involving unseen entities.",
+      "confidence": 0.8,
+      "context": "• FB20k [189] is a benchmark whose testing triples may involve unseen entities."
+    },
+    {
+      "name": "FB15k",
+      "type": "material",
+      "description": "A knowledge graph completion benchmark that has the same training set and validation set as the normal KG completion benchmark.",
+      "confidence": 0.9,
+      "context": "• FB15k, but extends FB15k’s testing set by adding triples involving unseen entities."
+    },
+    {
+      "name": "Normal KG completion",
+      "type": "phenomenon",
+      "description": "A type of knowledge graph completion that involves predicting triples with at least one entity being seen.",
+      "confidence": 0.9,
+      "context": "for normal KG completion, while the other three kinds are for zero-shot KG completion."
+    },
+    {
+      "name": "generalized zero-shot KG completion",
+      "type": "phenomenon",
+      "description": "A task that can be constructed in a way similar to zero-shot KG completion.",
+      "confidence": 0.8,
+      "context": "The numbers of the test triples of the above four types for training and ind-test-graph for testing."
+    },
+    {
+      "name": "optimization-based paradigm",
+      "type": "method",
+      "description": "A method for constructing few-shot KG completion benchmarks based on normal KG completion benchmarks.",
+      "confidence": 0.9,
+      "context": "the optimization-based paradigm [130]."
+    },
+    {
+      "name": "few-shot KG completion",
+      "type": "phenomenon",
+      "description": "The process of completing knowledge graphs with unseen entities using a limited number of training triples.",
+      "confidence": 0.95,
+      "context": "Several few-shot KG completion benchmarks with unseen entities have also been constructed."
+    },
+    {
+      "name": "few-shot triples",
+      "type": "phenomenon",
+      "description": "A set of triples that contains a few examples of seen relations for unseen entities.",
+      "confidence": 0.9,
+      "context": "NELL-995 extracted by [133]."
+    },
+    {
+      "name": "few-shot sampling",
+      "type": "method",
+      "description": "Selecting training triples that contain exactly one or two unseen entities for a new training set.",
+      "confidence": 0.9,
+      "context": "those that contain exactly one unseen entity are selected as few-shot samples"
+    },
+    {
+      "name": "relation textual descriptions",
+      "type": "material",
+      "description": "Using relation textual descriptions as auxiliary information.",
+      "confidence": 0.8,
+      "context": "use relation textual descriptions as the auxiliary information"
+    },
+    {
+      "name": "ontological schemas",
+      "type": "material",
+      "description": "Constructing ontological schemas that contain not only textual information but also relation hierarchies, relation domains and ranges, relation characteristics and so on.",
+      "confidence": 0.9,
+      "context": "construct ontological schemas, which contain not only textual information but also relation hierarchies, relation domains and ranges,"
+    },
+    {
+      "name": "symbolic reasoning",
+      "type": "method",
+      "description": "Combining symbolic reasoning with data augmentation.",
+      "confidence": 0.9,
+      "context": "It would be a promising direction to combine symbolic reasoning with data augmentation."
+    },
+    {
+      "name": "metalearning algorithms",
+      "type": "method",
+      "description": "Techniques used to apply meta-learning to few-shot learning tasks.",
+      "confidence": 0.9,
+      "context": "Many FSL methods focus on utilizing more general few-shot KG completion by adding more thefew-shotsamplesviaapplyingmetalearningalgorithmsor"
+    },
+    {
+      "name": "knowledge graph (KG) construction",
+      "type": "phenomenon",
+      "description": "The process of creating or building a knowledge graph.",
+      "confidence": 0.9,
+      "context": "Nowadays KG construction uses not only heuristics (e.g., hand-crafted rules and templates), symbolic knowledge engineering and manual curation, but also machine learning prediction for (semi-)automation"
+    },
+    {
+      "name": "knowledge integration",
+      "type": "method",
+      "description": "The process of combining different sources of knowledge.",
+      "confidence": 0.8,
+      "context": "First, knowledge and data integration is rarely investigated, and the impact of low-quality knowledge, which could be biased or even erroneous, has not been studied in the current KG-aware ZSL and FSL works."
+    },
+    {
+      "name": "knowledge graph (KG) quality",
+      "type": "phenomenon",
+      "description": "The measure of how accurate and reliable a knowledge graph is.",
+      "confidence": 0.9,
+      "context": "A. Knowledge Graph Quality"
+    },
+    {
+      "name": "open information extraction",
+      "type": "method",
+      "description": "A method for extracting knowledge from different data sources such as text, Web tables and databases.",
+      "confidence": 0.9,
+      "context": "knowledge extraction from different data sources such as text, Web tables and databases, to knowledge curation such as KG completion, entity alignment, entity resolution, entity typing and schema inference."
+    },
+    {
+      "name": "supervised learning",
+      "type": "method",
+      "description": "A type of machine learning that relies on labeled samples.",
+      "confidence": 0.95,
+      "context": "Many such tasks rely on supervised learning,butoftensufferfromtheshortageoflabeledsamples."
+    },
+    {
+      "name": "schema inference",
+      "type": "method",
+      "description": "A method for inferring schema from knowledge graphs.",
+      "confidence": 0.9,
+      "context": "knowledge extraction from different data sources such as text, Web tables and databases, to knowledge curation such as KG completion, entity alignment, entity resolution, entity typing and schema inference."
+    },
+    {
+      "name": "KG-aware ZSL and FSL benchmarks",
+      "type": "phenomenon",
+      "description": "Benchmarking studies for generation-based methods conditioned on KG embeddings in zero-shot learning (ZSL) and few-shot learning (FSL)",
+      "confidence": 0.95,
+      "context": "four methods, one of which uses rules while the re- benchmarks for KG-aware ZSL and FSL."
+    },
+    {
+      "name": "Generation-based paradigm",
+      "type": "method",
+      "description": "A method that can choose the model and avoid bias after data are generated",
+      "confidence": 0.95,
+      "context": "the generation-based paradigm can flexible choose the model and avoid the bias after data are generated"
+    },
+    {
+      "name": "Fixed KGs",
+      "type": "material",
+      "description": "Pre-defined knowledge graphs used in knowledge graph completion",
+      "confidence": 0.8,
+      "context": "it is feasible to use ontological schemas and fixed KGs."
+    },
+    {
+      "name": "Systematic evaluation and comparison",
+      "type": "method",
+      "description": "A method that evaluates and compares different methods across different datasets, tasks, and knowledge settings",
+      "confidence": 0.95,
+      "context": "systematicevaluationandcomparison worthofmoreinvestigationinthefuture"
+    },
+    {
+      "name": "benchmarking",
+      "type": "method",
+      "description": "The process of evaluating and comparing the performance of different models or algorithms on a specific task.",
+      "confidence": 0.6,
+      "context": "W. Wang, V. W. Zheng, H. Yu, and C. Miao, “A survey of zero-shot learning: Settings, methods, and applications,” ACM Transactions on Intelligent Systems and Technology (TIST), vol. 10, no. 2, pp. 1–37, 2019."
+    },
+    {
+      "name": "Devise",
+      "type": "method",
+      "description": "A deep visual-semantic embedding model.",
+      "confidence": 0.4,
+      "context": "[10] A.Frome,G.S.Corrado,J.Shlens,S.Bengio,J.Dean,M. Ranzato, and T. Mikolov, “Devise: A deep visual-semantic embedding model,” Advances in Neural Information Processing Systems, vol. 26, pp. 2121–2129, 2013."
+    },
+    {
+      "name": "semantic embeddings",
+      "type": "phenomenon",
+      "description": "The process of converting semantic information into numerical representations that can be used for various applications.",
+      "confidence": 0.95,
+      "context": "Zero-shot learning by convex combination of semantic embeddings,"
+    },
+    {
+      "name": "Rethinking Knowledge Graph Propagation",
+      "type": "method",
+      "description": "A novel approach to zero-shot learning that rethinks traditional knowledge graph propagation methods.",
+      "confidence": 0.9,
+      "context": "[13] M. Kampffmeyer, Y. Chen, X. Liang, H. Wang, Y.Zhang,andE.P.Xing,‘Rethinkingknowledgegraphpropagationforzero-shotlearning,’inProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2019, pp. 11487–11496."
+    },
+    {
+      "name": "OntoZSL",
+      "type": "method",
+      "description": "A ontology-enhanced zero-shot learning approach that leverages domain-specific knowledge to improve recognition accuracy.",
+      "confidence": 0.8,
+      "context": "[14] Y. Geng, J. Chen, Z. Chen, J. Z. Pan, Z. Ye, Z. Yuan, Y. Jia, and H. Chen, ‘OntoZSL: Ontology-enhanced zero-shot learning,’ in Proceedings of the Web Conference, 2021, pp. 3325–3336."
+    },
+    {
+      "name": "meta-learning",
+      "type": "theory",
+      "description": "Learning to learn from a few examples.",
+      "confidence": 0.95,
+      "context": "[2] C.H.Lampert,H.Nickisch,andS.Harmeling,\"Learn- ing to detect unseen object classes by between-class attribute transfer,\" in 2009 IEEE Conference on Computer Vision and Pattern Recognition."
+    },
+    {
+      "name": "semantic output",
+      "type": "measurement",
+      "description": "Output of a neural network that can be interpreted semantically.",
+      "confidence": 0.8,
+      "context": "[15] Y. Wang, Q. Yao, J. T. Kwok, and L. M. Ni, “Gen-codes,” Advances in Neural Information Processing Systems, vol. 22, 2009."
+    },
+    {
+      "name": "metric learning",
+      "type": "method",
+      "description": "Learning a metric space to compare examples.",
+      "confidence": 0.85,
+      "context": "[18] D. Sui, Y. Chen, B. Mao, D. Qiu, K. Liu, and J. Zhao, “Knowledge guided metric learning for few-shot text classification,” in Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies."
+    },
+    {
+      "name": "knowledge guided metric learning",
+      "type": "method",
+      "description": "Guiding metric learning with knowledge to improve few-shot text classification.",
+      "confidence": 0.9,
+      "context": "[18] D. Sui, Y. Chen, B. Mao, D. Qiu, K. Liu, and J. Zhao, “Knowledge guided metric learning for few-shot text classification,” in Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies."
+    },
+    {
+      "name": "optimization methods",
+      "type": "method",
+      "description": "Methods used to optimize machine learning models.",
+      "confidence": 0.8,
+      "context": "[34] L. Bottou, F. E. Curtis, and J. Nocedal, “Optimization methods for large-scale machine learning,” Siam Review, vol. 60, no. 2, pp. 223–311, 2018."
+    },
+    {
+      "name": "relation adversarial network",
+      "type": "method",
+      "description": "A neural network architecture that learns to manipulate relationships in a knowledge graph.",
+      "confidence": 0.6,
+      "context": "[23] N. Zhang, S. Deng, Z. Sun, J. Chen, W. Zhang, and H. Chen, “Relation adversarial network for low-resource knowledge graph completion,” in Proceedings of The Web Conference 2020, 2020, pp. 1–12."
+    },
+    {
+      "name": "SNOMED CT",
+      "type": "material",
+      "description": "A standardized ontology for clinical concepts.",
+      "confidence": 0.9,
+      "context": "[38] S. Schulz and R. Cornet, “SNOMED CT’s ontological commitment,” Nature Precedings, pp. 1–1, 2009."
+    },
+    {
+      "name": "f-SWRL",
+      "type": "method",
+      "description": "A fuzzy extension of the SWRL rule language.",
+      "confidence": 0.8,
+      "context": "[39] J. Z. Pan, G. Stamou, V. Tzouvaras, and I. Horrocks, “f-SWRL: A fuzzy extension of SWRL,” in Proc. of the International Conference on Artificial Neural Networks (ICANN 2005), Special section on ”Intelligent multimedia and semantics”, 2005."
+    },
+    {
+      "name": "OWL rules language",
+      "type": "method",
+      "description": "A proposed approach for representing and reasoning with ontological knowledge.",
+      "confidence": 0.9,
+      "context": "arXiv preprint arXiv:2003.02320, 2020."
+    },
+    {
+      "name": "Low-shot learning for structured data",
+      "type": "phenomenon",
+      "description": "A machine learning approach that enables learning from limited labeled examples.",
+      "confidence": 0.8,
+      "context": "arXiv preprint arXiv:2106.06410, 2021."
+    },
+    {
+      "name": "Combinatorial ontology and reinforcement learning",
+      "type": "method",
+      "description": "An approach that combines ontological knowledge with reinforcement learning for zero-shot classification.",
+      "confidence": 0.85,
+      "context": "arXiv preprint arXiv:2106.06410, 2021."
+    },
+    {
+      "name": "Attribute-based classification",
+      "type": "method",
+      "description": "A machine learning approach that enables zero-shot visual object categorization based on attribute representations.",
+      "confidence": 0.85,
+      "context": "IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 36, no. 3, pp. 453–465, 2013."
+    },
+    {
+      "name": "Residual graph convolutional networks",
+      "type": "method",
+      "description": "A deep learning approach that enables zero-shot learning by leveraging residual connections in graph convolutional networks.",
+      "confidence": 0.9,
+      "context": "in Proceedings of the ACM Multimedia Asia, 2019, pp. 1–6."
+    },
+    {
+      "name": "Hierarchical semantic embedding",
+      "type": "method",
+      "description": "A technique used for zero-shot image tagging by representing images as hierarchical semantic embeddings.",
+      "confidence": 0.85,
+      "context": "[45] X.Li,S.Liao,W.Lan,X.Du,andG.Yang,“Zero-shot image tagging by hierarchical semantic embedding,” in Proceedingsofthe38thInternationalACMSIGIRConference on Research and Development in Information Retrieval, 2015, pp. 879–882."
+    },
+    {
+      "name": "Generative adversarial zero-shot learning",
+      "type": "method",
+      "description": "A generative adversarial network-based approach for zero-shot relational learning on knowledge graphs.",
+      "confidence": 0.9,
+      "context": "[30] P. Qin, X. Wang, W. Chen, C. Zhang, W. Xu, and W. Y. Wang, “Generative adversarial zero-shot relational learning for knowledge graphs,” in Proceedingsofthe AAAI Conference on Artificial Intelligence, vol. 34, no. 05, 2020, pp. 8673–8680."
+    },
+    {
+      "name": "Wikidata",
+      "type": "material",
+      "description": "A free collaborative knowledgebase that provides a framework for representing entities and their relationships.",
+      "confidence": 0.9,
+      "context": "[33] D. Vrandecˇic´ and M. Kro¨tzsch, “Wikidata: A free collaborative knowledgebase,” Communications of the ACM, vol. 38, no. 11, pp. 39–41, 1995."
+    },
+    {
+      "name": "Dual knowledge graphs",
+      "type": "material",
+      "description": "Two interconnected knowledge graphs that provide a framework for representing entities and their relationships.",
+      "confidence": 0.85,
+      "context": "[48] J. Wang and B. Jiang, “Zero-shot learning via contrastive learning on dual knowledge graphs,” in Proceedingsofthe IEEE/CVF International Conference on Computer Vision, 2021, pp. 885–892."
+    },
+    {
+      "name": "Label embedding",
+      "type": "method",
+      "description": "A technique for zero-shot fine-grained named entity typing.",
+      "confidence": 0.9,
+      "context": "Y. Ma, E. Cambria, and S. Gao, “Label embedding for zero-shot fine-grained named entity typing,” in Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: Technical Papers, 2016, pp. 171–180."
+    },
+    {
+      "name": "Multi-relational graph convolutional network",
+      "type": "method",
+      "description": "A neural network architecture for zero-shot ingredient recognition.",
+      "confidence": 0.9,
+      "context": "T.-S. Chua, “Zero-shot ingredient recognition by multi-relational graph convolutional network,” in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 34, no. 07, 2020, pp. 10542–10550."
+    },
+    {
+      "name": "Knowledge graph transfer network",
+      "type": "method",
+      "description": "A neural network architecture for few-shot recognition.",
+      "confidence": 0.9,
+      "context": "R. Chen, T. Chen, X. Hui, H. Wu, G. Li, and L. Lin, “Knowledge graph transfer network for few-shot recognition,” in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 34, no. 07, 2020, pp. 10575–10582."
+    },
+    {
+      "name": "Ontology-based n-ball concept embeddings",
+      "type": "method",
+      "description": "A technique for informing few-shot image classification.",
+      "confidence": 0.9,
+      "context": "M. Jayathilaka, T. Mu, and U. Sattler, “Ontology-based n-ball concept embeddings informing few-shot image classification,” arXiv preprint arXiv:2109.09063, 2021."
+    },
+    {
+      "name": "Knowledge-enhanced domain adaptation",
+      "type": "method",
+      "description": "A technique for improving few-shot relation classification.",
+      "confidence": 0.9,
+      "context": "J. Zhang, J. Zhu, Y. Yang, W. Shi, C. Zhang, and H. Wang, “Knowledge-enhanced domain adaptation in few-shot relation classification,” in Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery & Data Mining, 2021, pp. 2183–2191."
+    },
+    {
+      "name": "Bayesian meta-learning",
+      "type": "method",
+      "description": "A technique for few-shot relation extraction.",
+      "confidence": 0.9,
+      "context": "M. Qu, T. Gao, L.-P. Xhonneux, and J. Tang, “Few-shot relation extraction via Bayesian meta-learning on relation graphs,” in International Conference on Machine Learning. PMLR, 2020, pp. 7867–7876."
+    },
+    {
+      "name": "Transferable graph generation",
+      "type": "method",
+      "description": "Generating transferable graphs for zero-shot and few-shot learning.",
+      "confidence": 0.8,
+      "context": "in Proceedings of the 27th ACM International Conference on Multimedia, 2019, pp. 1641–1649."
+    },
+    {
+      "name": "Logic-guided semantic representation learning",
+      "type": "method",
+      "description": "Learning semantic representations guided by logic for zero-shot relation classification.",
+      "confidence": 0.85,
+      "context": "arXiv preprint [66] J. Li, R. Wang, N. Zhang, W. Zhang, F. Yang, and H. Chen, “Logic-guided semantic representation learning for zero-shot relation classification,”"
+    },
+    {
+      "name": "NEIL",
+      "type": "method",
+      "description": "Extracting visual knowledge from web data.",
+      "confidence": 0.75,
+      "context": "in Proceedings of the IEEE International Conference on Computer Vision, 2013, pp. 1409–1416."
+    },
+    {
+      "name": "FVQA: Fact-based visual question answering",
+      "type": "method",
+      "description": "A method for fact-based visual question answering.",
+      "confidence": 0.9,
+      "context": "IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 40, no. 10, pp. 2413–2427, 2017."
+    },
+    {
+      "name": "Ten years of webtables",
+      "type": "application",
+      "description": "A study on the evolution of web tables over a decade.",
+      "confidence": 0.8,
+      "context": "Proceedings of the VLDB Endowment, vol. 11, no. 12, pp. 2140–2149, 2018."
+    },
+    {
+      "name": "Zero-shot text classification via knowledge graph embedding",
+      "type": "method",
+      "description": "A method for zero-shot text classification using knowledge graph embedding.",
+      "confidence": 0.85,
+      "context": "IEEE Internet of Things Journal, 2021."
+    },
+    {
+      "name": "Freebase: A collaboratively created graph database for structuring human knowledge",
+      "type": "material",
+      "description": "A collaborative effort to create a graph database for structuring human knowledge.",
+      "confidence": 0.9,
+      "context": "Proceedings of the 2008 ACM SIGMOD International Conference, 2008."
+    },
+    {
+      "name": "An upper-level ontology for the biomedical domain",
+      "type": "theory",
+      "description": "A theoretical framework for the biomedical domain.",
+      "confidence": 0.7,
+      "context": "Reasoning, vol. 17, no. 1, pp. [2020]."
+    },
+    {
+      "name": "multi-label learning for structured label spaces",
+      "type": "method",
+      "description": "A machine learning approach to classify data with multiple labels.",
+      "confidence": 0.9,
+      "context": "Few-shot and zero-shot multi-label learning for structured label spaces, in Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing, 2018, pp. 3132–3142."
+    },
+    {
+      "name": "context-aware zero-shot recognition",
+      "type": "method",
+      "description": "A machine learning approach to recognize data without labeled training examples.",
+      "confidence": 0.9,
+      "context": "Context-aware zero-shot recognition, in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 34, no. 07, 2020, pp. 11709–11716."
+    },
+    {
+      "name": "commonsense transformers",
+      "type": "theory",
+      "description": "A type of artificial intelligence model that can generate human-like text based on context.",
+      "confidence": 0.9,
+      "context": "Comet: Commonsense transformers for automatic knowledge graph construction, in Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, 2019, pp. 4762–4779."
+    },
+    {
+      "name": "knowledge-driven zero-shot learning",
+      "type": "theory",
+      "description": "A machine learning approach that uses prior knowledge to recognize data without labeled training examples.",
+      "confidence": 0.9,
+      "context": "Benchmarking knowledge-driven zero-shot learning, Journal of Web Semantics, vol. 75, p. 100757, 2023."
+    },
+    {
+      "name": "label-embedding for attribute-based classification",
+      "type": "method",
+      "description": "A machine learning approach to classify data based on attributes.",
+      "confidence": 0.9,
+      "context": "Label-embedding for attribute-based classification, in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2013, pp. 819–826."
+    },
+    {
+      "name": "multi-hop inference",
+      "type": "method",
+      "description": "A technique for supporting reasoning and explanation in knowledge graphs.",
+      "confidence": 0.9,
+      "context": "Proceedings of the 12th Language Resources and Evaluation Conference, 2020, pp. 5456–5473."
+    },
+    {
+      "name": "knowledge graph completion models",
+      "type": "theory",
+      "description": "A type of model that predicts missing information in knowledge graphs.",
+      "confidence": 0.8,
+      "context": "Proceedings of the AAAI Conference on Artificial Intelligence, vol. 33, no. 01, 2019, pp. 3044–3051."
+    },
+    {
+      "name": "graph-based visual-semantic entanglement network",
+      "type": "method",
+      "description": "A neural network architecture for zero-shot image recognition.",
+      "confidence": 0.95,
+      "context": "IEEE Transactions on Multimedia, 2021."
+    },
+    {
+      "name": "synthesized classifiers",
+      "type": "method",
+      "description": "A technique for zero-shot learning that generates new classifiers.",
+      "confidence": 0.9,
+      "context": "Proceedings of the IEEE Conference on Computer Vision and Pattern recognition, 2016, pp. 5327–5336."
+    },
+    {
+      "name": "injecting logical background knowledge into embeddings",
+      "type": "method",
+      "description": "A technique for injecting logical background knowledge into embeddings for relation extraction.",
+      "confidence": 0.8,
+      "context": "Proceedings of the 2015 conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, 2015, pp. 1119–1129."
+    },
+    {
+      "name": "knowledge-based fine-grained classification",
+      "type": "method",
+      "description": "A technique that uses knowledge graphs to classify entities into fine-grained categories.",
+      "confidence": 0.9,
+      "context": "“Knowledge-based fine-grained classification for few-shot learning,” in Thirty-Second AAAI Conference on Artificial Intelligence, 2018."
+    },
+    {
+      "name": "transferrable feature and projection learning",
+      "type": "method",
+      "description": "A method that learns transferable features and projections to enable zero-shot learning.",
+      "confidence": 0.9,
+      "context": "“Transferrable feature and projection learning with class hierarchy for zero-shot learning,” International Journal of Computer Vision, vol. 128, pp. 2810–2827, 2020."
+    },
+    {
+      "name": "open-world knowledge graph completion",
+      "type": "phenomenon",
+      "description": "The ability to complete a knowledge graph by filling in missing entities and relationships.",
+      "confidence": 0.9,
+      "context": "“Open-world knowledge graph completion,” in Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, 2019, pp. 3449–3460."
+    },
+    {
+      "name": "multiple interaction attention",
+      "type": "method",
+      "description": "A technique that uses attention mechanisms to model multiple interactions between entities in a knowledge graph.",
+      "confidence": 0.8,
+      "context": "“Open-world knowledge graph completion with multiple interaction attention,” World Wide Web, vol. 24, no. 1, pp. 419–439, 2021."
+    },
+    {
+      "name": "ontology-guided semantic composition",
+      "type": "method",
+      "description": "A technique for zero-shot learning that uses ontologies to guide semantic composition.",
+      "confidence": 0.95,
+      "context": "Ontology-guided semantic composition for zero-shot learning,"
+    },
+    {
+      "name": "KEPLER model",
+      "type": "theory",
+      "description": "A unified model for knowledge embedding and pre-trained language representation.",
+      "confidence": 0.9,
+      "context": "KEPLER: A unified model for knowledge embedding and pre-trained language representation,"
+    },
+    {
+      "name": "inductive learning on commonsense knowledge graph completion",
+      "type": "method",
+      "description": "A method for completing knowledge graphs using inductive learning on commonsense knowledge.",
+      "confidence": 0.9,
+      "context": "Inductive learning on commonsense knowledge graph completion,"
+    },
+    {
+      "name": "Convolutional 2D knowledge graph embeddings",
+      "type": "theory",
+      "description": "A theoretical framework for representing knowledge graphs as 2D convolutional embeddings.",
+      "confidence": 0.8,
+      "context": "Convolutional 2d knowledge graph embeddings,"
+    },
+    {
+      "name": "BERT-based inductive relation prediction",
+      "type": "method",
+      "description": "A method for predicting relations using BERT-based models and inductive learning.",
+      "confidence": 0.9,
+      "context": "Inductive relation prediction by bert,"
+    },
+    {
+      "name": "One-shot relational learning for knowledge graphs",
+      "type": "theory",
+      "description": "A theoretical framework for learning relational patterns in knowledge graphs with one-shot learning.",
+      "confidence": 0.8,
+      "context": "One-shot relational learning for knowledge graphs,"
+    },
+    {
+      "name": "Generative Adversarial Nets (GANs)",
+      "type": "method",
+      "description": "A type of deep learning algorithm that involves training two neural networks to generate new data and distinguish real from fake data.",
+      "confidence": 0.95,
+      "context": "Advances in Neural Information Processing Systems, vol. 27, 2014."
+    },
+    {
+      "name": "Auto-Encoding Variational Bayes (AEVB)",
+      "type": "method",
+      "description": "A type of generative model that uses a neural network to learn the distribution of data and then generates new data based on this distribution.",
+      "confidence": 0.95,
+      "context": "arXiv preprint arXiv:1312.6114, 2013."
+    },
+    {
+      "name": "Prompt-based Zero-shot Relation Classification",
+      "type": "method",
+      "description": "A method for classifying relations between entities without requiring labeled training data.",
+      "confidence": 0.9,
+      "context": "Proceedings of the AAAI Conference on Artificial Intelligence, vol. 34, no. 03, 2020, pp. 3041–3048."
+    },
+    {
+      "name": "Knowledge Graph-Enhanced Zero-shot Entity Linking",
+      "type": "method",
+      "description": "A method for linking entities to their corresponding entries in a knowledge graph without requiring labeled training data.",
+      "confidence": 0.9,
+      "context": "Proceedings of the 11th Knowledge Capture Conference, 2021, pp. 49–56."
+    },
+    {
+      "name": "Semantic Auto-Encoder",
+      "type": "method",
+      "description": "A type of neural network that learns to encode and decode semantic information from input data.",
+      "confidence": 0.9,
+      "context": "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2017, pp. 3174–3183."
+    },
+    {
+      "name": "Logic Attention-based Neighborhood Aggregation",
+      "type": "method",
+      "description": "A method for aggregating information from neighboring nodes in a graph using attention mechanisms.",
+      "confidence": 0.9,
+      "context": "Proceedings of the AAAI Conference on Artificial Intelligence, vol. 33, no. 01, 2019, pp. 7152–7159."
+    },
+    {
+      "name": "Knowledge Transfer for Out-of-Knowledge-Base Entities",
+      "type": "method",
+      "description": "A method for transferring knowledge from one domain to another using graph neural networks.",
+      "confidence": 0.8,
+      "context": "Proceedings of the 26th International Joint Conference on Artificial Intelligence, 2017, pp. 1802–1808."
+    },
+    {
+      "name": "Graph Neural Networks (GNNs)",
+      "type": "theory",
+      "description": "A type of neural network that is designed to operate on graph-structured data.",
+      "confidence": 0.9,
+      "context": "Proceedings of the AAAI Conference on Artificial Intelligence, vol. 34, no. 03, 2020, pp. 3041–3048."
+    },
+    {
+      "name": "Adversarial Network",
+      "type": "method",
+      "description": "A generative adversarial approach for zero-shot learning from noisy texts.",
+      "confidence": 0.9,
+      "context": "in Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2018, pp. 1004–1013."
+    },
+    {
+      "name": "Dual Adversarial Network",
+      "type": "method",
+      "description": "A method for generalized zero-shot learning.",
+      "confidence": 0.95,
+      "context": "ativedualadversarialnetworkforgeneralizedzero-shot 2019, pp. 7152–7159."
+    },
+    {
+      "name": "Knowledge Graphs",
+      "type": "material",
+      "description": "A type of graph that represents knowledge.",
+      "confidence": 0.95,
+      "context": "sample representation learning for knowledge graphs,” in Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: Findings, 2020, pp. 2657–2666."
+    },
+    {
+      "name": "Explainable Link Prediction",
+      "type": "method",
+      "description": "A method for predicting links between entities in knowledge graphs.",
+      "confidence": 0.9,
+      "context": "in International Semantic Web Conference. Springer, 2020, pp. 39–55."
+    },
+    {
+      "name": "Attention-Based Aggregation Graph Networks",
+      "type": "method",
+      "description": "A method for aggregating graph networks for knowledge graph information transfer.",
+      "confidence": 0.95,
+      "context": "Advances in Knowledge Discovery and Data Mining, vol. 12085, p. 542."
+    },
+    {
+      "name": "FastText",
+      "type": "method",
+      "description": "A compressing text classification model.",
+      "confidence": 0.9,
+      "context": "arXiv preprint arXiv:1612.03651, 2016."
+    },
+    {
+      "name": "Krisp",
+      "type": "method",
+      "description": "Integrating implicit and symbolic knowledge for open-domain knowledge-based VQA.",
+      "confidence": 0.85,
+      "context": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2021, pp. 14111–14121."
+    },
+    {
+      "name": "Meta reasoning over knowledge graphs",
+      "type": "phenomenon",
+      "description": "Reasoning over knowledge graphs.",
+      "confidence": 0.9,
+      "context": "arXiv preprint arXiv:1908.04877, 2019."
+    },
+    {
+      "name": "Meta Relational Learning",
+      "type": "method",
+      "description": "A technique for few-shot link prediction in knowledge graphs.",
+      "confidence": 0.9,
+      "context": "in Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), 2019, pp. 6103–6109."
+    },
+    {
+      "name": "El++",
+      "type": "material",
+      "description": "A description logic for constructing models.",
+      "confidence": 0.8,
+      "context": "arXiv preprint arXiv:1908.04877, 2019."
+    },
+    {
+      "name": "Meta Reasoning",
+      "type": "method",
+      "description": "A technique for reasoning over knowledge graphs.",
+      "confidence": 0.95,
+      "context": "Y. Wang, “Meta reasoning over knowledge graphs,” arXiv preprint arXiv:1908.04877, 2019."
+    },
+    {
+      "name": "Few-Shot Link Prediction",
+      "type": "phenomenon",
+      "description": "A process of predicting links in a knowledge graph with limited training data.",
+      "confidence": 0.9,
+      "context": "in Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP), 2019, pp. 6103–6109."
+    },
+    {
+      "name": "Deep Conditional Generative Models",
+      "type": "method",
+      "description": "A type of model that generates structured output.",
+      "confidence": 0.8,
+      "context": "[142] K. Sohn, H. Lee, and X. Yan, “Learning structured output representation using deep conditional generative models,” Advances in Neural Information Processing Systems, vol. 28, pp. 3483–3491, 2015."
+    },
+    {
+      "name": "Subgraph reasoning",
+      "type": "method",
+      "description": "A technique for predicting relations by reasoning over subgraphs.",
+      "confidence": 0.9,
+      "context": "Inductive relation prediction by subgraph reasoning, in International Conference on Machine Learning. PMLR, 2020, pp. 9448–9457."
+    },
+    {
+      "name": "Graph Convolutional Networks",
+      "type": "method",
+      "description": "A type of neural network for modeling relational data.",
+      "confidence": 0.95,
+      "context": "Modeling relational data with graph convolutional networks, in Proceedings of the 2020 Conference on European Semantic Web Conference. Springer, 2018, pp. 593–607."
+    },
+    {
+      "name": "Pair-wise encoding",
+      "type": "method",
+      "description": "A technique for inducing knowledge graph completion using GNN-based pair-wise encoding.",
+      "confidence": 0.9,
+      "context": "Gnn-based inductive knowledge graph completion using pair-wise encoding, in Advances in Neural Information Processing Systems, 2021."
+    },
+    {
+      "name": "Topology-aware correlations",
+      "type": "phenomenon",
+      "description": "Correlations between relations that are aware of the topology of the knowledge graph.",
+      "confidence": 0.9,
+      "context": "Topology-aware correlations between relations for inductive link prediction in knowledge graphs, in AAAI. AAAIPress, 2021, pp. 6271–6278."
+    },
+    {
+      "name": "Differentiable rule mining",
+      "type": "method",
+      "description": "A technique for end-to-end differentiable rule mining on knowledge graphs.",
+      "confidence": 0.9,
+      "context": "Drum: End-to-end differentiable rule mining on knowledge graphs, Advances in Neural Information Processing Systems, vol. 32, pp. 15347–15357, 2019."
+    },
+    {
+      "name": "Zero-shot object detection",
+      "type": "application",
+      "description": "A use case for detecting objects without any training data.",
+      "confidence": 0.8,
+      "context": "Zero-shot object detection with textual descriptions, in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 33, no. 01, 2019, pp. 8690–8697."
+    },
+    {
+      "name": "end-to-end differentiable rule mining",
+      "type": "method",
+      "description": "A technique for mining rules from knowledge graphs in an end-to-end differentiable manner.",
+      "confidence": 0.95,
+      "context": "End-to-end differentiable rule mining 8690–8697."
+    },
+    {
+      "name": "markov logic networks",
+      "type": "theory",
+      "description": "A theoretical framework for representing and reasoning about complex systems using probabilistic graphical models.",
+      "confidence": 0.9,
+      "context": "Mapping and revising markov logic networks for transfer learning,"
+    },
+    {
+      "name": "knowledge graph embeddings",
+      "type": "phenomenon",
+      "description": "The process of converting knowledge graphs into numerical representations that can be used for various applications.",
+      "confidence": 0.95,
+      "context": "Contrastive object detection using knowledge graph embeddings,"
+    },
+    {
+      "name": "OntoNotes",
+      "type": "material",
+      "description": "A large training corpus for enhanced processing.",
+      "confidence": 0.9,
+      "context": "R. M. Weischedel, E. H. Hovy, M. P. Marcus, and J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li, and M. Palmer, “OntoNotes: A large training corpus for enhanced processing,” 2017."
+    },
+    {
+      "name": "Nus-wide",
+      "type": "material",
+      "description": "A real-world web image database from National University of Singapore.",
+      "confidence": 0.8,
+      "context": "T.-S. Chua, J. Tang, R. Hong, H. Li, Z. Luo, and Y. Zheng, “Nus-wide: a real-world web image database from national university of singapore,” in Proceedings of the ACM international conference on image and video retrieval."
+    },
+    {
+      "name": "Multi-label zero-shot classification",
+      "type": "method",
+      "description": "Learning to transfer from external knowledge.",
+      "confidence": 0.8,
+      "context": "H. Huang, W. Tang, P. S. Yu, Y. Chen, W. Zheng, and Q. Chen, “Multi-label zero-shot classification by learning to transfer from external knowledge,” in BMVC."
+    },
+    {
+      "name": "Discriminative region-based multi-label zero-shot learning",
+      "type": "method",
+      "description": "Region-based multi-label zero-shot learning.",
+      "confidence": 0.9,
+      "context": "S. Narayan, A. Gupta, S. Khan, F. S. Khan, L. Shao, and M. Shah, “Discriminative region-based multi-label zero-shot learning,” in Proceedings of the IEEE/CVF International Conference on Computer Vision."
+    },
+    {
+      "name": "Mimic-iii",
+      "type": "material",
+      "description": "A freely accessible critical care database.",
+      "confidence": 1.0,
+      "context": "[158] Z. Wu and M. Palmer, “Verb semantics and lexical selection,” p. 133–138, 1994."
+    },
+    {
+      "name": "Low-shot visual recognition",
+      "type": "method",
+      "description": "Recognition by shrinking and hallucinating features.",
+      "confidence": 1.0,
+      "context": "[159] B. Hariharan and R. Girshick, “Low-shot visual recognition by shrinking and hallucinating features,” in Proceedings of the IEEE International Conference on Computer Vision, 2017, pp. 3018–3027."
+    },
+    {
+      "name": "Matching networks",
+      "type": "method",
+      "description": "For one shot learning.",
+      "confidence": 1.0,
+      "context": "[160] O. Vinyals, C. Blundell, T. Lillicrap, D. Wierstra et al., “Matching networks for one shot learning,” Advances in Neural Information Processing Systems, vol. 29, pp. 3630–3638, 2016."
+    },
+    {
+      "name": "Zero-shot visual question answering",
+      "type": "phenomenon",
+      "description": "Answering questions without training on the specific task.",
+      "confidence": 1.0,
+      "context": "[162] D. Teney and A. v. d. Hengel, “Zero-shot visual question answering,” arXiv preprint arXiv:1611.05546, 2016."
+    },
+    {
+      "name": "PIQA",
+      "type": "application",
+      "description": "Reasoning about physical commonsense in natural language.",
+      "confidence": 1.0,
+      "context": "[176] Y. Bisk, R. Zellers, J. Gao, Y. Choi et al., “PIQA: Reasoning about physical commonsense in natural language,” in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 34, no. 05, 2020, pp. 7432–7439."
+    },
+    {
+      "name": "DeepPath",
+      "type": "method",
+      "description": "A reinforcement learning method for knowledge graph reasoning",
+      "confidence": 1.0,
+      "context": "W. Xiong, T. Hoang, and W. Y. Wang, “DeepPath: A reinforcement learning method for knowledge graph reasoning,” in Proceedings of the 2017 Conference on Empirical Methods in Natural Language Processing,"
+    },
+    {
+      "name": "Abductive commonsense reasoning",
+      "type": "theory",
+      "description": "A theoretical framework for understanding human-like reasoning",
+      "confidence": 0.95,
+      "context": "Y. Choi, “Abductive commonsense reasoning,” in The International Conference on Learning Representations, 2020."
+    },
+    {
+      "name": "QASC: A dataset for question answering via sentence composition",
+      "type": "application",
+      "description": "A dataset and approach for question answering using sentence composition",
+      "confidence": 1.0,
+      "context": "T. Khot, P. Clark, M. Guerquin, P. Jansen, and A. Sabharwal, “QASC: A dataset for question answering via sentence composition,” in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 34, no. 05, IEEE, 2020, pp. 8082–8090."
+    },
+    {
+      "name": "Representation learning of knowledge graphs with entity descriptions",
+      "type": "method",
+      "description": "A method for learning representations of knowledge graphs using entity descriptions",
+      "confidence": 0.95,
+      "context": "R. Xie, Z. Liu, J. Jia, H. Luan, and M. Sun, “Representation learning of knowledge graphs with entity descriptions,” in Proceedings of the AAAI Conference on Artificial Intelligence, vol. 30, no. 1, 2016."
+    },
+    {
+      "name": "Knowledge base enhancement via data facts and crowdsourcing",
+      "type": "application",
+      "description": "A method for enhancing a knowledge base using data facts and crowdsourcing",
+      "confidence": 0.95,
+      "context": "L. Jiang, L. Chen, and Z. Chen, “Knowledge base enhancement via data facts and crowdsourcing,” in 2018 IEEE 34th International Conference on Data Engineering (ICDE), 2018, pp. 1109–1119."
+    }
+  ],
+  "relationships": [
+    {
+      "from": "Knowledge Graphs",
+      "to": "Structured Data",
+      "type": "uses",
+      "confidence": 0.95,
+      "context": "KG-aware FSL methods utilize structured data for knowledge graph completion models."
+    },
+    {
+      "from": "Few-shot Learning",
+      "to": "Zero-shot Learning",
+      "type": "is_a",
+      "confidence": 0.95,
+      "context": "The paper reviews research for both Zero-shot and Few-shot Learning, highlighting the connections between the two."
+    },
+    {
+      "from": "Auxiliary Information",
+      "to": "Few-shot Learning",
+      "type": "enables",
+      "confidence": 0.95,
+      "context": "All the auxiliary information used in ZSL can also be used in FSL, and the utilization method can be transferred to FSL easily"
+    },
+    {
+      "from": "Model Parameter Propagation",
+      "to": "Class Belief Propagation",
+      "type": "related_to",
+      "confidence": 0.85,
+      "context": "These methods are often used for multi-label classification where one sample is annotated by multiple related classes."
+    },
+    {
+      "from": "Meta Learning (a.k.a. Learn to Learn)",
+      "to": "Transfer learning",
+      "type": "based_on",
+      "confidence": 0.95,
+      "context": "Meta learning is based on the idea of transfer learning, where a model learns to learn from past experiences."
+    },
+    {
+      "from": "Knowledge Graph",
+      "to": "Structured Data",
+      "type": "part_of",
+      "confidence": 0.85,
+      "context": "KGs can be used to represent structured data, such as ontologies and databases."
+    },
+    {
+      "from": "Convolutional Neural Networks (CNNs)",
+      "to": "Image Classification",
+      "type": "applies_to",
+      "confidence": 0.95,
+      "context": "The mapping learning of the class encoding impacts the mapping learning of the input encoding."
+    },
+    {
+      "from": "Few-shot Text Classification",
+      "to": "Knowledge Graph Completion",
+      "type": "measures",
+      "confidence": 0.8,
+      "context": "The performance of few-shot text classification is measured using knowledge graph completion models."
+    }
+  ],
+  "statistics": {
+    "num_entities": 457,
+    "num_relationships": 8,
+    "num_chunks_processed": 116
+  }
+}
