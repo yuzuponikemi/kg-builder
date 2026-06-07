@@ -1,7 +1,53 @@
 {
   "description": "Index of processed research papers (PDFs kept local)",
-  "total_papers": 0,
-  "papers": [],
-  "last_updated": "2025-11-22T12:00:00",
+  "total_papers": 5,
+  "papers": [
+    {
+      "source_file": "2202_07412v1.pdf",
+      "title": "2202",
+      "authors": [],
+      "arxiv_id": null,
+      "num_entities": 145,
+      "num_relationships": 6,
+      "extraction_date": "2025-12-03T10:06:10.505153"
+    },
+    {
+      "source_file": "2003_00719v3.pdf",
+      "title": "January2020",
+      "authors": [],
+      "arxiv_id": null,
+      "num_entities": 99,
+      "num_relationships": 6,
+      "extraction_date": "2025-12-03T10:12:37.180492"
+    },
+    {
+      "source_file": "2210_08119v1.pdf",
+      "title": "A Survey on Knowledge Graph-based Methods",
+      "authors": [],
+      "arxiv_id": null,
+      "num_entities": 163,
+      "num_relationships": 6,
+      "extraction_date": "2025-12-03T10:22:14.143959"
+    },
+    {
+      "source_file": "2003_03875v1.pdf",
+      "title": "Microsoft Word - CCKS2019评测综述-中文信息学报-v1.2.docx",
+      "authors": [],
+      "arxiv_id": null,
+      "num_entities": 123,
+      "num_relationships": 7,
+      "extraction_date": "2025-12-03T10:33:11.628359"
+    },
+    {
+      "source_file": "2112_10006v6.pdf",
+      "title": "UNDERREVISION 1",
+      "authors": [],
+      "arxiv_id": null,
+      "num_entities": 457,
+      "num_relationships": 8,
+      "extraction_date": "2025-12-03T11:27:54.588553"
+    }
+  ],
+  "last_updated": "2025-12-03T11:27:54.608181",
   "note": "PDF files are not included in version control. Only metadata is tracked. Run 'python scripts/create_papers_index.py' to update this file."
 }

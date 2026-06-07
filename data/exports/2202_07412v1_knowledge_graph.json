@@ -1,0 +1,1076 @@
+{
+  "metadata": {
+    "source_file": "2202_07412v1.pdf",
+    "title": "2202",
+    "authors": [],
+    "num_pages": 9,
+    "extraction_date": "2025-12-03T10:06:10.505153",
+    "arxiv_id": null
+  },
+  "entities": [
+    {
+      "name": "Knowledge Graph Reasoning",
+      "type": "phenomenon",
+      "description": "The process of reasoning with knowledge graphs, which represents entities and relations as vectors.",
+      "confidence": 0.95,
+      "context": "Recently, with the fast development of deep learning, KG embedding, which represents entities and relations as vectors, shows great success in KG reasoning..."
+    },
+    {
+      "name": "logics",
+      "type": "theory",
+      "description": "A theoretical framework for representing and reasoning with knowledge graphs.",
+      "confidence": 0.95,
+      "context": "we specific topic, focusing on logics and KG embeddings, and first briefly introduce preliminaries..."
+    },
+    {
+      "name": "Embeddings",
+      "type": "material",
+      "description": "Vectors that represent entities and relations in a knowledge graph.",
+      "confidence": 0.95,
+      "context": "KG embedding, which represents entities and relations as vectors, shows great success in KG reasoning..."
+    },
+    {
+      "name": "Inductive Reasoning",
+      "type": "phenomenon",
+      "description": "A type of reasoning that does not require pre-defined logics.",
+      "confidence": 0.9,
+      "context": "...especially in inductive reasoning without pre-defined logics."
+    },
+    {
+      "name": "hybrid reasoning",
+      "type": "method",
+      "description": "A method that combines symbolic and neural approaches for knowledge graph reasoning.",
+      "confidence": 0.9,
+      "context": "hispaper, [Zhangetal.,2021a] reviewspapersonsymbolic,neural,and we comprehensively survey these works, focusing hybridreasoning."
+    },
+    {
+      "name": "embedding-based KG reasoning",
+      "type": "method",
+      "description": "A method that aims to discover implicit knowledge by utilizing logics for augmenting embeddings.",
+      "confidence": 0.95,
+      "context": "Section 3 reviews methods Reasoning, which aims to discover implicit knowledge, can utilize logic for augmenting embeddings."
+    },
+    {
+      "name": "symbolic logics",
+      "type": "theory",
+      "description": "A theoretical framework that is deductive and often used in conventional KG reasoning.",
+      "confidence": 0.9,
+      "context": "Conventional KG reasoning is often based on symbolic logics and is deductive."
+    },
+    {
+      "name": "Datalog rule reasoning",
+      "type": "method",
+      "description": "A method for supporting Datalog rule reasoning using a famous KG storage.",
+      "confidence": 0.85,
+      "context": "RDFox [Nenov et al., 2015] is a famous KG storage supporting Datalog rule reasoning."
+    },
+    {
+      "name": "logical reasoning",
+      "type": "method",
+      "description": "A method that can be used to infer new implicit knowledge or detect inconsistencies in a Knowledge Graph.",
+      "confidence": 0.95,
+      "context": "Reasoning with Logics Given a KG, logical reasoning can be used to infer new implicit knowledge or to detect inconsistencies."
+    },
+    {
+      "name": "Web Ontology Language (OWL)",
+      "type": "theory",
+      "description": "A theoretical framework that is based on Description Logics and provides rich expressive power for Knowledge Graphs.",
+      "confidence": 0.9,
+      "context": "The WebOntologyLanguage OWL2, which is based on the DL [Horrocks et al.,], is a key standard schema language of KGs."
+    },
+    {
+      "name": "Description Logics (DLs)",
+      "type": "theory",
+      "description": "A theoretical framework that provides rich expressive power for Knowledge Graphs.",
+      "confidence": 0.9,
+      "context": "OWL2 provides rich expressive power, including a strong support for datatypes [Pan and Horrocks, 2006] and rules [Kro¨tzsch et al., 2008]."
+    },
+    {
+      "name": "integration stages",
+      "type": "method",
+      "description": "Three stages of integrating logic in learning embeddings: Pre, Joint, and Post.",
+      "confidence": 0.85,
+      "context": "Considering the time when logic is injected in learning embeddings, there are three stages: 1) Pre: conducting symbolic reasoning before learning embeddings."
+    },
+    {
+      "name": "loss function",
+      "type": "measurement",
+      "description": "A metric that can be extended with logic constraints by adding an additional regularizer on some relation embeddings.",
+      "confidence": 0.8,
+      "context": "This often extends the loss function with logic constraints, by e.g., adding an additional regularizer on some relation embeddings."
+    },
+    {
+      "name": "Knowledge Graph Embedding (KGE)",
+      "type": "method",
+      "description": "A kind of representation learning technique that aims to represent entities and relations by vectors with their semantics.",
+      "confidence": 0.95,
+      "context": "With the embeddings, implicit and new knowledge can be inferred, often with approximation or prediction."
+    },
+    {
+      "name": "TransE",
+      "type": "method",
+      "description": "A method for implementing a review of two kinds of KG reasoning tasks: deductive logic reasoning, which further includes query answering and theorem proving.",
+      "confidence": 0.95,
+      "context": "It interprets TransE as implementing a review two kinds of KG reasoning tasks: deductive logic reasoning, which further includes query answering and theorem proving."
+    },
+    {
+      "name": "ComplEx",
+      "type": "theory",
+      "description": "A theoretical framework for embedding knowledge graphs.",
+      "confidence": 1.0,
+      "context": "duceitinthisparagraphbecauseRotatEisbasedonComplEx."
+    },
+    {
+      "name": "RotatE",
+      "type": "method",
+      "description": "A mechanism for injecting logics into KG embeddings.",
+      "confidence": 1.0,
+      "context": "Pre-defined Logics Integration Stage Mechanism"
+    },
+    {
+      "name": "OWL 2 schema",
+      "type": "material",
+      "description": "A semantic framework used to define class hierarchies, complex classes and relations.",
+      "confidence": 0.8,
+      "context": "OWL 2 schemacan be used to construct a predictive model with both results from embeddings and logics as inputs, or logical constraints as filters."
+    },
+    {
+      "name": "Logic rules",
+      "type": "method",
+      "description": "Rules of the form H ← B1 ∧ B2 ∧ ... ∧ Bn, where H is the rule head and B1 ∧ B2 ∧ ... ∧ Bn is the rule body with the conjunction of atoms.",
+      "confidence": 0.9,
+      "context": "Logic rules are of the form H ← B1 ∧ B2 ∧ ... ∧ Bn, where H is the rule head and B1 ∧ B2 ∧ ... ∧ Bn is the rule body with the conjunction of atoms."
+    },
+    {
+      "name": "Path rule",
+      "type": "method",
+      "description": "A technique for injecting logics into KG embeddings.",
+      "confidence": 0.95,
+      "context": "[Linetal.,2015;Wuetal.,2015;Niuetal.,2020]"
+    },
+    {
+      "name": "KGE Method",
+      "type": "method",
+      "description": "A method for computing the truth value based on entity and relation embeddings, and minimizing values of generated negativetriples.",
+      "confidence": 0.85,
+      "context": "A KGE method is usually composed of a score function φ()..."
+    },
+    {
+      "name": "PTransE",
+      "type": "method",
+      "description": "A typical explicit method that makes h+r as the score function of triples, where and joint-training method.",
+      "confidence": 0.9,
+      "context": "PTransE [Lin et al., 2015] is a typical explicit method..."
+    },
+    {
+      "name": "TakeTransE",
+      "type": "method",
+      "description": "A joint-training method that makes h+r as the score function of triples, where and are vectors in the Euclidean space.",
+      "confidence": 0.9,
+      "context": "TakeTransE [Bordes et al., 2013] is an example, it makes h+r..."
+    },
+    {
+      "name": "RPJE",
+      "type": "method",
+      "description": "A method that selects the path with the highest confidence to compose the path for each triple.",
+      "confidence": 0.8,
+      "context": "RPJE [Niuet al., 2020] selects the path with the highest confidence..."
+    },
+    {
+      "name": "ComplEx-NNE AER",
+      "type": "method",
+      "description": "A method that infers constraints on relation embeddings by making φ(h,r1,t) > φ(h,r2,t) if r1(X,Y) and r2(X,Y).",
+      "confidence": 0.9,
+      "context": "Though KGE methods have achieved great success, they still suffer from the following problems..."
+    },
+    {
+      "name": "ComplEx-puts",
+      "type": "method",
+      "description": "A method that adapts relation embedding constraints to longer path rules.",
+      "confidence": 0.9,
+      "context": "Though KG methods have achieved great success, they still suffer from the following problems:1) they could fail to embed complex semantic such as relationships by logical rules; NNE AER, SLRE [Guo et al., 2020] adapts relation embedding constrains to longer path rules."
+    },
+    {
+      "name": "KALE",
+      "type": "method",
+      "description": "A method that models groundings by t-norm fuzzy logics which gives a truth score for each grounding based on the truth value of all atoms.",
+      "confidence": 0.95,
+      "context": "KALE [Guo et al., 2016] models groundings by t-norm fuzzy logics which gives a truth score for each grounding based on truth value of all atoms."
+    },
+    {
+      "name": "LogicTypes",
+      "type": "theory",
+      "description": "A theoretical framework that considers two main stream logic forms used in KG reasoning: (1) logic rules and (2) Ontological schema, such as those supported by OWL 2.",
+      "confidence": 0.9,
+      "context": "We consider two main stream logic forms used in KG reasoning: (1) logic rules and (2) Ontological schema, such as those supported by OWL 2, which can internalize most logic rules, with some exceptions, such as those with loops in the body [Kro¨tzsch et al., 2008]."
+    },
+    {
+      "name": "Grounding",
+      "type": "method",
+      "description": "A method that replaces variables in each rule with concrete entities, infers implicit triples, and generates additional triples for KGEs' training.",
+      "confidence": 0.95,
+      "context": "One more general solution is using grounding, which replaces variables in each rule with concrete entities, infers implicit triples, and generates additional triples for KGEs' training."
+    },
+    {
+      "name": "predefined logics injection",
+      "type": "method",
+      "description": "Injecting predefined logics into embeddings for more flexibility in a model.",
+      "confidence": 0.9,
+      "context": "Pre-defined logics 1) With: injecting predefined logics or natively, multiple times or iterative injection ensures more theirreasoningresultsintoembeddings,and/orapplyingon-"
+    },
+    {
+      "name": "RUGE",
+      "type": "application",
+      "description": "Predicts labels of unlabeled triples in roundings based on norm fuzzy logics.",
+      "confidence": 0.8,
+      "context": "For example, in each training itera- tion,RUGE[Guoetal.,2018]andIterE[Zhangetal.,2019]"
+    },
+    {
+      "name": "Iterative injection",
+      "type": "method",
+      "description": "Ensures more flexibility for a model by injecting logics into embeddings iteratively.",
+      "confidence": 0.85,
+      "context": "Pre-defined logics 1) With: injecting predefined logics or natively, multiple times or iterative injection ensures more theirreasoningresultsintoembeddings,and/orapplyingon-"
+    },
+    {
+      "name": "KGE-freeproperty",
+      "type": "phenomenon",
+      "description": "The property that KGE-based methods continuously benefit from the development of KGEs.",
+      "confidence": 0.9,
+      "context": "However,theKGE-freeprop-ertymakesthem continuouslybenefitfromthedevelopment"
+    },
+    {
+      "name": "Post-training injection solutions",
+      "type": "method",
+      "description": "Solutions that are KGE-free and benefit from the development of KGEs.",
+      "confidence": 0.8,
+      "context": "Post-training injection solutions are also KGE- free."
+    },
+    {
+      "name": "Integer Linear Programming problem",
+      "type": "method",
+      "description": "A problem to combine rules and KGEs, where rules are translated into conditional constraints during training.",
+      "confidence": 0.9,
+      "context": "For example,[Wangetal.,2015]proposestoframean Integer Linear Programming problem"
+    },
+    {
+      "name": "conditional constraints",
+      "type": "method",
+      "description": "A method that models each relation as a vector together with a relation-specific sphere.",
+      "confidence": 0.9,
+      "context": "Apart from the satisfaction of rules, a multi-layer relation hierarchy, proposes to model each relation asa vectortogetherwith a relation-specificsphere."
+    },
+    {
+      "name": "TARE",
+      "type": "method",
+      "description": "A method that emphasizes the properties of transitivity and symmetry of rules which make the order of relations in rules matter.",
+      "confidence": 0.8,
+      "context": "TARE [Wangetal.,2018b] emphasizes the properties oftransitivityandasymmetryofruleswhichmakestheorderofrelation"
+    },
+    {
+      "name": "sRHS",
+      "type": "method",
+      "description": "A method that proposes to model each relation as a vector together with a relation-specific sphere.",
+      "confidence": 0.9,
+      "context": "Tran-sRHS[Zhangetal.,2020a]whichdoesnotexplicitlyassumemulti-layerrelationhierarchy"
+    },
+    {
+      "name": "Ontological Schemas",
+      "type": "theory",
+      "description": "A theoretical framework that describes high-level semantics of KGs.",
+      "confidence": 0.9,
+      "context": "Ontological schemas, which are often defined by languages suchas OWL andRDF Schema, describehigh-levelseman-tics (meta information) of KGs."
+    },
+    {
+      "name": "Class Hierarchies",
+      "type": "theory",
+      "description": "A theoretical framework that classifies entity types, denoting entities as instantiations of classes.",
+      "confidence": 0.9,
+      "context": "Class hierarchies classify entity types, denoting entities as instantiations of classes."
+    },
+    {
+      "name": "TypeDM",
+      "type": "method",
+      "description": "A method that learns an assumed domain and range embedding for each relation, using them for constraining entity type embeddings.",
+      "confidence": 0.95,
+      "context": "To encode entity types, with entity types given, one kind of method learns an embedding for each type, and adds regularization on these embeddings."
+    },
+    {
+      "name": "TAGAT",
+      "type": "method",
+      "description": "A method that regularizes entity embeddings to be close to their corresponding type embeddings.",
+      "confidence": 0.95,
+      "context": "TAGAT[Wangetal.,2021]regularizesentityembeddingsto be close to their corresponding type embeddings, and also closes the embeddings of entities that belong to the same type."
+    },
+    {
+      "name": "RETA-Grader",
+      "type": "method",
+      "description": "A method that uses type embeddings in entity-typed triples for triple scoring.",
+      "confidence": 0.95,
+      "context": "RETA-Grader [Rossoetal.,2021] uses type embeddings in entity-typed triples (h type i ,r,t type j ) for each entity to the tail entity in complex vector space."
+    },
+    {
+      "name": "Rot-Pro",
+      "type": "method",
+      "description": "A method that proposes to model Transitionerelations by defining relations as projection and rotation.",
+      "confidence": 0.95,
+      "context": "Further-more,Rot-Pro[Songetal.,2021] proposestomodelTransi-"
+    },
+    {
+      "name": "dORC",
+      "type": "method",
+      "description": "A method that enables modeling Reflexive, Symmetric and Transitive relations by disentangling the embedding of each entity as head and tail entities.",
+      "confidence": 0.95,
+      "context": "TypeDM [Jainetal.,2018] uses the assumed type embed- ding of an entity and domain(range) embeddings of a relation to calculate the satisfactory of domain(range) of a relation."
+    },
+    {
+      "name": "Post-training injection",
+      "type": "method",
+      "description": "A method that proposes a post-training injection for Cardinality of relations, by framing a Linear programming problem.",
+      "confidence": 0.95,
+      "context": "[Wangetal.,2015] proposeapost-traininginjectionforCardinalityofrelations,byframingaLinerprogrammingproblem."
+    },
+    {
+      "name": "relation properties constraining multiple relations",
+      "type": "phenomenon",
+      "description": "Properties that constrain multiple relations, including Equivalent and Inverse.",
+      "confidence": 0.9,
+      "context": "In order to inject entity type hierarchies into embeddings, there are methods with and without pre-defined hierarchies."
+    },
+    {
+      "name": "vector space assumption in KGEs",
+      "type": "phenomenon",
+      "description": "An assumption used in Knowledge Graph Embeddings (KGEs) that relates to the vector space representation of relations.",
+      "confidence": 0.8,
+      "context": "Given these two pre-defined relation properties, [Minervinietal.,2017] injects them via a single constraint on the embedding of the two relations in schemas, based on the vector space assumption in KGEs."
+    },
+    {
+      "name": "TransOWL",
+      "type": "theory",
+      "description": "A framework that proposes to add new triples inferred by these schemas into training, which could also be applied to entity type constraints.",
+      "confidence": 0.9,
+      "context": "Besides applying axiom-based regularization, TransOWL [d'Amatoetal.,2021] also proposes to add new triples inferred by these schemas into training..."
+    },
+    {
+      "name": "polar coordinate system",
+      "type": "method",
+      "description": "A method that maps entities into a polar coordinate system, where concentric circles can naturally reflect hierarchies.",
+      "confidence": 0.8,
+      "context": "HAKE [Zhangetal.,2020b] proposes to map entities into a polar coordinate system..."
+    },
+    {
+      "name": "iterative KG completion approach",
+      "type": "method",
+      "description": "An approach that uses ontological reasoning within its iterative Knowledge Graph (KG) completion framework.",
+      "confidence": 0.9,
+      "context": "...to use ontological reasoning within their iterative KG completion approach to infer new triples."
+    },
+    {
+      "name": "Composition of relations",
+      "type": "phenomenon",
+      "description": "The process of combining multiple relationships to enrich the input KG for embedding.",
+      "confidence": 0.95,
+      "context": "After training, implicit entity hierarchies could be decoded from entity embeddings."
+    },
+    {
+      "name": "Entity embeddings",
+      "type": "measurement",
+      "description": "A representation of entities in a knowledge graph as numerical vectors.",
+      "confidence": 1.0,
+      "context": "After training, implicit entity hierarchies could be decoded from entity embeddings."
+    },
+    {
+      "name": "Class hierarchy",
+      "type": "phenomenon",
+      "description": "The organization of entities in a knowledge graph based on their relationships and properties.",
+      "confidence": 0.95,
+      "context": "classhierarchy √ - - √ - - √ [Xieetal.,2016]"
+    },
+    {
+      "name": "Entity type",
+      "type": "measurement",
+      "description": "A characteristic or property of an entity in a knowledge graph.",
+      "confidence": 1.0,
+      "context": "entitytype √ - - √ - - √ [Wangetal.,2021;Jainetal.,2018]"
+    },
+    {
+      "name": "constraint checking",
+      "type": "method",
+      "description": "A method for filtering out schema-incorrect triples via consistency and methods.",
+      "confidence": 0.9,
+      "context": "Beforediscussingtheandtofilteroutschema-incorrecttriplesviaconsistencyandmethods,asinSection3,"
+    },
+    {
+      "name": "ReasonKGE",
+      "type": "theory",
+      "description": "A theoretical framework for evaluating logics.",
+      "confidence": 0.9,
+      "context": "Only a few methods, like SIC, ReasonKGE, and TransOWL, support general ontological schemas."
+    },
+    {
+      "name": "schema-incorrect triples",
+      "type": "phenomenon",
+      "description": "Triples that are inconsistent with the schema.",
+      "confidence": 0.9,
+      "context": "Beforediscussingtheandtofilteroutschema-incorrecttriplesviaconsistencyandmethods,asinSection3,"
+    },
+    {
+      "name": "pre-defined logics",
+      "type": "theory",
+      "description": "Logics that are defined before injecting them into embeddings.",
+      "confidence": 0.8,
+      "context": "If logics are pre- Pre-definedLogics Embeddingscouldbecombinedtolog-"
+    },
+    {
+      "name": "model-based models",
+      "type": "method",
+      "description": "Models that are based on data and used for pre-training injection methods.",
+      "confidence": 0.9,
+      "context": "For pre-traininginjection methods, databasedmodelsaremorecommon,"
+    },
+    {
+      "name": "post-training injection methods",
+      "type": "method",
+      "description": "Methods that inject logics into embeddings after training.",
+      "confidence": 0.8,
+      "context": "Moreover, in the scenario withoutpre-definedlogics,model-basedandpost-traininginjection"
+    },
+    {
+      "name": "hybrid mechanism",
+      "type": "method",
+      "description": "A mechanism that applies embeddings and then infers in a symbolic space.",
+      "confidence": 0.9,
+      "context": "Mechanism 1) Hybrid: after applyingembeddings,meth-"
+    },
+    {
+      "name": "neural mechanism",
+      "type": "method",
+      "description": "A mechanism that uses embeddings to infer in a symbolic space.",
+      "confidence": 0.8,
+      "context": "2)Neural: usingembed-"
+    },
+    {
+      "name": "logic reasoning",
+      "type": "method",
+      "description": "A method of drawing conclusions based on pre-defined logics.",
+      "confidence": 0.9,
+      "context": "Hybrid: after applying embeddings, meth- logic languages."
+    },
+    {
+      "name": "embeddings for logic reasoning",
+      "type": "method",
+      "description": "A technique that utilizes embeddings to perform inductive reasoning without pre-defined logics.",
+      "confidence": 0.95,
+      "context": "Forexample composition of relations could be represented as a path rule."
+    },
+    {
+      "name": "query answering",
+      "type": "phenomenon",
+      "description": "The process of returning correct entities in a knowledge graph (KG) as answers to a given structured query.",
+      "confidence": 0.9,
+      "context": "Query Answering Query answering returns correct entities ina KG as answers of a given structured query, where reasoning is usually considered for hidden answers."
+    },
+    {
+      "name": "theorem proving",
+      "type": "phenomenon",
+      "description": "The process of proving theorems using logic and embeddings.",
+      "confidence": 0.9,
+      "context": "Embeddings for Logics Query answering and theorem proving are two popular logic reasoning tasks where embeddings could be utilized."
+    },
+    {
+      "name": "Path queries",
+      "type": "method",
+      "description": "A type of query that can be used for augmenting KG queries.",
+      "confidence": 0.95,
+      "context": "Thus utilizing embeddings for augmenting KG queries are considered, for example, path queries proposed"
+    },
+    {
+      "name": "Neural networks",
+      "type": "material",
+      "description": "A type of material used for learning embeddings and similarities between entities and relations in a KG.",
+      "confidence": 0.9,
+      "context": "It enables Prolog to learn embeddings and similar- ities between entities and relations in a KG."
+    },
+    {
+      "name": "Symbolic logic reasoning",
+      "type": "phenomenon",
+      "description": "A phenomenon that can be used for learning embeddings and similarities between entities and relations in a KG.",
+      "confidence": 0.9,
+      "context": "It enables Prolog to learn embeddings and similar- ities between entities and relations in a KG."
+    },
+    {
+      "name": "Transformer Encoder",
+      "type": "method",
+      "description": "A method for encoding queries into vectors using a Transformer Encoder.",
+      "confidence": 0.9,
+      "context": "translates conjunctive queries into a sequence and encodes them by TransformerEncoder."
+    },
+    {
+      "name": "Logical Queries",
+      "type": "phenomenon",
+      "description": "A phenomenon where conjunctive queries are translated into sequences and encoded using various methods.",
+      "confidence": 0.8,
+      "context": "logical queries and Existential Positive First-Order (EPFO), Prolog but compare symbols using their embeddings rather than identical symbols."
+    },
+    {
+      "name": "NTP",
+      "type": "method",
+      "description": "A method for processing knowledge graphs, following steps of symbolic logic reasoning that requires enumerating and scoring all bounded-depth proof paths for a given goal.",
+      "confidence": 0.9,
+      "context": "The core process of NTP follows steps of symbolic logic reasoning that requires enumerating and scoring all bounded-depth proof paths for a given goal, thus NTP is efficient on large KGs."
+    },
+    {
+      "name": "BiQE",
+      "type": "method",
+      "description": "A method for translating conjunctive queries into sequences and encoding them using fact embeddings to select the top nearest neighbor facts for proving sub-goals.",
+      "confidence": 0.8,
+      "context": "GNTP [Minervinietal.,2020a] use fact embeddings to select the top nearest neighbor facts for provingsub-goals, and also GNTP[Minervinietal.,2020a] use relation embeddings to select top rules to be expanded."
+    },
+    {
+      "name": "Query2box",
+      "type": "method",
+      "description": "A method for translating conjunctive queries into sequences and encoding them using Transformer Encoder, which can further support disjunctions ( ) in queries via transforming them into Disjunctive Normal Form (DNF).",
+      "confidence": 0.9,
+      "context": "Query2box [Renetal.,2020] use relation embeddings to select top rules to be expanded."
+    },
+    {
+      "name": "CQD",
+      "type": "method",
+      "description": "A method for defining projection operators using ComplEx, while applying other quantifications according to norms.",
+      "confidence": 0.8,
+      "context": "Alternatively, CQD [Arakelyanetal.,2021] only defines projection operators using ComplEx [Trouillonetal.,2016] while applying other quantifications according to norms."
+    },
+    {
+      "name": "BetaE",
+      "type": "theory",
+      "description": "A theory that proposes to embed entities and queries as Beta distributions",
+      "confidence": 0.9,
+      "context": "BetaE [RenandLes ∧ kovec,2020] an ∨ d discover potential (and probabilistic) logics"
+    },
+    {
+      "name": "ConE",
+      "type": "theory",
+      "description": "A theory that proposes to embed entities and queries as sector-cones respectively",
+      "confidence": 0.9,
+      "context": "ConE [Zhange ¬ tal.,2021c] propose to embed entities and as schemas and logic rules"
+    },
+    {
+      "name": "AMIE",
+      "type": "method",
+      "description": "A method that is symbolic-based and uses random walking and adding atoms based on KGs",
+      "confidence": 0.9,
+      "context": "Conventional meth-ods like AMIE [Gala´rragaetal.,2015] and Any-"
+    },
+    {
+      "name": "BURL",
+      "type": "method",
+      "description": "A method that is symbolic-based and uses random walking and adding atoms based on KGs",
+      "confidence": 0.9,
+      "context": "Conventional meth-ods like AMIE [Gala´rragaetal.,2015] and Any-"
+    },
+    {
+      "name": "NewLook",
+      "type": "method",
+      "description": "A method that further supports queries including Difference(=) by logical operations as flexible neural networks",
+      "confidence": 0.9,
+      "context": "NewLook[Liuetal.,2021] furthersupportsqueries"
+    },
+    {
+      "name": "INS-ES",
+      "type": "application",
+      "description": "An application that uses the data-driven inference algorithm INS on Markov Logic Networks (MLN) for symbolic reasoning",
+      "confidence": 0.9,
+      "context": "For example, INS-ES[Weietal.,2015], runningthe"
+    },
+    {
+      "name": "RuLES",
+      "type": "method",
+      "description": "A method that adds confidential triples using embedding models for quality extension of KGs",
+      "confidence": 0.9,
+      "context": "RuLES [Hoetal.,2018] addsconfidentialtriplesusingembeddingmodelsforquality"
+    },
+    {
+      "name": "ProPPR+MF",
+      "type": "method",
+      "description": "A method that reconstructs the transition of proofs in ProPPR, a stochastic extension of Prolog based on embeddings of first-order logic through matrix factorization.",
+      "confidence": 0.95,
+      "context": "reconstructs the transition of proofs in ProPPR [Wangetal.,2013], a stochastic extension of Prolog, based on embeddings of"
+    },
+    {
+      "name": "RESCAL",
+      "type": "method",
+      "description": "A method that learns embeddings on the subgraph sampled for target predicates.",
+      "confidence": 0.95,
+      "context": "targetpredicateswith RESCAL [Nickeletal.,2011]"
+    },
+    {
+      "name": "DistMult",
+      "type": "method",
+      "description": "An alternative method that uses relation embeddings to calculate the confidence of rules.",
+      "confidence": 0.95,
+      "context": "alternatively use relation embeddings to calculate the con-"
+    },
+    {
+      "name": "IterE",
+      "type": "method",
+      "description": "Another alternative method that uses relation embeddings to calculate the confidence of rules.",
+      "confidence": 0.95,
+      "context": "alternatively use relation embeddings to calculate the con-"
+    },
+    {
+      "name": "Differentiable Theorem Proving",
+      "type": "method",
+      "description": "A method that uses embeddings overcomes the limitations of symbolic proving on generalizing to queries with similar but not identical stants.",
+      "confidence": 0.95,
+      "context": "using embeddingsovercomethelimitsofsymbolicproverson"
+    },
+    {
+      "name": "RLvLR",
+      "type": "method",
+      "description": "A method that uses embeddings to guide and prune the search during rule mining.",
+      "confidence": 0.95,
+      "context": "uses embeddingstoguideandprunethesearchduringrulemining,"
+    },
+    {
+      "name": "ProPPR",
+      "type": "theory",
+      "description": "A theoretical framework based on embeddings of first-order logic through matrix factorization.",
+      "confidence": 0.9,
+      "context": "a stochastic extension of Prolog, based on embeddings of"
+    },
+    {
+      "name": "differentiable rule mining methods",
+      "type": "method",
+      "description": "Methods that learn rules in an end-to-end differentiable manner in vector space.",
+      "confidence": 0.95,
+      "context": "Another critical challenge is making intetiable rule mining, learning rules in an end-to-end differ-entiable manner in vector space."
+    },
+    {
+      "name": "TensorLog",
+      "type": "method",
+      "description": "A differentiable probabilistic logic that establishes a connection between inference using first-order rules and sparse matrix multiplication.",
+      "confidence": 0.95,
+      "context": "TensorLog [Cohen et al., 2020], a differentiable probabilistic logic."
+    },
+    {
+      "name": "NeuralLP",
+      "type": "method",
+      "description": "A neural controller system for weight generation that applies attention-based reasoning steps to models.",
+      "confidence": 0.9,
+      "context": "NeuralLP [Yanget al., 2017] uses an attention-based neural controller system for weight generation..."
+    },
+    {
+      "name": "DRUM",
+      "type": "method",
+      "description": "A method that applies a low-rank approximation to enable mining rules with numerical features in a differentiable framework.",
+      "confidence": 0.9,
+      "context": "...and DRUM [Sadeghian et al., 2019] applies a low-rank approximation."
+    },
+    {
+      "name": "Neural-Num LP",
+      "type": "method",
+      "description": "A method that further enables mining rules with numerical features in a differentiable framework.",
+      "confidence": 0.8,
+      "context": "...and Neural-Num LP [Wang et al., 2020] further enable mining rules with numerical features..."
+    },
+    {
+      "name": "logic reasoning and learning",
+      "type": "method",
+      "description": "Methods for combining embeddings with pre-defined logics or without, applied jointly or separately during the process of logic reasoning and learning.",
+      "confidence": 0.95,
+      "context": "soning steps into models, which extend them from one-step to multi-step reasoning models with interpretable intermediate results."
+    },
+    {
+      "name": "multi-step reasoning models",
+      "type": "phenomenon",
+      "description": "A type of model that extends one-step reasoning to multiple steps, allowing for more complex logic-based tasks.",
+      "confidence": 0.95,
+      "context": "soning steps into models, which extend them from one-step to multi-step reasoning models with interpretable intermediate results."
+    },
+    {
+      "name": "explainable machine learning methods",
+      "type": "method",
+      "description": "Methods that integrate logics and embeddings to help preserve the transparency of logic-based methods and the robustness of embedding-based methods.",
+      "confidence": 0.95,
+      "context": "Third, integrate logics and embeddings through explainable machine learning methods."
+    },
+    {
+      "name": "KG reasoning with logics and embeddings",
+      "type": "phenomenon",
+      "description": "A type of reasoning that combines knowledge graph embeddings with logical rules and ontological schemas.",
+      "confidence": 0.95,
+      "context": "This paper presents a literature review for KG reasoning with logics and embeddings."
+    },
+    {
+      "name": "supervised learning setting",
+      "type": "method",
+      "description": "A type of learning setting where the primary goal is making datasets suitable for supervised learning, which does not ensure diverse logic patterns.",
+      "confidence": 0.95,
+      "context": "When creating these datasets, the primary goal is making them suitable for supervised learning setting..."
+    },
+    {
+      "name": "logic-based setting",
+      "type": "method",
+      "description": "A method for ensuring and exploring diverse logic reasoning tasks.",
+      "confidence": 0.9,
+      "context": "ddings to logic-based ing setting, which do not ensure and explore diverse logic reasoningtasks(queryanswering, theoremproving,and rule patterns contained in the dataset."
+    },
+    {
+      "name": "logic diversity",
+      "type": "phenomenon",
+      "description": "The challenge of dealing with diverse logics.",
+      "confidence": 0.9,
+      "context": "LogicdiversityOnecriticalchallengeoflogicandembeddingintegrationliesinthediversityoflogics."
+    },
+    {
+      "name": "explainability",
+      "type": "phenomenon",
+      "description": "The need for methods to be explainable.",
+      "confidence": 0.8,
+      "context": "From four perspectives: logic diversity, explainability, benchmark, and application."
+    },
+    {
+      "name": "benchmark",
+      "type": "measurement",
+      "description": "A standard for evaluating logics.",
+      "confidence": 0.9,
+      "context": "benchmarks containing diverse pre-defined logics or logic patterns deserved to be proposed."
+    },
+    {
+      "name": "application",
+      "type": "application",
+      "description": "The use of KG reasoning tasks beyond benchmark KGs reported in papers.",
+      "confidence": 0.8,
+      "context": "Application Apart from KG reasoning tasks, there are schemacorrectness[Wiharjaetal.,2020]ismorepromising."
+    },
+    {
+      "name": "SIC",
+      "type": "theory",
+      "description": "A theoretical framework for evaluating logics.",
+      "confidence": 0.9,
+      "context": "Also, SIC [Wiharjaetal.,2020] argues that experimental results show that the existing correctness notion based on the silver standard is highly questionable."
+    },
+    {
+      "name": "Pre-training and Fine-tuning",
+      "type": "method",
+      "description": "A method that extends pre-trained language models to be used in many KG applications.",
+      "confidence": 0.95,
+      "context": "Recently, inspired by the concept of pre-training and fine-tuning of language models, which is powerful in many downstream natural language processing tasks, KGEs are also extended to pre-trained KG models [Zhangetal.,2021b] to be used in many KG applications."
+    },
+    {
+      "name": "neural link predictors",
+      "type": "method",
+      "description": "Techniques used for guided answering with knowledge graphs.",
+      "confidence": 0.9,
+      "context": "Rule learning from knowledge graphs guided answering with neural link predictors."
+    },
+    {
+      "name": "embedding models",
+      "type": "method",
+      "description": "Models used for embedding and querying knowledge graphs.",
+      "confidence": 0.8,
+      "context": "by embedding models"
+    },
+    {
+      "name": "symbolic knowledge",
+      "type": "material",
+      "description": "Knowledge represented in symbolic form.",
+      "confidence": 0.7,
+      "context": "usingsymbolicknowledge"
+    },
+    {
+      "name": "knowledge graph embeddings",
+      "type": "phenomenon",
+      "description": "The process of representing and querying knowledge graphs.",
+      "confidence": 0.9,
+      "context": "Improving knowledge graph embeddings without ontological reasoning."
+    },
+    {
+      "name": "bidirectional sequence encoders",
+      "type": "method",
+      "description": "Techniques used for answering complex queries in KGs.",
+      "confidence": 0.8,
+      "context": "Ans. complex queries in KGs with bidirectional sequence encoders."
+    },
+    {
+      "name": "AMIE+",
+      "type": "method",
+      "description": "A method for fast rule mining in ontological knowledge bases.",
+      "confidence": 0.9,
+      "context": "Fast rule mining in ontological knowledgebaseswithAMIE+. VLDBJ.,2015."
+    },
+    {
+      "name": "Hermit: An OWL reasoner",
+      "type": "method",
+      "description": "An OWL reasoner for differentiable reasoning on large knowledge bases and natural language.",
+      "confidence": 0.9,
+      "context": "2reasoner. J.Autom.Reason.,2014."
+    },
+    {
+      "name": "Jointly embedding knowledge graphs and logical rules",
+      "type": "theory",
+      "description": "A theory that jointly embeds knowledge graphs and logical rules for end-to-end differentiable proving.",
+      "confidence": 0.8,
+      "context": "Learningreasoningstrategiesinend-to-enddifferentiableproving."
+    },
+    {
+      "name": "Injecting background knowledge into embedding models",
+      "type": "method",
+      "description": "A method that injects background knowledge into embedding models for predictive tasks on knowledge graphs.",
+      "confidence": 0.9,
+      "context": "Injectingbackgroundknowledgetintoembeddingmodelsforpredictivetaskson[knowledgegraphs]. InESWC,2021."
+    },
+    {
+      "name": "Modeling relation paths",
+      "type": "method",
+      "description": "A method that models relation paths for representation learning of knowledge bases.",
+      "confidence": 0.9,
+      "context": "Modelingrelationpathsforrepresentationlearningofknowledgebases. InEMNLP,2015."
+    },
+    {
+      "name": "Neural-answering logical queries on knowledge graphs",
+      "type": "application",
+      "description": "An application that uses neural networks to answer logical queries on knowledge graphs.",
+      "confidence": 0.8,
+      "context": "Neural-answeringlogicalquerieson[knowledgegraphs]. InKDD,2021."
+    },
+    {
+      "name": "Ontozsl: Ontology-enhanced zero-shot learning",
+      "type": "application",
+      "description": "An application that uses ontology-enhanced zero-shot learning for knowledge graph embedding.",
+      "confidence": 0.8,
+      "context": "Ontozsl: Ontology-enhancedzero-shotlearning. InWWW,2021."
+    },
+    {
+      "name": "Regularizing knowledge graph embeddings via equivalence and inversion axioms",
+      "type": "method",
+      "description": "A method that regularizes knowledge graph embeddings using equivalence and inversion axioms.",
+      "confidence": 0.9,
+      "context": "Regularizingknowledgegraphembeddingsviaequivalenceandinversionaxioms. InECML/PKDD,2017."
+    },
+    {
+      "name": "Simple constraints for improving knowledge graph embedding",
+      "type": "method",
+      "description": "A method that uses simple constraints to improve knowledge graph embedding.",
+      "confidence": 0.9,
+      "context": "Improvingknowledgegraphembeddingusing[simpleconstraints]. InACL,2018."
+    },
+    {
+      "name": "differentiable proving",
+      "type": "method",
+      "description": "A method for learning reasoning strategies in end-to-end and logical rules.",
+      "confidence": 0.9,
+      "context": "InICML,2020."
+    },
+    {
+      "name": "jointly embedding knowledge graphs",
+      "type": "method",
+      "description": "A method for embedding knowledge graphs.",
+      "confidence": 0.8,
+      "context": "ontus Stenetorp, Edward Grefenstette, and Tim Wang,andLi Guo. Jointlyembeddingknowledgegraphs Rockta¨schel."
+    },
+    {
+      "name": "iterative guidance from soft rules",
+      "type": "method",
+      "description": "A method for iterative guidance from soft rules.",
+      "confidence": 0.85,
+      "context": "Rdfox: A iterativeguidancefromsoftrules. InAAAI,2018."
+    },
+    {
+      "name": "three-way model for collective learning on multi-relational data",
+      "type": "theory",
+      "description": "A theoretical framework for collective learning on multi-relational data.",
+      "confidence": 0.9,
+      "context": "[Nickeletal.,2011] Maximilian Nickel, Volker Tresp, and Hans-Peter Kriegel."
+    },
+    {
+      "name": "transitivity and asymmetry of rules",
+      "type": "phenomenon",
+      "description": "A phenomenon related to the transitivity and asymmetry of rules.",
+      "confidence": 0.8,
+      "context": "[Wangetal.,2018b] M. Wang, E. Rong, H. Zhuo, and Hans-Peter Kriegel."
+    },
+    {
+      "name": "scalable rule learning via representation",
+      "type": "method",
+      "description": "A method for scalable rule learning via representation.",
+      "confidence": 0.85,
+      "context": "[Omranetal.,2018] Pouya Ghiasnezhad Omran, Kewen He, Wenbo Lu, and Shuolin Gao."
+    },
+    {
+      "name": "beta embeddings for multi-hop logical reasoning",
+      "type": "method",
+      "description": "A method for beta embeddings in multi-hop logical reasoning.",
+      "confidence": 0.9,
+      "context": "[RenandLeskovec,2020] Hongyu Ren and Jure Leskovec."
+    },
+    {
+      "name": "beta embeddings",
+      "type": "method",
+      "description": "A technique for multi-hop logical reasoning in knowledge graphs.",
+      "confidence": 0.9,
+      "context": "Beta embeddings for multi-hop logical reasoning in [Wiharjaetal.,2020] Kemas Wiharja, Jeff Z. Pan, Martin J."
+    },
+    {
+      "name": "schema aware iterative knowledge graph completion",
+      "type": "method",
+      "description": "A method for completing knowledge graphs.",
+      "confidence": 0.8,
+      "context": "Schema Aware Iterative Knowledge Graph Completion. JoWS,2020."
+    },
+    {
+      "name": "query2box: reasoning over knowledge graphs",
+      "type": "application",
+      "description": "An application of using box embeddings to reason over knowledge graphs.",
+      "confidence": 0.9,
+      "context": "Query2box: Reasoning over knowledge graphs invectorspaceusing boxembeddings. InICLR,2020."
+    },
+    {
+      "name": "end-to-end differentiable proving",
+      "type": "method",
+      "description": "A technique for end-to-end differentiable proving.",
+      "confidence": 0.9,
+      "context": "End-to-end differentiable proving. In NIPS,2017."
+    },
+    {
+      "name": "RETA: schema-aware, end-to-end solution for instance completion in knowledge graphs",
+      "type": "application",
+      "description": "An application of using a schema-aware, end-to-end solution to complete instances in knowledge graphs.",
+      "confidence": 0.9,
+      "context": "RETA: Aschema- aware, end-to-end solution for instance completion in knowledgegraphs. InWWW,2021."
+    },
+    {
+      "name": "DRUM: end-to-end differentiable rule mining on knowledge graphs",
+      "type": "method",
+      "description": "A technique for end-to-end differentiable rule mining on knowledge graphs.",
+      "confidence": 0.9,
+      "context": "DRUM:end-to-enddifferentiableruleminingonknowledgegraphs. InNeurIPS,2019."
+    },
+    {
+      "name": "Rot-pro: modeling transitivity by projection in knowledge graph embedding",
+      "type": "method",
+      "description": "A technique for modeling transitivity by projection in knowledge graph embedding.",
+      "confidence": 0.8,
+      "context": "Rot-pro: Modelingtransitivitybyprojectioninknowledgegraphembedding. NeurIPS,2021."
+    },
+    {
+      "name": "rotate: knowledge graph embedding by relational rotation in complex space",
+      "type": "method",
+      "description": "A technique for knowledge graph embedding by relational rotation in complex space.",
+      "confidence": 0.9,
+      "context": "Rotate: Knowledgegraphembeddingbyrelationalrotationincomplexspace."
+    },
+    {
+      "name": "Rotate: Knowledge Graph Embedding",
+      "type": "method",
+      "description": "A method for knowledge graph embedding by relational rotation in complex space.",
+      "confidence": 0.9,
+      "context": "Nie,andJianTang. Rotate: Knowledgegraphembedding [Zhangetal.,2018] ZhaoZhang,FuzhenZhuang,MengQu,"
+    },
+    {
+      "name": "Hierarchical Relation Structure",
+      "type": "theory",
+      "description": "A theoretical framework for knowledge graph embedding with hierarchical relation structure.",
+      "confidence": 0.85,
+      "context": "T. Trouillon, J. Welbl, S. Riedel, E., hierarchicalrelationstructure. InEMNLP,2018."
+    },
+    {
+      "name": "Complex Embeddings",
+      "type": "method",
+      "description": "A method for complex embeddings for simple link prediction.",
+      "confidence": 0.9,
+      "context": "H.Zhu,W.Zhang,A.Bernstein,andH.Chen. Iteratively [Zhangetal.,2020a] Fuxiang Zhang, Xin Wang, Zhao Li,"
+    },
+    {
+      "name": "First-Order Logic Embeddings",
+      "type": "method",
+      "description": "A method for learning first-order logic embeddings via matrix factorization.",
+      "confidence": 0.9,
+      "context": "[WangandCohen,2016] William Y. Wang and William W. learning embeddingsand rules for knowledge graph rea-"
+    },
+    {
+      "name": "TransRHS",
+      "type": "method",
+      "description": "A representation learning method for knowledge graphs with relation hierarchical structure.",
+      "confidence": 0.9,
+      "context": "[Zhangetal.,2020] Fuxiang Zhang, Xin Wang, Zhao Li,"
+    },
+    {
+      "name": "Pagerank: A Locally Groundable First-Order Probabilistic Logic",
+      "type": "method",
+      "description": "A method for pagerank: a locally groundable first-order probabilistic logic.",
+      "confidence": 0.9,
+      "context": "[Zhangetal.,2021a] Jing Zhang, Bo Chen, Lingxi Zhang,"
+    },
+    {
+      "name": "Neural, Symbolic and Neural-Symbolic Reasoning",
+      "type": "method",
+      "description": "A method for neural, symbolic and neural-symbolic reasoning on knowledge graphs.",
+      "confidence": 0.9,
+      "context": "[Zhangetal.,2021b] W. Zhang, C. Man Wong, G. Ye,"
+    },
+    {
+      "name": "Cone embeddings",
+      "type": "method",
+      "description": "A method for multi-hop reasoning over knowledge graphs.",
+      "confidence": 1.0,
+      "context": "In Cone: Cone embeddings formulti-hopreasoning overknowledgegraphs. InNeurIPS,2021."
+    },
+    {
+      "name": "Knowledge graph embedding with diversity of structures",
+      "type": "theory",
+      "description": "A theoretical framework for representing knowledge graphs.",
+      "confidence": 0.95,
+      "context": "Wen Zhang. Knowledge graph embedding withdiversityofstructures. InWWW,2017."
+    }
+  ],
+  "relationships": [
+    {
+      "from": "Knowledge Graph Reasoning",
+      "to": "logics",
+      "type": "based_on",
+      "confidence": 0.95,
+      "context": "Conventional KG reasoning based on symbolic logics is deterministic, with reasoning results being explainable"
+    },
+    {
+      "from": "Knowledge Graph Embedding (KGE)",
+      "to": "TransE",
+      "type": "uses",
+      "confidence": 0.9,
+      "context": "PTransE [Linetal.,2015] is a typical explicit KGE method, where path compositional representations calculated with relation embeddings in the path are encouraged to near the relation embedding in rule head respectively."
+    },
+    {
+      "from": "Knowledge Graph Embedding (KGE)",
+      "to": "Embeddings",
+      "type": "is_a",
+      "confidence": 0.95,
+      "context": "Knowledge graph embedding with diversity of structures"
+    },
+    {
+      "from": "Neural networks",
+      "to": "Symbolic logic reasoning",
+      "type": "related_to",
+      "confidence": 0.85,
+      "context": "Differentiable proving on large knowledge bases and natural language. InAAAI,2020."
+    },
+    {
+      "from": "Hybrid Reasoning",
+      "to": "Knowledge Graph Embedding (KGE)",
+      "type": "enables",
+      "confidence": 0.95,
+      "context": "We comprehensively survey these works, focusing hybrid reasoning."
+    },
+    {
+      "from": "benchmark",
+      "to": "logic reasoning",
+      "type": "measures",
+      "confidence": 0.95,
+      "context": "Goodresultsfromthe silver standard often cannot be transferred to other knowledge graphs beyond the benchmark KGs reported in papers."
+    }
+  ],
+  "statistics": {
+    "num_entities": 145,
+    "num_relationships": 6,
+    "num_chunks_processed": 27
+  }
+}

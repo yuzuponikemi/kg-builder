@@ -1,0 +1,1202 @@
+{
+  "metadata": {
+    "source_file": "2210_08119v1.pdf",
+    "title": "A Survey on Knowledge Graph-based Methods",
+    "authors": [],
+    "num_pages": 17,
+    "extraction_date": "2025-12-03T10:22:14.143959",
+    "arxiv_id": null
+  },
+  "entities": [
+    {
+      "name": "Knowledge Graph Embeddings",
+      "type": "method",
+      "description": "A technique for applying machine learning to graph-structured data.",
+      "confidence": 0.9,
+      "context": "However, recent progress in knowledge graph embeddings and graph neural networks allows to applying machine learning to graph-structured data."
+    },
+    {
+      "name": "Graph Neural Networks",
+      "type": "method",
+      "description": "A type of neural network that can be applied to graph-structured data.",
+      "confidence": 0.9,
+      "context": "However, recent progress in knowledge graph embeddings and graph neural networks allows to applying machine learning to graph-structured data."
+    },
+    {
+      "name": "Automated Driving",
+      "type": "phenomenon",
+      "description": "The use of computer science and artificial intelligence to enable vehicles to drive autonomously.",
+      "confidence": 0.95,
+      "context": "Abstract. Automated driving is one of the most active research areas in computer science."
+    },
+    {
+      "name": "Knowledge Graphs",
+      "type": "theory",
+      "description": "A theoretical framework for modeling temporally contextualized observations and Recurrent Transformers (RETRA) for neural encoder stack with feedback loop and constrained multi-headed self-attention layers.",
+      "confidence": 0.95,
+      "context": "An approach for KG-based scene understanding was described by Werner et al. [107]. The paper proposes a KG to model temporally contextualized observations and Recurrent Transformers (RETRA), a neural encoder stack with a feedback loop and constrained multi-headed self-attention layers."
+    },
+    {
+      "name": "Machine Learning",
+      "type": "theory",
+      "description": "A subfield of artificial intelligence that involves training algorithms to make predictions or take actions based on data.",
+      "confidence": 0.9,
+      "context": "Deep learning methods have made remarkable breakthroughs in machine learning generally and in automated driving (AD) in particular."
+    },
+    {
+      "name": "Ontologies",
+      "type": "theory",
+      "description": "A formal and explicit specification of a shared conceptualization.",
+      "confidence": 0.95,
+      "context": "In computer science, on the other hand, ontologies are defined as a formal and explicit specification of a shared conceptualization [97]."
+    },
+    {
+      "name": "Graph Neural Network",
+      "type": "method",
+      "description": "A method for representing knowledge using graphs.",
+      "confidence": 0.9,
+      "context": "The use of graphs to represent knowledge has been researched for a long time."
+    },
+    {
+      "name": "Explainable AI (XAI)",
+      "type": "theory",
+      "description": "A concept introduced to provide information on what the network has learned and thus be harder to interpret and validate.",
+      "confidence": 0.8,
+      "context": "The concept of explainable AI was therefore introduced."
+    },
+    {
+      "name": "Deep Learning (DL)",
+      "type": "method",
+      "description": "A method that has made remarkable breakthroughs with significant impact on the performance of AD systems.",
+      "confidence": 0.9,
+      "context": "Deep learning (DL) has made remarkable breakthroughs with significant impact on the performance of AD systems."
+    },
+    {
+      "name": "ISO26262",
+      "type": "theory",
+      "description": "A standard that specifies strong safety requirements for automated driving systems.",
+      "confidence": 0.8,
+      "context": "Moreover, AD systems must consider the strong safety requirements specified in ISO26262..."
+    },
+    {
+      "name": "Knowledge Graph (KG)",
+      "type": "material",
+      "description": "A graph-based representation of structured facts with entities connected via named relationships.",
+      "confidence": 0.9,
+      "context": "Thetermknowledgegraph(KG)waspopularizedwiththeannouncementoftheGoogle Knowledge Graph [95]."
+    },
+    {
+      "name": "Graph-Based Representation",
+      "type": "method",
+      "description": "A concise and intuitive abstraction of knowledge with edges representing the relations that exist between entities.",
+      "confidence": 0.8,
+      "context": "A graph-based representation has several advantages over alternative approaches to represent knowledge."
+    },
+    {
+      "name": "Machine learning on graphs",
+      "type": "theory",
+      "description": "A model and comprehensive taxonomy of machine learning on graphs.",
+      "confidence": 0.95,
+      "context": "14. Chami,I.,Abu-El-Haija,S.,Perozzi,B.,Ré,C.,Murphy,K.:Machinelearningon graphs: A model and comprehensive taxonomy. CoRR abs/2005.03675 (2020)"
+    },
+    {
+      "name": "Named Relationships",
+      "type": "phenomenon",
+      "description": "The connections between entities in a knowledge graph, representing the relations that exist between them.",
+      "confidence": 0.9,
+      "context": "Knowledge graphs are means for structuring facts, with entities connected via named relationships."
+    },
+    {
+      "name": "Factual Triple",
+      "type": "measurement",
+      "description": "A format for expressing knowledge in the form of (head, relation, tail) or (subject, predicate, object).",
+      "confidence": 0.8,
+      "context": "Knowledge can be expressed in a factual triple in the form of (head, relation, tail) or (subject, predicate, object) under the Resource Description Framework (RDF), for example, (Albert Einstein, WinnerOf, Nobel Prize)."
+    },
+    {
+      "name": "Resource Description Framework (RDF)",
+      "type": "theory",
+      "description": "A framework for expressing data in the form of factual triples.",
+      "confidence": 0.95,
+      "context": "can be expressed in a factual triple in the form of (head, relation, tail) or (subject, predicate, object) under the Resource Description Framework (RDF), for example, (Albert Einstein, WinnerOf, Nobel Prize)."
+    },
+    {
+      "name": "Graph-based operations",
+      "type": "method",
+      "description": "Operations used to manipulate data in graph models.",
+      "confidence": 0.95,
+      "context": "The datamanipulation is realized by graph-based operations and adequate integrity constraints[1]."
+    },
+    {
+      "name": "Graph model",
+      "type": "theory",
+      "description": "A model that structures data, including its schema and/or instances in the form of graphs.",
+      "confidence": 0.95,
+      "context": "A graph model is a model which structures the data, including its schema and/or instances in the form of graphs, and the datamanipulation is realized by graph-based operations and adequate integrity constraints[1]."
+    },
+    {
+      "name": "Directed Labeled Graphs",
+      "type": "phenomenon",
+      "description": "A type of graph model that represents data with labeled nodes and edges.",
+      "confidence": 0.95,
+      "context": "Directed Labeled Graphs A directed labeled graph is comprised of a set of nodes and a set of edges connecting those nodes, labeled based on a specific vocabulary."
+    },
+    {
+      "name": "Hyper-relational Graphs",
+      "type": "phenomenon",
+      "description": "A type of graph model that represents data with complex relationships.",
+      "confidence": 0.95,
+      "context": "Hyper-relational Graphs A hyper-relational graph is also a labeled directed multigraph where each node and edge might have a number of associated key-value pairs [2]."
+    },
+    {
+      "name": "Knowledge graph",
+      "type": "material",
+      "description": "A type of graph data structure that represents knowledge and relationships.",
+      "confidence": 1.0,
+      "context": "Halilaj, L., Dindorkar, I., Luettin, J., Rothermel, S.: A knowledge graph-based approach for situation comprehension in driving scenarios. In: ESWC (2021)"
+    },
+    {
+      "name": "Knowledge Graph Embedding (KGE)",
+      "type": "method",
+      "description": "A representation where entities and relations of a KG are mapped into low-dimensional vectors.",
+      "confidence": 0.95,
+      "context": "Using a knowledge graph embedding method (KGE-Method), a KG can be transformed into a knowledge graph embedding (KGE), a representation where entities and relations of a KG are mapped into low-dimensional vectors."
+    },
+    {
+      "name": "KGE-Method",
+      "type": "method",
+      "description": "A graph embedding method that transforms a knowledge graph into a representation where entities and relations are mapped into low-dimensional vectors.",
+      "confidence": 0.95,
+      "context": "ge graph em- bedding method (KGE-Method), a KG can be transformed into a knowledge graph embedding (KGE), a representation where entities and relations of a KG are mapped into low-dimensional vectors."
+    },
+    {
+      "name": "Graph Embedding",
+      "type": "phenomenon",
+      "description": "A representation where entities and relations of a graph are mapped into low-dimensional vectors.",
+      "confidence": 0.95,
+      "context": "The KGE captures semantic meanings and relations of the graph nodes and reflects them by locality in vector space [106]."
+    },
+    {
+      "name": "Graph Neural Networks (GNNs)",
+      "type": "method",
+      "description": "An extension of deep learning networks that can directly work on a knowledge graph.",
+      "confidence": 0.95,
+      "context": "Common supervised KGE-Methods are based on graph neural networks (GNNs) [30], an extension of DL networks that can directly work on a KG."
+    },
+    {
+      "name": "Graph Convolutional Networks (GCN)",
+      "type": "method",
+      "description": "A method for scalability and overcoming challenges that arise from graph irregularities.",
+      "confidence": 0.95,
+      "context": "For scalability reasons and to overcome challenges that arise from graph irregularities, various adaptations have emerged such as graph convolutional networks (GCN) [60] and graph attention networks (GAT) [104]."
+    },
+    {
+      "name": "Graph Attention Networks (GAT)",
+      "type": "method",
+      "description": "A method for scalability and overcoming challenges that arise from graph irregularities.",
+      "confidence": 0.95,
+      "context": "For scalability reasons and to overcome challenges that arise from graph irregularities, various adaptations have emerged such as graph convolutional networks (GCN) [60] and graph attention networks (GAT) [104]."
+    },
+    {
+      "name": "deep reinforcement learning",
+      "type": "method",
+      "description": "A machine learning approach that combines deep learning and reinforcement learning to make decisions.",
+      "confidence": 0.9,
+      "context": "ding computer vision [53], object detection [3,31], DL based scene understanding [71,36,33,49],DLbasedvehiclebehaviorprediction [78],deepreinforcementlearning [61],lanedetection[118,79,99],semanticsegmentation[65,73],and planning and decision making [28,82,94,8,18]."
+    },
+    {
+      "name": "knowledge-infused learning",
+      "type": "method",
+      "description": "An approach that incorporates knowledge graphs into machine learning models to improve their performance.",
+      "confidence": 0.85,
+      "context": "More recently, ontologies and KGs have gained interest for knowledge-infused learning approaches."
+    },
+    {
+      "name": "ontology",
+      "type": "material",
+      "description": "A formal representation of a set of concepts and relationships used to model relevant knowledge in the automotive domain.",
+      "confidence": 0.95,
+      "context": "Severalontologieshavebeendevelopedtomodelrelevantknowledgeintheautomotive domain."
+    },
+    {
+      "name": "Scene Understanding",
+      "type": "phenomenon",
+      "description": "Understanding what is happening in the scene, and relations between objects for further steps in automated driving.",
+      "confidence": 0.95,
+      "context": "Scene understanding aims to understand what is happening in the scene, the relations between the objects in order to obtain a comprehension for further steps in automated driving that deal with motion planning and vehicle control."
+    },
+    {
+      "name": "vehicle behavior prediction",
+      "type": "phenomenon",
+      "description": "The ability to predict the behavior of vehicles in different scenarios.",
+      "confidence": 0.85,
+      "context": "DLbasedvehiclebehaviorprediction [78]"
+    },
+    {
+      "name": "lane detection",
+      "type": "phenomenon",
+      "description": "The process of detecting the lanes on a road.",
+      "confidence": 0.95,
+      "context": "79. Narote, S.P., Bhujbal, P.N., Narote, A.S., Dhane, D.M.: A review of recent advances in lane detection and departure warning system. Pattern Recognition (2018)"
+    },
+    {
+      "name": "semantic segmentation",
+      "type": "phenomenon",
+      "description": "The process of assigning a semantic meaningful class label (e.g. road, sidewalk, pedestrian, road sign, vehicle) to each pixel in a given image.",
+      "confidence": 0.9,
+      "context": "The goal of semantic segmentation is to assign a semantic meaningful class label (e.g. road, sidewalk, pedestrian, road sign, vehicle) to each pixel in a given image."
+    },
+    {
+      "name": "planning and decision making",
+      "type": "phenomenon",
+      "description": "The ability to make decisions and plan actions in complex scenarios.",
+      "confidence": 0.9,
+      "context": "and planning and decision making [28,82,94,8,18]."
+    },
+    {
+      "name": "hybrid learning approach",
+      "type": "method",
+      "description": "A method for categorizing drivers based on their driving styles.",
+      "confidence": 0.9,
+      "context": "An ontology for modeling driver profiles based on their demographic and behavioral aspects is proposed by [89]. It is used as an input for a hybrid learning approach for categorizing drivers according to their driving styles."
+    },
+    {
+      "name": "driver profiling",
+      "type": "method",
+      "description": "A method for modeling driver profiles based on demographic and behavioral aspects.",
+      "confidence": 0.8,
+      "context": "An ontology for modeling driver profiles based on their demographic and behavioral aspects is proposed by [89]."
+    },
+    {
+      "name": "automotive ontologies",
+      "type": "theory",
+      "description": "Theoretical frameworks for understanding automotive concepts, including vehicle, driver, and context.",
+      "confidence": 0.9,
+      "context": "Table 1. Automotive ontologies. Relevant ontologies split into different categories considering their main focus and concepts."
+    },
+    {
+      "name": "driver assistance ontology",
+      "type": "theory",
+      "description": "A theoretical framework for understanding driver assistance concepts, including domain understanding, decision-making, and information sharing.",
+      "confidence": 0.9,
+      "context": "Driver Assistance An ontology for driver assistance is described in [58]. It serves as a common basis for domain understanding, decision-making, and in-formation sharing."
+    },
+    {
+      "name": "traffic intersection ontology",
+      "type": "theory",
+      "description": "A theoretical framework for understanding traffic intersections, including reasoning about the right-of-way.",
+      "confidence": 0.9,
+      "context": "Huelsen et al. [50,51] developed an ontology for traffic intersections to reason about the right-of-way"
+    },
+    {
+      "name": "Route Planning",
+      "type": "method",
+      "description": "A method for modeling and processing map data in cars.",
+      "confidence": 0.9,
+      "context": "Suryawanshi et al. [98] presented an ontology-based method for modeling and processing map data in cars."
+    },
+    {
+      "name": "Ontology-Based Method",
+      "type": "method",
+      "description": "A method for modeling and processing map data using ontologies.",
+      "confidence": 0.9,
+      "context": "Suryawanshi et al. [98] presented an ontology-based method for modeling and processing map data in cars."
+    },
+    {
+      "name": "Context Model",
+      "type": "theory",
+      "description": "An ontology for context representation and environmental modelling for AD.",
+      "confidence": 0.95,
+      "context": "Ulbrich et al. [102] described an ontology for context representation and environmental modelling for AD."
+    },
+    {
+      "name": "Automated Driving Systems Ontology",
+      "type": "theory",
+      "description": "A description of the levels of automated driving systems, ranging from fully manual to fully automated.",
+      "confidence": 0.9,
+      "context": "An ontology describing the levels of automated driving systems, ranging from fully manual to fully automated was presented in [83]."
+    },
+    {
+      "name": "Automotive Urban Traffic Ontology (A.U.T.O.)",
+      "type": "theory",
+      "description": "An ontology for structured description and categorization of urban scenes in the context of automated driving.",
+      "confidence": 0.95,
+      "context": "mprehensive 6-layer model for a structured description and categorization of urban scenes was describe in [93]. This was further developed into the Automotive Urban Traffic Ontology (A.U.T.O.) [109]."
+    },
+    {
+      "name": "Route Planning with Ontologies",
+      "type": "method",
+      "description": "The use of ontologies to improve the capabilities and performance of on-board route-planning.",
+      "confidence": 0.9,
+      "context": "Schlenoff et al. [91] explored the use of ontologies to improve the capabilities and performance of on-board route-planning."
+    },
+    {
+      "name": "Semantic State Space",
+      "type": "theory",
+      "description": "A modeling approach for maneuver planning using semantic state space.",
+      "confidence": 0.9,
+      "context": "Kohlhaas et al. [63] introduced a modeling approach for the semantic state space for maneuver planning."
+    },
+    {
+      "name": "Automotive Global Ontology (AGO)",
+      "type": "theory",
+      "description": "An ontology for semantic labeling and testing use cases in the context of automated driving.",
+      "confidence": 0.95,
+      "context": "The Automotive Global Ontology(AGO) [103] focuses on semantic labeling and testing use cases."
+    },
+    {
+      "name": "Scene Graphs",
+      "type": "phenomenon",
+      "description": "A technique to semantically describe and represent objects and relations in a scene.",
+      "confidence": 0.95,
+      "context": "Scene graphs are a relatively recent technique to semantically describe and represent objects and relations in a scene [56]."
+    },
+    {
+      "name": "Object Detection",
+      "type": "method",
+      "description": "The detection of traffic participants such as vehicles, pedestrians, road markings, traffic signs, and others.",
+      "confidence": 0.95,
+      "context": "Object detection in AD includes the detection of traffic participants such as vehicles, pedestrians, road markings, traffic signs, and others."
+    },
+    {
+      "name": "Bottom-up Approach",
+      "type": "method",
+      "description": "An approach to object detection that consists of object detection followed by pairwise relationship recognition.",
+      "confidence": 0.95,
+      "context": "The first, bottom up approach, consists of object detection followed by pairwise relationship recognition."
+    },
+    {
+      "name": "Top-down Approach",
+      "type": "method",
+      "description": "An approach to object detection that consists of joint detection and recognition of objects and their relationships.",
+      "confidence": 0.95,
+      "context": "The second, top-down approach, consists of joint detection and recognition of objects and their relationships."
+    },
+    {
+      "name": "bottom up approach",
+      "type": "method",
+      "description": "A method that consists of object detection followed by pairwise relationship recognition.",
+      "confidence": 0.9,
+      "context": "The second, top-down approach, consists of joint detection and recognition of objects and their relationships."
+    },
+    {
+      "name": "top down approach",
+      "type": "method",
+      "description": "A method that consists of joint detection and recognition of objects and their relationships.",
+      "confidence": 0.8,
+      "context": "The second, top-down approach, consists of joint detection and recognition of objects and their relationships."
+    },
+    {
+      "name": "Graph Bridging Networks (GB-Net)",
+      "type": "method",
+      "description": "A method that regards the scene graph as the image conditioned instantiation of the commonsense knowledge graph.",
+      "confidence": 0.9,
+      "context": "The use of KGs to provide background knowledge and generate scene graphs is recently proposed [114] with Graph Bridging Networks (GB-Net)."
+    },
+    {
+      "name": "ConceptNet",
+      "type": "material",
+      "description": "Practical commonsense reasoning toolkit.",
+      "confidence": 0.85,
+      "context": "Liu,H.,Singh,P.: Conceptnet—apracticalcommonsensereasoningtool-kit.BT Technology Journal 22, 211–226 (2004)"
+    },
+    {
+      "name": "KB-GAN",
+      "type": "method",
+      "description": "A method that uses external knowledge and image reconstruction loss to overcome problems found in datasets.",
+      "confidence": 0.9,
+      "context": "Gu et al. [34] presented KB-GAN, a knowledge base and auxiliary image generation approach based on external knowledge and image reconstruction loss to overcome the problems found in datasets."
+    },
+    {
+      "name": "knowledge graph embedding",
+      "type": "method",
+      "description": "A method for representing and processing knowledge graphs.",
+      "confidence": 0.95,
+      "context": "Wang,Q.,Mao,Z.,Wang,B.,Guo,L.: Knowledge graph embedding: A survey of approaches and applications. IEEE Trans. on Knowledge and Data Eng. (2017)"
+    },
+    {
+      "name": "object detection as a KG link prediction problem",
+      "type": "theory",
+      "description": "A theoretical framework that formalizes object detection as a KG link prediction problem.",
+      "confidence": 0.8,
+      "context": "This is accomplished with a novel mapping and formalization of object detection as a KG link prediction problem."
+    },
+    {
+      "name": "KGE algorithms evaluation",
+      "type": "method",
+      "description": "A method that evaluates several KGE algorithms and compares them.",
+      "confidence": 0.9,
+      "context": "Several KGE algorithms are evaluated and compared [110]."
+    },
+    {
+      "name": "global context encoding",
+      "type": "method",
+      "description": "A method that extracts global context information using a geometric layout encoding.",
+      "confidence": 0.8,
+      "context": "Woo et al. [112] presented a method to embed relations by jointly learning connections between objects. It contains a global context encoding and a geometric layout encoding which extract global context information and spatial information."
+    },
+    {
+      "name": "road sign detection",
+      "type": "application",
+      "description": "A use case that focuses on using knowledge-graphs for road sign detection.",
+      "confidence": 0.9,
+      "context": "Road-Sign Detection Several approaches focus on using knowledge-graphs for road sign detection [59,76]."
+    },
+    {
+      "name": "knowledge graph neural network (KG-NN)",
+      "type": "method",
+      "description": "A method that uses a knowledge graph neural network to supervise the training using image-data-invariant auxiliary knowledge.",
+      "confidence": 0.9,
+      "context": "Monka et al. [76] proposed an approach for object recognition based on a knowledge graph neural network (KG-NN) that supervises the training using image-data-invariant auxiliary knowledge."
+    },
+    {
+      "name": "KG-NN",
+      "type": "method",
+      "description": "A knowledge graph neural network that supervises the training using image-data-invariant auxiliary knowledge.",
+      "confidence": 0.95,
+      "context": "a knowledge graph neural network (KG-NN) that supervises the training using image-data-invariantauxiliaryknowledge."
+    },
+    {
+      "name": "embedding method",
+      "type": "method",
+      "description": "A method for transforming KG with respective concepts and their relationships into a dense vector representation.",
+      "confidence": 0.9,
+      "context": "These are transformed into a dense vector representation by an embedding method."
+    },
+    {
+      "name": "contrastive loss function",
+      "type": "method",
+      "description": "A method for adapting the visual embedding space of KG-NN.",
+      "confidence": 0.9,
+      "context": "The KG-NN learns to adapt its visual embedding space by a contrastive loss function."
+    },
+    {
+      "name": "graph-embedding-based approach",
+      "type": "method",
+      "description": "A method for lane detection that uses graph embeddings.",
+      "confidence": 0.9,
+      "context": "A graph-embedding-based approach for lane detection [72] can robustly detect parallel, non-parallel (merging or splitting), varying lane width, and partially blocked lane markings."
+    },
+    {
+      "name": "lane features",
+      "type": "phenomenon",
+      "description": "Geometric and topological properties of the local regions associated with the lane boundaries.",
+      "confidence": 0.9,
+      "context": "A novel graph structure is used to represent lane features, lane geometry, and lane topology."
+    },
+    {
+      "name": "scene graph",
+      "type": "material",
+      "description": "A logical representation that models the structure of the road using an abstract representation.",
+      "confidence": 0.9,
+      "context": "A scene graph is generated from a set of segmented entities that models the structure of the road using an abstract, logical representation to enable the incorporation of background knowledge."
+    },
+    {
+      "name": "Recurrent Transformers",
+      "type": "method",
+      "description": "A neural encoder stack with a feedback loop and constrained multi-headed self-attention layers for modeling temporally contextualized observations.",
+      "confidence": 0.95,
+      "context": "An approach for KG-based scene understanding was described by Werner et al. [107]. The paper proposes a KG to model temporally contextualized observations and Recurrent Transformers (RETRA), a neural encoder stack with a feedback loop and constrained multi-headed self-attention layers."
+    },
+    {
+      "name": "Digital Maps",
+      "type": "material",
+      "description": "Virtual sensors for retrieving information about the road network for understanding, navigating, and making decisions.",
+      "confidence": 0.9,
+      "context": "Automated vehicles often used digital maps as a virtual sensor to retrieve information about the road network for understanding, navigating, and making decisions about the driving path."
+    },
+    {
+      "name": "RETRA",
+      "type": "method",
+      "description": "A neural encoder stack with a feedback loop and constrained multi-headed self-attention layers for transforming global KG-embeddings into custom embeddings.",
+      "confidence": 0.95,
+      "context": "aper proposes a KG to model temporally contextualized observations and RETRA, a neural encoder stack..."
+    },
+    {
+      "name": "KGE",
+      "type": "method",
+      "description": "A graph neural network-based approach for classifying driving situations.",
+      "confidence": 0.9,
+      "context": "A KGE based on graph neural networks [106] is then used for the task to classify driving situations."
+    },
+    {
+      "name": "ontology-based reasoning",
+      "type": "method",
+      "description": "An approach for long-term behavior prediction of road users using semantic reasoning that considers interactions among various players.",
+      "confidence": 0.9,
+      "context": "Fangetal.[23] described an ontology-based reasoning approach for long-term behavior prediction of road users."
+    },
+    {
+      "name": "GRIP",
+      "type": "method",
+      "description": "A graph based interaction-aware trajectory prediction approach using GCN and graph operations to model the interaction between vehicles.",
+      "confidence": 0.9,
+      "context": "Li et al. [67] present a graph based interaction-aware trajectory prediction (GRIP) approach."
+    },
+    {
+      "name": "GCN",
+      "type": "method",
+      "description": "A graph convolutional network used in the GRIP approach for modeling the interaction between vehicles.",
+      "confidence": 0.8,
+      "context": "Li et al. [67] present a graph based interaction-aware trajectory prediction (GRIP) approach."
+    },
+    {
+      "name": "SOSA",
+      "type": "material",
+      "description": "An existing ontology used in the paper for building and organizing heterogeneous types and sources of information.",
+      "confidence": 0.8,
+      "context": "The model builds on the terminology of [101] and uses existing ontologies such as SOSA [54]."
+    },
+    {
+      "name": "ontology-based decision-making",
+      "type": "method",
+      "description": "A method for making decisions based on ontologies, used in automated driving systems.",
+      "confidence": 0.95,
+      "context": "Zhao et al. [117,115,116] presented core ontologies to enable safe automated driving."
+    },
+    {
+      "name": "ontology-based scene creation",
+      "type": "method",
+      "description": "A method for creating scenes based on ontologies, used in scenario-based design paradigm.",
+      "confidence": 0.95,
+      "context": "Bagschik et al.[9]introduced a concept of ontology-based scene creation..."
+    },
+    {
+      "name": "combinatorial testing",
+      "type": "method",
+      "description": "A method for generating test cases based on input models.",
+      "confidence": 0.9,
+      "context": "It is based on ontologies for describing the environment and converted to input models for combinatorial testing."
+    },
+    {
+      "name": "semantic model",
+      "type": "theory",
+      "description": "A theoretical framework that translates requirements using world knowledge into formal representation.",
+      "confidence": 0.8,
+      "context": "A semantic model translates requirements using world knowledge into formal representation, which is then used to check plausibility and consistency of requirements."
+    },
+    {
+      "name": "knowledge graph-based methods",
+      "type": "method",
+      "description": "Approaches for AD-tasks based on knowledge graphs.",
+      "confidence": 0.9,
+      "context": "A summary of KG-based methods for AD-tasks is shown in Tab. 2."
+    },
+    {
+      "name": "KG-based representation learning",
+      "type": "theory",
+      "description": "Recent progress in using knowledge graphs to represent complex structured information and relational information between entities.",
+      "confidence": 0.8,
+      "context": "Recent progress on KGs and KG-based representation learning has opened new possibilities in addressing these open questions."
+    },
+    {
+      "name": "KG construction and usage",
+      "type": "application",
+      "description": "The use of knowledge graphs for machine learning applications such as AD.",
+      "confidence": 0.9,
+      "context": "However, harmonization of automotive ontologies and AD dataset structures is an important step towards enabling KG construction and usage for AD tasks."
+    },
+    {
+      "name": "KG-based methods",
+      "type": "method",
+      "description": "Methods that utilize knowledge graphs for tasks in the AD domain.",
+      "confidence": 0.9,
+      "context": "Given the benefits and improvements of KG-based methods in other domains indicates great potential of KG-based methods in the AD domain."
+    },
+    {
+      "name": "knowledge graph construction",
+      "type": "phenomenon",
+      "description": "The process of creating a knowledge graph for use in tasks such as automated driving.",
+      "confidence": 0.8,
+      "context": "Harmonization of automotive ontologies and AD dataset structures is an important step towards enabling KG construction and usage for AD tasks."
+    },
+    {
+      "name": "task-oriented knowledge representation",
+      "type": "theory",
+      "description": "A theoretical framework that represents knowledge in a way that is tailored to specific tasks.",
+      "confidence": 0.7,
+      "context": "Future topics include but are not limited to (1) the inclusion of additional knowledge sources; (2) task-oriented knowledge representation and knowledge embedding;"
+    },
+    {
+      "name": "temporal representation",
+      "type": "theory",
+      "description": "A theoretical framework that represents temporal information in a knowledge graph.",
+      "confidence": 0.6,
+      "context": "Future topics include but are not limited to (3) temporal representation of KG-based approaches;"
+    },
+    {
+      "name": "rule extraction and verification",
+      "type": "method",
+      "description": "Methods for extracting and verifying rules from a knowledge graph for explainability.",
+      "confidence": 0.8,
+      "context": "Future topics include but are not limited to (4) rule extraction and verification for explainability."
+    },
+    {
+      "name": "ASAM OpenSCENARIO V2.0",
+      "type": "material",
+      "description": "A software framework for scenario-based testing of autonomous vehicles.",
+      "confidence": 1.0,
+      "context": "7. Auer,S.,Bizer,C.,Kobilarov,G.,Lehmann,J.,Cyganiak,R.,Ives,Z.G.:Dbpedia: A nucleus for a web of open data. In: ISWC (2007)"
+    },
+    {
+      "name": "ASAM OpenX",
+      "type": "material",
+      "description": "A software framework for scenario-based testing of autonomous vehicles.",
+      "confidence": 1.0,
+      "context": "6. ASAM: ASAM OpenX, proposal (2022)"
+    },
+    {
+      "name": "Dbpedia",
+      "type": "theory",
+      "description": "A nucleus for a web of open data.",
+      "confidence": 1.0,
+      "context": "7. Auer,S.,Bizer,C.,Kobilarov,G.,Lehmann,J.,Cyganiak,R.,Ives,Z.G.:Dbpedia: A nucleus for a web of open data. In: ISWC (2007)"
+    },
+    {
+      "name": "Evidential grammars",
+      "type": "method",
+      "description": "A compositional approach for scene understanding in autonomous driving.",
+      "confidence": 0.95,
+      "context": "10. Bordes, J.B., Davoine, F., Xu, P., Denoeux, T.: Evidential grammars: A compositional approach for scene understanding. application to multimodal street data. Appl. Soft Comput. (2017)"
+    },
+    {
+      "name": "Ontology-based traffic scene modeling",
+      "type": "method",
+      "description": "A method for modeling traffic scenes in autonomous driving.",
+      "confidence": 0.95,
+      "context": "11. Buechel, M., Hinz, G., Ruehl, F., et al.: Ontology-based traffic scene modeling, traffic regulations dependent situational awareness and decision-making for automated vehicles. In: IEEE Intelligent Vehicles Symposium, IV (2017)"
+    },
+    {
+      "name": "High-Level Decision Making",
+      "type": "method",
+      "description": "Techniques for making decisions in highway autonomous driving.",
+      "confidence": 0.9,
+      "context": "A study on AI-based approaches for high-level decision making in highway autonomous driving."
+    },
+    {
+      "name": "Semantic Reasoning",
+      "type": "method",
+      "description": "Approach for generating compact models for traffic scenarios to estimate driver behavior.",
+      "confidence": 0.85,
+      "context": "Generating compact models for traffic scenarios to estimate driver behavior using semantic reasoning."
+    },
+    {
+      "name": "Dynamic Monocular Machine Vision",
+      "type": "phenomenon",
+      "description": "Technique for machine vision in autonomous driving.",
+      "confidence": 0.95,
+      "context": "Dynamic monocular machine vision."
+    },
+    {
+      "name": "Multi-Hypothesis Road Representation",
+      "type": "method",
+      "description": "Approach for representing roads in automated driving.",
+      "confidence": 0.9,
+      "context": "Towards a multi-hypothesis road representation for automated driving."
+    },
+    {
+      "name": "Automotive Ontology",
+      "type": "theory",
+      "description": "Framework for managing knowledge inside the vehicle and sharing it between cars.",
+      "confidence": 0.95,
+      "context": "The automotive ontology: managing knowledge inside the vehicle and sharing it between cars."
+    },
+    {
+      "name": "Scene Description",
+      "type": "method",
+      "description": "Approach for describing scenes in context-aware driver assistance systems using ontologies.",
+      "confidence": 0.9,
+      "context": "A model for ontology-based scene description for context-aware driver assistance systems."
+    },
+    {
+      "name": "Automated Vehicles Ontology",
+      "type": "theory",
+      "description": "Framework for assessing automated vehicles using scenarios and ontologies.",
+      "confidence": 0.95,
+      "context": "Ontology for scenarios for the assessment of automated vehicles."
+    },
+    {
+      "name": "Deep learning",
+      "type": "theory",
+      "description": "A theoretical framework for machine learning using multiple layers of artificial neural networks.",
+      "confidence": 1.0,
+      "context": "Goodfellow, I., Bengio, Y., Courville, A.C.: Deep learning. Nature 521, 436–444 (2015)"
+    },
+    {
+      "name": "Graph domains",
+      "type": "phenomenon",
+      "description": "A type of domain where graph-based methods can be applied.",
+      "confidence": 0.9,
+      "context": "Gori,M.,Monfardini,G.,Scarselli,F.:Anewmodelforlearningingraphdomains.In: IJCNN (2005)"
+    },
+    {
+      "name": "Intelligent object perception",
+      "type": "phenomenon",
+      "description": "The ability to perceive and understand objects in the environment.",
+      "confidence": 0.95,
+      "context": "Gouidis, F., Vassiliades, A., Patkos, T., et al.: A review on intelligent object perception methods combining knowledge-based reasoning and machine learning. In: Proceedings of the AAAI-MAKE Symposium (2020)"
+    },
+    {
+      "name": "Graph embedding techniques",
+      "type": "method",
+      "description": "A set of algorithms for converting graph data into a lower-dimensional representation.",
+      "confidence": 1.0,
+      "context": "Goyal, P., Ferrara, E.: Graph embedding techniques, applications, and performance: A survey. Knowl. Based Syst. (2018)"
+    },
+    {
+      "name": "Scene graph generation",
+      "type": "method",
+      "description": "A technique for generating a graph representation of the scene.",
+      "confidence": 0.9,
+      "context": "Gu, J., Zhao, H., Lin, Z., Li, S., Cai, J., Ling, M.: Scene graph generation with external knowledge and image reconstruction. CVPR (2019)"
+    },
+    {
+      "name": "Schema.org",
+      "type": "application",
+      "description": "A structured data initiative for the web.",
+      "confidence": 1.0,
+      "context": "Guha, R.V., Brickley, D., Macbeth, S.: Schema.org: evolution of structured data on the web. Commun. ACM (2016)"
+    },
+    {
+      "name": "Deep learning techniques",
+      "type": "method",
+      "description": "A set of algorithms for deep learning in autonomous driving.",
+      "confidence": 0.9,
+      "context": "Grigorescu, S.M., Trasnea, B., Cocias, T.T., Macesanu, G.: A survey of deep learning techniques for autonomous driving. J. Field Robotics (2020)"
+    },
+    {
+      "name": "Agent-based framework",
+      "type": "method",
+      "description": "A framework for advanced driver assistance systems using agent-based modeling.",
+      "confidence": 0.9,
+      "context": "Gutiérrez, G., Iglesias, J.A., Ordóñez, F.J., Ledezma, A., Sanchis, A.: Agent-based framework for advanced driver assistance systems in urban environments. FUSION (2014)"
+    },
+    {
+      "name": "Context-aware recommendations",
+      "type": "application",
+      "description": "A system that provides personalized recommendations based on context.",
+      "confidence": 0.9,
+      "context": "Halilaj, L., Luettin, J., Rothermel, S., Arumugam, S.K., Dindorkar, I.: Towards a knowledge graph-based approach for context-aware points-of-interest recommendations. In: ACM/SIGAPP SAC. pp. 1846–1854 (2021)"
+    },
+    {
+      "name": "Knowledge graphs for automated driving",
+      "type": "application",
+      "description": "A system that uses knowledge graphs for automated driving.",
+      "confidence": 0.9,
+      "context": "Halilaj, L., Luettin, J., Henson, C., Monka, S.: Knowledge graphs for automated driving. In: IEEE AIKE-Artificial Intelligence and Knowledge Engineering (2022)"
+    },
+    {
+      "name": "Scene search",
+      "type": "method",
+      "description": "A technique for searching autonomous driving data using a knowledge graph of scenes.",
+      "confidence": 0.9,
+      "context": "Henson, C., Schmid, S., Tran, A.T., Karatzoglou, A.: Using a knowledge graph of scenes to enable search of autonomous driving data. In: ISWC (2019)"
+    },
+    {
+      "name": "knowledge graph of scenes",
+      "type": "material",
+      "description": "A knowledge graph used to enable search of autonomous driving data.",
+      "confidence": 0.9,
+      "context": "In: ACM/SIGAPP SAC. pp. 1846–1854 (2021)"
+    },
+    {
+      "name": "ontology-based decision-making systems",
+      "type": "theory",
+      "description": "Theoretical frameworks for making decisions using ontologies.",
+      "confidence": 0.8,
+      "context": "Feasibility study: Rule generation for ontology-based decision-making systems. In: JIST (2019)"
+    },
+    {
+      "name": "lane topology",
+      "type": "phenomenon",
+      "description": "The structure and organization of lanes in autonomous driving scenarios.",
+      "confidence": 0.7,
+      "context": "Dagmapper: Learning to map by discovering lane topology. ICCV (2019)"
+    },
+    {
+      "name": "ontology-based driving scene modeling, situation assessment, and decision making for autonomous vehicles",
+      "type": "application",
+      "description": "A practical implementation of ontology-based approaches for autonomous vehicle control.",
+      "confidence": 0.6,
+      "context": "Ontology-based driving scene modeling, situation assessment and decisionmaking for autonomous vehicles. (ACIRS) (2019)"
+    },
+    {
+      "name": "Computer Vision for Autonomous Vehicles",
+      "type": "method",
+      "description": "Techniques and approaches used in computer vision for autonomous vehicles.",
+      "confidence": 0.9,
+      "context": "Found. Trends Comput. Graph. Vis. (2020)"
+    },
+    {
+      "name": "SOSA Ontology",
+      "type": "material",
+      "description": "Lightweight ontology for sensors, observations, samples, and actuators.",
+      "confidence": 0.8,
+      "context": "J. Web Semant. 56, 1–10 (2019)"
+    },
+    {
+      "name": "Ontology Integration in Verification",
+      "type": "method",
+      "description": "Approach to integrating ontologies into verification for autonomous driving.",
+      "confidence": 0.7,
+      "context": "ISWC Satellites (2019)"
+    },
+    {
+      "name": "Intelligent Driver Assistance System",
+      "type": "application",
+      "description": "System for vehicle safety modeling using ontology approach.",
+      "confidence": 0.8,
+      "context": "International Journal of UbiComp (2010)"
+    },
+    {
+      "name": "Graph Convolutional Networks",
+      "type": "method",
+      "description": "Semi-supervised classification with graph convolutional networks.",
+      "confidence": 0.9,
+      "context": "ICLR (2017)"
+    },
+    {
+      "name": "Deep Reinforcement Learning for Autonomous Driving",
+      "type": "theory",
+      "description": "Survey on deep reinforcement learning for autonomous driving.",
+      "confidence": 0.85,
+      "context": "IEEE Transactions on Intelligent Transportation Systems 23, 4909–4926 (2022)"
+    },
+    {
+      "name": "Road layout reconstruction",
+      "type": "method",
+      "description": "Technique for reconstructing road layouts from partially segmented scenes.",
+      "confidence": 0.9,
+      "context": "Kunze, L., Bruls, T., Suleymanov, T., Newman, P.: Reading between the lanes: Road layout reconstruction from partially segmented scenes. ITSC (2018)"
+    },
+    {
+      "name": "Ontology-based risk indicators",
+      "type": "theory",
+      "description": "Framework for modeling and identifying critical interactions between human-driven and automated vehicles.",
+      "confidence": 0.95,
+      "context": "Leroy, J., Gruyer, D., Orfila, O., Faouzi, N.E.E.: Five key components based riskindicators ontology for the modelling and identification of critical interaction between human driven and automated vehicles. IFAC (2020)"
+    },
+    {
+      "name": "Graph-based trajectory prediction",
+      "type": "method",
+      "description": "Technique for predicting trajectories using graph-based models.",
+      "confidence": 0.9,
+      "context": "Li, X., Ying, X., Chuah, M.C.: Grip: Graph-based interaction-aware trajectory prediction. 2019 IEEE ITSC pp. 3960–3966 (2019)"
+    },
+    {
+      "name": "Ontology-based test generation",
+      "type": "method",
+      "description": "Technique for generating tests for automated and autonomous driving functions using ontologies.",
+      "confidence": 0.95,
+      "context": "Li, Y., Tao, J., Wotawa, F.: Ontology-based test generation for automated and autonomous driving functions. IST (2020)"
+    },
+    {
+      "name": "Personalizing HMI elements",
+      "type": "application",
+      "description": "Approach to personalizing human-machine interface elements in ADAS systems using ontologies and rule-based reasoning.",
+      "confidence": 0.9,
+      "context": "Lilis,Y.,Zidianakis,E.,Partarakis,N.,Antona,M.,Stephanidis,C.:Personalizing HMI elements in ADAS using ontology meta-models and rule-based reasoning. In: Universal Access in Human-Computer Interaction. Design and Dev. Approaches and Methods (2017)"
+    },
+    {
+      "name": "Deep learning for generic object detection",
+      "type": "theory",
+      "description": "Survey of deep learning techniques for generic object detection.",
+      "confidence": 0.95,
+      "context": "Liu, L., Ouyang, W., Wang, X., Fieguth, P., Chen, J., Liu, X., Pietikäinen, M.: Deep learning for generic object detection: A survey. IJCV (2019)"
+    },
+    {
+      "name": "Graph-embedded lane detection",
+      "type": "method",
+      "description": "Technique for detecting lanes using graph-based models.",
+      "confidence": 0.9,
+      "context": "Lu, P., Xu, S., Peng, H.: Graph-embedded lane detection. IEEE Transactions on Image Processing (2021)"
+    },
+    {
+      "name": "Image segmentation using deep learning",
+      "type": "phenomenon",
+      "description": "Process of segmenting images using deep learning techniques.",
+      "confidence": 0.85,
+      "context": "Minaee, S., Boykov, Y., Porikli, F., Plaza, A., Kehtarnavaz, N., Terzopoulos, D.: Image segmentation using deep learning: A survey. IEEE Trans. PAMI (2021)"
+    },
+    {
+      "name": "Ontology-based framework for risk assessment",
+      "type": "theory",
+      "description": "Framework for assessing risks in road scenes using ontologies and videos.",
+      "confidence": 0.95,
+      "context": "Mohammad,M.A.,Kaloskampis,I.,Hicks,Y.,Setchi,R.: Ontology-based frame- work for riskassessment inroadscenesusingvideos.In:Inter.Conf.KES(2015)"
+    },
+    {
+      "name": "Visual transfer learning using knowledge graphs",
+      "type": "method",
+      "description": "Technique for transferring visual models using knowledge graphs.",
+      "confidence": 0.9,
+      "context": "Monka, S., Halilaj, L., Rettinger, A.: A survey on visual transfer learning using knowledge graphs. Semantic Web 13, 477–510 (2022)"
+    },
+    {
+      "name": "Learning visual models using a knowledge graph as a trainer",
+      "type": "method",
+      "description": "Technique for training visual models using a knowledge graph.",
+      "confidence": 0.95,
+      "context": "Monka, S., Halilaj, L., Schmid, S., Rettinger, A.: Learning visual models using a knowledge graph as a trainer. In: ISWC 2021 (2021)"
+    },
+    {
+      "name": "ontology-based approach",
+      "type": "method",
+      "description": "An approach to relax traffic regulation for autonomous vehicle assistance.",
+      "confidence": 0.95,
+      "context": "77. Morignot,P.,Nashashibi,F.:An ontology-based approach to relax traffic regulation for autonomous vehicle assistance. ArXiv abs/1212.0768 (2012)"
+    },
+    {
+      "name": "relational machine learning",
+      "type": "theory",
+      "description": "A type of machine learning that focuses on relationships between entities.",
+      "confidence": 0.95,
+      "context": "80. Nickel,M.,Murphy,K.,Tresp,V.,Gabrilovich,E.: A review of relational machine learning for knowledge graphs. Proc. IEEE (2016)"
+    },
+    {
+      "name": "hybrid-ai approach",
+      "type": "method",
+      "description": "An approach that combines artificial intelligence and other technologies to assess the competence of automated driving functions.",
+      "confidence": 0.95,
+      "context": "81. Paardekooper, J.P., Comi, M., et al.: A hybrid-ai approach for competence assessment of automated driving functions. In: SafeAI@AAAI (2021)"
+    },
+    {
+      "name": "motion planning and control",
+      "type": "phenomenon",
+      "description": "The process of planning and controlling the motion of a vehicle.",
+      "confidence": 0.95,
+      "context": "82. Paden, B., Cáp, M., Yong, S.Z., Yershov, D.S., Frazzoli, E.: A survey of motion planning and control techniques for self-driving urban vehicles. IEEE Transactions on Intelligent Vehicles (2016)"
+    },
+    {
+      "name": "ontology-based model",
+      "type": "method",
+      "description": "A model that uses ontology to determine the automation level of an automated vehicle for co-driving.",
+      "confidence": 0.95,
+      "context": "83. Pollard,E.,Morignot,P.,Nashashibi,F.: An ontology-based model to determine the automation level of an automated vehicle for co-driving. In: Proc. FUSION (2013)"
+    },
+    {
+      "name": "knowledge architecture layer",
+      "type": "material",
+      "description": "A data structure that represents a set of entities and their relationships, used in autonomous vehicles.",
+      "confidence": 0.95,
+      "context": "84. Qiu, H., Ayara, A., Glimm, B.: A knowledge architecture layer for map data in autonomous vehicles. ITSC (2020)"
+    },
+    {
+      "name": "ontology-based processing",
+      "type": "method",
+      "description": "A method that uses ontology to process dynamic maps in automated driving.",
+      "confidence": 0.95,
+      "context": "85. Qiu, H., Ayara, A., Glimm, B.: Ontology-based processing of dynamic maps in automated driving. In: KEOD (2020)"
+    },
+    {
+      "name": "ontology-based map data quality assurance",
+      "type": "method",
+      "description": "A method that uses ontology to assure the quality of map data in automated driving.",
+      "confidence": 0.95,
+      "context": "86. Qiu, H., Ayara, A., Glimm, B.: Ontology-based map data quality assurance. In: Proc. ESWC (2021)"
+    },
+    {
+      "name": "ontology-based traffic models",
+      "type": "method",
+      "description": "A method that uses ontology to create more efficient decision-making for autonomous vehicles.",
+      "confidence": 0.95,
+      "context": "87. Regele,R.: Using ontology-based traffic models for more efficient decision-making of autonomous vehicles. ICAS (2008)"
+    },
+    {
+      "name": "context-awareness",
+      "type": "phenomenon",
+      "description": "The ability to be aware of the context in which a vehicle is operating.",
+      "confidence": 0.95,
+      "context": "88. Ryu, M.W., Cha, S.H.: Context-awareness based driving assistance system for autonomous vehicles. International Journal of Control and Automation (2018)"
+    },
+    {
+      "name": "Context-awareness based driving assistance system",
+      "type": "method",
+      "description": "A method for providing driving assistance to autonomous vehicles using context awareness.",
+      "confidence": 0.95,
+      "context": "Ryu, M.W., Cha, S.H.: Context-awareness based driving assistance system for autonomous vehicles. International Journal of Control and Automation (2018)"
+    },
+    {
+      "name": "Ontology-based hybrid intelligent framework",
+      "type": "method",
+      "description": "A method for categorizing vehicle drivers using an ontology-based hybrid intelligent framework.",
+      "confidence": 0.95,
+      "context": "Sarwar, S., Zia, S., ul Qayyum, Z., Iqbal, M., Safyan, M., Mumtaz, S., et al.: Context-aware ontology-based hybrid intelligent framework for vehicle driver categorization. Transact. on Emerging Telecommunications Technologies (2019)"
+    },
+    {
+      "name": "Knowledge modeling",
+      "type": "method",
+      "description": "A method for modeling knowledge in autonomous vehicle systems engineering.",
+      "confidence": 0.95,
+      "context": "Schafer, F., Kriesten, R., Chrenko, D., Gechter, F.: No need to learn from each other? - potentials of knowledge modeling in autonomous vehicle systems engineering towards new methods in multidisciplinary contexts. In: ICE/ITMC (2017)"
+    },
+    {
+      "name": "Ontologies for navigation planning",
+      "type": "method",
+      "description": "A method for using ontologies to aid navigation planning in autonomous vehicles.",
+      "confidence": 0.95,
+      "context": "Schlenoff, C., Balakirsky, S., Uschold, M., Provine, R., Smith, S.: Using ontologies to aid navigation planning in autonomous vehicles. The Knowledge Engineering Review (2003)"
+    },
+    {
+      "name": "Deep learning in neural networks",
+      "type": "theory",
+      "description": "A theoretical framework for deep learning in neural networks.",
+      "confidence": 0.95,
+      "context": "Schmidhuber, J.: Deep learning in neural networks: An overview. Neural Networks : the official journal of the International Neural Network Society 61, 85–117 (2015)"
+    },
+    {
+      "name": "6-layer model for structured description and categorization",
+      "type": "method",
+      "description": "A method for describing and categorizing urban traffic and environment using a 6-layer model.",
+      "confidence": 0.95,
+      "context": "Scholtes, M., Westhofen, L., Turner, L.R., Lotto, K., Schuldes, M., Weber, H., et al.: 6-layer model for a structured description and categorization of urban traffic and environment. IEEE Access 9, 59131–59147 (2021)"
+    },
+    {
+      "name": "Social behavior for autonomous vehicles",
+      "type": "phenomenon",
+      "description": "A phenomenon where social behavior is studied for autonomous vehicles.",
+      "confidence": 0.95,
+      "context": "Schwarting, W., Pierson, A., et al.: Social behavior for autonomous vehicles. Proc. Natl. Acad. Sci. USA (2019)"
+    },
+    {
+      "name": "Hierarchical scene understanding",
+      "type": "method",
+      "description": "A method for understanding hierarchical scenes in intelligent vehicles.",
+      "confidence": 0.95,
+      "context": "Spehr, J., Rosebrock, D., Mossau, D., Auer, R., Brosig, S., Wahl, F.: Hierarchical scene understanding for intelligent vehicles. IV (2011)"
+    },
+    {
+      "name": "Knowledge engineering",
+      "type": "theory",
+      "description": "A theoretical framework for knowledge engineering: principles and methods.",
+      "confidence": 0.95,
+      "context": "Studer, R., Benjamins, V.R., Fensel, D.: Knowledge engineering: Principles and methods. Data Knowl. Eng. 25(1-2), 161–197 (1998)"
+    },
+    {
+      "name": "Ontological model for map data",
+      "type": "method",
+      "description": "A method for modeling map data in automotive systems using an ontological approach.",
+      "confidence": 0.95,
+      "context": "Suryawanshi, Y., Qiu, H., Ayara, A., Glimm, B.: An ontological model for map data in automotive systems. In: IEEE AIKE (2019)"
+    },
+    {
+      "name": "Lane detection methods based on deep learning",
+      "type": "method",
+      "description": "A method for detecting lanes using deep learning.",
+      "confidence": 0.95,
+      "context": "Tang, J., Li, S., Liu, P.: A review of lane detection methods based on deep learning. Pattern Recognition (2021)"
+    },
+    {
+      "name": "compositional hierarchical models",
+      "type": "method",
+      "description": "A method for efficient road scene understanding in intelligent vehicles.",
+      "confidence": 0.9,
+      "context": "Töpfer, D., Spehr, J., Effertz, J., Stiller, C.: Efficient road scene understanding for intelligent vehicles using compositional hierarchical models. T-ITS (2015)"
+    },
+    {
+      "name": "graph attention networks",
+      "type": "method",
+      "description": "A method for graph-based representation and processing.",
+      "confidence": 0.95,
+      "context": "Velickovic,P.,Cucurull,G.,Casanova,A.,Romero,A.,Liò,P.,Bengio,Y.: Graph attention networks. In:6th International Conference on Learning Representations, ICLR (2018)"
+    },
+    {
+      "name": "latent hierarchical part based models",
+      "type": "method",
+      "description": "A method for road scene understanding using latent hierarchical part-based models.",
+      "confidence": 0.9,
+      "context": "Venkateshkumar, S., Sridhar, M., Ott, P.: Latent hierarchical part based models for road scene understanding. ICCVW (2015)"
+    },
+    {
+      "name": "taxonomical, situational or sequential knowledge graph context",
+      "type": "method",
+      "description": "A method for embedding taxonomical, situational or sequential knowledge graph context for recommendation tasks.",
+      "confidence": 0.9,
+      "context": "Werner,S.,Rettinger,A.,Halilaj,L.,Luettin,J.: Embedding taxonomical, situational or sequential knowledge graph context for recommendation tasks. In: Further with Knowledge Graphs (2021)"
+    },
+    {
+      "name": "ontology-based decision making",
+      "type": "theory",
+      "description": "A theoretical framework for making decisions in autonomous driving scenarios using ontologies.",
+      "confidence": 0.9,
+      "context": "Ontology-based decisionmaking on uncontrolled intersections and narrow roads. IV (2015)"
+    },
+    {
+      "name": "relation-based motion prediction",
+      "type": "method",
+      "description": "A method for predicting the motion of objects in a scene based on their relationships.",
+      "confidence": 0.9,
+      "context": "Relation-based motion prediction using traffic scene graphs. In: IEEE ITSC (2022)"
+    },
+    {
+      "name": "traffic scene graph",
+      "type": "material",
+      "description": "A data structure representing the relationships between objects in a traffic scene.",
+      "confidence": 0.8,
+      "context": "Relation-based motion prediction using traffic scene graphs. In: IEEE ITSC (2022)"
+    },
+    {
+      "name": "ontology for driving context modelling and reasoning",
+      "type": "theory",
+      "description": "A theoretical framework for representing the context of a driving scenario and making decisions based on that context.",
+      "confidence": 0.9,
+      "context": "The development of an ontology for driving context modelling and reasoning. ITSC (2016)"
+    },
+    {
+      "name": "core ontologies for safe autonomous driving",
+      "type": "theory",
+      "description": "A set of fundamental ontologies that can be used to reason about the safety of autonomous vehicles.",
+      "confidence": 0.9,
+      "context": "Core ontologies for safe autonomous driving. In: ISWC (2015)"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "Graph Neural Networks",
+      "to": "Deep Learning (DL)",
+      "type": "is_a",
+      "confidence": 0.98,
+      "context": "The paper discusses graph neural networks as a type of deep learning technique for processing graph-structured data."
+    },
+    {
+      "from": "Graph Neural Networks",
+      "to": "Knowledge Graph Embeddings",
+      "type": "uses",
+      "confidence": 0.95,
+      "context": "RETRA enables transformation of global KG-embeddings into custom embeddings, given the situation-specific factors of the relation and the subjective history of the entity."
+    },
+    {
+      "from": "Knowledge Graphs",
+      "to": "Ontologies",
+      "type": "based_on",
+      "confidence": 0.96,
+      "context": "The paper is based on the idea that knowledge graphs can be used to represent ontological knowledge in the context of automated driving."
+    },
+    {
+      "from": "Scene Understanding",
+      "to": "Automated Driving",
+      "type": "applies_to",
+      "confidence": 0.95,
+      "context": "Scene understanding aims to understand what is happening in the scene, the relations between the objects in order to obtain a comprehension for further steps in automated driving that deal with motion planning and vehicle control."
+    },
+    {
+      "from": "Knowledge Graphs",
+      "to": "Ontologies",
+      "type": "related_to",
+      "confidence": 0.85,
+      "context": "The model builds on the terminology of [101] and uses existing ontologies such as SOSA [54]."
+    },
+    {
+      "from": "Automated Driving",
+      "to": "Machine Learning",
+      "type": "enables",
+      "confidence": 0.95,
+      "context": "Towards integrating ontologies into verification for autonomous driving."
+    }
+  ],
+  "statistics": {
+    "num_entities": 163,
+    "num_relationships": 6,
+    "num_chunks_processed": 27
+  }
+}
