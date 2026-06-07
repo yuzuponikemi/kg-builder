@@ -332,7 +332,9 @@ def main() -> None:
     print_header("Step 5: Installing Recommended Models")
     print("\nRecommended models for your system:\n")
     for i, (model, desc) in enumerate(recommended_models, 1):
-        status = "✓ Installed" if model in installed else "⬇ Not installed"
+        # Check if model is installed (with or without :latest tag)
+        is_installed = model in installed or f"{model}:latest" in installed
+        status = "✓ Installed" if is_installed else "⬇ Not installed"
         print(f"{i}. {model} - {desc} [{status}]")
 
     print("\nOptions:")
@@ -344,7 +346,10 @@ def main() -> None:
 
     models_to_install = []
     if choice == "1":
-        models_to_install = [m for m, _ in recommended_models if m not in installed]
+        models_to_install = [
+            m for m, _ in recommended_models
+            if m not in installed and f"{m}:latest" not in installed
+        ]
     elif choice == "2":
         print("\nEnter model numbers to install (comma-separated):")
         numbers = input("Models: ").strip().split(",")
@@ -353,7 +358,8 @@ def main() -> None:
                 idx = int(num.strip()) - 1
                 if 0 <= idx < len(recommended_models):
                     model = recommended_models[idx][0]
-                    if model not in installed:
+                    # Check if model is not already installed (with or without :latest tag)
+                    if model not in installed and f"{model}:latest" not in installed:
                         models_to_install.append(model)
             except ValueError:
                 pass
@@ -374,9 +380,11 @@ def main() -> None:
     # Find best available model for LLM
     llm_model = None
     for model, _ in recommended_models:
-        if model in final_installed and "embed" not in model:
-            llm_model = model
-            break
+        if "embed" not in model:
+            # Check if model is installed (with or without :latest tag)
+            if model in final_installed or f"{model}:latest" in final_installed:
+                llm_model = model
+                break
 
     # Find embedding model
     embed_model = None
