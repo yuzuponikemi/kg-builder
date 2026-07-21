@@ -118,7 +118,17 @@ uv run pre-commit run --all-files
 - Scale-free graph representation with semantic embeddings
 - Deduplication and validation
 
-**5. Configuration** (`src/kg_builder/config/`)
+**5. Hypothesis Generation & Reasoning** (`src/kg_builder/reasoning/`)
+- `graph_analytics.py`: Graph analytics (centrality analysis, community detection)
+- `link_predictor.py`: Link prediction using similarity metrics
+- `hypothesis_generator.py`: LLM-based hypothesis generation from predicted links
+- `hypothesis_engine.py`: Orchestrates analysis, prediction, and generation
+- `recursive_alchemist.py`: Multi-layered hypothesis expansion for SF-level exploration
+- Discovers "unexplored territories" in knowledge graphs
+- Generates novel research hypotheses by combining unconnected but structurally similar concepts
+- Recursive exploration: hypotheses become new concepts for further hypothesis generation
+
+**6. Configuration** (`src/kg_builder/config/`)
 - `settings.py`: Pydantic settings model loaded from environment variables
 - Supports multiple LLM providers via `llm_provider` setting
 - Get settings: `from kg_builder.config import get_settings; settings = get_settings()`
@@ -271,6 +281,87 @@ uv run python scripts/neo4j_manager.py papers          # List all papers
 
 See `docs/NEO4J_GUIDE.md` for complete documentation.
 
+### Hypothesis Generation (NEW)
+
+Generate novel research hypotheses from the knowledge graph:
+
+```bash
+# Basic usage
+python scripts/generate_hypotheses.py
+
+# Cross-domain hypotheses (different concept types)
+python scripts/generate_hypotheses.py --cross-domain --max-hypotheses 20
+
+# High-quality hypotheses with specific thresholds
+python scripts/generate_hypotheses.py \
+  --method adamic_adar \
+  --min-novelty 0.7 \
+  --min-impact 0.8 \
+  --temperature 0.8
+
+# Focus on central concepts
+python scripts/generate_hypotheses.py \
+  --method jaccard \
+  --top-n 100 \
+  --max-hypotheses 30
+
+# More creative hypotheses
+python scripts/generate_hypotheses.py --temperature 0.9
+```
+
+**Key Options:**
+- `--method`: Similarity method (jaccard, adamic_adar, resource_allocation, common_neighbors, preferential_attachment)
+- `--cross-domain`: Only cross-domain links (method + theory, etc.)
+- `--max-hypotheses`: Limit number of hypotheses
+- `--temperature`: Creativity level (0.3=conservative, 0.9=creative)
+- `--min-novelty/feasibility/impact`: Quality filters (0.0-1.0)
+
+**Output**: JSON file in `data/hypotheses/` with:
+- Hypothesis title, rationale, research direction
+- Novelty/feasibility/impact scores
+- Predicted links with similarity scores
+- Graph analytics (centrality, communities)
+
+See `docs/HYPOTHESIS_GENERATION.md` for complete documentation.
+
+### Recursive Hypothesis Exploration (SF-Level) (NEW)
+
+Generate multi-layered hypothesis expansions for SF-prototype imagination:
+
+```bash
+# Basic recursive exploration
+python scripts/explore_hypotheses_recursive.py
+
+# Deep exploration (3 layers, 3 branches per layer)
+python scripts/explore_hypotheses_recursive.py \
+  --max-depth 3 \
+  --branches-per-layer 3 \
+  --hypotheses-per-layer 15
+
+# SF-level creative exploration
+python scripts/explore_hypotheses_recursive.py \
+  --max-depth 4 \
+  --temperature 0.95 \
+  --branching-criteria novelty
+```
+
+**Concept**: Hypotheses become new concepts → generate new hypotheses → repeat.
+Creates a multi-dimensional exploration tree with branches like:
+- Layer 0: Original KG
+- Layer 1: "Quantum + Biology", "AI + Materials"
+- Layer 2: "Quantum-Bio City Design", "AI-Enhanced Metamaterials"
+- Layer 3: "Self-Organizing Quantum Urban Organism" (SF territory!)
+
+**Branching Criteria**:
+- `diversity`: Branch by concept type combinations
+- `impact`: Branch by high/medium/low impact
+- `novelty`: Branch by innovation level
+- `feasibility`: Branch by short/mid/long-term realizability
+
+**Output**: Multi-layered JSON tree in `data/hypotheses/exploration_tree_*.json`
+
+See `docs/RECURSIVE_HYPOTHESIS_EXPLORATION.md` for complete documentation.
+
 ## Important Patterns
 
 ### Entity Types
@@ -321,27 +412,37 @@ src/kg_builder/
 │   └── prompts/      # Prompt templates for extraction
 ├── search/           # ArXiv search and LLM filtering
 ├── graph/            # Neo4j graph management
-├── reasoning/        # Graph reasoning and analytics
+├── reasoning/        # Graph reasoning, analytics, and hypothesis generation
+│   ├── graph_analytics.py      # Centrality, community detection
+│   ├── link_predictor.py       # Link prediction algorithms
+│   ├── hypothesis_generator.py # LLM-based hypothesis generation
+│   ├── hypothesis_engine.py    # Main orchestrator
+│   └── prompts/                # Hypothesis generation prompts
 ├── visualization/    # Graph visualization
 ├── api/              # FastAPI server
 └── sdk/              # Python client SDK (stub)
 
 scripts/              # Utility scripts
-├── search_and_download_papers.py  # Main paper acquisition workflow
-├── batch_extract_papers.py        # Batch processing
-├── setup_ollama.py                # Ollama setup helper
-└── setup_neo4j.py                 # Database initialization
+├── search_and_download_papers.py    # Main paper acquisition workflow
+├── batch_extract_papers.py          # Batch processing
+├── generate_hypotheses.py           # Hypothesis generation from KG
+├── explore_hypotheses_recursive.py  # Recursive multi-layer exploration
+├── setup_ollama.py                  # Ollama setup helper
+└── setup_neo4j.py                   # Database initialization
 
 data/
 ├── papers/           # Downloaded PDFs
 ├── embeddings/       # Cached embeddings
-└── exports/          # Graph exports
+├── exports/          # Graph exports (JSON)
+└── hypotheses/       # Generated research hypotheses
 ```
 
 ## Key Dependencies
 
 - **Neo4j** (5.x): Graph database - must be running
 - **Ollama** (recommended): Local LLM server for knowledge extraction
+- **NetworkX**: Graph algorithms (centrality, link prediction)
+- **python-louvain**: Community detection (Louvain method)
 - **FastAPI**: API framework
 - **Pydantic**: Settings and validation
 - **pdfplumber**: PDF text extraction (preferred over PyPDF2)
