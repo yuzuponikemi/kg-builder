@@ -174,9 +174,7 @@ class ArxivSearcher:
             print(f"Warning: Failed to parse entry: {e}")
             return None
 
-    def download_paper(
-        self, paper: ArxivPaper, output_dir: Path | str = "data/papers"
-    ) -> Path:
+    def download_paper(self, paper: ArxivPaper, output_dir: Path | str = "data/papers") -> Path:
         """Download paper PDF.
 
         Args:

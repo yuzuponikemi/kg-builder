@@ -8,7 +8,7 @@ Handles connection, entity/relationship creation, and queries.
 import logging
 from typing import Any
 
-from neo4j import GraphDatabase, Session
+from neo4j import GraphDatabase
 from neo4j.exceptions import ServiceUnavailable
 
 from kg_builder.config.settings import get_settings
@@ -19,7 +19,9 @@ logger = logging.getLogger(__name__)
 class Neo4jClient:
     """Client for interacting with Neo4j graph database."""
 
-    def __init__(self, uri: str | None = None, username: str | None = None, password: str | None = None):
+    def __init__(
+        self, uri: str | None = None, username: str | None = None, password: str | None = None
+    ):
         """Initialize Neo4j client.
 
         Args:
@@ -84,7 +86,9 @@ class Neo4jClient:
             session.run("MATCH (n) DETACH DELETE n")
         logger.warning("Database cleared!")
 
-    def create_concept(self, name: str, concept_type: str, properties: dict[str, Any] | None = None) -> dict:
+    def create_concept(
+        self, name: str, concept_type: str, properties: dict[str, Any] | None = None
+    ) -> dict:
         """Create or merge a Concept node.
 
         Args:
@@ -162,7 +166,11 @@ class Neo4jClient:
             return dict(record["a"]) if record else {}
 
     def create_relationship(
-        self, source_name: str, target_name: str, rel_type: str, properties: dict[str, Any] | None = None
+        self,
+        source_name: str,
+        target_name: str,
+        rel_type: str,
+        properties: dict[str, Any] | None = None,
     ) -> dict:
         """Create relationship between two Concept nodes.
 
@@ -194,7 +202,9 @@ class Neo4jClient:
             record = result.single()
             return dict(record["r"]) if record else {}
 
-    def link_paper_to_concept(self, paper_id: str, concept_name: str, properties: dict[str, Any] | None = None):
+    def link_paper_to_concept(
+        self, paper_id: str, concept_name: str, properties: dict[str, Any] | None = None
+    ):
         """Create MENTIONS relationship from Paper to Concept.
 
         Args:
@@ -310,7 +320,11 @@ class Neo4jClient:
         with self.driver.session() as session:
             result = session.run(query, paper_id=paper_id)
             return [
-                {"concept": record["concept"], "type": record["type"], "mention_props": dict(record["mention_props"])}
+                {
+                    "concept": record["concept"],
+                    "type": record["type"],
+                    "mention_props": dict(record["mention_props"]),
+                }
                 for record in result
             ]
 
@@ -356,7 +370,14 @@ class Neo4jClient:
 
         with self.driver.session() as session:
             result = session.run(query, search=search_term, limit=limit)
-            return [{"name": record["name"], "type": record["type"], "properties": dict(record["props"])} for record in result]
+            return [
+                {
+                    "name": record["name"],
+                    "type": record["type"],
+                    "properties": dict(record["props"]),
+                }
+                for record in result
+            ]
 
     def run_cypher(self, query: str, parameters: dict[str, Any] | None = None) -> list[dict]:
         """Run a custom Cypher query.

@@ -191,10 +191,7 @@ class LLMClient:
         if response_format == "json":
             generation_config["response_mime_type"] = "application/json"
 
-        response = self.client.generate_content(
-            full_prompt,
-            generation_config=generation_config
-        )
+        response = self.client.generate_content(full_prompt, generation_config=generation_config)
 
         return response.text
 
@@ -222,7 +219,7 @@ class LLMClient:
         try:
             return json.loads(response)
         except json.JSONDecodeError as e:
-            raise ValueError(f"Failed to parse JSON response: {e}\nResponse: {response}")
+            raise ValueError(f"Failed to parse JSON response: {e}\nResponse: {response}") from e
 
 
 def get_llm_client(provider: str | None = None) -> LLMClient:

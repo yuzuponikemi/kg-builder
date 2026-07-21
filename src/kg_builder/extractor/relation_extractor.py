@@ -1,6 +1,5 @@
 """Relationship extraction from scientific text using LLMs."""
 
-import json
 from pathlib import Path
 from typing import Any
 
@@ -78,9 +77,7 @@ class RelationshipExtractor:
 
             except Exception as e:
                 if attempt == max_retries:
-                    print(
-                        f"Failed to extract relationships after {max_retries + 1} attempts: {e}"
-                    )
+                    print(f"Failed to extract relationships after {max_retries + 1} attempts: {e}")
                     return []
                 print(f"Attempt {attempt + 1} failed: {e}. Retrying...")
 
@@ -165,9 +162,10 @@ class RelationshipExtractor:
                 # Create unique key
                 key = f"{rel['from'].lower()}|{rel['type']}|{rel['to'].lower()}"
 
-                if key not in all_relationships or rel["confidence"] > all_relationships[key][
-                    "confidence"
-                ]:
+                if (
+                    key not in all_relationships
+                    or rel["confidence"] > all_relationships[key]["confidence"]
+                ):
                     all_relationships[key] = rel
 
         return list(all_relationships.values())
